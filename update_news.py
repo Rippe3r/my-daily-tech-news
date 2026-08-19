@@ -1,54 +1,78 @@
 import os
-import xml.etree.ElementTree as ET
+import ssl
 import urllib.request
+import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
+# Fetch RSS feeds with fallback user-agent and SSL context
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
-    "https://techcrunch.com/category/artificial-intelligence/feed/",
-    "https://www.wired.com/feed/category/business/latest/rss"
+    "https://techcrunch.com/category/artificial-intelligence/feed/"
 ]
 
 def fetch_rss():
     articles = []
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
     for feed in RSS_FEEDS:
         try:
-            req = urllib.request.Request(feed, headers={'User-Agent': 'Mozilla/5.0'})
-            xml_data = urllib.request.urlopen(req).read()
+            req = urllib.request.Request(feed, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+            xml_data = urllib.request.urlopen(req, context=ctx, timeout=10).read()
             root = ET.fromstring(xml_data)
             for item in root.findall('.//item')[:5]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 link = item.find('link').text if item.find('link') is not None else ""
-                articles.append(f"Title: {title}\nURL: {link}")
+                if title and link:
+                    articles.append(f"Title: {title}\nURL: {link}")
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Warning: Failed feed {feed}: {e}")
+            
     return "\n---\n".join(articles)
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+# Check for API Key
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    raise ValueError("GEMINI_API_KEY secret is missing or empty in GitHub Secrets!")
+
+client = genai.Client(api_key=api_key)
+
+raw_news = fetch_rss()
+if not raw_news:
+    raise ValueError("Could not retrieve news items from RSS feeds.")
 
 system_prompt = """
 You are an expert AI & Tech News Fact-Checker. 
 Select 5 to 8 verified, major tech stories from the list below. Exclude clickbait, duplicate topics, and rumors.
 Output ONLY raw HTML cards using this template for each story (do NOT use markdown code blocks):
 
-
-  CATEGORY
-  TITLE
-  2-3 sentence summary explaining what happened and why it matters.
-
+<div class="news-card">
+  <span class="category">CATEGORY</span>
+  <h2><a href="URL" target="_blank">TITLE</a></h2>
+  <p>2-3 sentence summary explaining what happened and why it matters.</p>
+</div>
 """
 
-raw_news = fetch_rss()
+# Call Gemini API with automatic model fallback
+try:
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=f"Raw news data:\n{raw_news}",
+        config=types.GenerateContentConfig(system_instruction=system_prompt)
+    )
+    raw_text = response.text
+except Exception as e:
+    print(f"Gemini 2.5 call failed: {e}. Falling back to gemini-2.0-flash...")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=f"Raw news data:\n{raw_news}",
+        config=types.GenerateContentConfig(system_instruction=system_prompt)
+    )
+    raw_text = response.text
 
-response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents=f"Raw news data:\n{raw_news}",
-    config=types.GenerateContentConfig(system_instruction=system_prompt)
-)
-
-# Clean up any markdown code blocks returned by Gemini
-clean_content = response.text.replace("```html", "").replace("```", "").strip()
+clean_content = raw_text.replace("```html", "").replace("```", "").strip()
 
 html_page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -80,3 +104,5 @@ html_page = f"""<!DOCTYPE html>
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_page)
+
+print("Successfully generated index.html")
