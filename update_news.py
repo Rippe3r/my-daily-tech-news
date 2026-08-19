@@ -5,7 +5,6 @@ import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# Fetch RSS feeds with fallback user-agent and SSL context
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/"
@@ -32,7 +31,6 @@ def fetch_rss():
             
     return "\n---\n".join(articles)
 
-# Check for API Key
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("GEMINI_API_KEY secret is missing or empty in GitHub Secrets!")
@@ -50,23 +48,22 @@ Output ONLY raw HTML cards using this template for each story (do NOT use markdo
 
 <div class="news-card">
   <span class="category">CATEGORY</span>
-  <h2><a href="URL" target="_blank">TITLE</a></h2>
-  <p>2-3 sentence summary explaining what happened and why it matters.</p>
+  2-3 sentence summary explaining what happened and why it matters.
 </div>
 """
 
-# Call Gemini API with automatic model fallback
+# Primary call using gemini-3.6-flash, with gemini-1.5-flash as fallback
 try:
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.6-flash",
         contents=f"Raw news data:\n{raw_news}",
         config=types.GenerateContentConfig(system_instruction=system_prompt)
     )
     raw_text = response.text
 except Exception as e:
-    print(f"Gemini 2.5 call failed: {e}. Falling back to gemini-2.0-flash...")
+    print(f"Gemini 3.6 call failed: {e}. Falling back to gemini-1.5-flash...")
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-1.5-flash",
         contents=f"Raw news data:\n{raw_news}",
         config=types.GenerateContentConfig(system_instruction=system_prompt)
     )
