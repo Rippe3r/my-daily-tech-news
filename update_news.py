@@ -47,22 +47,35 @@ response = client.models.generate_content(
     config=types.GenerateContentConfig(system_instruction=system_prompt)
 )
 
-html_page = f"""
+# Clean up any markdown code blocks returned by Gemini
+clean_content = response.text.replace("```html", "").replace("```", "").strip()
 
-
-    
-    
-    Daily AI & Tech Digest
-    
-
-
-    ⚡ Daily AI & Tech Pulse
-    Updated automatically every 24 hours via Gemini API
-    
-        {response.text}
-    
-
-
+html_page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily AI & Tech Digest</title>
+    <style>
+        body {{ font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #0f172a; color: #f8fafc; line-height: 1.6; }}
+        h1 {{ color: #38bdf8; text-align: center; margin-bottom: 4px; }}
+        .subtitle {{ text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 40px; }}
+        .news-card {{ background: #1e293b; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #334155; }}
+        .category {{ background: #0284c7; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: bold; text-transform: uppercase; }}
+        .news-card h2 {{ margin: 10px 0 8px 0; font-size: 1.2rem; }}
+        .news-card a {{ color: #f8fafc; text-decoration: none; }}
+        .news-card a:hover {{ color: #38bdf8; }}
+        .news-card p {{ color: #94a3b8; margin: 0; font-size: 0.95rem; }}
+    </style>
+</head>
+<body>
+    <h1>⚡ Daily AI & Tech Pulse</h1>
+    <p class="subtitle">Updated automatically every 24 hours via Gemini API</p>
+    <div>
+        {clean_content}
+    </div>
+</body>
+</html>
 """
 
 with open("index.html", "w", encoding="utf-8") as f:
