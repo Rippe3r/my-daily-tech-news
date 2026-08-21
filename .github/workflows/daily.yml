@@ -1,9 +1,9 @@
-name: Run News Update Daily
+name: Run News Update Hourly
 
 on:
   schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
+    - cron: '0 * * * *' # Runs automatically every hour
+  workflow_dispatch: # Allows manual trigger anytime
 
 jobs:
   update-site:
@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: pip install google-genai
 
-      - name: Generate updated index.html
+      - name: Generate updated index.html and database
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python update_news.py
@@ -29,5 +29,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update daily news" && git push)
+          git add index.html news_data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Hourly news update" && git push)
