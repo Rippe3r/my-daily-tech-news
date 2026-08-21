@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# 1. RSS Feed Parser
+# 1. RSS Feed Parser with URL Validation
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -20,10 +20,10 @@ def extract_image_url(item):
     for child in item:
         if child.tag.endswith(('thumbnail', 'content', 'enclosure')):
             url = child.attrib.get('url')
-            if url: return url
+            if url and url.startswith('http'): return url
     desc = item.find('description')
     if desc is not None and desc.text:
-        img_match = re.search(r'<img [^>]*src="([^"]+)"', desc.text)
+        img_match = re.search(r'<img [^>]*src="(https?://[^"]+)"', desc.text)
         if img_match: return img_match.group(1)
     return ""
 
@@ -49,10 +49,10 @@ def fetch_rss():
             
     return "\n---\n".join(articles)
 
-# 2. Setup Database & Purge Stories Older Than 48 Hours
+# 2. Database & Purge Stories Older Than 48 Hours
 DB_FILE = "news_data.json"
 NOW_EPOCH = int(time.time())
-RETENTION_PERIOD = 48 * 3600  # 48 hours in seconds
+RETENTION_PERIOD = 48 * 3600  # 48 hours
 
 existing_news = []
 if os.path.exists(DB_FILE):
@@ -62,11 +62,10 @@ if os.path.exists(DB_FILE):
     except Exception as e:
         print(f"Error loading database: {e}")
 
-# Keep stories published within the last 48 hours
 active_news = [item for item in existing_news if (NOW_EPOCH - item.get("timestamp_epoch", 0)) < RETENTION_PERIOD]
 existing_urls = {item["url"] for item in active_news}
 
-# 3. Call Gemini API for New Stories
+# 3. Gemini API Call
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise ValueError("GEMINI_API_KEY secret is missing or empty!")
@@ -77,9 +76,8 @@ raw_news = fetch_rss()
 system_prompt = """
 You are an expert AI & Tech Journalist.
 Analyze the raw RSS feeds and return a JSON ARRAY of 3 to 5 verified, distinct major tech stories.
-Do NOT repeat unverified rumors or clickbait.
 
-Output ONLY a raw JSON array matching this exact schema for each item (do NOT use ```json formatting blocks):
+Output ONLY a raw JSON array matching this exact schema for each item (no ```json code blocks):
 [
   {
     "title": "Headline",
@@ -110,7 +108,7 @@ except Exception as e:
     )
     raw_text = response.text
 
-# 4. Process API Output & Add Timestamps
+# 4. Process Output & Add Timestamps
 clean_json = raw_text.replace("```json", "").replace("```", "").strip()
 
 try:
@@ -122,12 +120,6 @@ except Exception as e:
 now_utc = datetime.now(timezone.utc)
 timestamp_str = now_utc.strftime("%b %d • %I:%M %p UTC")
 
-fallback_images = {
-    "AI": "[https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop)",
-    "HARDWARE": "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop)",
-    "SECURITY": "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop)",
-    "SOFTWARE": "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop)"
-}
 default_fallback = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)"
 
 added_count = 0
@@ -135,15 +127,14 @@ for item in new_items:
     url = item.get("url", "").strip()
     if url and url not in existing_urls:
         img = item.get("image_url", "").strip()
-        if not img or len(img) < 10:
-            cat = item.get("category", "").upper()
-            img = next((img_url for key, img_url in fallback_images.items() if key in cat), default_fallback)
+        if not img or not img.startswith("http"):
+            img = default_fallback
             
         item["image_url"] = img
         item["timestamp_epoch"] = NOW_EPOCH
         item["timestamp_display"] = timestamp_str
         
-        active_news.insert(0, item)  # Insert newest at top
+        active_news.insert(0, item)
         existing_urls.add(url)
         added_count += 1
 
@@ -151,13 +142,13 @@ for item in new_items:
 with open(DB_FILE, "w", encoding="utf-8") as f:
     json.dump(active_news, f, indent=2)
 
-# 5. Build HTML Page
+# 5. Build HTML with Anti-Stutter CSS & Anti-Loop Image Fallbacks
 cards_html = ""
 for item in active_news:
     cards_html += f"""
 <article class="news-card">
   <div class="card-image">
-    <img src="{item.get('image_url')}" alt="News Image" onerror="this.src='{default_fallback}'">
+    <img src="{item.get('image_url')}" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='{default_fallback}';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
@@ -220,9 +211,16 @@ html_page = f"""<!DOCTYPE html>
             border-color: var(--accent);
         }}
         
+        .card-image {{
+            background: #0f172a;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }}
+        
         .card-image img {{
             width: 100%;
-            height: 220px;
+            height: 100%;
             object-fit: cover;
             display: block;
         }}
@@ -284,8 +282,7 @@ html_page = f"""<!DOCTYPE html>
 
         @media (min-width: 640px) {{
             .news-card {{ flex-direction: row; }}
-            .card-image {{ width: 35%; flex-shrink: 0; }}
-            .card-image img {{ height: 100%; }}
+            .card-image {{ width: 35%; flex-shrink: 0; aspect-ratio: auto; }}
             .card-content {{ width: 65%; }}
         }}
     </style>
@@ -305,4 +302,4 @@ html_page = f"""<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_page)
 
-print(f"Updated news site successfully. Added {added_count} new stories. Total active stories in last 48h: {len(active_news)}")
+print(f"Updated news site smoothly. Active stories in last 48h: {len(active_news)}")
