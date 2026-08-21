@@ -1,5 +1,18 @@
 [
   {
+    "title": "Generalist AI Robots Demonstrate Real-Time On-the-Spot Learning",
+    "url": "https://www.wired.com/story/generalist-ai-robots-learn-like-clever-toddlers/",
+    "category": "AI",
+    "summary": "Researchers have demonstrated generalist AI models that enable physical robots to adapt and master new physical tasks on the fly. Rather than relying solely on pre-programmed instructions, these systems absorb physical feedback dynamically in their environments.",
+    "point1": "Robotic systems equipped with generalist AI are learning physical tasks spontaneously in real-world settings.",
+    "point2": "Marks a critical step from rigid industrial automation toward versatile, adaptive embodied AI.",
+    "point3": "Accelerates the timeline for consumer humanoids and flexible commercial robotics in complex environments.",
+    "rss_image": "https://media.wired.com/photos/6a85e8ea4518d27679a9b132/master/pass/AI-Lab-Very-Clever-Robot-Creeped-Me-Out-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a85e8ea4518d27679a9b132/master/pass/AI-Lab-Very-Clever-Robot-Creeped-Me-Out-Business.jpg",
+    "timestamp_epoch": 1787347022,
+    "timestamp_display": "Aug 21 \u2022 09:17 PM UTC"
+  },
+  {
     "title": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
     "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
     "category": "ARTIFICIAL INTELLIGENCE",
