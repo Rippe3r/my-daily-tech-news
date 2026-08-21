@@ -1,5 +1,29 @@
 [
   {
+    "title": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
+    "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
+    "category": "ARTIFICIAL INTELLIGENCE",
+    "summary": "AI data supply startup Micro1 reached a $500 million gross run rate as demand for high-quality human training data continues to surge. The rapid growth highlights the immense capital flowing into data annotation to train next-generation frontier AI models.",
+    "point1": "Micro1 hit a $500 million run rate supplying vetted human-in-the-loop training datasets.",
+    "point2": "Proves that specialized high-quality data collection remains a vital bottleneck for generative AI development.",
+    "point3": "Startup valuations in data curation are expected to keep climbing as standard web-scraped data reaches quality ceilings.",
+    "image_url": "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)",
+    "timestamp_epoch": 1787343458,
+    "timestamp_display": "Aug 21 \u2022 08:17 PM UTC"
+  },
+  {
+    "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
+    "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/",
+    "category": "ARTIFICIAL INTELLIGENCE",
+    "summary": "Enterprise adoption data shows OpenAI regaining momentum against chief rival Anthropic among corporate customers. Enterprise-grade security features, reduced API costs, and productivity tooling integrations are driving the renewed business adoption.",
+    "point1": "OpenAI is closing the enterprise adoption gap with Anthropic across key business sectors.",
+    "point2": "Headed competition among primary LLM providers is accelerating pricing drops and enterprise feature rollouts.",
+    "point3": "Winning market share will depend on offering seamless workflow integrations and top-tier data privacy guarantees.",
+    "image_url": "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)",
+    "timestamp_epoch": 1787343458,
+    "timestamp_display": "Aug 21 \u2022 08:17 PM UTC"
+  },
+  {
     "title": "Starcloud Raises $250 Million to Build Space-Based Data Centers",
     "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
     "category": "SPACE TECH",
