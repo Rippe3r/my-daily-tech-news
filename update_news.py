@@ -1,11 +1,15 @@
 import os
 import ssl
 import re
+import json
+import time
+from datetime import datetime, timezone
 import urllib.request
 import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
+# 1. RSS Feed Parser
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -13,21 +17,14 @@ RSS_FEEDS = [
 ]
 
 def extract_image_url(item):
-    """Extract thumbnail or image URL from RSS XML structure."""
     for child in item:
-        if child.tag.endswith(('thumbnail', 'content')):
+        if child.tag.endswith(('thumbnail', 'content', 'enclosure')):
             url = child.attrib.get('url')
             if url: return url
-        if child.tag == 'enclosure':
-            url = child.attrib.get('url')
-            if url: return url
-            
     desc = item.find('description')
     if desc is not None and desc.text:
         img_match = re.search(r'<img [^>]*src="([^"]+)"', desc.text)
-        if img_match:
-            return img_match.group(1)
-            
+        if img_match: return img_match.group(1)
     return ""
 
 def fetch_rss():
@@ -41,7 +38,7 @@ def fetch_rss():
             req = urllib.request.Request(feed, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
             xml_data = urllib.request.urlopen(req, context=ctx, timeout=10).read()
             root = ET.fromstring(xml_data)
-            for item in root.findall('.//item')[:6]:
+            for item in root.findall('.//item')[:5]:
                 title = item.find('title').text if item.find('title') is not None else ""
                 link = item.find('link').text if item.find('link') is not None else ""
                 img = extract_image_url(item)
@@ -52,47 +49,49 @@ def fetch_rss():
             
     return "\n---\n".join(articles)
 
+# 2. Setup Database & Purge Stories Older Than 48 Hours
+DB_FILE = "news_data.json"
+NOW_EPOCH = int(time.time())
+RETENTION_PERIOD = 48 * 3600  # 48 hours in seconds
+
+existing_news = []
+if os.path.exists(DB_FILE):
+    try:
+        with open(DB_FILE, "r", encoding="utf-8") as f:
+            existing_news = json.load(f)
+    except Exception as e:
+        print(f"Error loading database: {e}")
+
+# Keep stories published within the last 48 hours
+active_news = [item for item in existing_news if (NOW_EPOCH - item.get("timestamp_epoch", 0)) < RETENTION_PERIOD]
+existing_urls = {item["url"] for item in active_news}
+
+# 3. Call Gemini API for New Stories
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
-    raise ValueError("GEMINI_API_KEY secret is missing or empty in GitHub Secrets!")
+    raise ValueError("GEMINI_API_KEY secret is missing or empty!")
 
 client = genai.Client(api_key=api_key)
-
 raw_news = fetch_rss()
-if not raw_news:
-    raise ValueError("Could not retrieve news items from RSS feeds.")
 
 system_prompt = """
-You are an expert AI & Tech Journalist and Fact-Checker.
-Select 6 to 8 verified, major tech stories from the raw feed list. Exclude clickbait, duplicate topics, and unverified rumors.
+You are an expert AI & Tech Journalist.
+Analyze the raw RSS feeds and return a JSON ARRAY of 3 to 5 verified, distinct major tech stories.
+Do NOT repeat unverified rumors or clickbait.
 
-For each story, output strictly this HTML structure (do NOT use ```html formatting blocks):
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="IMAGE_URL_OR_FALLBACK" alt="News Image" onerror="this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)'">
-  </div>
-  <div class="card-content">
-    <span class="category">CATEGORY_NAME</span>
-    <h2 class="title"><a href="ORIGINAL_STORY_URL" target="_blank" rel="noopener">STORY_TITLE</a></h2>
-    <p class="summary">Detailed 2-3 sentence overview explaining what occurred, key context, and industry impact.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Important statistic, announcement, or primary takeaway.</li>
-      <li><strong>Impact:</strong> Why this matters for the tech industry or users.</li>
-      <li><strong>Next Steps:</strong> Expected future updates, product timeline, or legal/business implications.</li>
-    </ul>
-    <a href="ORIGINAL_STORY_URL" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-IMAGE SELECTION RULES:
-1. If the input item provides an Image URL, use that link in <img src="...">.
-2. If Image URL is blank or missing, select one appropriate Unsplash image based on topic:
-   - AI / Machine Learning: [https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop)
-   - Chips / Hardware / Data Centers: [https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop)
-   - Security / Law / Privacy: [https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop)
-   - Dev Tools / Code / Software: [https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop)
-   - General Business / Startups: [https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)
+Output ONLY a raw JSON array matching this exact schema for each item (do NOT use ```json formatting blocks):
+[
+  {
+    "title": "Headline",
+    "url": "Original Story Link",
+    "category": "CATEGORY_NAME",
+    "summary": "Detailed 2-3 sentence overview.",
+    "point1": "Key fact or primary takeaway.",
+    "point2": "Why this matters for users/industry.",
+    "point3": "Future outlook or timeline.",
+    "image_url": "Image URL from feed or leave blank"
+  }
+]
 """
 
 try:
@@ -103,7 +102,7 @@ try:
     )
     raw_text = response.text
 except Exception as e:
-    print(f"Gemini 3.6 call failed: {e}. Falling back to gemini-1.5-flash...")
+    print(f"Primary model failed: {e}. Falling back...")
     response = client.models.generate_content(
         model="gemini-1.5-flash",
         contents=f"Raw news data:\n{raw_news}",
@@ -111,14 +110,78 @@ except Exception as e:
     )
     raw_text = response.text
 
-clean_content = raw_text.replace("```html", "").replace("```", "").strip()
+# 4. Process API Output & Add Timestamps
+clean_json = raw_text.replace("```json", "").replace("```", "").strip()
+
+try:
+    new_items = json.loads(clean_json)
+except Exception as e:
+    print(f"JSON parsing error: {e}")
+    new_items = []
+
+now_utc = datetime.now(timezone.utc)
+timestamp_str = now_utc.strftime("%b %d • %I:%M %p UTC")
+
+fallback_images = {
+    "AI": "[https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop)",
+    "HARDWARE": "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop)",
+    "SECURITY": "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop)",
+    "SOFTWARE": "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop)"
+}
+default_fallback = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)"
+
+added_count = 0
+for item in new_items:
+    url = item.get("url", "").strip()
+    if url and url not in existing_urls:
+        img = item.get("image_url", "").strip()
+        if not img or len(img) < 10:
+            cat = item.get("category", "").upper()
+            img = next((img_url for key, img_url in fallback_images.items() if key in cat), default_fallback)
+            
+        item["image_url"] = img
+        item["timestamp_epoch"] = NOW_EPOCH
+        item["timestamp_display"] = timestamp_str
+        
+        active_news.insert(0, item)  # Insert newest at top
+        existing_urls.add(url)
+        added_count += 1
+
+# Save database
+with open(DB_FILE, "w", encoding="utf-8") as f:
+    json.dump(active_news, f, indent=2)
+
+# 5. Build HTML Page
+cards_html = ""
+for item in active_news:
+    cards_html += f"""
+<article class="news-card">
+  <div class="card-image">
+    <img src="{item.get('image_url')}" alt="News Image" onerror="this.src='{default_fallback}'">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">{item.get('category', 'TECH')}</span>
+      <span class="timestamp">⏰ {item.get('timestamp_display')}</span>
+    </div>
+    <h2 class="title"><a href="{item.get('url')}" target="_blank" rel="noopener">{item.get('title')}</a></h2>
+    <p class="summary">{item.get('summary')}</p>
+    <ul class="key-points">
+      <li><strong>Key Fact:</strong> {item.get('point1', '')}</li>
+      <li><strong>Impact:</strong> {item.get('point2', '')}</li>
+      <li><strong>Next Steps:</strong> {item.get('point3', '')}</li>
+    </ul>
+    <a href="{item.get('url')}" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+  </div>
+</article>
+"""
 
 html_page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily AI & Tech Digest</title>
+    <title>Hourly AI & Tech Pulse</title>
     <style>
         :root {{
             --bg-color: #0f172a;
@@ -166,6 +229,14 @@ html_page = f"""<!DOCTYPE html>
         
         .card-content {{ padding: 24px; flex-grow: 1; }}
         
+        .meta-bar {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }}
+        
         .category {{ 
             background: #0284c7; 
             color: white; 
@@ -175,8 +246,12 @@ html_page = f"""<!DOCTYPE html>
             font-weight: 700; 
             text-transform: uppercase; 
             letter-spacing: 0.5px;
-            display: inline-block;
-            margin-bottom: 12px;
+        }}
+        
+        .timestamp {{
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 500;
         }}
         
         .title {{ margin: 0 0 12px 0; font-size: 1.35rem; line-height: 1.3; }}
@@ -217,11 +292,11 @@ html_page = f"""<!DOCTYPE html>
 </head>
 <body>
     <header>
-        <h1>⚡ Daily AI & Tech Pulse</h1>
-        <p class="subtitle">Verified Daily News, Images & Deep-Dive Takeaways</p>
+        <h1>⚡ Hourly AI & Tech Pulse</h1>
+        <p class="subtitle">Live Verified News Feed • Stories Retained for 48 Hours</p>
     </header>
     <main>
-        {clean_content}
+        {cards_html}
     </main>
 </body>
 </html>
@@ -230,4 +305,4 @@ html_page = f"""<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_page)
 
-print("Successfully generated index.html with images, hyperlinks, and detailed takeaways!")
+print(f"Updated news site successfully. Added {added_count} new stories. Total active stories in last 48h: {len(active_news)}")
