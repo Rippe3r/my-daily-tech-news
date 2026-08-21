@@ -3,28 +3,51 @@ import ssl
 import re
 import json
 import time
+import random
 from datetime import datetime, timezone
 import urllib.request
 import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# 1. RSS Feed Parser with URL Validation
+# 1. RSS Feed Parser (Handles Media RSS Namespaces)
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
     "https://www.wired.com/feed/category/business/latest/rss"
 ]
 
+NAMESPACES = {
+    'media': 'http://search.yahoo.com/mrss/',
+    'content': 'http://purl.org/rss/1.0/modules/content/'
+}
+
 def extract_image_url(item):
-    for child in item:
-        if child.tag.endswith(('thumbnail', 'content', 'enclosure')):
-            url = child.attrib.get('url')
-            if url and url.startswith('http'): return url
+    """Extract valid image URL from RSS XML structure including media namespace."""
+    # Check media:content and media:thumbnail
+    for tag in ['.//media:content', './/media:thumbnail']:
+        elem = item.find(tag, NAMESPACES)
+        if elem is not None:
+            url = elem.attrib.get('url')
+            if url and url.startswith('http') and not url.endswith('.svg'):
+                return url
+
+    # Check standard enclosure tag
+    enclosure = item.find('enclosure')
+    if enclosure is not None:
+        url = enclosure.attrib.get('url')
+        if url and url.startswith('http'):
+            return url
+
+    # Check HTML description tag for <img>
     desc = item.find('description')
     if desc is not None and desc.text:
         img_match = re.search(r'<img [^>]*src="(https?://[^"]+)"', desc.text)
-        if img_match: return img_match.group(1)
+        if img_match:
+            img_url = img_match.group(1)
+            if not img_url.endswith('.svg'):
+                return img_url
+
     return ""
 
 def fetch_rss():
@@ -43,7 +66,7 @@ def fetch_rss():
                 link = item.find('link').text if item.find('link') is not None else ""
                 img = extract_image_url(item)
                 if title and link:
-                    articles.append(f"Title: {title}\nURL: {link}\nImage: {img}")
+                    articles.append(f"Title: {title}\nURL: {link}\nRSS_Image: {img}")
         except Exception as e:
             print(f"Warning feed error {feed}: {e}")
             
@@ -77,17 +100,17 @@ system_prompt = """
 You are an expert AI & Tech Journalist.
 Analyze the raw RSS feeds and return a JSON ARRAY of 3 to 5 verified, distinct major tech stories.
 
-Output ONLY a raw JSON array matching this exact schema for each item (no ```json code blocks):
+Output ONLY a raw JSON array matching this exact schema for each item (do NOT use ```json code blocks):
 [
   {
     "title": "Headline",
     "url": "Original Story Link",
-    "category": "CATEGORY_NAME",
+    "category": "AI | HARDWARE | SECURITY | SOFTWARE | MOBILE | BUSINESS",
     "summary": "Detailed 2-3 sentence overview.",
     "point1": "Key fact or primary takeaway.",
     "point2": "Why this matters for users/industry.",
     "point3": "Future outlook or timeline.",
-    "image_url": "Image URL from feed or leave blank"
+    "rss_image": "Copy exact RSS_Image URL from feed if present, otherwise leave empty string"
   }
 ]
 """
@@ -108,7 +131,35 @@ except Exception as e:
     )
     raw_text = response.text
 
-# 4. Process Output & Add Timestamps
+# 4. Verified Category Image Pool (Guaranteed Working Unsplash Images)
+CATEGORY_IMAGES = {
+    "AI": [
+        "[https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop)"
+    ],
+    "HARDWARE": [
+        "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop)"
+    ],
+    "SECURITY": [
+        "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop)"
+    ],
+    "SOFTWARE": [
+        "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop)"
+    ],
+    "MOBILE": [
+        "[https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop)"
+    ],
+    "BUSINESS": [
+        "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)",
+        "[https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop)"
+    ]
+}
+DEFAULT_IMAGE = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)"
+
 clean_json = raw_text.replace("```json", "").replace("```", "").strip()
 
 try:
@@ -120,17 +171,21 @@ except Exception as e:
 now_utc = datetime.now(timezone.utc)
 timestamp_str = now_utc.strftime("%b %d • %I:%M %p UTC")
 
-default_fallback = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)"
-
 added_count = 0
 for item in new_items:
     url = item.get("url", "").strip()
     if url and url not in existing_urls:
-        img = item.get("image_url", "").strip()
-        if not img or not img.startswith("http"):
-            img = default_fallback
+        rss_img = item.get("rss_image", "").strip()
+        cat = item.get("category", "BUSINESS").upper()
+        
+        # Determine image: Use valid RSS feed image or pick a verified category image
+        if rss_img and rss_img.startswith("http") and not rss_img.endswith(".svg"):
+            final_img = rss_img
+        else:
+            img_list = CATEGORY_IMAGES.get(cat, CATEGORY_IMAGES["BUSINESS"])
+            final_img = random.choice(img_list)
             
-        item["image_url"] = img
+        item["image_url"] = final_img
         item["timestamp_epoch"] = NOW_EPOCH
         item["timestamp_display"] = timestamp_str
         
@@ -142,13 +197,13 @@ for item in new_items:
 with open(DB_FILE, "w", encoding="utf-8") as f:
     json.dump(active_news, f, indent=2)
 
-# 5. Build HTML with Anti-Stutter CSS & Anti-Loop Image Fallbacks
+# 5. Build HTML Page
 cards_html = ""
 for item in active_news:
     cards_html += f"""
 <article class="news-card">
   <div class="card-image">
-    <img src="{item.get('image_url')}" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='{default_fallback}';">
+    <img src="{item.get('image_url')}" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='{DEFAULT_IMAGE}';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
@@ -212,10 +267,11 @@ html_page = f"""<!DOCTYPE html>
         }}
         
         .card-image {{
-            background: #0f172a;
+            background: #1e293b;
             width: 100%;
-            aspect-ratio: 16 / 9;
+            height: 200px;
             overflow: hidden;
+            flex-shrink: 0;
         }}
         
         .card-image img {{
@@ -282,7 +338,7 @@ html_page = f"""<!DOCTYPE html>
 
         @media (min-width: 640px) {{
             .news-card {{ flex-direction: row; }}
-            .card-image {{ width: 35%; flex-shrink: 0; aspect-ratio: auto; }}
+            .card-image {{ width: 35%; height: auto; min-height: 220px; }}
             .card-content {{ width: 65%; }}
         }}
     </style>
@@ -302,4 +358,4 @@ html_page = f"""<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_page)
 
-print(f"Updated news site smoothly. Active stories in last 48h: {len(active_news)}")
+print(f"Updated news site successfully. Total active stories: {len(active_news)}")
