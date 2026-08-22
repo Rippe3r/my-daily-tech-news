@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# 1. RSS Feed Parser (Handles Media RSS Namespaces)
+# 1. RSS Feed Parser
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -23,8 +23,6 @@ NAMESPACES = {
 }
 
 def extract_image_url(item):
-    """Extract valid image URL from RSS XML structure including media namespace."""
-    # Check media:content and media:thumbnail
     for tag in ['.//media:content', './/media:thumbnail']:
         elem = item.find(tag, NAMESPACES)
         if elem is not None:
@@ -32,14 +30,12 @@ def extract_image_url(item):
             if url and url.startswith('http') and not url.endswith('.svg'):
                 return url
 
-    # Check standard enclosure tag
     enclosure = item.find('enclosure')
     if enclosure is not None:
         url = enclosure.attrib.get('url')
         if url and url.startswith('http'):
             return url
 
-    # Check HTML description tag for <img>
     desc = item.find('description')
     if desc is not None and desc.text:
         img_match = re.search(r'<img [^>]*src="(https?://[^"]+)"', desc.text)
@@ -75,7 +71,7 @@ def fetch_rss():
 # 2. Database & Purge Stories Older Than 48 Hours
 DB_FILE = "news_data.json"
 NOW_EPOCH = int(time.time())
-RETENTION_PERIOD = 48 * 3600  # 48 hours
+RETENTION_PERIOD = 48 * 3600
 
 existing_news = []
 if os.path.exists(DB_FILE):
@@ -131,34 +127,29 @@ except Exception as e:
     )
     raw_text = response.text
 
-# 4. Verified Category Image Pool (Guaranteed Working Unsplash Images)
+# 4. Reliable Tech Image Pool
 CATEGORY_IMAGES = {
     "AI": [
-        "[https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop)"
+        "[https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80)",
+        "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80)"
     ],
     "HARDWARE": [
-        "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&auto=format&fit=crop)"
+        "[https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80)",
+        "[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80)"
     ],
     "SECURITY": [
-        "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop)"
+        "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80)",
+        "[https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80)"
     ],
     "SOFTWARE": [
-        "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop)"
-    ],
-    "MOBILE": [
-        "[https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop)"
+        "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80)",
+        "[https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80)"
     ],
     "BUSINESS": [
-        "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)",
-        "[https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop)"
+        "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)"
     ]
 }
-DEFAULT_IMAGE = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)"
+DEFAULT_IMAGE = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)"
 
 clean_json = raw_text.replace("```json", "").replace("```", "").strip()
 
@@ -178,7 +169,6 @@ for item in new_items:
         rss_img = item.get("rss_image", "").strip()
         cat = item.get("category", "BUSINESS").upper()
         
-        # Determine image: Use valid RSS feed image or pick a verified category image
         if rss_img and rss_img.startswith("http") and not rss_img.endswith(".svg"):
             final_img = rss_img
         else:
@@ -193,17 +183,16 @@ for item in new_items:
         existing_urls.add(url)
         added_count += 1
 
-# Save database
 with open(DB_FILE, "w", encoding="utf-8") as f:
     json.dump(active_news, f, indent=2)
 
-# 5. Build HTML Page
+# 5. Cyberpunk / Glassmorphism HTML + Three.js 3D Interactive Node Canvas
 cards_html = ""
 for item in active_news:
     cards_html += f"""
 <article class="news-card">
   <div class="card-image">
-    <img src="{item.get('image_url')}" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='{DEFAULT_IMAGE}';">
+    <img src="{item.get('image_url')}" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='{DEFAULT_IMAGE}';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
@@ -213,11 +202,11 @@ for item in active_news:
     <h2 class="title"><a href="{item.get('url')}" target="_blank" rel="noopener">{item.get('title')}</a></h2>
     <p class="summary">{item.get('summary')}</p>
     <ul class="key-points">
-      <li><strong>Key Fact:</strong> {item.get('point1', '')}</li>
+      <li><strong>Takeaway:</strong> {item.get('point1', '')}</li>
       <li><strong>Impact:</strong> {item.get('point2', '')}</li>
-      <li><strong>Next Steps:</strong> {item.get('point3', '')}</li>
+      <li><strong>Outlook:</strong> {item.get('point3', '')}</li>
     </ul>
-    <a href="{item.get('url')}" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+    <a href="{item.get('url')}" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
   </div>
 </article>
 """
@@ -227,51 +216,91 @@ html_page = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hourly AI & Tech Pulse</title>
+    <title>AI & Tech Cyber Pulse</title>
+    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
     <style>
         :root {{
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
+            --bg-color: #050814;
+            --card-bg: rgba(15, 23, 42, 0.75);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
+            --cyan: #00f3ff;
+            --purple: #a855f7;
+            --border: rgba(56, 189, 248, 0.2);
         }}
+
+        * {{ box-sizing: border-box; }}
+        
         body {{ 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            max-width: 900px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif; 
+            max-width: 960px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
             background: var(--bg-color); 
             color: var(--text-main); 
-            line-height: 1.6; 
+            line-height: 1.6;
+            overflow-x: hidden;
         }}
-        header {{ text-align: center; margin-bottom: 40px; }}
-        h1 {{ color: var(--accent); margin-bottom: 6px; font-size: 2.2rem; }}
-        .subtitle {{ color: var(--text-muted); font-size: 0.95rem; }}
+
+        #bg-canvas {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }}
+
+        header {{ 
+            text-align: center; 
+            margin-bottom: 50px; 
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+        }}
+
+        h1 {{ 
+            background: linear-gradient(135deg, #00f3ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 8px 0; 
+            font-size: 2.5rem; 
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }}
+
+        .subtitle {{ color: var(--text-muted); font-size: 0.95rem; font-family: monospace; }}
         
         .news-card {{ 
             background: var(--card-bg); 
-            border-radius: 14px; 
-            margin-bottom: 30px; 
+            backdrop-filter: blur(16px);
+            border-radius: 16px; 
+            margin-bottom: 35px; 
             border: 1px solid var(--border); 
             overflow: hidden; 
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }}
+
         .news-card:hover {{
-            transform: translateY(-2px);
-            border-color: var(--accent);
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--cyan);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.25);
         }}
         
         .card-image {{
-            background: #1e293b;
+            background: #0b1120;
             width: 100%;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
             flex-shrink: 0;
+            position: relative;
         }}
         
         .card-image img {{
@@ -279,78 +308,166 @@ html_page = f"""<!DOCTYPE html>
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 0.5s ease;
+        }}
+
+        .news-card:hover .card-image img {{
+            transform: scale(1.05);
         }}
         
-        .card-content {{ padding: 24px; flex-grow: 1; }}
+        .card-content {{ padding: 28px; flex-grow: 1; }}
         
         .meta-bar {{
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
+            margin-bottom: 14px;
         }}
         
         .category {{ 
-            background: #0284c7; 
-            color: white; 
-            font-size: 0.72rem; 
-            padding: 3px 10px; 
-            border-radius: 6px; 
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.2), rgba(168, 85, 247, 0.2));
+            color: var(--cyan); 
+            border: 1px solid var(--cyan);
+            font-size: 0.7rem; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
             font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            font-family: monospace;
         }}
         
         .timestamp {{
             color: var(--text-muted);
             font-size: 0.8rem;
-            font-weight: 500;
+            font-family: monospace;
         }}
         
-        .title {{ margin: 0 0 12px 0; font-size: 1.35rem; line-height: 1.3; }}
+        .title {{ margin: 0 0 14px 0; font-size: 1.4rem; line-height: 1.35; }}
         .title a {{ color: var(--text-main); text-decoration: none; transition: color 0.2s; }}
-        .title a:hover {{ color: var(--accent); }}
+        .title a:hover {{ color: var(--cyan); }}
         
-        .summary {{ color: #cbd5e1; font-size: 0.98rem; margin-bottom: 16px; }}
+        .summary {{ color: #cbd5e1; font-size: 0.98rem; margin-bottom: 20px; }}
         
         .key-points {{
-            background: rgba(15, 23, 42, 0.5);
-            border-left: 3px solid var(--accent);
-            padding: 12px 16px 12px 28px;
-            margin: 0 0 20px 0;
-            border-radius: 0 8px 8px 0;
+            background: rgba(5, 8, 20, 0.7);
+            border-left: 3px solid var(--purple);
+            padding: 14px 18px 14px 28px;
+            margin: 0 0 22px 0;
+            border-radius: 0 10px 10px 0;
             font-size: 0.9rem;
             color: #94a3b8;
         }}
-        .key-points li {{ margin-bottom: 6px; }}
+        .key-points li {{ margin-bottom: 8px; }}
         .key-points li:last-child {{ margin-bottom: 0; }}
-        .key-points strong {{ color: var(--text-main); }}
+        .key-points strong {{ color: var(--cyan); font-family: monospace; }}
         
         .read-more {{ 
             display: inline-block; 
-            color: var(--accent); 
-            font-weight: 600; 
+            color: var(--cyan); 
+            font-weight: 700; 
             text-decoration: none; 
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-family: monospace;
+            letter-spacing: 1px;
+            transition: gap 0.2s ease;
         }}
-        .read-more:hover {{ text-decoration: underline; }}
+        .read-more:hover {{ color: var(--purple); text-shadow: 0 0 10px var(--purple); }}
 
-        @media (min-width: 640px) {{
+        @media (min-width: 680px) {{
             .news-card {{ flex-direction: row; }}
-            .card-image {{ width: 35%; height: auto; min-height: 220px; }}
-            .card-content {{ width: 65%; }}
+            .card-image {{ width: 38%; height: auto; min-height: 240px; }}
+            .card-content {{ width: 62%; }}
         }}
     </style>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
+
     <header>
-        <h1>⚡ Hourly AI & Tech Pulse</h1>
-        <p class="subtitle">Live Verified News Feed • Stories Retained for 48 Hours</p>
+        <h1>⚡ TECH MATRIX PULSE</h1>
+        <p class="subtitle">// NEURAL TECH DIGEST • LIVE 48-HOUR STREAM</p>
     </header>
+
     <main>
         {cards_html}
     </main>
+
+    <script>
+        // Three.js Interactive 3D Node Mesh Background
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({{ canvas: document.getElementById('bg-canvas'), alpha: true, antialias: true }});
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const particleCount = 70;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(particleCount * 3);
+        const velocities = [];
+
+        for (let i = 0; i < particleCount * 3; i += 3) {{
+            positions[i] = (Math.random() - 0.5) * 15;
+            positions[i + 1] = (Math.random() - 0.5) * 15;
+            positions[i + 2] = (Math.random() - 0.5) * 15;
+
+            velocities.push({{
+                x: (Math.random() - 0.5) * 0.008,
+                y: (Math.random() - 0.5) * 0.008,
+                z: (Math.random() - 0.5) * 0.008
+            }});
+        }}
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+        const material = new THREE.PointsMaterial({{
+            color: 0x00f3ff,
+            size: 0.12,
+            transparent: true,
+            opacity: 0.8
+        }});
+
+        const particles = new THREE.Points(geometry, material);
+        scene.add(particles);
+
+        camera.position.z = 8;
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {{
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 0.5;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 0.5;
+        }});
+
+        function animate() {{
+            requestAnimationFrame(animate);
+
+            const pos = particles.geometry.attributes.position.array;
+            for (let i = 0; i < particleCount; i++) {{
+                const idx = i * 3;
+                pos[idx] += velocities[i].x;
+                pos[idx + 1] += velocities[i].y;
+                pos[idx + 2] += velocities[i].z;
+
+                if (Math.abs(pos[idx]) > 8) velocities[i].x *= -1;
+                if (Math.abs(pos[idx + 1]) > 8) velocities[i].y *= -1;
+                if (Math.abs(pos[idx + 2]) > 8) velocities[i].z *= -1;
+            }}
+            particles.geometry.attributes.position.needsUpdate = true;
+
+            particles.rotation.y += 0.001 + mouseX * 0.02;
+            particles.rotation.x += 0.0005 + mouseY * 0.02;
+
+            renderer.render(scene, camera);
+        }}
+
+        animate();
+
+        window.addEventListener('resize', () => {{
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }});
+    </script>
 </body>
 </html>
 """
@@ -358,4 +475,4 @@ html_page = f"""<!DOCTYPE html>
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_page)
 
-print(f"Updated news site successfully. Total active stories: {len(active_news)}")
+print(f"Interactive 3JS site updated successfully! Active stories: {len(active_news)}")
