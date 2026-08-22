@@ -121,7 +121,7 @@ try:
 except Exception as e:
     print(f"Primary model failed: {e}. Falling back...")
     response = client.models.generate_content(
-        model="gemini-1.5-flash",
+        model="gemini-3.5-flash",
         contents=f"Raw news data:\n{raw_news}",
         config=types.GenerateContentConfig(system_instruction=system_prompt)
     )
@@ -130,26 +130,26 @@ except Exception as e:
 # 4. Reliable Tech Image Pool
 CATEGORY_IMAGES = {
     "AI": [
-        "[https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80)",
-        "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80)"
+        "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
     ],
     "HARDWARE": [
-        "[https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80)",
-        "[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80)"
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80"
     ],
     "SECURITY": [
-        "[https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80)",
-        "[https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80)"
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
     ],
     "SOFTWARE": [
-        "[https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80)",
-        "[https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80)"
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80"
     ],
     "BUSINESS": [
-        "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)"
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
     ]
 }
-DEFAULT_IMAGE = "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)"
+DEFAULT_IMAGE = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
 
 clean_json = raw_text.replace("```json", "").replace("```", "").strip()
 
@@ -217,7 +217,7 @@ html_page = f"""<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & Tech Cyber Pulse</title>
-    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {{
             --bg-color: #050814;
@@ -393,80 +393,213 @@ html_page = f"""<!DOCTYPE html>
     </main>
 
     <script>
-        // Three.js Interactive 3D Node Mesh Background
+    // Three.js Interactive Neural Network Background
+    (function () {{
+        const canvas = document.getElementById('bg-canvas');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({{ canvas: document.getElementById('bg-canvas'), alpha: true, antialias: true }});
-        
+        scene.fog = new THREE.FogExp2(0x050814, 0.05);
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 9;
+
+        const renderer = new THREE.WebGLRenderer({{ canvas: canvas, alpha: true, antialias: true }});
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        const particleCount = 70;
-        const geometry = new THREE.BufferGeometry();
-        const positions = new Float32Array(particleCount * 3);
+        // Soft circular sprite so nodes read as glowing points rather than hard squares
+        function makeNodeTexture() {{
+            const size = 128;
+            const c = document.createElement('canvas');
+            c.width = size;
+            c.height = size;
+            const ctx = c.getContext('2d');
+            const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+            g.addColorStop(0, 'rgba(255,255,255,1)');
+            g.addColorStop(0.35, 'rgba(255,255,255,0.55)');
+            g.addColorStop(1, 'rgba(255,255,255,0)');
+            ctx.fillStyle = g;
+            ctx.fillRect(0, 0, size, size);
+            return new THREE.CanvasTexture(c);
+        }}
+
+        const NODE_COUNT = window.innerWidth < 680 ? 55 : 95;
+        const BOUNDS = 9;
+        const LINK_DIST = 3;
+
+        const positions = new Float32Array(NODE_COUNT * 3);
         const velocities = [];
 
-        for (let i = 0; i < particleCount * 3; i += 3) {{
-            positions[i] = (Math.random() - 0.5) * 15;
-            positions[i + 1] = (Math.random() - 0.5) * 15;
-            positions[i + 2] = (Math.random() - 0.5) * 15;
-
+        for (let i = 0; i < NODE_COUNT; i++) {{
+            const idx = i * 3;
+            positions[idx] = (Math.random() - 0.5) * BOUNDS * 2;
+            positions[idx + 1] = (Math.random() - 0.5) * BOUNDS * 2;
+            positions[idx + 2] = (Math.random() - 0.5) * BOUNDS * 2;
             velocities.push({{
-                x: (Math.random() - 0.5) * 0.008,
-                y: (Math.random() - 0.5) * 0.008,
-                z: (Math.random() - 0.5) * 0.008
+                x: (Math.random() - 0.5) * 0.006,
+                y: (Math.random() - 0.5) * 0.006,
+                z: (Math.random() - 0.5) * 0.006
             }});
         }}
 
-        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const nodesGeometry = new THREE.BufferGeometry();
+        nodesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-        const material = new THREE.PointsMaterial({{
-            color: 0x00f3ff,
-            size: 0.12,
+        const nodesMaterial = new THREE.PointsMaterial({{
+            size: 0.32,
+            map: makeNodeTexture(),
+            color: 0x5eeaff,
             transparent: true,
-            opacity: 0.8
+            opacity: 0.95,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending,
+            sizeAttenuation: true
         }});
 
-        const particles = new THREE.Points(geometry, material);
-        scene.add(particles);
+        const nodes = new THREE.Points(nodesGeometry, nodesMaterial);
 
-        camera.position.z = 8;
+        // Pre-allocate the max possible connection buffer; only a slice is drawn each frame
+        const maxPairs = (NODE_COUNT * (NODE_COUNT - 1)) / 2;
+        const linePositions = new Float32Array(maxPairs * 2 * 3);
+        const lineColors = new Float32Array(maxPairs * 2 * 3);
 
-        let mouseX = 0, mouseY = 0;
-        document.addEventListener('mousemove', (e) => {{
-            mouseX = (e.clientX / window.innerWidth - 0.5) * 0.5;
-            mouseY = (e.clientY / window.innerHeight - 0.5) * 0.5;
+        const linesGeometry = new THREE.BufferGeometry();
+        const linePosAttr = new THREE.BufferAttribute(linePositions, 3);
+        const lineColorAttr = new THREE.BufferAttribute(lineColors, 3);
+        linePosAttr.setUsage(THREE.DynamicDrawUsage);
+        lineColorAttr.setUsage(THREE.DynamicDrawUsage);
+        linesGeometry.setAttribute('position', linePosAttr);
+        linesGeometry.setAttribute('color', lineColorAttr);
+
+        const linesMaterial = new THREE.LineBasicMaterial({{
+            vertexColors: true,
+            transparent: true,
+            opacity: 0.45,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
         }});
+
+        const links = new THREE.LineSegments(linesGeometry, linesMaterial);
+
+        const group = new THREE.Group();
+        group.add(links);
+        group.add(nodes);
+        scene.add(group);
+
+        // Track pointer (mouse or touch) as a 3D world position via a plane facing the camera
+        const raycaster = new THREE.Raycaster();
+        const pointerNDC = new THREE.Vector2(999, 999);
+        const pointerPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+        const pointerWorld = new THREE.Vector3();
+        let pointerActive = false;
+
+        function setPointer(clientX, clientY) {{
+            pointerNDC.x = (clientX / window.innerWidth) * 2 - 1;
+            pointerNDC.y = -(clientY / window.innerHeight) * 2 + 1;
+            pointerActive = true;
+        }}
+
+        window.addEventListener('pointermove', function (e) {{ setPointer(e.clientX, e.clientY); }});
+        window.addEventListener('pointerdown', function (e) {{ setPointer(e.clientX, e.clientY); }});
+        window.addEventListener('pointerleave', function () {{ pointerActive = false; }});
+
+        const CYAN = new THREE.Color(0x00f3ff);
+        const PURPLE = new THREE.Color(0xa855f7);
+        const tmpColor = new THREE.Color();
+
+        function buildLinks() {{
+            let vi = 0;
+            let ci = 0;
+            let segments = 0;
+            for (let i = 0; i < NODE_COUNT; i++) {{
+                const ai = i * 3;
+                for (let j = i + 1; j < NODE_COUNT; j++) {{
+                    const bi = j * 3;
+                    const dx = positions[ai] - positions[bi];
+                    const dy = positions[ai + 1] - positions[bi + 1];
+                    const dz = positions[ai + 2] - positions[bi + 2];
+                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+                    if (dist < LINK_DIST) {{
+                        linePositions[vi++] = positions[ai];
+                        linePositions[vi++] = positions[ai + 1];
+                        linePositions[vi++] = positions[ai + 2];
+                        linePositions[vi++] = positions[bi];
+                        linePositions[vi++] = positions[bi + 1];
+                        linePositions[vi++] = positions[bi + 2];
+
+                        tmpColor.copy(CYAN).lerp(PURPLE, dist / LINK_DIST);
+                        lineColors[ci++] = tmpColor.r;
+                        lineColors[ci++] = tmpColor.g;
+                        lineColors[ci++] = tmpColor.b;
+                        lineColors[ci++] = tmpColor.r;
+                        lineColors[ci++] = tmpColor.g;
+                        lineColors[ci++] = tmpColor.b;
+
+                        segments++;
+                    }}
+                }}
+            }}
+            linePosAttr.needsUpdate = true;
+            lineColorAttr.needsUpdate = true;
+            linesGeometry.setDrawRange(0, segments * 2);
+        }}
 
         function animate() {{
             requestAnimationFrame(animate);
 
-            const pos = particles.geometry.attributes.position.array;
-            for (let i = 0; i < particleCount; i++) {{
-                const idx = i * 3;
-                pos[idx] += velocities[i].x;
-                pos[idx + 1] += velocities[i].y;
-                pos[idx + 2] += velocities[i].z;
-
-                if (Math.abs(pos[idx]) > 8) velocities[i].x *= -1;
-                if (Math.abs(pos[idx + 1]) > 8) velocities[i].y *= -1;
-                if (Math.abs(pos[idx + 2]) > 8) velocities[i].z *= -1;
+            if (pointerActive) {{
+                raycaster.setFromCamera(pointerNDC, camera);
+                raycaster.ray.intersectPlane(pointerPlane, pointerWorld);
             }}
-            particles.geometry.attributes.position.needsUpdate = true;
 
-            particles.rotation.y += 0.001 + mouseX * 0.02;
-            particles.rotation.x += 0.0005 + mouseY * 0.02;
+            for (let i = 0; i < NODE_COUNT; i++) {{
+                const idx = i * 3;
+                positions[idx] += velocities[i].x;
+                positions[idx + 1] += velocities[i].y;
+                positions[idx + 2] += velocities[i].z;
+
+                if (Math.abs(positions[idx]) > BOUNDS) velocities[i].x *= -1;
+                if (Math.abs(positions[idx + 1]) > BOUNDS) velocities[i].y *= -1;
+                if (Math.abs(positions[idx + 2]) > BOUNDS) velocities[i].z *= -1;
+
+                if (pointerActive) {{
+                    const dx = positions[idx] - pointerWorld.x;
+                    const dy = positions[idx + 1] - pointerWorld.y;
+                    const dz = positions[idx + 2] - pointerWorld.z;
+                    const distSq = dx * dx + dy * dy + dz * dz;
+                    const repelRadius = 3.2;
+                    if (distSq < repelRadius * repelRadius && distSq > 0.0001) {{
+                        const dist = Math.sqrt(distSq);
+                        const force = (1 - dist / repelRadius) * 0.03;
+                        positions[idx] += (dx / dist) * force;
+                        positions[idx + 1] += (dy / dist) * force;
+                        positions[idx + 2] += (dz / dist) * force;
+                    }}
+                }}
+            }}
+            nodesGeometry.attributes.position.needsUpdate = true;
+
+            buildLinks();
+
+            group.rotation.y += 0.0009;
 
             renderer.render(scene, camera);
         }}
 
-        animate();
+        if (prefersReducedMotion) {{
+            buildLinks();
+            renderer.render(scene, camera);
+        }} else {{
+            animate();
+        }}
 
-        window.addEventListener('resize', () => {{
+        window.addEventListener('resize', function () {{
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }});
+    }})();
     </script>
 </body>
 </html>
