@@ -1,5 +1,31 @@
 [
   {
+    "title": "English Local Government Rejects Palantir NHS Data Integration",
+    "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
+    "category": "SECURITY",
+    "summary": "Local administrators in an English county have taken a stand against integrating Palantir software within local healthcare services. The rejection highlights growing public resistance to commercial surveillance vendors handling sensitive public health data.",
+    "point1": "Local council refuses integration with Palantir's national NHS data framework.",
+    "point2": "Reflects public distrust over private vendor access to sensitive medical records and user data.",
+    "point3": "Creates a precedent for local governance opt-outs against centralized surveillance tech contracts.",
+    "rss_image": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "timestamp_epoch": 1787359811,
+    "timestamp_display": "Aug 22 \u2022 12:50 AM UTC"
+  },
+  {
+    "title": "Micron CEO Declares AI Demand Has Permanently Altered Memory Market Cycles",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sOHJDX0FqdzZsbVdTTWJzbzhFdFRpMHBFVjVfODAwODlNRERQSUlXZlNrUTdNdHBKSlBhc3JFMkxKa3VEN1dTLV94UTUzbjhIcEs4T00yQk14VXRxWEdROEhzbW5oZl8wczh1dWswT2YyREdScVFMa183MThOQjDSAYQBQVVfeXFMTWV6WGhRb3VDVWFvSF9sUU9sS25ma0w3YUJtZ1pZVUN4ZGphWlVCWU83TVF4b0psLVhLeV85TWY1aGpiOHZfNmRMcHZuSHVUMUlRcmd2dHhsbXJ5bUgwc2tfRmk5eUlicFBFU2dTSkk3RkNwNWtyMVlOUlJFZThKcy0tblhn?oc=5",
+    "category": "HARDWARE",
+    "summary": "Micron Technology's leadership reported that relentless demand for High Bandwidth Memory (HBM) required for AI workloads is fundamentally changing semiconductor dynamics. The boom-and-bust cycle historically seen in memory chips is shifting toward sustained structural growth.",
+    "point1": "Artificial intelligence hardware clusters absorb massive high-density DRAM capacity.",
+    "point2": "Stabilizes semiconductor revenues while prioritizing enterprise server components over consumer hardware.",
+    "point3": "Requires sustained multi-year capital investment to meet long-term AI infrastructure requirements.",
+    "rss_image": "",
+    "image_url": "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)",
+    "timestamp_epoch": 1787359811,
+    "timestamp_display": "Aug 22 \u2022 12:50 AM UTC"
+  },
+  {
     "title": "Corporate AI Debt Surge Tests Investor Limits as Fatigue Emerges",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM0hQck8wSDlzR3ViRDJHS25NaGxwNHdVYWN5cHRUcWJvb0hybjRtclNxMFFGT18tMmc2SEw5RFNYb3ZrSWZpS0VYTw?oc=5",
     "category": "AI",
