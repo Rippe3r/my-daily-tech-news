@@ -1,5 +1,18 @@
 [
   {
+    "title": "Co-Packaged Optics Emerges as Breakthrough for AI Supercomputing",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE44eG5iRFQ2RVc1Z203TEg4c0QteWIzRzFTMTBSTEs0MXB0VUppU01tbWlhTGd2amlZYUhtYzRxaEJpZzBORHlXNW1PbEhiSm12eXlfTjB1NjgxWC13Mml3?oc=5",
+    "category": "HARDWARE",
+    "summary": "New research published in Nature highlights co-packaged optics (CPO) as an essential solution to overcome power and bandwidth limitations in high-performance computing. Integrating optical interconnects directly into computing silicon significantly lowers latency and energy consumption for massive AI workloads.",
+    "point1": "Co-packaged optics significantly reduces interconnect power requirements while scaling interconnect bandwidth.",
+    "point2": "Traditional copper and electrical interconnects are approaching physical heat and performance limits in AI clusters.",
+    "point3": "Commercial adoption of CPO architecture is expected to accelerate in upcoming GPU and silicon designs.",
+    "rss_image": "",
+    "image_url": "[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)",
+    "timestamp_epoch": 1787372711,
+    "timestamp_display": "Aug 22 \u2022 04:25 AM UTC"
+  },
+  {
     "title": "Corporate AI Debt Surge Triggers Investor Fatigue",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM3BfTDBIOXNHdWJEMkdLbk1obHA0d1VBY3lwdFRxYm9vSHJuNG1yU3EwUUZPXy0yZzZITDVEU1hvdmtJZmlLRVhP?oc=5",
     "category": "AI",
