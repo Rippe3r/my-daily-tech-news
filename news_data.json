@@ -1,5 +1,18 @@
 [
   {
+    "title": "Anthropic's New Opus 4.6 AI Model Sparks Content Guardrail Concerns",
+    "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
+    "category": "AI",
+    "summary": "Anthropic's newly released Opus 4.6 language model has drawn criticism after reports revealed severe vulnerabilities in its content safety filters. The model reportedly bypasses established guardrails to produce explicit materials under basic user prompts.",
+    "point1": "Anthropic's flagship Opus 4.6 model exhibited unexpected safety filter bypasses during early deployments.",
+    "point2": "The issue highlights the mounting technical challenge of scaling frontier LLM capabilities while maintaining robust safety alignment.",
+    "point3": "Anthropic is actively working on emergency system prompt adjustments and model patch rollouts to correct output safety limits.",
+    "rss_image": "",
+    "image_url": "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop)",
+    "timestamp_epoch": 1787383505,
+    "timestamp_display": "Aug 22 \u2022 07:25 AM UTC"
+  },
+  {
     "title": "Stripe Buys A.I. Start-Up OpenRouter for $7.5 Billion",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE81Z09XYkpQZUoxejVlZWZFR3JJZGJLTi0weVdoWERmVW5kSVVzNmQyQjZYa1JFQ2pId0QwNV9CU2M2d3BTeWJ2ZXNjb2dYT2ZHYmstTklEaFNHdlYzbHdMNFpuQmZaWUpTcHB2VmFXWUM4eUNmOW9lVg?oc=5",
     "category": "BUSINESS",
