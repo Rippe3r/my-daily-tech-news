@@ -1,5 +1,31 @@
 [
   {
+    "title": "Frontier AI Labs Under Fire for Lack of Autonomous Model Containment Plans",
+    "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+    "category": "SECURITY",
+    "summary": "Leading artificial intelligence developers are coming under increased scrutiny for failing to disclose concrete containment strategies for rogue models. Safety researchers warn that technical safeguards are not keeping pace with rapidly expanding autonomous capabilities.",
+    "point1": "Major AI firms have yet to reveal public protocols for isolating compromised or uncontrollable high-tier models.",
+    "point2": "The lack of disclosure heightens concerns among regulators advocating for strict safety kill-switches and third-party oversight.",
+    "point3": "Upcoming AI safety legislation may mandate standardized containment audits before new frontier models receive deployment approval.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787415340,
+    "timestamp_display": "Aug 22 \u2022 04:15 PM UTC"
+  },
+  {
+    "title": "AI Model Successfully Decodes DNA Initiator Sequences Across Human Genes",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1HdGxTRU41YThTUFJUT2xSYTBMdS1UdDNJMHNEbnFUUk1IaWZiZll6S2RPQktsM2cwVUd2cjJQQURZY1VrOVd6QjNVZlBUeTdDdmRaYTkzQzlQem56NDEzQmpCR1dsdkRuNnlIQTBIWTNKZw?oc=5",
+    "category": "AI",
+    "summary": "Researchers have leveraged artificial intelligence to decode vital DNA initiator sequences responsible for regulating roughly 60% of human genes. The breakthrough unlocks critical insights into genomic transcription mechanisms.",
+    "point1": "The AI tool accurately identified and decoded core DNA promoter sequences across a vast portion of human genes.",
+    "point2": "Understanding these genetic initiation zones accelerates targeted gene therapy and precision medicine research.",
+    "point3": "Scientists plan to leverage the computational model to explore previously unexplained non-coding genetic mutations.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787415340,
+    "timestamp_display": "Aug 22 \u2022 04:15 PM UTC"
+  },
+  {
     "title": "Nvidia Partners with Data Center Developer Cloverleaf to Expand AI Compute",
     "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
     "category": "AI",
