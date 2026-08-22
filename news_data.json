@@ -1,5 +1,18 @@
 [
   {
+    "title": "Inherent Claims AI Teammate Outperforms OpenAI and Anthropic in Scientific Research Replication",
+    "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+    "category": "AI",
+    "summary": "Inherent, an AI startup founded by DeepMind alumni, announced that its autonomous AI system outperformed frontier models from OpenAI and Anthropic on complex scientific replication benchmarks.",
+    "point1": "The specialized platform demonstrated higher precision in autonomously reproducing multi-step scientific research and computational experiments.",
+    "point2": "Highlights a shift toward domain-specific AI 'teammates' built for specialized scientific discovery rather than general Chatbot interfaces.",
+    "point3": "Inherent aims to scale its automated scientific validation tool across major research institutions and commercial laboratories.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787426250,
+    "timestamp_display": "Aug 22 \u2022 07:17 PM UTC"
+  },
+  {
     "title": "OpenAI Urges California Lawmakers to Strengthen Pending AI Safety Bill",
     "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
     "category": "AI",
