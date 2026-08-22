@@ -1,5 +1,18 @@
 [
   {
+    "title": "English Local Government Rejects Palantir Health Data Integration",
+    "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
+    "category": "SECURITY",
+    "summary": "A local authority in England has refused to adopt Palantir's data analytics infrastructure for its regional health services. The decision stands as a rare pushback against the major defense and data analytics vendor amid public concerns over data privacy.",
+    "point1": "An English local council officially opted out of Palantir's national health data enterprise agreement.",
+    "point2": "Highlights growing public and institutional resistance to enterprise data firm involvement in public healthcare systems.",
+    "point3": "May encourage other local health trusts to demand stronger data sovereignty protections before signing vendor contracts.",
+    "rss_image": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "timestamp_epoch": 1787394411,
+    "timestamp_display": "Aug 22 \u2022 10:28 AM UTC"
+  },
+  {
     "title": "Anthropic Scrutinized After Opus 4.6 Release Exhibits Systemic Guardrail Failures",
     "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
     "category": "AI",
