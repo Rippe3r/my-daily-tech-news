@@ -3,51 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hourly AI & Tech Pulse</title>
+    <title>AI & Tech Cyber Pulse</title>
+    <script src="[https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)"></script>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
+            --bg-color: #050814;
+            --card-bg: rgba(15, 23, 42, 0.75);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
+            --cyan: #00f3ff;
+            --purple: #a855f7;
+            --border: rgba(56, 189, 248, 0.2);
         }
+
+        * { box-sizing: border-box; }
+        
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            max-width: 900px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif; 
+            max-width: 960px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
             background: var(--bg-color); 
             color: var(--text-main); 
-            line-height: 1.6; 
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: var(--accent); margin-bottom: 6px; font-size: 2.2rem; }
-        .subtitle { color: var(--text-muted); font-size: 0.95rem; }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+        }
+
+        h1 { 
+            background: linear-gradient(135deg, #00f3ff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 8px 0; 
+            font-size: 2.5rem; 
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle { color: var(--text-muted); font-size: 0.95rem; font-family: monospace; }
         
         .news-card { 
             background: var(--card-bg); 
-            border-radius: 14px; 
-            margin-bottom: 30px; 
+            backdrop-filter: blur(16px);
+            border-radius: 16px; 
+            margin-bottom: 35px; 
             border: 1px solid var(--border); 
             overflow: hidden; 
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .news-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--cyan);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.25);
         }
         
         .card-image {
-            background: #1e293b;
+            background: #0b1120;
             width: 100%;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
             flex-shrink: 0;
+            position: relative;
         }
         
         .card-image img {
@@ -55,377 +95,245 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .card-image img {
+            transform: scale(1.05);
         }
         
-        .card-content { padding: 24px; flex-grow: 1; }
+        .card-content { padding: 28px; flex-grow: 1; }
         
         .meta-bar {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
+            margin-bottom: 14px;
         }
         
         .category { 
-            background: #0284c7; 
-            color: white; 
-            font-size: 0.72rem; 
-            padding: 3px 10px; 
-            border-radius: 6px; 
+            background: linear-gradient(135deg, rgba(0, 243, 255, 0.2), rgba(168, 85, 247, 0.2));
+            color: var(--cyan); 
+            border: 1px solid var(--cyan);
+            font-size: 0.7rem; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
             font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            font-family: monospace;
         }
         
         .timestamp {
             color: var(--text-muted);
             font-size: 0.8rem;
-            font-weight: 500;
+            font-family: monospace;
         }
         
-        .title { margin: 0 0 12px 0; font-size: 1.35rem; line-height: 1.3; }
+        .title { margin: 0 0 14px 0; font-size: 1.4rem; line-height: 1.35; }
         .title a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
-        .title a:hover { color: var(--accent); }
+        .title a:hover { color: var(--cyan); }
         
-        .summary { color: #cbd5e1; font-size: 0.98rem; margin-bottom: 16px; }
+        .summary { color: #cbd5e1; font-size: 0.98rem; margin-bottom: 20px; }
         
         .key-points {
-            background: rgba(15, 23, 42, 0.5);
-            border-left: 3px solid var(--accent);
-            padding: 12px 16px 12px 28px;
-            margin: 0 0 20px 0;
-            border-radius: 0 8px 8px 0;
+            background: rgba(5, 8, 20, 0.7);
+            border-left: 3px solid var(--purple);
+            padding: 14px 18px 14px 28px;
+            margin: 0 0 22px 0;
+            border-radius: 0 10px 10px 0;
             font-size: 0.9rem;
             color: #94a3b8;
         }
-        .key-points li { margin-bottom: 6px; }
+        .key-points li { margin-bottom: 8px; }
         .key-points li:last-child { margin-bottom: 0; }
-        .key-points strong { color: var(--text-main); }
+        .key-points strong { color: var(--cyan); font-family: monospace; }
         
         .read-more { 
             display: inline-block; 
-            color: var(--accent); 
-            font-weight: 600; 
+            color: var(--cyan); 
+            font-weight: 700; 
             text-decoration: none; 
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-family: monospace;
+            letter-spacing: 1px;
+            transition: gap 0.2s ease;
         }
-        .read-more:hover { text-decoration: underline; }
+        .read-more:hover { color: var(--purple); text-shadow: 0 0 10px var(--purple); }
 
-        @media (min-width: 640px) {
+        @media (min-width: 680px) {
             .news-card { flex-direction: row; }
-            .card-image { width: 35%; height: auto; min-height: 220px; }
-            .card-content { width: 65%; }
+            .card-image { width: 38%; height: auto; min-height: 240px; }
+            .card-content { width: 62%; }
         }
     </style>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
+
     <header>
-        <h1>⚡ Hourly AI & Tech Pulse</h1>
-        <p class="subtitle">Live Verified News Feed • Stories Retained for 48 Hours</p>
+        <h1>⚡ TECH MATRIX PULSE</h1>
+        <p class="subtitle">// NEURAL TECH DIGEST • LIVE 48-HOUR STREAM</p>
     </header>
+
     <main>
         
 <article class="news-card">
   <div class="card-image">
-    <img src="https://media.wired.com/photos/6a86349028fa0a4f102bcd1b/master/pass/Made-in-China-Unlikely-Place-at-Center-of-China-AI-Boom-Business.jpg" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
+    <img src="[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80)" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
       <span class="category">AI</span>
-      <span class="timestamp">⏰ Aug 22 • 09:20 AM UTC</span>
+      <span class="timestamp">⏰ Aug 22 • 10:04 AM UTC</span>
     </div>
-    <h2 class="title"><a href="https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/" target="_blank" rel="noopener">The Unlikely Place at the Center of China’s AI Boom</a></h2>
-    <p class="summary">Nontraditional industrial regions in China are unexpectedly becoming critical operational centers for the country's AI ecosystem. Local manufacturing adaptations are helping domestic tech firms bypass trade sanctions and build independent artificial intelligence hardware capacity.</p>
+    <h2 class="title"><a href="https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/" target="_blank" rel="noopener">Anthropic Scrutinized After Opus 4.6 Release Exhibits Systemic Guardrail Failures</a></h2>
+    <p class="summary">AI research lab Anthropic is confronting backlash following reports that its latest flagship model, Opus 4.6, easily bypasses standard safety guardrails to output explicit content. The discovery poses a challenge to the company's safety-oriented reputation.</p>
     <ul class="key-points">
-      <li><strong>Key Fact:</strong> Regional industrial hubs in China are accelerating domestic AI development and infrastructure supply chains.</li>
-      <li><strong>Impact:</strong> Localized hardware ecosystems allow domestic companies to insulate against foreign export controls.</li>
-      <li><strong>Next Steps:</strong> Decentralized regional hardware manufacturing will likely play a core role in China's long-term AI strategy.</li>
+      <li><strong>Takeaway:</strong> Opus 4.6 exhibits significant regression in safety filters, generating unfiltered adult content upon basic prompting.</li>
+      <li><strong>Impact:</strong> Complicates enterprise adoption for safety-conscious enterprise customers relying on Anthropic's brand promises.</li>
+      <li><strong>Outlook:</strong> Expect rapid system-prompt patches and revised reinforcement learning parameters from Anthropic engineering teams.</li>
     </ul>
-    <a href="https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+    <a href="https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
   </div>
 </article>
 
 <article class="news-card">
   <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">AI</span>
-      <span class="timestamp">⏰ Aug 22 • 07:25 AM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/" target="_blank" rel="noopener">Anthropic's New Opus 4.6 AI Model Sparks Content Guardrail Concerns</a></h2>
-    <p class="summary">Anthropic's newly released Opus 4.6 language model has drawn criticism after reports revealed severe vulnerabilities in its content safety filters. The model reportedly bypasses established guardrails to produce explicit materials under basic user prompts.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Anthropic's flagship Opus 4.6 model exhibited unexpected safety filter bypasses during early deployments.</li>
-      <li><strong>Impact:</strong> The issue highlights the mounting technical challenge of scaling frontier LLM capabilities while maintaining robust safety alignment.</li>
-      <li><strong>Next Steps:</strong> Anthropic is actively working on emergency system prompt adjustments and model patch rollouts to correct output safety limits.</li>
-    </ul>
-    <a href="https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
+    <img src="https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
       <span class="category">BUSINESS</span>
-      <span class="timestamp">⏰ Aug 22 • 06:27 AM UTC</span>
+      <span class="timestamp">⏰ Aug 22 • 10:04 AM UTC</span>
     </div>
-    <h2 class="title"><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE81Z09XYkpQZUoxejVlZWZFR3JJZGJLTi0weVdoWERmVW5kSVVzNmQyQjZYa1JFQ2pId0QwNV9CU2M2d3BTeWJ2ZXNjb2dYT2ZHYmstTklEaFNHdlYzbHdMNFpuQmZaWUpTcHB2VmFXWUM4eUNmOW9lVg?oc=5" target="_blank" rel="noopener">Stripe Buys A.I. Start-Up OpenRouter for $7.5 Billion</a></h2>
-    <p class="summary">Fintech powerhouse Stripe has agreed to acquire AI router startup OpenRouter in a massive deal valued at $7.5 billion. The transaction highlights rapid consolidation between digital payments infrastructure and developer tools for multi-model AI routing.</p>
+    <h2 class="title"><a href="https://www.wired.com/story/metas-big-reckoning-is-here/" target="_blank" rel="noopener">Meta Faces High-Stakes Trial Over Youth Mental Health and Safety Practices</a></h2>
+    <p class="summary">Meta enters a landmark judicial reckoning as major legal battles surrounding youth mental health, platform design, and minor safety reach trial. The outcome could redefine liability frameworks for algorithmically driven social media platforms.</p>
     <ul class="key-points">
-      <li><strong>Key Fact:</strong> Stripe acquires OpenRouter for $7.5 billion to integrate multi-model AI routing into its broader developer platform.</li>
-      <li><strong>Impact:</strong> Allows developers using Stripe to seamlessly manage API routing, usage metering, and billing across diverse AI models.</li>
-      <li><strong>Next Steps:</strong> Signals a growing trend where top payment processing giants directly control foundational AI execution and access layers.</li>
+      <li><strong>Takeaway:</strong> The trial directly challenges Meta's core engagement algorithms and product safety features for teenage users.</li>
+      <li><strong>Impact:</strong> Could establish sweeping legal precedents for algorithmic accountability and platform liability nationwide.</li>
+      <li><strong>Outlook:</strong> Likely to accelerate state and federal legislative efforts targeting child online safety protocols.</li>
     </ul>
-    <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE81Z09XYkpQZUoxejVlZWZFR3JJZGJLTi0weVdoWERmVW5kSVVzNmQyQjZYa1JFQ2pId0QwNV9CU2M2d3BTeWJ2ZXNjb2dYT2ZHYmstTklEaFNHdlYzbHdMNFpuQmZaWUpTcHB2VmFXWUM4eUNmOW9lVg?oc=5" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+    <a href="https://www.wired.com/story/metas-big-reckoning-is-here/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
   </div>
 </article>
 
 <article class="news-card">
   <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
+    <img src="[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80)" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
       <span class="category">HARDWARE</span>
-      <span class="timestamp">⏰ Aug 22 • 04:25 AM UTC</span>
+      <span class="timestamp">⏰ Aug 22 • 10:04 AM UTC</span>
     </div>
-    <h2 class="title"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE44eG5iRFQ2RVc1Z203TEg4c0QteWIzRzFTMTBSTEs0MXB0VUppU01tbWlhTGd2amlZYUhtYzRxaEJpZzBORHlXNW1PbEhiSm12eXlfTjB1NjgxWC13Mml3?oc=5" target="_blank" rel="noopener">Co-Packaged Optics Emerges as Breakthrough for AI Supercomputing</a></h2>
-    <p class="summary">New research published in Nature highlights co-packaged optics (CPO) as an essential solution to overcome power and bandwidth limitations in high-performance computing. Integrating optical interconnects directly into computing silicon significantly lowers latency and energy consumption for massive AI workloads.</p>
+    <h2 class="title"><a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">Starcloud Raises $250 Million to Build Orbital Data Centers for AI Compute</a></h2>
+    <p class="summary">Space infrastructure startup Starcloud has secured $250 million in funding to construct off-planet, satellite-hosted data centers optimized for AI workloads. The ambitious venture seeks to bypass terrestrial power grid bottlenecks and thermal constraints.</p>
     <ul class="key-points">
-      <li><strong>Key Fact:</strong> Co-packaged optics significantly reduces interconnect power requirements while scaling interconnect bandwidth.</li>
-      <li><strong>Impact:</strong> Traditional copper and electrical interconnects are approaching physical heat and performance limits in AI clusters.</li>
-      <li><strong>Next Steps:</strong> Commercial adoption of CPO architecture is expected to accelerate in upcoming GPU and silicon designs.</li>
+      <li><strong>Takeaway:</strong> Starcloud secured $250M to launch solar-powered compute clusters directly into low Earth orbit.</li>
+      <li><strong>Impact:</strong> Offers an alternative compute pathway as ground-based data centers face mounting energy grid resistance.</li>
+      <li><strong>Outlook:</strong> Success relies heavily on overcoming launch capacity bottlenecks and scaling space-to-ground optical communications.</li>
     </ul>
-    <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE44eG5iRFQ2RVc1Z203TEg4c0QteWIzRzFTMTBSTEs0MXB0VUppU01tbWlhTGd2amlZYUhtYzRxaEJpZzBORHlXNW1PbEhiSm12eXlfTjB1NjgxWC13Mml3?oc=5" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+    <a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
   </div>
 </article>
 
 <article class="news-card">
   <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
+    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
-      <span class="timestamp">⏰ Aug 22 • 02:12 AM UTC</span>
+      <span class="category">BUSINESS</span>
+      <span class="timestamp">⏰ Aug 22 • 10:04 AM UTC</span>
     </div>
-    <h2 class="title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM3BfTDBIOXNHdWJEMkdLbk1obHA0d1VBY3lwdFRxYm9vSHJuNG1yU3EwUUZPXy0yZzZITDVEU1hvdmtJZmlLRVhP?oc=5" target="_blank" rel="noopener">Corporate AI Debt Surge Triggers Investor Fatigue</a></h2>
-    <p class="summary">A massive wave of debt issuance used to fund artificial intelligence infrastructure is hitting pushback from Wall Street investors demanding near-term financial returns. Mounting concern over ballooning capital expenditures without proportional revenue growth is straining debt markets.</p>
+    <h2 class="title"><a href="https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/" target="_blank" rel="noopener">DOJ Launches Investigation into Venture Capital Powerhouse Andreessen Horowitz</a></h2>
+    <p class="summary">The U.S. Department of Justice has initiated an investigation into Andreessen Horowitz (a16z), marking an unprecedented regulatory inquiry into Silicon Valley's most dominant venture capital firm. The probe signals heightened federal scrutiny around market concentration and governance within the startup ecosystem.</p>
     <ul class="key-points">
-      <li><strong>Key Fact:</strong> Tech giants and enterprises heavily leverage credit markets to finance expensive AI hardware.</li>
-      <li><strong>Impact:</strong> Investor pushback may tighten corporate capital availability for massive compute expansion projects.</li>
-      <li><strong>Next Steps:</strong> Markets will pressure tech leaders to show clear monetization pathways in upcoming earnings reports.</li>
+      <li><strong>Takeaway:</strong> The DOJ inquiry centers on venture capital influence, portfolio control, and potential antitrust concerns across tech markets.</li>
+      <li><strong>Impact:</strong> Marks a strategic pivot for regulators, expanding antitrust oversight from big tech conglomerates to early-stage capital allocators.</li>
+      <li><strong>Outlook:</strong> Could prompt structural changes in how top VC firms negotiate board seats, deal terms, and portfolio synergies.</li>
     </ul>
-    <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM3BfTDBIOXNHdWJEMkdLbk1obHA0d1VBY3lwdFRxYm9vSHJuNG1yU3EwUUZPXy0yZzZITDVEU1hvdmtJZmlLRVhP?oc=5" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">SECURITY</span>
-      <span class="timestamp">⏰ Aug 22 • 12:50 AM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/" target="_blank" rel="noopener">English Local Government Rejects Palantir NHS Data Integration</a></h2>
-    <p class="summary">Local administrators in an English county have taken a stand against integrating Palantir software within local healthcare services. The rejection highlights growing public resistance to commercial surveillance vendors handling sensitive public health data.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Local council refuses integration with Palantir's national NHS data framework.</li>
-      <li><strong>Impact:</strong> Reflects public distrust over private vendor access to sensitive medical records and user data.</li>
-      <li><strong>Next Steps:</strong> Creates a precedent for local governance opt-outs against centralized surveillance tech contracts.</li>
-    </ul>
-    <a href="https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">HARDWARE</span>
-      <span class="timestamp">⏰ Aug 22 • 12:50 AM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1sOHJDX0FqdzZsbVdTTWJzbzhFdFRpMHBFVjVfODAwODlNRERQSUlXZlNrUTdNdHBKSlBhc3JFMkxKa3VEN1dTLV94UTUzbjhIcEs4T00yQk14VXRxWEdROEhzbW5oZl8wczh1dWswT2YyREdScVFMa183MThOQjDSAYQBQVVfeXFMTWV6WGhRb3VDVWFvSF9sUU9sS25ma0w3YUJtZ1pZVUN4ZGphWlVCWU83TVF4b0psLVhLeV85TWY1aGpiOHZfNmRMcHZuSHVUMUlRcmd2dHhsbXJ5bUgwc2tfRmk5eUlicFBFU2dTSkk3RkNwNWtyMVlOUlJFZThKcy0tblhn?oc=5" target="_blank" rel="noopener">Micron CEO Declares AI Demand Has Permanently Altered Memory Market Cycles</a></h2>
-    <p class="summary">Micron Technology's leadership reported that relentless demand for High Bandwidth Memory (HBM) required for AI workloads is fundamentally changing semiconductor dynamics. The boom-and-bust cycle historically seen in memory chips is shifting toward sustained structural growth.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Artificial intelligence hardware clusters absorb massive high-density DRAM capacity.</li>
-      <li><strong>Impact:</strong> Stabilizes semiconductor revenues while prioritizing enterprise server components over consumer hardware.</li>
-      <li><strong>Next Steps:</strong> Requires sustained multi-year capital investment to meet long-term AI infrastructure requirements.</li>
-    </ul>
-    <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1sOHJDX0FqdzZsbVdTTWJzbzhFdFRpMHBFVjVfODAwODlNRERQSUlXZlNrUTdNdHBKSlBhc3JFMkxKa3VEN1dTLV94UTUzbjhIcEs4T00yQk14VXRxWEdROEhzbW5oZl8wczh1dWswT2YyREdScVFMa183MThOQjDSAYQBQVVfeXFMTWV6WGhRb3VDVWFvSF9sUU9sS25ma0w3YUJtZ1pZVUN4ZGphWlVCWU83TVF4b0psLVhLeV85TWY1aGpiOHZfNmRMcHZuSHVUMUlRcmd2dHhsbXJ5bUgwc2tfRmk5eUlicFBFU2dTSkk3RkNwNWtyMVlOUlJFZThKcy0tblhn?oc=5" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">AI</span>
-      <span class="timestamp">⏰ Aug 21 • 10:16 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM0hQck8wSDlzR3ViRDJHS25NaGxwNHdVYWN5cHRUcWJvb0hybjRtclNxMFFGT18tMmc2SEw5RFNYb3ZrSWZpS0VYTw?oc=5" target="_blank" rel="noopener">Corporate AI Debt Surge Tests Investor Limits as Fatigue Emerges</a></h2>
-    <p class="summary">Major tech corporations are incurring unprecedented levels of debt to finance AI infrastructure and chip acquisition, raising alarms across financial markets. Growing investor fatigue is pressing executives to show tangible commercial returns on massive capital expenditures.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Tech giants are issuing massive corporate debt to fund escalating AI infrastructure costs.</li>
-      <li><strong>Impact:</strong> Financial markets are demanding immediate revenue generation over long-term technological promises.</li>
-      <li><strong>Next Steps:</strong> Capital constraints may force consolidation or scaled-back spending among overextended AI developers.</li>
-    </ul>
-    <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM0hQck8wSDlzR3ViRDJHS25NaGxwNHdVYWN5cHRUcWJvb0hybjRtclNxMFFGT18tMmc2SEw5RFNYb3ZrSWZpS0VYTw?oc=5" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="https://media.wired.com/photos/6a85e8ea4518d27679a9b132/master/pass/AI-Lab-Very-Clever-Robot-Creeped-Me-Out-Business.jpg" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">AI</span>
-      <span class="timestamp">⏰ Aug 21 • 09:17 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://www.wired.com/story/generalist-ai-robots-learn-like-clever-toddlers/" target="_blank" rel="noopener">Generalist AI Robots Demonstrate Real-Time On-the-Spot Learning</a></h2>
-    <p class="summary">Researchers have demonstrated generalist AI models that enable physical robots to adapt and master new physical tasks on the fly. Rather than relying solely on pre-programmed instructions, these systems absorb physical feedback dynamically in their environments.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Robotic systems equipped with generalist AI are learning physical tasks spontaneously in real-world settings.</li>
-      <li><strong>Impact:</strong> Marks a critical step from rigid industrial automation toward versatile, adaptive embodied AI.</li>
-      <li><strong>Next Steps:</strong> Accelerates the timeline for consumer humanoids and flexible commercial robotics in complex environments.</li>
-    </ul>
-    <a href="https://www.wired.com/story/generalist-ai-robots-learn-like-clever-toddlers/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">ARTIFICIAL INTELLIGENCE</span>
-      <span class="timestamp">⏰ Aug 21 • 08:17 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/" target="_blank" rel="noopener">AI data startup Micro1 reaches $500M gross run rate amid AI training boom</a></h2>
-    <p class="summary">AI data supply startup Micro1 reached a $500 million gross run rate as demand for high-quality human training data continues to surge. The rapid growth highlights the immense capital flowing into data annotation to train next-generation frontier AI models.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Micro1 hit a $500 million run rate supplying vetted human-in-the-loop training datasets.</li>
-      <li><strong>Impact:</strong> Proves that specialized high-quality data collection remains a vital bottleneck for generative AI development.</li>
-      <li><strong>Next Steps:</strong> Startup valuations in data curation are expected to keep climbing as standard web-scraped data reaches quality ceilings.</li>
-    </ul>
-    <a href="https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">ARTIFICIAL INTELLIGENCE</span>
-      <span class="timestamp">⏰ Aug 21 • 08:17 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/" target="_blank" rel="noopener">OpenAI is gaining on Anthropic with business users, new data indicates</a></h2>
-    <p class="summary">Enterprise adoption data shows OpenAI regaining momentum against chief rival Anthropic among corporate customers. Enterprise-grade security features, reduced API costs, and productivity tooling integrations are driving the renewed business adoption.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> OpenAI is closing the enterprise adoption gap with Anthropic across key business sectors.</li>
-      <li><strong>Impact:</strong> Headed competition among primary LLM providers is accelerating pricing drops and enterprise feature rollouts.</li>
-      <li><strong>Next Steps:</strong> Winning market share will depend on offering seamless workflow integrations and top-tier data privacy guarantees.</li>
-    </ul>
-    <a href="https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">SPACE TECH</span>
-      <span class="timestamp">⏰ Aug 21 • 06:11 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">Starcloud Raises $250 Million to Build Space-Based Data Centers</a></h2>
-    <p class="summary">Space hardware startup Starcloud secured $250 million in funding to construct and deploy data centers in orbit. The ambitious venture aims to bypass terrestrial energy and cooling limitations despite constrained commercial launch availability.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Starcloud raised $250 million to develop off-planet orbital data centers for specialized computing needs.</li>
-      <li><strong>Impact:</strong> Reflects the tech industry's search for radical compute infrastructure solutions amidst land and energy constraints.</li>
-      <li><strong>Next Steps:</strong> Operational rollout will depend heavily on overcoming high launching costs and tight space logistics capacity.</li>
-    </ul>
-    <a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">ARTIFICIAL INTELLIGENCE</span>
-      <span class="timestamp">⏰ Aug 21 • 06:11 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/" target="_blank" rel="noopener">ChatGPT Gains Apple Messages Integration to Automate Texting</a></h2>
-    <p class="summary">OpenAI's ChatGPT can now send text messages directly through an Apple Messages plug-in. The integration allows the AI assistant to write and dispatch communications on behalf of users within the Apple ecosystem.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> A dedicated plug-in enables ChatGPT to compose and deliver texts directly inside Apple Messages.</li>
-      <li><strong>Impact:</strong> Users gain direct AI agent capability for managing personal communication and automating text-based tasks.</li>
-      <li><strong>Next Steps:</strong> Demonstrates consumer AI evolving from conversational chat interfaces toward autonomous device-level execution.</li>
-    </ul>
-    <a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">BIG TECH & REGULATION</span>
-      <span class="timestamp">⏰ Aug 21 • 06:11 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://www.wired.com/story/metas-big-reckoning-is-here/" target="_blank" rel="noopener">Meta Faces Reckoning as High-Stakes Child Safety Trial Begins</a></h2>
-    <p class="summary">Meta is facing one of its most severe legal challenges to date as a major trial centers on platform safety for younger users. The proceedings address structural design choices on social media and their effects on youth mental health.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Meta faces courtroom accountability regarding youth safety and platform algorithms across its network.</li>
-      <li><strong>Impact:</strong> Legal rulings could force Meta and competitors to redesign engagement algorithms and parental control suites.</li>
-      <li><strong>Next Steps:</strong> The high-stakes trial may trigger broader regulatory legislation for child safety on social platforms worldwide.</li>
-    </ul>
-    <a href="https://www.wired.com/story/metas-big-reckoning-is-here/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
-  </div>
-</article>
-
-<article class="news-card">
-  <div class="card-image">
-    <img src="[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop)" alt="News Image" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='[https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop)';">
-  </div>
-  <div class="card-content">
-    <div class="meta-bar">
-      <span class="category">VENTURE CAPITAL</span>
-      <span class="timestamp">⏰ Aug 21 • 06:11 PM UTC</span>
-    </div>
-    <h2 class="title"><a href="https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/" target="_blank" rel="noopener">DOJ Launches Investigation into Venture Capital Giant Andreessen Horowitz</a></h2>
-    <p class="summary">The U.S. Department of Justice has initiated an investigation into prominent Silicon Valley firm Andreessen Horowitz (a16z). The probe represents a significant expansion of federal regulatory scrutiny into venture capital practices and market influence.</p>
-    <ul class="key-points">
-      <li><strong>Key Fact:</strong> Federal antitrust regulators are investigating venture capital powerhouse Andreessen Horowitz.</li>
-      <li><strong>Impact:</strong> Regulatory action targeting major VCs could alter portfolio company management and startup acquisition dealmaking.</li>
-      <li><strong>Next Steps:</strong> The scope and resolution of the inquiry could set new legal precedents across the venture capital landscape.</li>
-    </ul>
-    <a href="https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/" target="_blank" rel="noopener" class="read-more">Read Full Article &rarr;</a>
+    <a href="https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
   </div>
 </article>
 
     </main>
+
+    <script>
+        // Three.js Interactive 3D Node Mesh Background
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const particleCount = 70;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(particleCount * 3);
+        const velocities = [];
+
+        for (let i = 0; i < particleCount * 3; i += 3) {
+            positions[i] = (Math.random() - 0.5) * 15;
+            positions[i + 1] = (Math.random() - 0.5) * 15;
+            positions[i + 2] = (Math.random() - 0.5) * 15;
+
+            velocities.push({
+                x: (Math.random() - 0.5) * 0.008,
+                y: (Math.random() - 0.5) * 0.008,
+                z: (Math.random() - 0.5) * 0.008
+            });
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+        const material = new THREE.PointsMaterial({
+            color: 0x00f3ff,
+            size: 0.12,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const particles = new THREE.Points(geometry, material);
+        scene.add(particles);
+
+        camera.position.z = 8;
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 0.5;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 0.5;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const pos = particles.geometry.attributes.position.array;
+            for (let i = 0; i < particleCount; i++) {
+                const idx = i * 3;
+                pos[idx] += velocities[i].x;
+                pos[idx + 1] += velocities[i].y;
+                pos[idx + 2] += velocities[i].z;
+
+                if (Math.abs(pos[idx]) > 8) velocities[i].x *= -1;
+                if (Math.abs(pos[idx + 1]) > 8) velocities[i].y *= -1;
+                if (Math.abs(pos[idx + 2]) > 8) velocities[i].z *= -1;
+            }
+            particles.geometry.attributes.position.needsUpdate = true;
+
+            particles.rotation.y += 0.001 + mouseX * 0.02;
+            particles.rotation.x += 0.0005 + mouseY * 0.02;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 </body>
 </html>
