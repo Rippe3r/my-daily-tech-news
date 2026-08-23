@@ -1,5 +1,44 @@
 [
   {
+    "title": "OpenAI Leadership Warns of 'Persistent' AI-Driven Cyber-Attacks",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTU9VbHZPQ2czTUlfNVZMVk53TkZRbUhPTTJJQ3o3SjE4VEpiZWx2UHBpWG5MZkN6aG9ZVWsycTk1ME9pNFNmaWFybG1oMmxlY2NoZEEyZlZwT09...",
+    "category": "SECURITY",
+    "summary": "An OpenAI executive warned that cybersecurity threat vectors are entering a dangerous new era characterized by persistent automated AI attacks. Adversaries are leveraging sophisticated models to automate complex exploits and lower the execution cost of cyber warfare.",
+    "point1": "OpenAI warns that AI models are escalating the velocity and sophistication of automated cyber-attacks.",
+    "point2": "Lowers the technical barrier for cybercriminals to orchestrate continuous enterprise espionage.",
+    "point3": "Organizations will need to rely heavily on autonomous defensive AI to counteract rapid threat vectors.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787509131,
+    "timestamp_display": "Aug 23 \u2022 06:19 PM UTC"
+  },
+  {
+    "title": "Alibaba Launches $10 Billion Hong Kong Share Placement to Fund AI Spending",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSHJGOUFEMWhrdjlTbk5JelZ2Zl9jNWZ3UjRUTFVZX3hyTmx2bnZ2Qi1Ob3FPZGdBNkoyOHpfRXk3YzFpYXMwNkZHb09uX01jWDRVZ3lJSi1r3fGb...",
+    "category": "BUSINESS",
+    "summary": "Alibaba is initiating a massive $10 billion share placement in Hong Kong to fund its expanding artificial intelligence and cloud computing efforts. The capital influx will support heavy investments in data center expansion, LLM development, and hardware procurement.",
+    "point1": "Alibaba is raising $10 billion through Hong Kong stock issuance dedicated to AI growth.",
+    "point2": "Highlights the massive capital intensity required for global tech giants to remain competitive in generative AI.",
+    "point3": "The funding will accelerate Alibaba Cloud's capability expansion across Asia-Pacific and global markets.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787509131,
+    "timestamp_display": "Aug 23 \u2022 06:19 PM UTC"
+  },
+  {
+    "title": "Nvidia Customers Reportedly Warned About AI-Related Price Hikes",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbDg2ZnNCREtJeGoxQlhMdWp2M1lSRjM2dDg5R1AwanNOdEZIYVFOMUZ0RG5rbGRfa3JFMmhVUDhyTWcxM3VNVEhERnc3VmtwM2F5eGZaVllKeUZ1dFVrRmxwc0E1Sm80VDctYzlDNkFSejFrU2N6X1FTWlM0bG03UlpKQUFXNkx3ekE3Q3lBcGhjUVlBVThnWHRGY0tsZi1MSTBV0gGoAUFVX3lxTFBrdUpId05mVHUwNWVSZW1ibUNKVW9pV1pvNjBBdkx3WWNDdmxIOG4yR2dkZFd3OG1GQ0H...",
+    "category": "HARDWARE",
+    "summary": "Nvidia has reportedly begun alerting major enterprise clients about upcoming price increases across its AI hardware portfolio. The impending price hikes are attributed to sustained global demand, elevated manufacturing costs, and tight semiconductor supply chain constraints.",
+    "point1": "Nvidia is notifying customers of imminent price increases for AI infrastructure and GPUs.",
+    "point2": "Higher hardware costs will likely trickle down to end consumers and elevate operational costs for cloud AI providers.",
+    "point3": "Price pressure is expected to continue until next-generation chip manufacturing scales up significantly.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787509131,
+    "timestamp_display": "Aug 23 \u2022 06:19 PM UTC"
+  },
+  {
     "title": "Flock CEO Calls for \u2018Compromise\u2019 as Surveillance Company Faces Growing Backlash",
     "url": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
     "category": "SECURITY",
