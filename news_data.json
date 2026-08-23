@@ -1,5 +1,18 @@
 [
   {
+    "title": "Anthropic Enterprise Clients Pivot to Cheaper AI Models Ahead of Anticipated IPO",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSlVfSFdqRDlDNjAxbTBzN01TYXY4WkYxU050eFZ3cERYeHRIa2hsd3prNzQ1cElPZlM1Mm9hdzA2VlloeTNXYlQ5aEVtRUJRWEl0aGZiM3N2ckpLLThhTDAwdTJIWDZJS2l3TGZvZlI5NGZTRk15VEZVQzFUUjBxMDFUdWJzRnMyM1VLdGY3MEVIak80TzRyQzNUSGJHQXNlMmpqcHg5SE0xd2N4azVvTGVXbHRHdw?oc=5",
+    "category": "AI",
+    "summary": "Enterprise users of Anthropic's Claude infrastructure are increasingly shifting toward cost-efficient, smaller models to reduce operational expenses. This enterprise cost optimization comes as Anthropic prepares key financial and operational metrics ahead of a prospective public offering.",
+    "point1": "Corporate clients are shifting workloads toward cheaper lightweight models to curb soaring API inference costs.",
+    "point2": "Generative AI vendors are facing growing pressure to deliver sustainable enterprise ROI beyond top-tier flagship models.",
+    "point3": "AI market leaders will likely diversify their offerings with specialized, domain-specific models tailored for budget-conscious enterprises.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787523245,
+    "timestamp_display": "Aug 23 \u2022 10:14 PM UTC"
+  },
+  {
     "title": "Nvidia customers reportedly warned about AI-related price hikes",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbDg2ZnNCREtJeGoxQlhMdWp2M1lSRjM2dDg5R1AwanNOdEZIYVFOMUZ0RG5rbGRfa3JFMmhVUDhyTWcxM3VNVEhERnc3VmtwM2F5eGZaVllKeUZ1dFVrRmxwc0E1Sm80VDctYzlDNkFSejFrU2N6X1FTWlM0bG03UlpKQUFXNkx3ekE3Q3lBcGhjUVlBVThnWHRGY0tsZi1MSTBV0gGoAUFVX3lxTFBrdUpId05mVHUwNWVSZW1ibUNKVW9pV1pvNjBBdkx3WWNDdmxIOG4yR2dkZFd3OG1GQ0hBeWw1NlEyM2x5S3EyRUw0R3BnMVRLM1pjNU1IMU5sNVRENktqbVdMYUNMS2dUQkF4MTRmLW9FMmlMMy1CUWV2RUJUc0pWeElhdV9GN2NEQndueDhFclMtakdlcjFkNy1HYzUtaXdvekJCcVVSeA?oc=5",
     "category": "HARDWARE",
