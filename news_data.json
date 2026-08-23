@@ -1,5 +1,18 @@
 [
   {
+    "title": "Nvidia Customers Reportedly Warned About AI Hardware Price Hikes",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbDg2ZnNCREtJeGoxQlhMdWp2M1lSRjM2dDg5R1AwanNOdEZIYVFOMUZ0RG5rbGRfa3JFMmhVUDhyTWcxM3VNVEhERnc3VmtwM2F5eGZaVllKeUZ1dFVrRmxwc0A1Sm80VDctYzlDNkFSejFrU2N6X1FTWlM0bG03UlpKQUFXNkx3ekE3Q3lBcGhjUVlBVThnWHRGY0tsZi1MSTBV0gGoAUFVX3lxTFBrdUpId05mVHUwNWVSZW1ibUNKVW9pV1pvNjBBdkx3WWNDdmxIOG4yR2dkZFd3OG1GQ0hBeWw1NlEyM2x5S3EyRUw0R3BnMVRLM1pjNU1IMU5sNVRENktqbVdMYUNMS2dUQkF4MTRmLW9FMmlMMy1CUWV2RUJUc0pWeElhdV9GN2NEQndueDhFclMtakdlcjFkNy1HYzUtaXdvekJCcVVSeA?oc=5",
+    "category": "HARDWARE",
+    "summary": "Nvidia has reportedly alerted key cloud providers and enterprise customers to impending cost increases across its AI hardware portfolio. Persistent global demand for compute infrastructure alongside tight supply constraints continues to squeeze hardware economics.",
+    "point1": "Nvidia is preparing enterprise customers for higher hardware costs driven by extreme demand for AI chips.",
+    "point2": "Higher infrastructure costs will increase capital expenditure for major cloud providers and AI research institutions.",
+    "point3": "Price pressure on hardware is expected to persist until next-generation chip fabrication capacity fully scales.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787512661,
+    "timestamp_display": "Aug 23 \u2022 07:18 PM UTC"
+  },
+  {
     "title": "OpenAI Leadership Warns of 'Persistent' AI-Driven Cyber-Attacks",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTU9VbHZPQ2czTUlfNVZMVk53TkZRbUhPTTJJQ3o3SjE4VEpiZWx2UHBpWG5MZkN6aG9ZVWsycTk1ME9pNFNmaWFybG1oMmxlY2NoZEEyZlZwT09...",
     "category": "SECURITY",
