@@ -1,5 +1,18 @@
 [
   {
+    "title": "Nvidia Allocates $6 Billion for U.S. AI Supply Chain Alternative",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWHdVbW56NVZvU3ZwQTRIcmdRUVVZWjBVc1J4TFhhVUs2VE5RY21CNEpSdHA2NUJLa0daUVhYcGJwaGh6bERReE5fcFdFdHJ5bWpXa1dPTkFweDVVS3AycGxMa3VqS2JDS0VTZDNIb2RYLVVYcmdxT2xQUUpRSXNFbHhTTVozVjVyUkVYRmItTzc5SlIwS2M0NVZseUtUWFZDX3V6azMxTHJhdHJwYm5XU28yUmlzUQ?oc=5",
+    "category": "HARDWARE",
+    "summary": "Nvidia is investing $6 billion to develop domestic computing infrastructure and reduce reliance on Chinese technology supply chains. The initiative comes amid tightening geopolitical trade controls and soaring global demand for AI processing hardware.",
+    "point1": "Nvidia is spending $6 billion to build localized AI manufacturing and compute capabilities.",
+    "point2": "Reduces vulnerabilities to international trade restrictions and hardware supply disruptions.",
+    "point3": "Infrastructure deployment and local ecosystem partnerships will unfold over coming months.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787602888,
+    "timestamp_display": "Aug 24 \u2022 08:21 PM UTC"
+  },
+  {
     "title": "Chinese Hackers Repurpose DeepSeek AI Models for Cyberattacks",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUzhVcmx3UnRJMGN0SmJRclJnZTlrWnh2c0t4Nm5kQ1g4YWNvQVJScXVTZjNldm03VmdLdHp2Y1p6d3pJZUZoM01tQlBENlFMRGJQcm9hMEI5LVJtQ29yOGdaUnFxekg5X3BCXzdPNWJxQlpOclNiT3VYaDVqY2dCWDVTbGRHWlpoSTk3c2FPWHZPWmxtNXIzNUNLOC1VWGhtQTlxeEk1YWRxWHZ4dGhkMkJn?oc=5",
     "category": "SECURITY",
