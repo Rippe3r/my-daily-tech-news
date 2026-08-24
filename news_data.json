@@ -1,5 +1,31 @@
 [
   {
+    "title": "Unraveling the Mystery Behind Stealth AI Model 'Ox Alpha'",
+    "url": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/",
+    "category": "AI",
+    "summary": "A previously unknown AI model designated 'Ox Alpha' has surfaced on competitive AI benchmarks, achieving surprisingly high results. Industry watchers are actively investigating whether the hidden release originates from a major tech giant or a well-funded stealth startup.",
+    "point1": "Ox Alpha emerged unexpectedly on open benchmarks with impressive performance figures.",
+    "point2": "Underscores a growing trend of stealth test deployments in the competitive AI research ecosystem.",
+    "point3": "The developer group behind the model is expected to announce their identity and architecture soon.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787570409,
+    "timestamp_display": "Aug 24 \u2022 11:20 AM UTC"
+  },
+  {
+    "title": "English County Resists Palantir\u2019s Expansion Into Public Healthcare Data",
+    "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
+    "category": "SOFTWARE",
+    "summary": "A local council in England has rejected integrating Palantir\u2019s data management tools into its public health system, citing privacy concerns. Local officials and privacy advocates successfully pushed back against centralized data collection schemes operated by foreign defense contractors.",
+    "point1": "An English county successfully opted out of using Palantir's public sector data platform.",
+    "point2": "Reflects intensifying local resistance to corporate data consolidation in public sector management.",
+    "point3": "May inspire similar municipal challenges to enterprise surveillance and data-mining software deals.",
+    "rss_image": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
+    "timestamp_epoch": 1787570409,
+    "timestamp_display": "Aug 24 \u2022 11:20 AM UTC"
+  },
+  {
     "title": "Meta Faces Critical Legal Reckoning Over Youth Safety and Platform Impact",
     "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
     "category": "BUSINESS",
@@ -401,29 +427,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787415340,
     "timestamp_display": "Aug 22 \u2022 04:15 PM UTC"
-  },
-  {
-    "title": "Nvidia Partners with Data Center Developer Cloverleaf to Expand AI Compute",
-    "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
-    "category": "AI",
-    "summary": "Nvidia has announced a strategic partnership with data center developer Cloverleaf to streamline and accelerate the construction of specialized facilities for AI workloads. The partnership aims to build high-density infrastructure optimized specifically for Nvidia GPU clusters.",
-    "point1": "Nvidia is teaming up directly with Cloverleaf to construct dedicated, high-power AI data facilities.",
-    "point2": "Securing physical infrastructure and power access is now a key bottleneck for deploying AI hardware.",
-    "point3": "The partnership will speed up implementation timelines for enterprise AI compute deployments.",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787397279,
-    "timestamp_display": "Aug 22 \u2022 11:14 AM UTC"
-  },
-  {
-    "title": "Alphabet and Amazon Commit $420 Billion to Massive AI Infrastructure Expansion",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZUFyOE9ZS0F6VUJIWF9yRnZQck41WXdlRmM3bUw2Y1h4QjJYai16WVVOQ0NYaXhSS3BKSkFQeElzWjdRRXYyTFZiLVp6UzA4UnBBS1owTzJqelhQbEk2SGY3MU5IVVkxM2lXbVJpOEZLaS1BM1U2Vzc0RWJRMkdhMmYzR0VrWHpCd3J0NTRNdGVkSk9Oang3M2FkbUE1MUU2cUZF?oc=5",
-    "category": "AI",
-    "summary": "Tech giants Alphabet and Amazon are investing a combined $420 billion into capital expenditure for artificial intelligence infrastructure and data centers. This massive expenditure highlights the scaling race to supply necessary compute power for next-generation generative AI workloads.",
-    "point1": "Alphabet and Amazon are committing $420 billion to expand global AI compute capabilities.",
-    "point2": "Surging enterprise demand for compute capacity is driving massive capital deployment into hardware ecosystems.",
-    "point3": "Specialized chipmakers and server component manufacturers stand to gain long-term structural revenue.",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787397279,
-    "timestamp_display": "Aug 22 \u2022 11:14 AM UTC"
   }
 ]
