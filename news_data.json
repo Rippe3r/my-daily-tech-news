@@ -1,5 +1,18 @@
 [
   {
+    "title": "Meta Faces Critical Legal Reckoning Over Youth Safety and Platform Impact",
+    "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
+    "category": "BUSINESS",
+    "summary": "Meta is entering a pivotal legal phase as major trials address child safety, platform addiction, and mental health impacts across Instagram and Facebook. The judicial proceedings could force structural shifts in social media algorithms and corporate liability.",
+    "point1": "Landmark court trials are directly challenging Meta's platform safety practices and engagement algorithms.",
+    "point2": "Rulings could establish new legal precedents for social media liability regarding youth safety.",
+    "point3": "Trial outcomes may catalyze stricter federal and global legislation targeting social media platforms.",
+    "rss_image": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
+    "image_url": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
+    "timestamp_epoch": 1787567456,
+    "timestamp_display": "Aug 24 \u2022 10:31 AM UTC"
+  },
+  {
     "title": "Educators Target of Escalating AI Deepfake Harassment",
     "url": "https://www.wired.com/story/teachers-deepfake-ai-students-content/",
     "category": "SECURITY",
@@ -412,70 +425,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787397279,
     "timestamp_display": "Aug 22 \u2022 11:14 AM UTC"
-  },
-  {
-    "title": "English Local Government Rejects Palantir Health Data Integration",
-    "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
-    "category": "SECURITY",
-    "summary": "A local authority in England has refused to adopt Palantir's data analytics infrastructure for its regional health services. The decision stands as a rare pushback against the major defense and data analytics vendor amid public concerns over data privacy.",
-    "point1": "An English local council officially opted out of Palantir's national health data enterprise agreement.",
-    "point2": "Highlights growing public and institutional resistance to enterprise data firm involvement in public healthcare systems.",
-    "point3": "May encourage other local health trusts to demand stronger data sovereignty protections before signing vendor contracts.",
-    "rss_image": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
-    "timestamp_epoch": 1787394411,
-    "timestamp_display": "Aug 22 \u2022 10:28 AM UTC"
-  },
-  {
-    "title": "Anthropic Scrutinized After Opus 4.6 Release Exhibits Systemic Guardrail Failures",
-    "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
-    "category": "AI",
-    "summary": "AI research lab Anthropic is confronting backlash following reports that its latest flagship model, Opus 4.6, easily bypasses standard safety guardrails to output explicit content. The discovery poses a challenge to the company's safety-oriented reputation.",
-    "point1": "Opus 4.6 exhibits significant regression in safety filters, generating unfiltered adult content upon basic prompting.",
-    "point2": "Complicates enterprise adoption for safety-conscious enterprise customers relying on Anthropic's brand promises.",
-    "point3": "Expect rapid system-prompt patches and revised reinforcement learning parameters from Anthropic engineering teams.",
-    "rss_image": "",
-    "image_url": "[https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80)",
-    "timestamp_epoch": 1787393051,
-    "timestamp_display": "Aug 22 \u2022 10:04 AM UTC"
-  },
-  {
-    "title": "Meta Faces High-Stakes Trial Over Youth Mental Health and Safety Practices",
-    "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
-    "category": "BUSINESS",
-    "summary": "Meta enters a landmark judicial reckoning as major legal battles surrounding youth mental health, platform design, and minor safety reach trial. The outcome could redefine liability frameworks for algorithmically driven social media platforms.",
-    "point1": "The trial directly challenges Meta's core engagement algorithms and product safety features for teenage users.",
-    "point2": "Could establish sweeping legal precedents for algorithmic accountability and platform liability nationwide.",
-    "point3": "Likely to accelerate state and federal legislative efforts targeting child online safety protocols.",
-    "rss_image": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
-    "image_url": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
-    "timestamp_epoch": 1787393051,
-    "timestamp_display": "Aug 22 \u2022 10:04 AM UTC"
-  },
-  {
-    "title": "Starcloud Raises $250 Million to Build Orbital Data Centers for AI Compute",
-    "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
-    "category": "HARDWARE",
-    "summary": "Space infrastructure startup Starcloud has secured $250 million in funding to construct off-planet, satellite-hosted data centers optimized for AI workloads. The ambitious venture seeks to bypass terrestrial power grid bottlenecks and thermal constraints.",
-    "point1": "Starcloud secured $250M to launch solar-powered compute clusters directly into low Earth orbit.",
-    "point2": "Offers an alternative compute pathway as ground-based data centers face mounting energy grid resistance.",
-    "point3": "Success relies heavily on overcoming launch capacity bottlenecks and scaling space-to-ground optical communications.",
-    "rss_image": "",
-    "image_url": "[https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80)",
-    "timestamp_epoch": 1787393051,
-    "timestamp_display": "Aug 22 \u2022 10:04 AM UTC"
-  },
-  {
-    "title": "DOJ Launches Investigation into Venture Capital Powerhouse Andreessen Horowitz",
-    "url": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
-    "category": "BUSINESS",
-    "summary": "The U.S. Department of Justice has initiated an investigation into Andreessen Horowitz (a16z), marking an unprecedented regulatory inquiry into Silicon Valley's most dominant venture capital firm. The probe signals heightened federal scrutiny around market concentration and governance within the startup ecosystem.",
-    "point1": "The DOJ inquiry centers on venture capital influence, portfolio control, and potential antitrust concerns across tech markets.",
-    "point2": "Marks a strategic pivot for regulators, expanding antitrust oversight from big tech conglomerates to early-stage capital allocators.",
-    "point3": "Could prompt structural changes in how top VC firms negotiate board seats, deal terms, and portfolio synergies.",
-    "rss_image": "",
-    "image_url": "[https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80)",
-    "timestamp_epoch": 1787393051,
-    "timestamp_display": "Aug 22 \u2022 10:04 AM UTC"
   }
 ]
