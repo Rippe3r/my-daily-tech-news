@@ -1,5 +1,31 @@
 [
   {
+    "title": "Stability AI Secures $76 Million in Fresh Funding Round",
+    "url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/",
+    "category": "BUSINESS",
+    "summary": "Stability AI, the company behind the popular Stable Diffusion image generation system, has secured $76 million in a new financing round. The new capital provides essential operational runway to expand enterprise features and train next-generation models.",
+    "point1": "Stability AI raises $76 million to bolster research capabilities and compute infrastructure.",
+    "point2": "Demonstrates continued investor backing for open-weights generative media ecosystems.",
+    "point3": "Funds will support upcoming releases of multimodal generative models and enterprise tools.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787685901,
+    "timestamp_display": "Aug 25 \u2022 07:25 PM UTC"
+  },
+  {
+    "title": "Apple Announces New Mac Mini and Mac Studio Models with AI Upgrades",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWG9hU01WSFg5ajRrWGFnNnJsODNjV0JFdElYMzVXczZYbzVkOWNsUk12ek4yMkRLeVlrOVVNRUxpUW1OdXdia2RQb3BQbTNzRnc5MDNmQlpmbDF2a050bXVHZlRFOEU5bkw4aG1tWDRWc19MX3FJZEdua2wtbGNUSnZpYWViVjZNUlJGZGwyWEk4X21IWUpabHJDMVJYVThFVjBZVWdjUdIBrAFBVV95cUxNQzN6R3J5dWQwRWVnWnhMSUx4QU5CY2QxSy1ncjlyTW5lUk1sVkZWcUZrMjlJUENpQ1JVSUs1UHVXaWxiTEM1cE0tX0lYcDBHYUlEekVFLWhtNGVKS2dlX1MyeUNVcTNMaW84VlBFblVRSGlnVjFleFJjRFZDQkgwYzBERmd1OHZLTllxR2x2QnJhdnB0UzZob3hLQ1k3T2FUbDNoR1RwNV95SWZw?oc=5",
+    "category": "HARDWARE",
+    "summary": "Apple has refreshed its desktop hardware lineup with upgraded Mac Mini and Mac Studio devices built to handle demanding AI workloads. The new systems incorporate enhanced Neural Engines to boost on-device Apple Intelligence performance.",
+    "point1": "Updated desktop lineup features upgraded chips tailored for localized Neural Engine tasks.",
+    "point2": "Provides creators and developers with significantly faster local execution of generative AI tools.",
+    "point3": "New models are scheduled to roll out alongside upcoming software updates for macOS.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787685901,
+    "timestamp_display": "Aug 25 \u2022 07:25 PM UTC"
+  },
+  {
     "title": "Claude Cowork Updates App to Support Persistent Memory Across Chats",
     "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
     "category": "SOFTWARE",
@@ -557,18 +583,5 @@
     "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787519670,
     "timestamp_display": "Aug 23 \u2022 09:14 PM UTC"
-  },
-  {
-    "title": "Nvidia Customers Reportedly Warned About AI Hardware Price Hikes",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbDg2ZnNCREtJeGoxQlhMdWp2M1lSRjM2dDg5R1AwanNOdEZIYVFOMUZ0RG5rbGRfa3JFMmhVUDhyTWcxM3VNVEhERnc3VmtwM2F5eGZaVllKeUZ1dFVrRmxwc0A1Sm80VDctYzlDNkFSejFrU2N6X1FTWlM0bG03UlpKQUFXNkx3ekE3Q3lBcGhjUVlBVThnWHRGY0tsZi1MSTBV0gGoAUFVX3lxTFBrdUpId05mVHUwNWVSZW1ibUNKVW9pV1pvNjBBdkx3WWNDdmxIOG4yR2dkZFd3OG1GQ0hBeWw1NlEyM2x5S3EyRUw0R3BnMVRLM1pjNU1IMU5sNVRENktqbVdMYUNMS2dUQkF4MTRmLW9FMmlMMy1CUWV2RUJUc0pWeElhdV9GN2NEQndueDhFclMtakdlcjFkNy1HYzUtaXdvekJCcVVSeA?oc=5",
-    "category": "HARDWARE",
-    "summary": "Nvidia has reportedly alerted key cloud providers and enterprise customers to impending cost increases across its AI hardware portfolio. Persistent global demand for compute infrastructure alongside tight supply constraints continues to squeeze hardware economics.",
-    "point1": "Nvidia is preparing enterprise customers for higher hardware costs driven by extreme demand for AI chips.",
-    "point2": "Higher infrastructure costs will increase capital expenditure for major cloud providers and AI research institutions.",
-    "point3": "Price pressure on hardware is expected to persist until next-generation chip fabrication capacity fully scales.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787512661,
-    "timestamp_display": "Aug 23 \u2022 07:18 PM UTC"
   }
 ]
