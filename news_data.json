@@ -1,5 +1,18 @@
 [
   {
+    "title": "Severe Land Constraints Push AI Data Centers into the Ocean",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5BSzhmX1dyRkRSNFFsbWt6U3B0NjNYMU12S1PPeEJaRnlWbnFpbk1yZnVUSWpFSVR1NXNBd2JuT2F4QVlRdzBGTXNNTHExcXd4blVxbFN1SGJoRVV4S1NYczNYNmZKRzg3bkR2am1vbFI?oc=5",
+    "category": "HARDWARE",
+    "summary": "Escalating physical land scarcity and enormous energy demands from artificial intelligence workloads are compelling companies to deploy underwater data centers. Subsea environments offer natural water-cooling advantages and relieve pressure on local power grids and real estate.",
+    "point1": "Rising resource requirements for AI clusters are pushing hardware infrastructure into oceanic deployments.",
+    "point2": "Subsea facilities dramatically lower cooling costs and bypass land zoning challenges faced by mega-scale server farms.",
+    "point3": "Oceanic data center deployments could move from experimental pilots to mainstream infrastructure options.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787665382,
+    "timestamp_display": "Aug 25 \u2022 01:43 PM UTC"
+  },
+  {
     "title": "Meta Nears Launch of Consumer-Focused AI Agent for Social Ecosystem",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOT1dpZkpRNTdHQnBteE41RWozaUdXT2xrZGk1SXNzZ1M4WXVuTEluUkt0STNVUWJOandjY1FqV21JNksyYlhDNDRSOGxYYzdCODNwa0tkbjU3SXFjeTJKN1NVVzdfRHgzXzdvUDhuNUNSNkxQNndqVGJWWXFLc0JoSFBYdDlDNFFwZGxlenpYYmJxX2FDLUJrX3NzX3dodG9Gc2FGcG5fczFEamxfYjNLVWg2V0g3TFE?oc=5",
     "category": "SOFTWARE",
@@ -557,18 +570,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787494575,
     "timestamp_display": "Aug 23 \u2022 02:16 PM UTC"
-  },
-  {
-    "title": "Alibaba Launches $10 Billion Share Placement to Fuel AI Infrastructure Push",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSHJGOUFEMWhrdjlTbk5JelZ2Zl9jNWZ3UjRUTFVZX3hyTmx2bnZ2Qi1Ob3FPZGdBNkoyOHpfRXk3YzFpYXMwNkZHb09uX01jWDRVZ3lJSi1rM2ZGbldMV1J1d0lLUWFTS1FLcHowTXNobENIUkxody01eDItOHZucHRUV0xjME84UkxscjVNX1dnRUlHY1BCN3o5TV9CMFNzcnlobjJBVWdyMHNiQjNtT090bEV6WXQyUU5SdQ?oc=5",
-    "category": "BUSINESS",
-    "summary": "Chinese e-commerce giant Alibaba is launching a massive $10 billion share placement in Hong Kong aimed directly at funding its AI infrastructure and cloud expansion. The aggressive capital raise underscores the escalating financial spending battle among global technology conglomerates aiming for artificial intelligence dominance.",
-    "point1": "Alibaba is raising $10 billion through a Hong Kong share offering specifically earmarked for AI spending and infrastructure.",
-    "point2": "Highlights the intense capital expenditure race between Chinese tech giants and Western competitors to secure compute power.",
-    "point3": "The capital injection will determine Alibaba's ability to scale its AI cloud services against domestic and international rivals.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787491630,
-    "timestamp_display": "Aug 23 \u2022 01:28 PM UTC"
   }
 ]
