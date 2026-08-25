@@ -1,5 +1,18 @@
 [
   {
+    "title": "Porsche inks $1.5 billion deal for AI deployment with India\u2019s largest IT services firm Tata Consultancy",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWlhoM1hsTlFFU1Y1blFjS25lYnNKemdoWjMzSGM1NGRrdC05bHRHa3hiTnVwOW9fSU4wTUhCNkhlWHc2b014ZkdCVkZoNHhjY2ctMTZJUExiOXR5dnRlNzQ2NVBFYXdJeWVGWTZHMzd5Y2MxWXJjMHliUXMyR2l3OHhxWEjSAYoBQVVfeXFMTkY5eHZ1ZzlZUEl3Skt3SHJnTHBuV045QTR3aUJQWGJDMHQzRGstSklJYnU1Qmk3YXdkU29RcENjcERrSlVPMHhXWXhHVFJhMW43dUE1UW52Vk1pYlN6NVN2RUMzRUVGUnVCMnFiOEkzM2JocGFVNjN0YUdORWtURUVDMHFDRGhza25R?oc=5",
+    "category": "AI",
+    "summary": "German luxury automaker Porsche has signed a $1.5 billion deal with Tata Consultancy Services to accelerate its AI integration. The multi-year partnership aims to modernize manufacturing, supply chain management, and vehicle software systems using advanced artificial intelligence.",
+    "point1": "Porsche entered a major $1.5 billion enterprise AI transformation contract with TCS.",
+    "point2": "Demonstrates heavy financial commitment from traditional automotive giants into AI operational integration.",
+    "point3": "The deployment is expected to roll out across manufacturing and software operations over multi-year phases.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787632351,
+    "timestamp_display": "Aug 25 \u2022 04:32 AM UTC"
+  },
+  {
     "title": "Some of Russia\u2019s A.I. Drones Are Powered by Nvidia Microcomputers, Ukrainian Officials Say",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPeXR6ZDdGV2VzZUpUYUJETEU3SzhrVW9Ucm1jeEE4UjRJSkt5R015LWFjS3lnS2dYWktwRTZQVU94cmdoLW5xSWxVTHlnTWd6aHVoYWF6aW93RF96bU1GbFg5NjRLRS1aWml0Z3BLMjNnUk5KS2JQcENZeTBlcDQ5djRjTmdYTnpmTW9RVmk5WXNoa3N3Mm93?oc=5",
     "category": "AI",
@@ -505,18 +518,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787473269,
     "timestamp_display": "Aug 23 \u2022 08:21 AM UTC"
-  },
-  {
-    "title": "AI decodes DNA initiator sequence found in about 60% of human genes",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1HdGxTRU41YThTUFJUT2xSYTBMdS1UdDNJMHNEbnFUUk1IaWZiZll6S2RPQktsM2cwVUd2cjJQQURZY1VrOVd6QjNVZlBUeTdDdmZaYTkzQzlQem56NDEzQmpCR1dsdkRuNnlIQTBIWTNKZw?oc=5",
-    "category": "AI",
-    "summary": "Researchers have leveraged artificial intelligence to successfully map and decode a fundamental DNA initiator sequence that regulates nearly 60% of human genes. This breakthrough provides deeper clarity into how genetic transcription begins across the human genome.",
-    "point1": "AI decoded a foundational DNA sequence present across most human genes.",
-    "point2": "Enhances scientific understanding of cellular gene expression and potential disease mechanisms.",
-    "point3": "Could accelerate the development of targeted genetic therapies and genomic medicine.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787456626,
-    "timestamp_display": "Aug 23 \u2022 03:44 AM UTC"
   }
 ]
