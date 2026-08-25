@@ -1,5 +1,18 @@
 [
   {
+    "title": "Nvidia, Supermicro employees charged over export of AI servers to China",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdTRTNmcyVFVYZTE2TEhZVG5ERmcySmdSZ0ZXa1Jwek9od2VKZi10bHk1X0pCM2hnOVFBUzV6Y2I3aTE4S01sODltS0pzQWRKajVGQXVGMHBNa0xtMlVWUzJoSjlGb001WElRdUVwS3hmTkx3UWZiN1JTMTRsYmJjaUFtcjhTdXNTSkV0YnhYUU5SeVJxempQTWN2VmNoR25PaWpZOENVTm1Dbm5BQTI2RXFXcUnSAboBQVVfeXFMTUxYMnBtek9lbkpza0lqZzJSNmhWYjZtUWZSalNwVjlFYXJkVW81N2JjVWdHa1N2MlpTN3FkYThXWjh5RTZrQnQ3QnpaQ2ZBMnp6bHBQdDk0Nlg3LWpxbzV2SEFmNVhJS09RZGpfNmxUVGJZZkdydFpqYzhlbHZieUxjbnNud1c1aEYtTFRWWDRVaGd1TWRnZ3pUc2QtVE1ncEozdFVVRFpWeGZYQ004WTl0NUtVbEhGVUp3?oc=5",
+    "category": "HARDWARE",
+    "summary": "Federal authorities have charged employees from Nvidia and Supermicro in connection with the illicit export of advanced AI servers to China. The charges highlight ongoing geopolitical tensions and strictly enforced trade sanctions regarding high-performance computing hardware.",
+    "point1": "Employees of major chip and server makers face criminal charges for bypassing U.S. export controls on AI hardware.",
+    "point2": "Underscores the intense regulatory scrutiny on technology supply chains and national security restrictions surrounding AI compute power.",
+    "point3": "U.S. enforcement agencies are likely to tighten audit protocols for AI hardware distributors worldwide.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787650088,
+    "timestamp_display": "Aug 25 \u2022 09:28 AM UTC"
+  },
+  {
     "title": "Australia's Music Industry Excludes AI-Generated Tracks from Official Charts",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNmpZLWhGY3U5WmV0YTNDX3d6U0dpZ0RZYzVZNThEbXdCTy1TanZCT0h0QTZKejB6bTg1UVFlMTR5OTRnMzMxbUVHbmU4OHpPZDZOcTNyZUI0LVVDYllLVHUxMDJtZGhLbDJsTXBnQ25TU0kzREVMa3hpMHNPUG9ibTNHVWtQSWZsemRFOEQ0M2dpRXhyVmxDZXB4Y3k5YV9qNWlLcHNSbjV0T1U?oc=5",
     "category": "SOFTWARE",
@@ -531,18 +544,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787480157,
     "timestamp_display": "Aug 23 \u2022 10:16 AM UTC"
-  },
-  {
-    "title": "US Corporate AI Debt Surge Tests Investor Limits as Market Fatigue Emerges",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9ONEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM0hQck8wSDlzR3ViRDJHS25NaGxwNHdVYWN5cHRUcWJvb0hybjRtclNxMFFGT18tMmc2SEw5RFNYb3ZrSWZpS0VYTw?oc=5",
-    "category": "BUSINESS",
-    "summary": "Major U.S. corporations are incurring unprecedented levels of debt to finance huge artificial intelligence infrastructure projects. However, financial markets and credit investors are signaling growing fatigue over long return horizons and sky-high capital expenditures.",
-    "point1": "Corporate bond markets are facing heavy pressure from record AI-related debt issuance.",
-    "point2": "Investors are increasingly demanding clear paths to profitability rather than unconstrained capex spending.",
-    "point3": "Tech giants may need to demonstrate tangible AI revenue gains in upcoming quarters to avoid rising borrowing costs.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787476877,
-    "timestamp_display": "Aug 23 \u2022 09:21 AM UTC"
   }
 ]
