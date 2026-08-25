@@ -1,5 +1,18 @@
 [
   {
+    "title": "Carl Sagan Estate Sues AI Startup over Unauthorized Voice Replication",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPYWNGM0xSREM1MEtRWmZraXZxVDhWQ2RLZk9XTHVDYWxjYWVwanZ2M3Q1ZTd2YVNodWs5MjZmNkZEaDlpTVVibmNSRzdmMWFuWDNUcS1neXoza1BzTk1nT1p5SkVJWmxWLXdTN0FxY2M2OTlaX2toX0V5YjY3eERrR2pnY3c2OXlQZ0FEOExlSXFUcF9fWXl4ajJ6ZHkwYzg5cWNMODZaelNTNWxm?oc=5",
+    "category": "AI",
+    "summary": "The estate of renowned astronomer Carl Sagan has filed a lawsuit against an AI company for allegedly generating a synthetic clone of his voice in an advertisement without authorization. The legal battle highlights increasing friction over intellectual property rights and publicity protections in the era of generative voice cloning. The estate seeks damages and an injunction against further unapproved audio generation.",
+    "point1": "The lawsuit targets an unauthorized AI voice clone used in commercial advertising.",
+    "point2": "This case tests the boundaries of right-of-publicity laws and posthumous likeness rights for public figures.",
+    "point3": "Legal outcomes will likely set new standards for how AI vendors license historical voice recordings.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787678697,
+    "timestamp_display": "Aug 25 \u2022 05:25 PM UTC"
+  },
+  {
     "title": "Accel-Backed Keenable Builds Web Index Designed for Autonomous AI Agents",
     "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
     "category": "SOFTWARE",
