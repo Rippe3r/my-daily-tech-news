@@ -1,5 +1,18 @@
 [
   {
+    "title": "Security Vulnerabilities Discovered in Leading Open-Weight LLMs",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5XdlhUWWNUS1VvcmVydndDTk11OXBVaGdaVjZDSXBXTEM3SlY1U0EwcnpCUWNwMXp0TmZqUGJLeGdoUVJBRF9kUzAxdjFHOUE5RDdfNldZYTY5dnB0U1ZoU0ZjTGhvcm9TS0pLaTdNZ0VYVTZNbkcxcg?oc=5",
+    "category": "SECURITY",
+    "summary": "Cybersecurity researchers have uncovered systemic security weaknesses in popular open-weight artificial intelligence models. The findings reveal that current safety alignment techniques can be bypassed or neutralized far easier in open-weight models than in closed, API-based architectures.",
+    "point1": "Researchers identified vulnerabilities that allow safety guardrails to be systematically dismantled due to accessible model weights.",
+    "point2": "Highlights the growing operational tension between open-source AI accessibility and the heightened risks of unmonitored model misuse.",
+    "point3": "Developers are expected to face stricter industry standards for defensive fine-tuning and safety auditing prior to open releases.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787672152,
+    "timestamp_display": "Aug 25 \u2022 03:36 PM UTC"
+  },
+  {
     "title": "OpenAI Benchmarks Custom 'Jalape\u00f1o' Chip Built for AI Inference",
     "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
     "category": "HARDWARE",
@@ -544,31 +557,5 @@
     "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787501806,
     "timestamp_display": "Aug 23 \u2022 04:17 PM UTC"
-  },
-  {
-    "title": "OpenAI Executive Warns of Escalating 'Persistent' AI-Powered Cyber Attacks",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTU9VbHZPQ2czTUlfNVZMVk53TkZRbUhPTTJJQ3o3SjE4VEpiZWx2UHBpWG5MZkN6aG9ZVWsycTk1ME9pNFNmaWFybG1oMmxlY2NoZEEyZlZwT09SY2dxdWZIYjFmSGRLNG91dkJLU1ZrYV8yRHY0eHc5TnR1UktESUpUR1l6SlRueXlIbU9aeW5TYTZqR0E?oc=5",
-    "category": "SECURITY",
-    "summary": "A leadership figure at OpenAI has raised alarms that cybersecurity threats are entering a dangerous new phase defined by persistent AI-driven attacks. Malicious actors are increasingly leveraging generative models to automate complex, continuous operations against critical systems.",
-    "point1": "OpenAI warns that automated AI tools are enabling threat actors to conduct continuous, highly adaptable cyber attacks.",
-    "point2": "Organizations will need to rapidly adopt autonomous AI defense systems to counter high-frequency threat vectors.",
-    "point3": "Likely to accelerate international policy pressure on AI labs to implement strict safeguards preventing misuse of frontier models.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787498089,
-    "timestamp_display": "Aug 23 \u2022 03:15 PM UTC"
-  },
-  {
-    "title": "Alibaba Launches $10 Billion Share Placement to Accelerate AI Spending",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSHJGOUFEMWhrdjlTbk5JelZ2Zl9jNWZ3UjRUTFVZX3hyTmx2bnZ2Qi1Ob3FPZGdBNkoyOHpfRXk3YzFpYXMwNkZHb09uX01jWDRVZ3lJSi1rM2ZGbldMV1J1d0lLUWFTS1FLcHowTXNobENIUkxody01eDItOHZucHRUV0xjME80UkxscjVNX1dnRUlHY1BCN3o5TV9CMFNzcnlobjJBVWdyMHNiQjNtT090bEV6WXQyUU5SdQ?oc=5",
-    "category": "BUSINESS",
-    "summary": "Chinese tech giant Alibaba has initiated a massive $10 billion share placement in Hong Kong aimed at scaling its artificial intelligence capabilities and infrastructure. The capital raise reflects a aggressive push to acquire compute power and expand cloud operations amid intensifying global competition in AI.",
-    "point1": "Alibaba is raising $10 billion specifically targeted at funding AI technology development and cloud compute expansion.",
-    "point2": "Highlights the massive capital reserves required for major tech conglomerates to remain competitive in the global AI hardware race.",
-    "point3": "Signals an accelerated timeline for Chinese tech firms seeking self-sufficiency and leadership in advanced AI infrastructure.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787498089,
-    "timestamp_display": "Aug 23 \u2022 03:15 PM UTC"
   }
 ]
