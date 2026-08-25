@@ -1,5 +1,18 @@
 [
   {
+    "title": "OpenAI Benchmarks Custom 'Jalape\u00f1o' Chip Built for AI Inference",
+    "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+    "category": "HARDWARE",
+    "summary": "Benchmark results reveal details about OpenAI's custom silicon, codenamed Jalape\u00f1o, which is designed specifically for high-speed, large-scale AI inference workloads. The dedicated hardware strategy aims to optimize server operational costs and lower latency for enterprise model deployment.",
+    "point1": "Initial benchmark tests show high efficiency for running inference at massive scale.",
+    "point2": "Reduces OpenAI's operational dependence on external GPU suppliers.",
+    "point3": "In-house chips are expected to significantly cut compute costs and speed up response times for users.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787668647,
+    "timestamp_display": "Aug 25 \u2022 02:37 PM UTC"
+  },
+  {
     "title": "Severe Land Constraints Push AI Data Centers into the Ocean",
     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5BSzhmX1dyRkRSNFFsbWt6U3B0NjNYMU12S1PPeEJaRnlWbnFpbk1yZnVUSWpFSVR1NXNBd2JuT2F4QVlRdzBGTXNNTHExcXd4blVxbFN1SGJoRVV4S1NYczNYNmZKRzg3bkR2am1vbFI?oc=5",
     "category": "HARDWARE",
@@ -557,18 +570,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787498089,
     "timestamp_display": "Aug 23 \u2022 03:15 PM UTC"
-  },
-  {
-    "title": "Alibaba Launches $10 Billion Placement to Fund AI Expansion",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSHJGOUREMWhrdjlTbk5JelZ2Zl9jNWZ3UjRUTFVZX3hyTmx2bnZ2Qi1Ob3FPZGdBNkoyOHpfRXk3YzFpYXMwNkZHb09uX01jWDRVZ3lJSi1rM2ZGbldMV1J1d0lLUWFTS1FLcHowTXNobENIUkxody01eDItOHZucHRUV0xjME84UkxscjVNX1dnRUlHY1BCN3o5TV_CMFNzcnlobjJBVWdyMHNiQjNtT090bEV6WXQyUU5SdQ?oc=5",
-    "category": "BUSINESS",
-    "summary": "Chinese tech giant Alibaba is executing a $10 billion share placement in Hong Kong to fund massive spending on artificial intelligence and cloud computing infrastructure. The capital raise highlights the intensifying global race among tech conglomerates to scale enterprise AI capabilities.",
-    "point1": "Alibaba is securing $10 billion in capital through a major Hong Kong share placement.",
-    "point2": "Underscores the huge financial expenditure required to compete in AI datacenters and model training.",
-    "point3": "Funds will be deployed into expanded compute capacity and AI infrastructure projects.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787494575,
-    "timestamp_display": "Aug 23 \u2022 02:16 PM UTC"
   }
 ]
