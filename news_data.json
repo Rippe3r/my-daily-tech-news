@@ -1,5 +1,31 @@
 [
   {
+    "title": "The Dark Side of AI: Deepfakes Increasingly Target School Teachers",
+    "url": "https://www.wired.com/story/they-dedicated-their-lives-to-teaching-then-the-deepfakes-started/",
+    "category": "SECURITY",
+    "summary": "A disturbing trend is emerging where middle and high school students are using easily accessible generative AI tools to create non-consensual deepfake images and videos of their teachers. These malicious creations are spreading through school communities, causing severe emotional damage and threatening educators' careers. School districts and legal systems are struggling to keep up with the lack of specific guardrails to protect public employees.",
+    "point1": "Teachers are becoming frequent targets of student-generated AI deepfakes, with severe personal and professional consequences.",
+    "point2": "This exposure highlights the lack of age-gating and safety controls on consumer-facing generative AI manipulation tools.",
+    "point3": "Educators and unions are calling for stronger federal legislation and school district policies specifically criminalizing deepfake harassment.",
+    "rss_image": "https://media.wired.com/photos/6a7658f0de0a40f999466656/master/pass/080726-teachers-deepfakes-ai.gif",
+    "image_url": "https://media.wired.com/photos/6a7658f0de0a40f999466656/master/pass/080726-teachers-deepfakes-ai.gif",
+    "timestamp_epoch": 1787653457,
+    "timestamp_display": "Aug 25 \u2022 10:25 AM UTC"
+  },
+  {
+    "title": "OpenAI Subpoenaed by Alabama AG Over Hugging Face Hack",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYmRubHJOT3Y5akdJRlhsQkVTZjNmSEp1czMyOXVQeTczTzloV0dQODBzbW1nb0plZkEyRW1LMXRBWDlLVTJHMzJ0UWgwU2dtSEp6dk1zRnhkWnR0Q3pVT3JlbUU5b3ZBOFJ0Q3hIYy1LZFduMkpnc0dyYU9FQ3ZEb0VrN0NxTUtZLU9La1dmR3c2X3FsWUU4V1ptU3ZDOUE2cGZIS180UE56Y1dlX2tzczdOd29vOTBp?oc=5",
+    "category": "SECURITY",
+    "summary": "The Alabama Attorney General has issued a subpoena to OpenAI regarding security vulnerabilities and data access linked to the breach of Hugging Face, a popular AI model repository. The investigation seeks to uncover if proprietary or sensitive data from OpenAI was exposed or misused during the hack. This escalation highlights growing regulatory pressure on major AI providers to secure their supply chains and partnerships.",
+    "point1": "Alabama's Attorney General is seeking details on OpenAI's security posture following the Hugging Face breach.",
+    "point2": "The move highlights how state-level regulators are increasingly targeting top AI firms over data security and third-party risk.",
+    "point3": "OpenAI's response could set legal precedents for developer liability in multi-platform AI integrations.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787653457,
+    "timestamp_display": "Aug 25 \u2022 10:25 AM UTC"
+  },
+  {
     "title": "Nvidia, Supermicro employees charged over export of AI servers to China",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdTRTNmcyVFVYZTE2TEhZVG5ERmcySmdSZ0ZXa1Jwek9od2VKZi10bHk1X0pCM2hnOVFBUzV6Y2I3aTE4S01sODltS0pzQWRKajVGQXVGMHBNa0xtMlVWUzJoSjlGb001WElRdUVwS3hmTkx3UWZiN1JTMTRsYmJjaUFtcjhTdXNTSkV0YnhYUU5SeVJxempQTWN2VmNoR25PaWpZOENVTm1Dbm5BQTI2RXFXcUnSAboBQVVfeXFMTUxYMnBtek9lbkpza0lqZzJSNmhWYjZtUWZSalNwVjlFYXJkVW81N2JjVWdHa1N2MlpTN3FkYThXWjh5RTZrQnQ3QnpaQ2ZBMnp6bHBQdDk0Nlg3LWpxbzV2SEFmNVhJS09RZGpfNmxUVGJZZkdydFpqYzhlbHZieUxjbnNud1c1aEYtTFRWWDRVaGd1TWRnZ3pUc2QtVE1ncEozdFVVRFpWeGZYQ004WTl0NUtVbEhGVUp3?oc=5",
     "category": "HARDWARE",
@@ -531,18 +557,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787491630,
     "timestamp_display": "Aug 23 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "Corporate AI Debt Surge Challenges Investor Patience amid Growing Fatigue",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNR0I5VXZyeVp4RlV6cnhVdXFwZ2RNZUU0Q1czQ2c0WkpZUUJuRV9PNEg0VHkzLVlnSUdZMWVOalJzNkNXdlNtamlGSzRLbVRXb0VkVzl3dm5Uc3hPV21Cb3BIdTNyOWZQSDRGQ1ZvV2xUVUZ6eExfeGpRM0hQck8wSDlzR3ViRDJHS25NaGxwNHdVYWN5cHRUcWJvb0hybjRtclNxMFFGT18tMmc2SEw5RFNYb3ZrSWZpS0VYTw?oc=5",
-    "category": "BUSINESS",
-    "summary": "Massive capital expenditure and debt issuance by US corporations building out AI infrastructure are running into growing investor skepticism. Financial markets are expressing fatigue over delayed monetization and high operational costs associated with enterprise AI adoption.",
-    "point1": "US corporations have accumulated substantial debt burdens to finance high-end AI chips and data centers.",
-    "point2": "Investors are demanding clear revenue generation metrics rather than speculative multi-year infrastructure promises.",
-    "point3": "Could lead to tighter corporate spending and re-evaluated valuations across tech and infrastructure sectors.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787480157,
-    "timestamp_display": "Aug 23 \u2022 10:16 AM UTC"
   }
 ]
