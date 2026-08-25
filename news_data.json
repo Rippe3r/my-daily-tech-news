@@ -1,5 +1,31 @@
 [
   {
+    "title": "Accel-Backed Keenable Builds Web Index Designed for Autonomous AI Agents",
+    "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
+    "category": "SOFTWARE",
+    "summary": "Keenable, a startup backed by Accel, is creating a web indexing engine engineered specifically for autonomous AI agents rather than human web browsers. The service structures internet content to enable fast parsing and real-time execution by automated software agents.",
+    "point1": "Keenable structures web data into agent-readable data feeds tailored for automated execution.",
+    "point2": "Shifts web indexing from conventional SEO toward machine-native search architecture.",
+    "point3": "Widespread adoption will depend on integration across emerging consumer and enterprise AI agent platforms.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787675302,
+    "timestamp_display": "Aug 25 \u2022 04:28 PM UTC"
+  },
+  {
+    "title": "Alabama Attorney General Issues Subpoena to OpenAI Over Hacking Incident",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMnpWT2xYZ19aU2xzaGN1UkxzS3EyY2FrR1VURkFTc1RLdlk3RWF1TEVIUS0ycEMzRWM0TWZ4M0IybHl2VHNvQ3M2YXFhZVBHX3pkdXdjX3NkTnRieDhYd2lCLXFmX0NRejBLZmFKamVoNk5JUWd3VTdzcVdjRk1Nd1VQUkg0WGsydGtVazFDSG9NSzBQVVlmY3pyYWhZMHZiTnfSAbYBQVVfeXFMTTFsWkVLQzFRdUdtMElObkUtSk9NQlNQcXZnRVdWazlDZ3B3Ym15enhwX3lsLWtiZVNic2xiWllpalRXbjZvX096eW51XzdDUVhvM3oyejVReEJKa0tsVE1hVE1sUUxrcl9iLVZ1c3JJUUswT3M0LVhWTkpwQTU2Z19YVjh1NUtBVi1nVS1VSzFPOHl4QzAyU002LVRsSXk2emRUTVh3dUYzRWc4VF9xOWI0Q3NTeEE?oc=5",
+    "category": "SECURITY",
+    "summary": "Alabama's Attorney General has subpoenaed OpenAI in connection with a reported cybersecurity breach. State officials are requesting documentation on the scope of the incident, vulnerability fixes, and data protection measures implemented to safeguard users.",
+    "point1": "State legal authorities have issued a subpoena to OpenAI regarding a recent security incident.",
+    "point2": "Demonstrates growing state-level legal scrutiny surrounding data breaches at major AI developers.",
+    "point3": "OpenAI must provide detailed disclosures on its data handling and breach response procedures.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787675302,
+    "timestamp_display": "Aug 25 \u2022 04:28 PM UTC"
+  },
+  {
     "title": "Security Vulnerabilities Discovered in Leading Open-Weight LLMs",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5XdlhUWWNUS1VvcmVydndDTk11OXBVaGdaVjZDSXBXTEM3SlY1U0EwcnpCUWNwMXp0TmZqUGJLeGdoUVJBRF9kUzAxdjFHOUE5RDdfNldZYTY5dnB0U1ZoU0ZjTGhvcm9TS0pLaTdNZ0VYVTZNbkcxcg?oc=5",
     "category": "SECURITY",
@@ -544,18 +570,5 @@
     "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787509131,
     "timestamp_display": "Aug 23 \u2022 06:19 PM UTC"
-  },
-  {
-    "title": "Flock CEO Calls for \u2018Compromise\u2019 as Surveillance Company Faces Growing Backlash",
-    "url": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
-    "category": "SECURITY",
-    "summary": "Automated license plate reader provider Flock Safety is seeking common ground with critics amid expanding public privacy concerns. Its chief executive expressed willingness to discuss policy guardrails as local governments reexamine law enforcement surveillance tech.",
-    "point1": "Flock Safety is pushing for balanced regulation as public resistance to license plate tracking networks grows.",
-    "point2": "Heightened scrutiny reflects broader civil liberties concerns regarding automated police tracking and data retention policies.",
-    "point3": "Legislative proposals may soon mandate standardized data limits and audit requirements for automated license plate technology.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787501806,
-    "timestamp_display": "Aug 23 \u2022 04:17 PM UTC"
   }
 ]
