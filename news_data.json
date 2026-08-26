@@ -1,5 +1,18 @@
 [
   {
+    "title": "Flock Safety Surveillance Network Triggers Growing National Backlash",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSGYwdi0tVmNJanhFakY5d2xNM1RNS3JfYjV0cnEzWjk2MkVzbjV2OXJ5TjZlOS00Mi1DcHdGQ1AtZ3dIU3JGTHIyNzZHd1U1OXhrX2xUWlB6LTlWUjEwbEpKVFFzclJ3eTB6XzZYbGxpZlJfMWUxX3JuWGQ1TUFEYlFMWWJPU09SdnlXanBfWldoeG1HcVRIZzVNUEJtNXpTRnJxRDlQRWpoUktpZ2VCNDhCNA?oc=5",
+    "category": "SECURITY",
+    "summary": "Automated license plate reader firm Flock Safety is facing increasing opposition from privacy advocates and local communities as its camera network expands nationwide. Critics warn that pervasive vehicle tracking threatens privacy rights without sufficient public oversight.",
+    "point1": "Flock Safety cameras are rapidly expanding across American towns, tracking millions of daily vehicle movements.",
+    "point2": "Civil liberties organizations argue the interconnected network creates a warrantless mass surveillance dragnet.",
+    "point3": "More local governments are considering legal bans or oversight measures on automated surveillance tech.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787722051,
+    "timestamp_display": "Aug 26 \u2022 05:27 AM UTC"
+  },
+  {
     "title": "Amazon Shuts Down Legacy Service Once Called 'Artificial Artificial Intelligence'",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFyMDZKYUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWk9R?oc=5",
     "category": "SOFTWARE",
@@ -557,18 +570,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787549541,
     "timestamp_display": "Aug 24 \u2022 05:32 AM UTC"
-  },
-  {
-    "title": "Silicon Valley Doesn't Get Why You Hate AI",
-    "url": "https://www.wired.com/story/silicon-valley-doesnt-get-why-you-hate-ai/",
-    "category": "AI",
-    "summary": "A widening divide has emerged between tech executives aggressively pushing generative AI and everyday consumers who feel alienated by forced features. Public sentiment reflects growing fatigue with unproven AI capabilities, job displacement fears, and ethical concerns. Silicon Valley's insistence on embedding AI into every product is meeting surprising friction from everyday users.",
-    "point1": "Tech companies face consumer pushback against shoehorning AI features into everyday applications.",
-    "point2": "Public frustration stems from job security threats, creative content harvesting, and diminishing software quality.",
-    "point3": "Tech firms will need to pivot from novelty-focused AI releases toward proven utility to rebuild consumer trust.",
-    "rss_image": "https://media.wired.com/photos/6a8606ab1997359abc4212b4/master/pass/Model-Behavior-Silicon-Valley-Doesnt-Understand-AI-Backlash-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a8606ab1997359abc4212b4/master/pass/Model-Behavior-Silicon-Valley-Doesnt-Understand-AI-Backlash-Business.jpg",
-    "timestamp_epoch": 1787546262,
-    "timestamp_display": "Aug 24 \u2022 04:37 AM UTC"
   }
 ]
