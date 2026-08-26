@@ -1,5 +1,44 @@
 [
   {
+    "title": "Amazon to Close Mechanical Turk, the Crowdsourcing Service Bezos Dubbed 'Artificial Artificial Intelligence'",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFy06JaUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWk9R?oc=5",
+    "category": "BUSINESS",
+    "summary": "Amazon is shutting down Mechanical Turk, its pioneering micro-task marketplace that allowed humans to perform discrete data tasks for nominal fees. Famously referred to by Jeff Bezos as 'artificial artificial intelligence' for using human intelligence to power digital processes, its sunset marks the end of an era in early internet history.",
+    "point1": "Launched in 2005, Mechanical Turk was a vital precursor to modern AI data labeling workflows.",
+    "point2": "The shutdown highlights the shift toward advanced, automated AI systems that no longer rely heavily on cheap human micro-labor.",
+    "point3": "Gig workers and researchers relying on the service for data generation must find alternative platforms.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787755061,
+    "timestamp_display": "Aug 26 \u2022 02:38 PM UTC"
+  },
+  {
+    "title": "Bill Gates Proposes Robot Taxes and 'Human Reserved' Jobs to Counter AI Displacement",
+    "url": "https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai/",
+    "category": "AI",
+    "summary": "Microsoft co-founder Bill Gates is warning of severe workforce disruption from rapid AI advancement, prompting him to call for aggressive policy interventions. He suggests governments impose taxes on automated labor and establish legally protected 'human-reserved' roles to cushion the economic transition.",
+    "point1": "Gates proposes a 'robot tax' to slow automation adoption and fund training programs for displaced workers.",
+    "point2": "He argues that high-empathy professions like teaching and caregiving should remain strictly reserved for humans.",
+    "point3": "Gates warns that the societal dangers of unregulated AI are much greater than current tech executives are willing to admit.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787755061,
+    "timestamp_display": "Aug 26 \u2022 02:38 PM UTC"
+  },
+  {
+    "title": "Meta Agrees to Landmark $16.7 Billion Settlement Over Social Media Harms",
+    "url": "https://www.wired.com/story/meta-will-pay-up-to-dollar167-billion-to-settle-its-social-media-harms-case-and-thats-just-for-starters/",
+    "category": "BUSINESS",
+    "summary": "Meta has agreed to a historic settlement of up to $16.7 billion to resolve extensive legal claims that platforms like Instagram and Facebook designed addictive features that harmed youth mental health. This represents one of the largest regulatory and civil payouts in tech history, signaling severe consequences for predatory algorithmic engagement.",
+    "point1": "Meta will pay up to $16.7 billion to resolve a massive multi-district litigation alleging youth mental health harms.",
+    "point2": "The scale of the settlement highlights growing legal liability for tech companies over algorithmic addiction and child safety failures.",
+    "point3": "The resolution is expected to mandate major design changes to Meta's platforms and set a massive financial precedent for other social media networks.",
+    "rss_image": "https://media.wired.com/photos/6a8eee8f85384b803654439f/master/pass/GettyImages-2261841633.jpg",
+    "image_url": "https://media.wired.com/photos/6a8eee8f85384b803654439f/master/pass/GettyImages-2261841633.jpg",
+    "timestamp_epoch": 1787755061,
+    "timestamp_display": "Aug 26 \u2022 02:38 PM UTC"
+  },
+  {
     "title": "Wall Street Scrutinizes Nvidia's Network of AI Startup Investments",
     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPUUZHb2ZGOEp5aWVkUUhscWc3RXpDSkRwLVhNZTdLZEgwQm5FMWs5WXZLX09acExMU0xMaHNTLV9SMFUyVndsaUhZMnJhRzZ0RmpCeVlVblgtblNtZmhzY2h3Yk5wSGVJeXlaYXRuRGF2ZzNrVVhrT2Z3U3BLeXM4ZlUzaFBmRDJlcU9ZdlBSaUl6UQ?oc=5",
     "category": "BUSINESS",
@@ -491,18 +530,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787585560,
     "timestamp_display": "Aug 24 \u2022 03:33 PM UTC"
-  },
-  {
-    "title": "Hugging Face Reportedly in Talks for $13 Billion Acquisition",
-    "url": "https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/",
-    "category": "BUSINESS",
-    "summary": "AI platform giant Hugging Face is reportedly in talks to be acquired in a deal valued at $13 billion. The move comes as the platform navigates escalating security challenges from automated AI agents and seeks to solidify its position in the open-source ecosystem.",
-    "point1": "Hugging Face is in early acquisition negotiations with a reported $13 billion valuation.",
-    "point2": "Demonstrates the immense commercial value and strategic importance of central open-source model repositories.",
-    "point3": "Final terms and regulatory approvals could reshape open-source AI hosting standards if the deal proceeds.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787582066,
-    "timestamp_display": "Aug 24 \u2022 02:34 PM UTC"
   }
 ]
