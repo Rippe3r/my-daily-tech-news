@@ -1,5 +1,31 @@
 [
   {
+    "title": "Robotics Startup Generalist Hits $3 Billion Valuation",
+    "url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/",
+    "category": "AI",
+    "summary": "Generalist, an emerging startup focused on general-purpose robotics, has reached a $3 billion valuation following a new funding round. Investors continue to pour significant capital into embodied AI technologies aiming to automate complex physical tasks.",
+    "point1": "Generalist achieved a $3 billion valuation in its latest private funding round.",
+    "point2": "Capital inflections signal sustained investor confidence in general-purpose robotics powered by modern AI architectures.",
+    "point3": "Commercial deployment timelines will likely accelerate as hardware and foundation model integration matures.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787705583,
+    "timestamp_display": "Aug 26 \u2022 12:53 AM UTC"
+  },
+  {
+    "title": "OpenAI Loses Top Data Center Executive Amid Continued Leadership Exodus",
+    "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
+    "category": "AI",
+    "summary": "OpenAI has lost another key leader, with a top data center executive departing the artificial intelligence research company. The exit adds to a persistent stream of high-profile departures across executive and technical teams in recent months.",
+    "point1": "OpenAI's top data center lead has exited the company, marking another key departure.",
+    "point2": "High employee churn at leadership levels could impact OpenAI's aggressive infrastructure scaling and data center expansion plans.",
+    "point3": "The company faces pressure to stabilize its leadership structure as competition for top AI talent and infrastructure resources intensifies.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787705583,
+    "timestamp_display": "Aug 26 \u2022 12:53 AM UTC"
+  },
+  {
     "title": "Stability AI Secures $76 Million in Fresh Funding Round",
     "url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/",
     "category": "BUSINESS",
