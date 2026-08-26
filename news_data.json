@@ -1,5 +1,18 @@
 [
   {
+    "title": "Wall Street Scrutinizes Nvidia's Network of AI Startup Investments",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPUUZHb2ZGOEp5aWVkUUhscWc3RXpDSkRwLVhNZTdLZEgwQm5FMWs5WXZLX09acExMU0xMaHNTLV9SMFUyVndsaUhZMnJhRzZ0RmpCeVlVblgtblNtZmhzY2h3Yk5wSGVJeXlaYXRuRGF2ZzNrVVhrT2Z3U3BLeXM4ZlUzaFBmRDJlcU9ZdlBSaUl6UQ?oc=5",
+    "category": "BUSINESS",
+    "summary": "Financial analysts are taking a closer look at Nvidia's extensive investment arm, which funds numerous AI startups that subsequently purchase its hardware. The strategy has raised questions about circular revenue loops and potential customer dependence across the AI chip market.",
+    "point1": "Wall Street is evaluating how Nvidia's venture investments contribute to its core GPU sales growth.",
+    "point2": "Nvidia's market dominance has drawn heightened regulatory and analyst focus onto its venture deal ecosystem.",
+    "point3": "Market observers will track whether portfolio companies continue heavy hardware purchases as AI venture capital funding matures.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787752135,
+    "timestamp_display": "Aug 26 \u2022 01:49 PM UTC"
+  },
+  {
     "title": "Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses",
     "url": "https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses/",
     "category": "HARDWARE",
