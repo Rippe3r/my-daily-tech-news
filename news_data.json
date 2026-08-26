@@ -1,5 +1,18 @@
 [
   {
+    "title": "Meta\u2019s Big Reckoning Is Here",
+    "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
+    "category": "SECURITY",
+    "summary": "Meta is facing a landmark trial scrutinizing the safety protections and algorithmic impact of its social platforms on younger users. The high-stakes legal battle represents one of the tech giant's most significant challenges regarding digital safety and corporate accountability.",
+    "point1": "Meta faces high-stakes legal proceedings examining social platform design, youth safety, and algorithmic recommendations.",
+    "point2": "A legal defeat could force structural changes to how major platforms design engagement algorithms for minors.",
+    "point3": "The trial outcome is poised to establish landmark legal and regulatory precedents for global social networks.",
+    "rss_image": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
+    "image_url": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
+    "timestamp_epoch": 1787743332,
+    "timestamp_display": "Aug 26 \u2022 11:22 AM UTC"
+  },
+  {
     "title": "Amazon Shuts Down Legacy Service Once Dubbed 'Artificial Artificial Intelligence'",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFyMDZKYUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWkOP?oc=5",
     "category": "BUSINESS",
@@ -478,44 +491,5 @@
     "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787574844,
     "timestamp_display": "Aug 24 \u2022 12:34 PM UTC"
-  },
-  {
-    "title": "Unraveling the Mystery Behind Stealth AI Model 'Ox Alpha'",
-    "url": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/",
-    "category": "AI",
-    "summary": "A previously unknown AI model designated 'Ox Alpha' has surfaced on competitive AI benchmarks, achieving surprisingly high results. Industry watchers are actively investigating whether the hidden release originates from a major tech giant or a well-funded stealth startup.",
-    "point1": "Ox Alpha emerged unexpectedly on open benchmarks with impressive performance figures.",
-    "point2": "Underscores a growing trend of stealth test deployments in the competitive AI research ecosystem.",
-    "point3": "The developer group behind the model is expected to announce their identity and architecture soon.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787570409,
-    "timestamp_display": "Aug 24 \u2022 11:20 AM UTC"
-  },
-  {
-    "title": "English County Resists Palantir\u2019s Expansion Into Public Healthcare Data",
-    "url": "https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/",
-    "category": "SOFTWARE",
-    "summary": "A local council in England has rejected integrating Palantir\u2019s data management tools into its public health system, citing privacy concerns. Local officials and privacy advocates successfully pushed back against centralized data collection schemes operated by foreign defense contractors.",
-    "point1": "An English county successfully opted out of using Palantir's public sector data platform.",
-    "point2": "Reflects intensifying local resistance to corporate data consolidation in public sector management.",
-    "point3": "May inspire similar municipal challenges to enterprise surveillance and data-mining software deals.",
-    "rss_image": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a7f4fef03ca5057b35be05c/master/pass/Small-Town-Saying-No-to-Palantir-Business.jpg",
-    "timestamp_epoch": 1787570409,
-    "timestamp_display": "Aug 24 \u2022 11:20 AM UTC"
-  },
-  {
-    "title": "Meta Faces Critical Legal Reckoning Over Youth Safety and Platform Impact",
-    "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
-    "category": "BUSINESS",
-    "summary": "Meta is entering a pivotal legal phase as major trials address child safety, platform addiction, and mental health impacts across Instagram and Facebook. The judicial proceedings could force structural shifts in social media algorithms and corporate liability.",
-    "point1": "Landmark court trials are directly challenging Meta's platform safety practices and engagement algorithms.",
-    "point2": "Rulings could establish new legal precedents for social media liability regarding youth safety.",
-    "point3": "Trial outcomes may catalyze stricter federal and global legislation targeting social media platforms.",
-    "rss_image": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
-    "image_url": "https://media.wired.com/photos/6a87451ce60bdcf9fa335d65/master/pass/Backchannel-Meta-Child-Safety-Trial-Biggest-Challenge-Yet-Business-2261841235.jpg",
-    "timestamp_epoch": 1787567456,
-    "timestamp_display": "Aug 24 \u2022 10:31 AM UTC"
   }
 ]
