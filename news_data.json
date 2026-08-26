@@ -1,5 +1,18 @@
 [
   {
+    "title": "DeepSeek Seeks $7 Billion Funding as Revenue Jumps Tenfold",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaEZpbmRuZTk0XzlYRzFpWVdhdTdNSmU4SjBfNXhBQndjeTVlQkk4MTlESUVEeDNxVFRtVjZ4RWlhcVkyVkhHLW92TTBsRUROdW1IVV85WXRRSklUdWdlNjF4ODhLYVVDcTEwQ1Rpc1UwbkJfS1d2cUxxVVh5eC1MQ0Vac1M1bzU1MzZpOHpdRTN4VTJuNHo5bzM1RFpCdjcwZ2h4RDNCcF9zQU9PazlVYmpjU0x4eHl3ck1uUg?oc=5",
+    "category": "AI",
+    "summary": "AI research lab DeepSeek is seeking to raise $7 billion in a new funding round following a tenfold surge in annual revenue. The round underscores massive market interest in efficient foundation model development.",
+    "point1": "DeepSeek is raising $7 billion in new capital after experiencing a 10x surge in revenue.",
+    "point2": "Demonstrates sustained commercial momentum and investor demand for high-efficiency AI model providers.",
+    "point3": "The capital injection will expand compute resources to scale next-generation model infrastructure.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787760745,
+    "timestamp_display": "Aug 26 \u2022 04:12 PM UTC"
+  },
+  {
     "title": "Amazon to Close Mechanical Turk, the Crowdsourcing Service Bezos Dubbed 'Artificial Artificial Intelligence'",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFy06JaUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWk9R?oc=5",
     "category": "BUSINESS",
@@ -517,18 +530,5 @@
     "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787588887,
     "timestamp_display": "Aug 24 \u2022 04:28 PM UTC"
-  },
-  {
-    "title": "General Intuition Secures $6B Valuation for AI Robotics Push",
-    "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
-    "category": "AI",
-    "summary": "Prominent investment firms Valor Equity Partners and Point72 have backed AI startup General Intuition at a $6 billion valuation. The fresh funding will drive the company's expansion from software models into physical robotics technology.",
-    "point1": "General Intuition closed a funding round valuing the enterprise at $6 billion.",
-    "point2": "Investors are pouring significant capital into embodied AI to bridge digital intelligence with physical systems.",
-    "point3": "The capital injection will accelerate real-world testing and commercial deployment of AI-powered robotics.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787585560,
-    "timestamp_display": "Aug 24 \u2022 03:33 PM UTC"
   }
 ]
