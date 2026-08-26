@@ -1,5 +1,31 @@
 [
   {
+    "title": "Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses",
+    "url": "https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses/",
+    "category": "HARDWARE",
+    "summary": "Hearing technology startup Legato has emerged from stealth with $12 million in funding to build smart glasses designed to aid the hearing impaired. The eyewear leverages real-time AI audio processing to filter background noise and isolate speech for wearers.",
+    "point1": "Legato secured $12 million in seed funding to launch smart assistive hearing eyewear.",
+    "point2": "Combines AI spatial audio processing with accessible wearable hardware, challenging traditional hearing aid designs.",
+    "point3": "The company plans to advance hardware prototypes into clinical trials and consumer deployment.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787747847,
+    "timestamp_display": "Aug 26 \u2022 12:37 PM UTC"
+  },
+  {
+    "title": "They Dedicated Their Lives to Teaching. Then the Deepfakes Started",
+    "url": "https://www.wired.com/story/teachers-deepfake-ai-students-content/",
+    "category": "SECURITY",
+    "summary": "Educators across school districts are increasingly targeted by AI-generated deepfakes created by students, leading to reputational damage and legal grey areas. The situation highlights a severe gap in protections for teachers as accessible generative AI tools spread rapidly among youth.",
+    "point1": "Teachers are becoming frequent victims of malicious, AI-generated non-consensual media produced by students.",
+    "point2": "Exposes significant policy and technical shortcomings in content moderation and digital harassment laws.",
+    "point3": "School systems and legal bodies are expected to draft stricter enforcement frameworks specifically addressing generative media abuse.",
+    "rss_image": "https://media.wired.com/photos/6a7658f0de0a40f999466656/master/pass/080726-teachers-deepfakes-ai.gif",
+    "image_url": "https://media.wired.com/photos/6a7658f0de0a40f999466656/master/pass/080726-teachers-deepfakes-ai.gif",
+    "timestamp_epoch": 1787747847,
+    "timestamp_display": "Aug 26 \u2022 12:37 PM UTC"
+  },
+  {
     "title": "Meta\u2019s Big Reckoning Is Here",
     "url": "https://www.wired.com/story/metas-big-reckoning-is-here/",
     "category": "SECURITY",
@@ -465,31 +491,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787582066,
     "timestamp_display": "Aug 24 \u2022 02:34 PM UTC"
-  },
-  {
-    "title": "Taiwan Issues Indictments Over Alleged Illegal AI Server Exports to China",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV_5cUxORUFqODhsNEhfOVR2RWdNdXd1LVI2REthVUgzaU4zdXNIa2RlZmdSTXVwemR6ODVzUm1mMmtOZ0FRR3FEbVp6YWlTbDZmcm1nLTdQcFFkcWhVTTBvMkJ4dDh2blB2NkswdzZTbEFGWEZ2c3Nwam9aWXREYmhVR0wzQzdSdVoxUThYa0VrcFI4R0VKaWk2SDVFNmJUaVFuZ1Z2Nmhha21pSWxaRm1rQklZWm83aUNhbjg?oc=5",
-    "category": "BUSINESS",
-    "summary": "Taiwanese prosecutors have indicted several individuals accused of illegally exporting high-performance AI servers to mainland China in violation of trade restrictions. The case marks a significant enforcement action aimed at curbing illicit technology transfers amid tight global AI trade controls.",
-    "point1": "Prosecutors charged suspects with smuggling restricted AI hardware servers into China.",
-    "point2": "Demonstrates strict enforcement action from Taiwan as geopolitical friction surrounding AI chips increases.",
-    "point3": "Expect Taiwan and key global allies to intensify export control oversight and increase penal sanctions for tech smuggling.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787574844,
-    "timestamp_display": "Aug 24 \u2022 12:34 PM UTC"
-  },
-  {
-    "title": "Some of Russia\u2019s A.I. Drones Powered by Nvidia Microcomputers, Officials Say",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV_5cUxQeXR6ZDdGV2VzZUpUYUJETEU3SzhrVW9Ucm1jeEE4UjRJSkt5R015LWFjS3lnS2dYWktwRTZQVU94cmdoLW5xSWxVTHlnTWd6aHVoYWF6aW93RF96bU1GbFg5NjRLRS1aWml0Z3BLMjNnUk5KS2JQcENZeTBlpDQ5djRjTmdYTnpmTW9RVmk5WXNoa3N3Mm93?oc=5",
-    "category": "HARDWARE",
-    "summary": "Ukrainian intelligence officials report that Russia is utilizing microcomputers manufactured by U.S. chipmaker Nvidia in its AI-guided military drones. The discovery highlights ongoing challenges in enforcing export controls and sanctions to keep advanced U.S. technology out of foreign military supply chains.",
-    "point1": "Downed Russian autonomous drones contained Nvidia-powered microcomputing components.",
-    "point2": "Illustrates the limitations of international sanction regimes on high-end chip sales and dual-use hardware.",
-    "point3": "Likely to trigger increased U.S. congressional scrutiny and stricter supply-chain auditing demands for chip manufacturers.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787574844,
-    "timestamp_display": "Aug 24 \u2022 12:34 PM UTC"
   }
 ]
