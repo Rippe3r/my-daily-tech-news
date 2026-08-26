@@ -1,5 +1,18 @@
 [
   {
+    "title": "Amazon Shuts Down Legacy Service Once Called 'Artificial Artificial Intelligence'",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFyMDZKYUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWk9R?oc=5",
+    "category": "SOFTWARE",
+    "summary": "Amazon is officially winding down its crowdsourcing marketplace, a service famously dubbed 'artificial artificial intelligence' by Jeff Bezos when launched two decades ago. The platform pioneered human micro-tasking to label data and perform manual tasks that early computer systems could not automate.",
+    "point1": "The service connected global human workers to complete micro-tasks like data annotation and image tagging.",
+    "point2": "Reflects the shift in tech where modern generative AI models increasingly automate tasks previously assigned to human annotators.",
+    "point3": "Businesses relying on manual crowdsourced data workflows are transitioning toward automated AI annotation pipelines.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787710903,
+    "timestamp_display": "Aug 26 \u2022 02:22 AM UTC"
+  },
+  {
     "title": "Robotics Startup Generalist Hits $3 Billion Valuation",
     "url": "https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/",
     "category": "AI",
@@ -557,18 +570,5 @@
     "image_url": "https://media.wired.com/photos/6a8606ab1997359abc4212b4/master/pass/Model-Behavior-Silicon-Valley-Doesnt-Understand-AI-Backlash-Business.jpg",
     "timestamp_epoch": 1787546262,
     "timestamp_display": "Aug 24 \u2022 04:37 AM UTC"
-  },
-  {
-    "title": "Alibaba Sets Price for $10.2 Billion Offering to Drive AI Expansion",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNbGxlYXBvS28wNzJIMFRlX0xDaDZuenhoZTZhYlBZQmdOalc3eHF2cUFsd0dqSkUyUDVqSHJFZ2RPakZFR3VXd2FiS1NSU1l4T2s2Wm1zOWkwUGRLME5VRi16Uk9TN0dkSDFTVTZDV3huTnVEbVpHQ1dyckl3NVFrNHZBWU9RSkoxci1wbUZUdjFqTmxlLVgtY1BFanJHZjBJVU9PQURYbWVrWU12cnJVcW5UOXc0VDRCSklsWnBqYmV5RjlPT2VxbE9IdGxaRDhCampfNF9NQlNXMDlXTldhNGFlb3Q?oc=5",
-    "category": "BUSINESS",
-    "summary": "Chinese tech giant Alibaba has finalized pricing for a massive $10.2 billion share offering intended to finance its aggressive push into artificial intelligence. The funding will support the expansion of cloud infrastructure and advanced AI model development to remain competitive against global rivals.",
-    "point1": "Alibaba is raising $10.2 billion via a major new share offer aimed at institutional investors.",
-    "point2": "Highlights the massive ongoing capital expenditure required for major tech conglomerates to scale AI capabilities.",
-    "point3": "The injected capital will immediately fund compute expansion and enterprise AI offerings across Alibaba Cloud.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787537963,
-    "timestamp_display": "Aug 24 \u2022 02:19 AM UTC"
   }
 ]
