@@ -1,5 +1,18 @@
 [
   {
+    "title": "Z.ai Unmasked as the Stealth AI Lab Behind the Mysterious 'Ox Alpha' Model",
+    "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
+    "category": "AI",
+    "summary": "AI research organization Z.ai has been identified as the creator of the elusive Ox Alpha model that recently created buzz across benchmark leaderboards. The reveal answers weeks of speculation within the AI community regarding who authored the high-performing architecture.",
+    "point1": "Z.ai officially claimed ownership of the secretive benchmark-topping Ox Alpha model.",
+    "point2": "Proves stealth labs continue to challenge major tech tech incumbents in foundation model capabilities.",
+    "point3": "Z.ai is expected to detail the underlying architecture and commercial availability timeline soon.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787770327,
+    "timestamp_display": "Aug 26 \u2022 06:52 PM UTC"
+  },
+  {
     "title": "DeepSeek Seeks $7 Billion Funding as Revenue Jumps Tenfold",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaEZpbmRuZTk0XzlYRzFpWVdhdTdNSmU4SjBfNXhBQndjeTVlQkk4MTlESUVEeDNxVFRtVjZ4RWlhcVkyVkhHLW92TTBsRUROdW1IVV85WXRRSklUdWdlNjF4ODhLYVVDcTEwQ1Rpc1UwbkJfS1d2cUxxVVh5eC1MQ0Vac1M1bzU1MzZpOHpdRTN4VTJuNHo5bzM1RFpCdjcwZ2h4RDNCcF9zQU9PazlVYmpjU0x4eHl3ck1uUg?oc=5",
     "category": "AI",
@@ -517,18 +530,5 @@
     "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787599405,
     "timestamp_display": "Aug 24 \u2022 07:23 PM UTC"
-  },
-  {
-    "title": "Some of Russia\u2019s A.I. Drones Are Powered by Nvidia Microcomputers, Ukrainian Officials Say",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeXR6ZDdGV2VzZUpUYUJETEU3SzhrVW9Ucm1jeEE4UjRJSkt5R015LWFjS3lnS2dYWktwRTZQVU94cmdoLW5xSWxVTHlnTWd6aHVoYWF6aW93RF96bU1GbFg5NjRLRS1aWml0Z3BLMjNnUk5KS2JQcENZeTBlcDQ5djRjTmdYTnpmTW9RVmk5WXNoa3N3Mm93?oc=5",
-    "category": "SECURITY",
-    "summary": "Ukrainian officials report that Russian military drones are utilizing commercial Nvidia microcomputers for autonomous target recognition. The findings illustrate the persistent challenge of preventing dual-use commercial technology from bypassing international sanctions.",
-    "point1": "Russian military drones rely on commercial Nvidia hardware for autonomous AI processing.",
-    "point2": "Highlights ongoing enforcement difficulties surrounding sanctions on dual-use microelectronics.",
-    "point3": "Likely to trigger stricter U.S. export auditing on third-party hardware resellers and supply chains.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787588887,
-    "timestamp_display": "Aug 24 \u2022 04:28 PM UTC"
   }
 ]
