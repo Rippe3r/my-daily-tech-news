@@ -1,5 +1,18 @@
 [
   {
+    "title": "OpenAI Publishes Official Debrief on Hugging Face Breach",
+    "url": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/",
+    "category": "SECURITY",
+    "summary": "OpenAI released its formal incident report regarding a security breach connected to AI platform Hugging Face. While providing initial findings, the report has raised further questions among cybersecurity researchers about the full reach and impact of the exploit.",
+    "point1": "OpenAI issued an official debrief detailing security vulnerabilities linked to the Hugging Face breach.",
+    "point2": "Highlights critical security exposure points in open-source AI integrations and supply chains.",
+    "point3": "Industry-wide security reviews and stricter third-party API controls are expected across AI developers.",
+    "rss_image": "https://media.wired.com/photos/6a8ec12c77fbaae8f5a47365/master/pass/OpenAIFaceHug.jpg",
+    "image_url": "https://media.wired.com/photos/6a8ec12c77fbaae8f5a47365/master/pass/OpenAIFaceHug.jpg",
+    "timestamp_epoch": 1787779940,
+    "timestamp_display": "Aug 26 \u2022 09:32 PM UTC"
+  },
+  {
     "title": "Z.ai Unmasked as the Stealth AI Lab Behind the Mysterious 'Ox Alpha' Model",
     "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
     "category": "AI",
@@ -491,44 +504,5 @@
     "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787609914,
     "timestamp_display": "Aug 24 \u2022 10:18 PM UTC"
-  },
-  {
-    "title": "Shield AI Flies Hivemind Autonomy Software on Orbiting Satellite",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVVdxVnkxX2twemtjX1UzSEo2T2g1NGRtM2Z2Rl9LSlVhSERWeXZrdFNfMUlNWk8xclJkMHctSVRpZXNhQVQwZ3JGUmpyN0NpUUJWNGJ2cjMtRFNacklSN0F3WVdWc1lET0lpMDljUzVRU2VSZTJhQU95RkRfWnB0pEVMXzVHczM2OUltWkNfYjU?oc=5",
-    "category": "SOFTWARE",
-    "summary": "Defense tech firm Shield AI successfully operated its Hivemind autonomous software aboard an active satellite in orbit. The milestone expands the technology's application from uncrewed aircraft to space system operations.",
-    "point1": "Shield AI's Hivemind software executed autonomous operational tasks on an orbital satellite.",
-    "point2": "Proves the viability of edge-AI autonomous decision systems in severe space environments without persistent ground control.",
-    "point3": "Lays groundwork for future autonomous satellite networks and space-based defense infrastructure.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787606503,
-    "timestamp_display": "Aug 24 \u2022 09:22 PM UTC"
-  },
-  {
-    "title": "Nvidia Allocates $6 Billion for U.S. AI Supply Chain Alternative",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWHdVbW56NVZvU3ZwQTRIcmdRUVVZWjBVc1J4TFhhVUs2VE5RY21CNEpSdHA2NUJLa0daUVhYcGJwaGh6bERReE5fcFdFdHJ5bWpXa1dPTkFweDVVS3AycGxMa3VqS2JDS0VTZDNIb2RYLVVYcmdxT2xQUUpRSXNFbHhTTVozVjVyUkVYRmItTzc5SlIwS2M0NVZseUtUWFZDX3V6azMxTHJhdHJwYm5XU28yUmlzUQ?oc=5",
-    "category": "HARDWARE",
-    "summary": "Nvidia is investing $6 billion to develop domestic computing infrastructure and reduce reliance on Chinese technology supply chains. The initiative comes amid tightening geopolitical trade controls and soaring global demand for AI processing hardware.",
-    "point1": "Nvidia is spending $6 billion to build localized AI manufacturing and compute capabilities.",
-    "point2": "Reduces vulnerabilities to international trade restrictions and hardware supply disruptions.",
-    "point3": "Infrastructure deployment and local ecosystem partnerships will unfold over coming months.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787602888,
-    "timestamp_display": "Aug 24 \u2022 08:21 PM UTC"
-  },
-  {
-    "title": "Chinese Hackers Repurpose DeepSeek AI Models for Cyberattacks",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUzhVcmx3UnRJMGN0SmJRclJnZTlrWnh2c0t4Nm5kQ1g4YWNvQVJScXVTZjNldm03VmdLdHp2Y1p6d3pJZUZoM01tQlBENlFMRGJQcm9hMEI5LVJtQ29yOGdaUnFxekg5X3BCXzdPNWJxQlpOclNiT3VYaDVqY2dCWDVTbGRHWlpoSTk3c2FPWHZPWmxtNXIzNUNLOC1VWGhtQTlxeEk1YWRxWHZ4dGhkMkJn?oc=5",
-    "category": "SECURITY",
-    "summary": "Cybersecurity researchers report that Chinese threat actors are utilizing open-weights AI models from DeepSeek to accelerate and refine cyberattack operations. The findings emphasize growing concerns over dual-use artificial intelligence technologies being leveraged by adversary groups.",
-    "point1": "Attackers are deploying DeepSeek open-weights models to automate vulnerability exploitation and code generation.",
-    "point2": "Highlights the security challenge posed by accessible, powerful open-weights AI tools in cyber warfare.",
-    "point3": "Expect heightened regulatory pressure on AI developers to implement stricter guardrails against abuse.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787599405,
-    "timestamp_display": "Aug 24 \u2022 07:23 PM UTC"
   }
 ]
