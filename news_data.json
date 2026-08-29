@@ -1,5 +1,18 @@
 [
   {
+    "title": "Amazon service Bezos once called 'artificial artificial intelligence' is shutting down",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeTRIUDBYQWZnU3dTSGNmb012T2VvcDYxOHhleFhhZmY0NUZJaEhJMlZFRTIyZzQ2d1JrS0ZLd3F5LTkwVXQyaElOWVhxRTdPZVhsT1BlOUFWekNranBlRWRGM0t2YnFvMjI2ZnphV2pzUFNXeWFWcmZMN1hFTkJoekFqNGZiQzNmWWRtSnF4UkJ3VG1Vek05VlM2WW51OVJJeFVwZkU4VW7SAa4BQVVfeXFMTnZiS2ZVSnIxeHozVFRvb2NVVFFPSFhtWjcwczVVMWxjV1h0dktFbHZsSUZrSWlNQmRBaHFtaXNMWGFyMDZKYUhSZTdsNVBpaUdqaGxPb05TeGJSdmRmRTRFYktBRjRKVUc2dHZiZ2FqWXRfZWJlb3RibzdtaHk1SXdFLUQ5SkZlVElTbUlGZUIzNk5lUElhbDRud0RPZlBlZy13S1BHVkV5eVItWk9R?oc=5",
+    "category": "BUSINESS",
+    "summary": "Amazon is officially shutting down Mechanical Turk, the crowdsourcing platform famously dubbed 'artificial artificial intelligence' by Jeff Bezos. The service relied on human workers to complete micro-tasks, a business model now largely rendered obsolete by automated machine learning.",
+    "point1": "Amazon is shuttering Mechanical Turk after nearly two decades of providing human micro-task crowdsourcing.",
+    "point2": "The move demonstrates how rapidly sophisticated generative AI and automated computer vision models have displaced basic human gig work.",
+    "point3": "Developers relying on the platform are being transitioned toward modern automated AI data pipeline services.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788015144,
+    "timestamp_display": "Aug 29 \u2022 02:52 PM UTC"
+  },
+  {
     "title": "An Anthropic researcher just gave us a peek at self-improving AI",
     "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
     "category": "AI",
@@ -141,70 +154,5 @@
     "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787873166,
     "timestamp_display": "Aug 27 \u2022 11:26 PM UTC"
-  },
-  {
-    "title": "UK Power Grid Strained by Logjam of Speculative Data Center Requests",
-    "url": "https://www.wired.com/story/uk-data-centers-logjam-ofgem-regulations/",
-    "category": "HARDWARE",
-    "summary": "The UK electrical grid is experiencing severe capacity logjams caused by speculative data center connection requests. Energy regulators are updating rules to clear dormant queue applications and allocate power to active AI infrastructure projects.",
-    "point1": "'Phantom' energy connection requests are blocking real data center developments from securing grid access in the UK.",
-    "point2": "Highlights power grid capacity as a primary bottleneck for scaling regional AI infrastructure.",
-    "point3": "UK regulator Ofgem is implementing stricter timeline milestones to revoke unused capacity reservations.",
-    "rss_image": "https://media.wired.com/photos/6a8e39f99a6c30f92d1621f3/master/pass/Phantom-Data-Centers-Clog-UK-Power-Grid-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a8e39f99a6c30f92d1621f3/master/pass/Phantom-Data-Centers-Clog-UK-Power-Grid-Business.jpg",
-    "timestamp_epoch": 1787837236,
-    "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "Cyber Insurers Revamp Policies to Cover Risks from Autonomous AI Agents",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdVRUeXAzYi1DWkw1Uno1dXNGdUo2NXlWVmt1Wk1Ob1lQNVNucTJVZ21TNEZQNU9qcmZweGJlV2xnTUFJWTFvbENkWlpyV3V4ekZRRzdfc1p4bnppXzRhd3hfdkQ4blp3eG1sNl_aajROWjA1SmxHVXJkZEFvMFkzNzk5ZXVWWWJ3Zi13bjdBV2t6ZVp6LXRfY0ZtX19ZdE1RUW9JNHFfWmVydkZ3c09WRl_L0E?oc=5",
-    "category": "SECURITY",
-    "summary": "Insurance providers are restructuring cyber liability policies to address risks created by autonomous AI agents taking unapproved or harmful actions. Underwriters are introducing strict governance guidelines and new exclusions for agentic system failures.",
-    "point1": "Cyber insurance carriers are updating policy terms specifically to manage liabilities from rogue AI agent actions.",
-    "point2": "Enterprise users will need to enforce stricter monitoring and safety guardrails to maintain insurance coverage.",
-    "point3": "Accelerates the establishment of industry-standard security and compliance requirements for agentic AI.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787837236,
-    "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "OpenAI to Introduce Ads on Free and Budget ChatGPT Tiers",
-    "url": "https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/",
-    "category": "SOFTWARE",
-    "summary": "OpenAI is beginning to roll out ad placements within ChatGPT, launching initially on free and lower-cost 'Go' subscription tiers in markets like India. The move marks a key revenue strategy pivot to offset massive compute and infrastructure expenditures.",
-    "point1": "OpenAI is implementing advertisements for non-premium ChatGPT tiers in select international regions.",
-    "point2": "Demonstrates the pressure on generative AI providers to monetize massive user bases against soaring operational costs.",
-    "point3": "Successful testing will likely lead to wider global rollouts of sponsored responses and ad banners.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787837236,
-    "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "Nvidia Closes In on Acquisition of AI Hub Hugging Face",
-    "url": "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/",
-    "category": "BUSINESS",
-    "summary": "Nvidia is reportedly in advanced talks to acquire open-source AI platform Hugging Face. The acquisition would consolidate Nvidia's dominance across both AI hardware manufacturing and foundational open-source software developer tooling.",
-    "point1": "Nvidia is nearing a deal to buy Hugging Face, the premier platform for hosting open-source AI models.",
-    "point2": "Gives Nvidia direct control over the core distribution hub used by millions of AI researchers and engineers.",
-    "point3": "Antitrust regulators are expected to closely analyze the deal due to growing concerns around market consolidation in AI.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787837236,
-    "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "Bill Gates Warns 'There Is No Plan' for the Economic Upheaval Driven by AI",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1TWjRYRDczeHJMLWZEczhIdzZYQmJPcFEyU0RqUlNIVDJHbUZSM3paVDhIQmlXX296U0pJaWt4YWpNaXZDMl85SlFyWjNrU3JOV0U0aFhSQXN0NGdfcDhMYnFwS0hUc3ZRcVQtVkFSYUU1eXJicm96TkJhMFk5d9IBgwFBVV95cUxQQXN1dFVRNHdaY2s1WVdFXzBiUFl0VjN6Z3BMR1RJVXFWQVRtNm9uQlBwNl9KNUxTVEUyalRTM242OHFNaDNzVkNFdWNmb2RQenNLQ3lNcmJYWlBiTlp5SWRuUzNoNmdqbWhqSWJqMnZteEo0b0HAGXVZjg1UGN6VzRQQQ?oc=5",
-    "category": "AI",
-    "summary": "Microsoft co-founder Bill Gates published a stark warning stating that governments and tech companies are unprepared for the societal and workforce disruptions artificial intelligence will bring. Gates emphasized that the speed of AI deployment far exceeds current regulatory and economic planning frameworks.",
-    "point1": "Bill Gates published a new essay highlighting a critical lack of preparation for AI-driven labor market disruption.",
-    "point2": "Signals a shift from tech industry optimism toward urgent public calls for regulatory and economic intervention.",
-    "point3": "Policy advocates and global leaders face rising pressure to formulate safety nets and retraining strategies.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787837236,
-    "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
   }
 ]
