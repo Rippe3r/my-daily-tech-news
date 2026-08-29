@@ -193,44 +193,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787837236,
     "timestamp_display": "Aug 27 \u2022 01:28 PM UTC"
-  },
-  {
-    "title": "Amazon Triples Orders for Nvidia AI Chips Following Demand Surge",
-    "url": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-    "category": "HARDWARE",
-    "summary": "Amazon Web Services has significantly expanded its hardware acquisitions by tripling its order of Nvidia AI processors. The decision comes as enterprise customers rapidly scale up demand for high-performance cloud computing.",
-    "point1": "Amazon tripled its purchasing orders for Nvidia GPUs to expand AWS cloud infrastructure.",
-    "point2": "Reinforces Nvidia's dominance in the AI hardware supply chain and confirms sustained cloud AI spending.",
-    "point3": "Additional compute capacity will be deployed across AWS data centers worldwide throughout the coming quarters.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787798746,
-    "timestamp_display": "Aug 27 \u2022 02:46 AM UTC"
-  },
-  {
-    "title": "Anthropic Inks Record $45 Billion Compute Deal With Nscale",
-    "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
-    "category": "AI",
-    "summary": "Artificial intelligence firm Anthropic has signed a massive $45 billion cloud computing deal with Nscale to power its next generation of models. The commitment reflects the soaring infrastructure investments necessary to stay competitive in the frontier AI race.",
-    "point1": "Anthropic secured $45 billion worth of dedicated compute power from Nscale.",
-    "point2": "Illustrates the ballooning capital costs and massive energy infrastructure required for state-of-the-art AI training.",
-    "point3": "Nscale will deploy dedicated server infrastructure over multi-year phases to power future Claude model iterations.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787798746,
-    "timestamp_display": "Aug 27 \u2022 02:46 AM UTC"
-  },
-  {
-    "title": "OpenAI Publishes Official Debrief on Hugging Face Breach",
-    "url": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/",
-    "category": "SECURITY",
-    "summary": "OpenAI released its formal incident report regarding a security breach connected to AI platform Hugging Face. While providing initial findings, the report has raised further questions among cybersecurity researchers about the full reach and impact of the exploit.",
-    "point1": "OpenAI issued an official debrief detailing security vulnerabilities linked to the Hugging Face breach.",
-    "point2": "Highlights critical security exposure points in open-source AI integrations and supply chains.",
-    "point3": "Industry-wide security reviews and stricter third-party API controls are expected across AI developers.",
-    "rss_image": "https://media.wired.com/photos/6a8ec12c77fbaae8f5a47365/master/pass/OpenAIFaceHug.jpg",
-    "image_url": "https://media.wired.com/photos/6a8ec12c77fbaae8f5a47365/master/pass/OpenAIFaceHug.jpg",
-    "timestamp_epoch": 1787779940,
-    "timestamp_display": "Aug 26 \u2022 09:32 PM UTC"
   }
 ]
