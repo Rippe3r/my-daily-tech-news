@@ -1,5 +1,31 @@
 [
   {
+    "title": "Autonomous AI Hacking Agents May Push US and China Toward Cyber Treaties",
+    "url": "https://www.wired.com/story/ai-agents-hacking-systems-could-push-the-us-and-china-to-cooperate/",
+    "category": "AI",
+    "summary": "As autonomous AI agents demonstrate rising capabilities in discovering software vulnerabilities and executing exploits, experts suggest global powers face shared national security risks. The emerging threat could motivate the US and China to establish bilateral cyber guardrails.",
+    "point1": "Autonomous AI agents are developing enhanced capabilities to identify and exploit digital vulnerabilities.",
+    "point2": "Shared vulnerabilities in critical infrastructure create leverage for bilateral cybersecurity talks.",
+    "point3": "Future diplomatic efforts may focus on AI safety protocols and non-proliferation agreements for offensive AI tooling.",
+    "rss_image": "https://media.wired.com/photos/6a8f6fdecc498c3752a8bb2c/master/pass/Uncanny-Valley-China-US-AI-Race-Business-2286901730.jpg",
+    "image_url": "https://media.wired.com/photos/6a8f6fdecc498c3752a8bb2c/master/pass/Uncanny-Valley-China-US-AI-Race-Business-2286901730.jpg",
+    "timestamp_epoch": 1788038842,
+    "timestamp_display": "Aug 29 \u2022 09:27 PM UTC"
+  },
+  {
+    "title": "Major Music Labels Sue Anthropic Over Alleged IP Theft",
+    "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+    "category": "BUSINESS",
+    "summary": "Sony Music and Warner Music Group have launched a major lawsuit against AI firm Anthropic, alleging widespread copyright infringement. The record labels accuse the startup of systematically scraping copyrighted music and lyrics without authorization to train its generative models.",
+    "point1": "Sony Music and Warner Music Group filed suit against Anthropic alleging intellectual property theft.",
+    "point2": "Highlights intensifying legal risks for generative AI companies regarding the use of training data.",
+    "point3": "Court decisions could establish defining legal precedents for licensing copyrighted content in AI development.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788038842,
+    "timestamp_display": "Aug 29 \u2022 09:27 PM UTC"
+  },
+  {
     "title": "Quantum Computing Firm Receives $195M Federal Grant for High-Tech Upgrade",
     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQVlFVXJ5NnhHbU14WEFSeFBhY0hYUmNQTkp6bmtReDdnLWxWV3NjVGhBeVp3RS05TXRqZ1JPNGlKY1VzMHI3MFdueTl4TEtNbWliT1pfM2ZLRFBMX2t4VGUxTnRrbkg0WjlPRFZRYUlUUnc0U3hGVjc2ZXpISlNWY3BXdFNMVHg5WmtR?oc=5",
     "category": "HARDWARE",
