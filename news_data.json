@@ -1,5 +1,18 @@
 [
   {
+    "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+    "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+    "category": "AI",
+    "summary": "A researcher at Anthropic shared insights into experimental models capable of evaluating and self-correcting their own reasoning processes. The methodology offers a glimpse into recursive self-improvement techniques that could shape future AI model training.",
+    "point1": "Anthropic demonstrated frameworks that allow models to autonomously evaluate and enhance reasoning outputs.",
+    "point2": "Self-refinement techniques could reduce reliance on manual human evaluation and post-training data sets.",
+    "point3": "Researchers continue to evaluate control mechanisms to ensure self-improving architectures remain safely aligned.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1787997055,
+    "timestamp_display": "Aug 29 \u2022 09:51 AM UTC"
+  },
+  {
     "title": "Microsoft Teams Weaponized for Corporate Cyber Scams in China",
     "url": "https://www.wired.com/story/microsoft-teams-is-becoming-a-haven-for-chinese-scammers/",
     "category": "SECURITY",
