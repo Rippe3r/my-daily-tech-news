@@ -1,5 +1,31 @@
 [
   {
+    "title": "Inside Meta\u2019s Push to Deploy Robots in Data Centers",
+    "url": "https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/",
+    "category": "HARDWARE",
+    "summary": "Meta is actively experimenting with autonomous robots to automate physical maintenance and monitoring tasks inside its vast data centers. The initiative aims to enhance operational efficiency as AI infrastructure scales rapidly across global facilities.",
+    "point1": "Meta is testing robotic automation for physical infrastructure and server room maintenance in data centers.",
+    "point2": "Automating hardware operations reduces human error and downtime in power-intensive AI infrastructure.",
+    "point3": "Robotic management could become standard industry practice as hyperscale data centers grow too large for human-only oversight.",
+    "rss_image": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
+    "timestamp_epoch": 1788126417,
+    "timestamp_display": "Aug 30 \u2022 09:47 PM UTC"
+  },
+  {
+    "title": "Microsoft Teams Exploited by Scammers in China",
+    "url": "https://www.wired.com/story/microsoft-teams-is-becoming-a-haven-for-chinese-scammers/",
+    "category": "SECURITY",
+    "summary": "Cybercriminals based in China are increasingly leveraging Microsoft Teams to conduct sophisticated phishing and fraud campaigns. Security experts warn that the enterprise platform's trusted status allows scammers to bypass standard corporate security filters.",
+    "point1": "Scammers in China are actively misusing Microsoft Teams for enterprise phishing and scam operations.",
+    "point2": "Enterprise collaboration tools are becoming prime targets as corporate users lower their guard inside internal messaging platforms.",
+    "point3": "Microsoft faces mounting pressure to tighten access controls and implement stricter identity verification for global Teams accounts.",
+    "rss_image": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
+    "timestamp_epoch": 1788126417,
+    "timestamp_display": "Aug 30 \u2022 09:47 PM UTC"
+  },
+  {
     "title": "Elon Musk\u2019s Gas Turbine Power Strategy for AI Triggers Pollution Concerns",
     "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
     "category": "BUSINESS",
@@ -102,70 +128,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1787997055,
     "timestamp_display": "Aug 29 \u2022 09:51 AM UTC"
-  },
-  {
-    "title": "Microsoft Teams Weaponized for Corporate Cyber Scams in China",
-    "url": "https://www.wired.com/story/microsoft-teams-is-becoming-a-haven-for-chinese-scammers/",
-    "category": "SECURITY",
-    "summary": "Cybersecurity researchers warn that Microsoft Teams is increasingly being targeted by threat actors in China for corporate phishing and scams. Attackers exploit default federation settings and inherent employee trust in business communication applications.",
-    "point1": "Scammers are exploiting default external communication channels in Microsoft Teams to launch corporate social engineering attacks.",
-    "point2": "Demonstrates how trusted collaboration tools are being turned into primary attack vectors for enterprise fraud.",
-    "point3": "Expect heightened administrative default restrictions and security enforcement for enterprise messaging tools globally.",
-    "rss_image": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
-    "timestamp_epoch": 1787949242,
-    "timestamp_display": "Aug 28 \u2022 08:34 PM UTC"
-  },
-  {
-    "title": "Open-Weight AI Startups Emerge as Top Acquisition Targets",
-    "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
-    "category": "BUSINESS",
-    "summary": "Silicon Valley acquirers are prioritizing open-weight AI developers to capture specialized technical talent and customizable model architecture. Tech buyers are increasingly favoring open models that offer greater privacy and control over closed API alternatives.",
-    "point1": "Open-weight AI companies are driving high levels of Silicon Valley M&A and venture interest.",
-    "point2": "Highlights a structural market demand shift toward customizable and self-hostable model deployments.",
-    "point3": "Likely to accelerate market consolidation among independent middle-tier AI labs.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787949242,
-    "timestamp_display": "Aug 28 \u2022 08:34 PM UTC"
-  },
-  {
-    "title": "Anthropic Wins Initial Court Ruling Against Pentagon Supply-Chain Label",
-    "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
-    "category": "AI",
-    "summary": "AI research lab Anthropic won a preliminary judicial victory challenging a Department of Defense supply-chain risk classification. The ruling provides strategic relief as leading AI firms face heightened regulatory oversight and national defense scrutiny.",
-    "point1": "Anthropic earned a legal victory contesting a Defense Department supply-chain risk designation.",
-    "point2": "Signals legal boundaries regarding how federal agencies classify defense-adjacent commercial AI labs.",
-    "point3": "Establishes a critical legal precedent for public-sector procurement and government AI security oversight.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787949242,
-    "timestamp_display": "Aug 28 \u2022 08:34 PM UTC"
-  },
-  {
-    "title": "Meta Experiments With Autonomous Data Center Robots",
-    "url": "https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/",
-    "category": "HARDWARE",
-    "summary": "Meta is actively testing autonomous robotic systems to handle routine maintenance, inspection, and physical management inside its AI data centers. The initiative aims to streamline operational workloads as data infrastructure scales beyond human physical capacity.",
-    "point1": "Meta is trialing automated robotic systems to execute physical maintenance within its enterprise data centers.",
-    "point2": "Operational automation is critical to maintaining hyper-scale infrastructure required for advanced AI workloads.",
-    "point3": "Broader adoption could set new automated operational standards for industrial and cloud facility operations.",
-    "rss_image": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
-    "timestamp_epoch": 1787949242,
-    "timestamp_display": "Aug 28 \u2022 08:34 PM UTC"
-  },
-  {
-    "title": "Neocloud Lambda Secures $1B in Debt for AI Chip Expansion",
-    "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
-    "category": "HARDWARE",
-    "summary": "Specialized cloud provider Lambda has raised $1 billion in debt financing to expand its compute infrastructure and purchase advanced AI chips. The massive capital injection reflects continuing intense enterprise demand for specialized GPU infrastructure.",
-    "point1": "Lambda secured $1 billion in debt financing designated specifically for purchasing advanced AI chips and hardware.",
-    "point2": "Illustrates the massive capital requirements and ongoing compute infrastructure race backing generative AI.",
-    "point3": "Enables Lambda to rapidly scale its cloud capacity to compete with incumbent cloud giants.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787949242,
-    "timestamp_display": "Aug 28 \u2022 08:34 PM UTC"
   }
 ]
