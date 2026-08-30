@@ -1,5 +1,18 @@
 [
   {
+    "title": "Elon Musk\u2019s Gas Turbine Power Strategy for AI Triggers Pollution Concerns",
+    "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+    "category": "BUSINESS",
+    "summary": "Elon Musk's efforts to rapidly scale electricity capacity for AI data centers using gas turbines are creating local environmental opposition. The reliance on fossil-fuel combustion underlines the intense energy crisis tech companies face to satisfy AI compute power requirements.",
+    "point1": "Musk's rapid deployment of gas turbines to power compute clusters is causing notable local environmental impact and pollution.",
+    "point2": "The massive energy consumption of modern AI infrastructure is forcing companies to trade clean energy goals for operational speed.",
+    "point3": "Increasing environmental pushback and local regulatory scrutiny could throttle the pace of future data center developments.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788114026,
+    "timestamp_display": "Aug 30 \u2022 06:20 PM UTC"
+  },
+  {
     "title": "US Mobilizes Major Tech Firms to Block Huawei AI Infrastructure Expansion in Africa",
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTkVYS0hSbXR4emZ3TEkzTDhlNjYybkk5T3dtdnRIS0tIQ3Z5czIyOV9rLUNFZWU3YkNTM0tjTXpiWWJvbEVKNzZPMXZySHMtckc1UzhidWFLNU9JMmVYQU5tV1RwemZWMHFxTzhpR3lkd2tEQ203cjAtU28wdWZFbFNqTkFGQXdGWkdQUVdpM19MajhHX1ExTl_MY2RZeEdlRmlFdFp1Uks1ZDRUa2FuNF84cmpxOVpOVFShUGtTNFFTRWFjSzFnOUQ1Nm11SVduZk8yMHZtRQ?oc=5",
     "category": "HARDWARE",
