@@ -1,5 +1,18 @@
 [
   {
+    "title": "Google Maps Glitch Relabels Lake Ontario as 'Lake America'",
+    "url": "https://www.wired.com/story/google-maps-now-shows-lake-america-instead-of-lake-ontario/",
+    "category": "SOFTWARE",
+    "summary": "Google Maps users uncovered a bizarre spatial labeling anomaly where Lake Ontario was displayed under the name 'Lake America'. The geographical bug underscores the risks of automated data pipelines in mapping platforms.",
+    "point1": "Google Maps displayed an incorrect label naming Lake Ontario as 'Lake America'.",
+    "point2": "Demonstrates how automated geographic data processing can inadvertently introduce widespread errors into essential navigation applications.",
+    "point3": "Google is expected to issue a map data update to correct the naming discrepancy.",
+    "rss_image": "https://media.wired.com/photos/6a9455859666495a32b503b6/master/pass/Screenshot%202026-08-30%20at%2011.06.40%E2%80%AFAM.png",
+    "image_url": "https://media.wired.com/photos/6a9455859666495a32b503b6/master/pass/Screenshot%202026-08-30%20at%2011.06.40%E2%80%AFAM.png",
+    "timestamp_epoch": 1788187358,
+    "timestamp_display": "Aug 31 \u2022 02:42 PM UTC"
+  },
+  {
     "title": "U.S. Hardware Restrictions Face Challenges Against China's Scale",
     "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
     "category": "BUSINESS",
@@ -141,18 +154,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788015144,
     "timestamp_display": "Aug 29 \u2022 02:52 PM UTC"
-  },
-  {
-    "title": "An Anthropic researcher just gave us a peek at self-improving AI",
-    "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-    "category": "AI",
-    "summary": "A researcher at Anthropic shared insights into experimental models capable of evaluating and self-correcting their own reasoning processes. The methodology offers a glimpse into recursive self-improvement techniques that could shape future AI model training.",
-    "point1": "Anthropic demonstrated frameworks that allow models to autonomously evaluate and enhance reasoning outputs.",
-    "point2": "Self-refinement techniques could reduce reliance on manual human evaluation and post-training data sets.",
-    "point3": "Researchers continue to evaluate control mechanisms to ensure self-improving architectures remain safely aligned.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1787997055,
-    "timestamp_display": "Aug 29 \u2022 09:51 AM UTC"
   }
 ]
