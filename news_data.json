@@ -1,5 +1,57 @@
 [
   {
+    "title": "US Congress Advances Bill to Give US Edge in Open-Source AI Race Against China",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbTRTcFRidXZkbmRlX3BSRXc2b0FaSUFZbzRNQmItZ1JwSGZMQVA1ZkVzbFByNFBuNkZxQVJ3MWtLR2hqeEhpUUw1X0FrR0QxYlpjalRhbm5VbWg5WlpGQWcwT1NhUVVta0p2NmFJcnlyMU4tQmpsbHVkWExSNmxrOThDSlhhU211Z1lxc3Jab1VUa05SU3JWdzVHMlZHYVRpZEZ2dkM5WG03TlhDMWllVFlVZS1nSHpPVlVlZU5RamRrWFRhMFZsMW5QVzRQZ9IBzgFBVV95cUxQQ0hibXp6Wjh2eWd3NnJyTDJQTXV6OHNKQk9BOVhtNWJEQVE3a3NoNVUyZ2RqdkFXTHVHeDFqeUdoVzZDS3ZabHRFTXdYOW9zVnNpN0pDYU0yY1o3QlVoajFGeEdvTnllN09TY0R6clFCdmlYZnpkcDVxQUtCQ2t4NnBKZzBVYnc2TnUzOUVuNFItaHBSeWNYQmg5RlpTcXJTd2FPRmp6T1VPd1dXUUFRZW9lVnJsMDgyMzhVbHhWY0E0QVlCWU1vNmtnYmRnZw?oc=5",
+    "category": "BUSINESS",
+    "summary": "A bipartisan US bill is moving forward in Congress aimed at securing national leadership in open-source AI to counter rapid technological developments in China. The proposed legislation looks to support decentralized, open-source model development through federal frameworks.",
+    "point1": "The bill seeks to protect open-source software while strategically funding public initiatives to keep US models globally competitive.",
+    "point2": "It reflects a growing political recognition that open-source AI is critical for both national security and widespread economic innovation.",
+    "point3": "If signed into law, the bill could channel significant public resources into AI research, counterbalancing the monopoly of closed-source tech giants.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788300977,
+    "timestamp_display": "Sep 01 \u2022 10:18 PM UTC"
+  },
+  {
+    "title": "Anthropic Launches New Fable AI Model with Lower Costs and Coding Upgrades",
+    "url": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+    "category": "AI",
+    "summary": "Anthropic has introduced Fable, its latest artificial intelligence model designed to offer developers superior software engineering performance at a lower cost. Alongside price reductions, the model features relaxed safety restrictions to give developers more flexibility.",
+    "point1": "Fable focuses heavily on coding proficiencies, directly targeting OpenAI\u2019s developer tools.",
+    "point2": "Lowering API costs while easing overly strict safety guardrails directly addresses major pain points raised by enterprise software developers.",
+    "point3": "This release escalates the price-performance war among major LLM providers fighting for dominance in the automated coding sector.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788300977,
+    "timestamp_display": "Sep 01 \u2022 10:18 PM UTC"
+  },
+  {
+    "title": "AfterQuery Becomes Y Combinator\u2019s Fastest-Ever Unicorn at $3.2B Valuation",
+    "url": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/",
+    "category": "BUSINESS",
+    "summary": "AI-driven database analysis platform AfterQuery has reached a $3.2 billion valuation, making it the fastest company to achieve unicorn status in Y Combinator\u2019s history. The rapid ascent highlights the intense and sustained investor appetite for practical enterprise AI tools.",
+    "point1": "The startup surpassed previous YC records held by legendary tech firms like Stripe and Airbnb to cross the billion-dollar threshold.",
+    "point2": "This milestone signals massive commercial confidence in specialized AI software that automates complex data querying and engineering.",
+    "point3": "Market analysts will closely watch whether AfterQuery can scale its actual revenue quickly enough to sustain this unprecedented valuation trajectory.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788300977,
+    "timestamp_display": "Sep 01 \u2022 10:18 PM UTC"
+  },
+  {
+    "title": "OpenAI Is About to Release Its First AI Model With 'Critical' Cyber Abilities",
+    "url": "https://www.wired.com/story/openai-astra-first-ai-model-with-critical-cyber-abilities/",
+    "category": "SECURITY",
+    "summary": "OpenAI is preparing to launch Astra, its first artificial intelligence model categorized as having 'critical' cybersecurity capabilities. The upcoming release represents a massive leap in automated hacking proficiency, carrying both offensive capabilities and defensive potential.",
+    "point1": "The Astra model has demonstrated advanced capabilities in penetration testing and vulnerability exploitation.",
+    "point2": "Its release marks a key turning point where AI safety protocols must balance high-stakes cyber risk against commercial accessibility.",
+    "point3": "Security professionals and government watchdogs are monitoring the deployment to evaluate how it will reshape automated cyber defense and threat landscapes.",
+    "rss_image": "https://media.wired.com/photos/6a9613c7a31f896f81e828e0/master/pass/OpenAI-AI-Safety-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a9613c7a31f896f81e828e0/master/pass/OpenAI-AI-Safety-Business.jpg",
+    "timestamp_epoch": 1788300977,
+    "timestamp_display": "Sep 01 \u2022 10:18 PM UTC"
+  },
+  {
     "title": "Google\u2019s answer to Canva is an AI tool where you prompt instead of design",
     "url": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/",
     "category": "SOFTWARE",
@@ -153,31 +205,5 @@
     "image_url": "https://media.wired.com/photos/6a9205e11fef496705b5c9f7/master/pass/Jensen-Took-Call-From-Trump-Business-2212801537.jpg",
     "timestamp_epoch": 1788134798,
     "timestamp_display": "Aug 31 \u2022 12:07 AM UTC"
-  },
-  {
-    "title": "Inside Meta\u2019s Push to Deploy Robots in Data Centers",
-    "url": "https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/",
-    "category": "HARDWARE",
-    "summary": "Meta is actively experimenting with autonomous robots to automate physical maintenance and monitoring tasks inside its vast data centers. The initiative aims to enhance operational efficiency as AI infrastructure scales rapidly across global facilities.",
-    "point1": "Meta is testing robotic automation for physical infrastructure and server room maintenance in data centers.",
-    "point2": "Automating hardware operations reduces human error and downtime in power-intensive AI infrastructure.",
-    "point3": "Robotic management could become standard industry practice as hyperscale data centers grow too large for human-only oversight.",
-    "rss_image": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a8778d3964ec62bf0f4c98f/master/pass/Inside-Meta-Experiments-with-Data-Center-Robots-Business.jpg",
-    "timestamp_epoch": 1788126417,
-    "timestamp_display": "Aug 30 \u2022 09:47 PM UTC"
-  },
-  {
-    "title": "Microsoft Teams Exploited by Scammers in China",
-    "url": "https://www.wired.com/story/microsoft-teams-is-becoming-a-haven-for-chinese-scammers/",
-    "category": "SECURITY",
-    "summary": "Cybercriminals based in China are increasingly leveraging Microsoft Teams to conduct sophisticated phishing and fraud campaigns. Security experts warn that the enterprise platform's trusted status allows scammers to bypass standard corporate security filters.",
-    "point1": "Scammers in China are actively misusing Microsoft Teams for enterprise phishing and scam operations.",
-    "point2": "Enterprise collaboration tools are becoming prime targets as corporate users lower their guard inside internal messaging platforms.",
-    "point3": "Microsoft faces mounting pressure to tighten access controls and implement stricter identity verification for global Teams accounts.",
-    "rss_image": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
-    "timestamp_epoch": 1788126417,
-    "timestamp_display": "Aug 30 \u2022 09:47 PM UTC"
   }
 ]
