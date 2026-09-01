@@ -1,5 +1,31 @@
 [
   {
+    "title": "'Superhuman' AI Diagnostic Tool Spots Heart Disease in Seconds",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdlhnZnJYYzduOURZejlmSkpvTm5tNEw5cHNkcUFrdVZ0SEtWMEJTTUVZdHJHdjFGN0otOFRkZUlHZHk1Wm5wYzJDR1p5tMXembxTkVHT285U2MtZVA4bEJLOFFRMDFlMEgyaHZMb184SXVsR1c1NTVycFVaQXZtWV_nUmMwWXVpdmdTSTRCeXZmbnc?oc=5",
+    "category": "AI",
+    "summary": "Medical researchers have revealed an advanced AI model capable of analyzing cardiac scans to detect cardiovascular disease in under two seconds. The system demonstrates accuracy superior to human specialists, drastically cutting down diagnosis times.",
+    "point1": "The AI tool evaluates complex cardiac scans significantly faster and more accurately than traditional clinical evaluations.",
+    "point2": "Could dramatically reduce hospital triage backlogs and improve patient outcomes through early detection.",
+    "point3": "Clinical trials and regulatory approval processes will determine how quickly hospitals integrate the technology into standard care protocols.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788277972,
+    "timestamp_display": "Sep 01 \u2022 03:53 PM UTC"
+  },
+  {
+    "title": "House Intelligence Committee Warns of 'Black Swan' AI Risks",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSldFa0VOb0pOQTkxckR0ZHBOSWJFalQ1NVIyaFdPVDM5SEQ3RXFxOEJjY0Y3cEU3QWcwMC1kTWRyak00THMxNXhuTGZ5THdvLVZuTFdTTXBDbjhFVWxibVhYdGNYQmF2S3p6bzA3TnBuR3ZEbVNlLXNwWEZpMFhQdWJR0gGHAUFVX3lxTE9BbzhvdWdiTFcxcXB0SDcxSVlDekRsZlcwUldyTEtoU09rc21aTk9iU3I3WXV2cW1wcXJmQ0s3LTR1VnEyWm9nU21GaFlvZEg1ZFgtZ1V3YUY3UjBDd0c4c3ZnaUVZNFYxeUdLZV9hZ1hBaEs0bUtPbjNHQnRMSnA3T3dzd29hRQ?oc=5",
+    "category": "AI",
+    "summary": "The U.S. House Intelligence Committee released a cautionary report outlining critical systemic and national security vulnerabilities linked to rapid AI deployment. Lawmakers emphasized the danger of unexpected 'Black Swan' events caused by autonomous AI systems operating at scale.",
+    "point1": "Congressional leaders warn that unchecked AI autonomy poses unpredictable, catastrophic national security risks.",
+    "point2": "Signals likely legislative pushes toward mandatory safety evaluations and government oversight for frontier AI models.",
+    "point3": "Federal agencies are expected to establish stricter compliance guidelines for defense contractors and commercial AI developers.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788277972,
+    "timestamp_display": "Sep 01 \u2022 03:53 PM UTC"
+  },
+  {
     "title": "AI could cause global economic downturn, Andrew Bailey warns G20",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE93UkFFTExla3dMSVo2YWwxUXl0ZllhV0dIbW0wWTdSMXktMHV1X2l4SnlZMmRFMXdSY2hqbm0tVGNNTmsxME5ncHp2aVdHRmhvd3Y0cUo2cnkwQQ?oc=5",
     "category": "BUSINESS",
@@ -127,18 +153,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788114026,
     "timestamp_display": "Aug 30 \u2022 06:20 PM UTC"
-  },
-  {
-    "title": "US Mobilizes Major Tech Firms to Block Huawei AI Infrastructure Expansion in Africa",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTkVYS0hSbXR4emZ3TEkzTDhlNjYybkk5T3dtdnRIS0tIQ3Z5czIyOV9rLUNFZWU3YkNTM0tjTXpiWWJvbEVKNzZPMXZySHMtckc1UzhidWFLNU9JMmVYQU5tV1RwemZWMHFxTzhpR3lkd2tEQ203cjAtU28wdWZFbFNqTkFGQXdGWkdQUVdpM19MajhHX1ExTl_MY2RZeEdlRmlFdFp1Uks1ZDRUa2FuNF84cmpxOVpOVFShUGtTNFFTRWFjSzFnOUQ1Nm11SVduZk8yMHZtRQ?oc=5",
-    "category": "HARDWARE",
-    "summary": "The United States government is orchestrating a strategic push involving three major US technology companies to counter a proposal by China's Huawei. Huawei is seeking to build a 2,008-chip AI data center in Africa's second-largest economy, sparking intense geopolitical tech competition.",
-    "point1": "The US is backing domestic tech heavyweights to outbid Huawei for a high-density AI computing project in Africa.",
-    "point2": "High-performance compute infrastructure is becoming a central battleground for global economic and strategic influence.",
-    "point3": "Expect increased intervention and financial backing from Western governments to secure critical AI hardware supply chains in developing nations.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788099143,
-    "timestamp_display": "Aug 30 \u2022 02:12 PM UTC"
   }
 ]
