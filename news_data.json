@@ -1,5 +1,44 @@
 [
   {
+    "title": "Google\u2019s answer to Canva is an AI tool where you prompt instead of design",
+    "url": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/",
+    "category": "SOFTWARE",
+    "summary": "Google has launched a generative AI graphic creation tool designed to directly compete with platforms like Canva. Rather than relying on manual drag-and-drop templates, the software builds complete graphic assets using natural language prompts.",
+    "point1": "Google unveiled a prompt-based graphic creation tool targeting Canva's core market.",
+    "point2": "Enables non-designers to generate professional layouts and assets without manual editing skills.",
+    "point3": "Highlights a growing shift toward intent-driven UI paradigms across mainstream software products.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788289587,
+    "timestamp_display": "Sep 01 \u2022 07:07 PM UTC"
+  },
+  {
+    "title": "\u2018Superhuman\u2019 AI tool spots heart disease in less than 2 seconds",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdlhnZnJYYzduOURZejlmSkpvTm5tNEw5cHNkcUFrdVZ0SEtWMEJTTUVZdHJHdjFGN0otOFRkZUlHZHk1Wm5wYzJDR1p5dE1XemJ4TkVHT285U2MtZVA4bEJLOFFRMDFlMEgyaHZMb184SXVsR1c1NTVycFVaQXZtWV9nUmMwWXVpdmdTSTRCeXZmbnc?oc=5",
+    "category": "AI",
+    "summary": "Researchers have developed a high-speed artificial intelligence system capable of detecting cardiovascular disease in under two seconds. The diagnostic tool outperforms traditional clinical assessments, earning a 'superhuman' classification from medical researchers.",
+    "point1": "The AI diagnostic system identifies signs of heart disease in under two seconds.",
+    "point2": "Significantly speeds up triage times and aids clinicians in catching early-stage cardiac issues.",
+    "point3": "Widespread clinical implementation could lower healthcare costs and ease emergency department workloads.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788289587,
+    "timestamp_display": "Sep 01 \u2022 07:07 PM UTC"
+  },
+  {
+    "title": "Who is John Ternus, Apple\u2019s new CEO?",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOY0RRek9NcjRvc0o2ZDlSU3NwdTFFVWFKdlpMZTZ5VGJFcDRwM0pOUHpZYWIzYTV2T2tDaFlQUWhTcmxUOVVsZ01NNm13clFEc2c0WWVoOEVfT05LWnJpNUEtbG9GMTFMcUJRWWIyQWFyRDcxLWd2ZXlDTTFzUERELWJ3RGJ5WF9pNEQ4WEtCSkswcHBHalhIem5OamxjLUZpLWNNWjBQbFhSb0ZrY0JMN1M4MjU?oc=5",
+    "category": "BUSINESS",
+    "summary": "Apple has officially appointed John Ternus as its new Chief Executive Officer, taking over leadership of the tech giant. Ternus previously led hardware engineering at Apple, playing a pivotal role in major product transitions including Apple Silicon.",
+    "point1": "John Ternus officially steps into executive leadership as Apple's new Chief Executive Officer.",
+    "point2": "Marks a major leadership transition for the world's most valuable technology company.",
+    "point3": "Industry analysts will closely monitor his management of AI integration, hardware product lines, and global operations.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788289587,
+    "timestamp_display": "Sep 01 \u2022 07:07 PM UTC"
+  },
+  {
     "title": "'Superhuman' AI Diagnostic Tool Spots Heart Disease in Seconds",
     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdlhnZnJYYzduOURZejlmSkpvTm5tNEw5cHNkcUFrdVZ0SEtWMEJTTUVZdHJHdjFGN0otOFRkZUlHZHk1Wm5wYzJDR1p5tMXembxTkVHT285U2MtZVA4bEJLOFFRMDFlMEgyaHZMb184SXVsR1c1NTVycFVaQXZtWV_nUmMwWXVpdmdTSTRCeXZmbnc?oc=5",
     "category": "AI",
@@ -140,18 +179,5 @@
     "image_url": "https://media.wired.com/photos/6a909d8a06c510ef6758e71c/master/pass/Made-In-China-Microsoft-Teams-Hidden-Scams-Business.jpg",
     "timestamp_epoch": 1788126417,
     "timestamp_display": "Aug 30 \u2022 09:47 PM UTC"
-  },
-  {
-    "title": "Elon Musk\u2019s Gas Turbine Power Strategy for AI Triggers Pollution Concerns",
-    "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
-    "category": "BUSINESS",
-    "summary": "Elon Musk's efforts to rapidly scale electricity capacity for AI data centers using gas turbines are creating local environmental opposition. The reliance on fossil-fuel combustion underlines the intense energy crisis tech companies face to satisfy AI compute power requirements.",
-    "point1": "Musk's rapid deployment of gas turbines to power compute clusters is causing notable local environmental impact and pollution.",
-    "point2": "The massive energy consumption of modern AI infrastructure is forcing companies to trade clean energy goals for operational speed.",
-    "point3": "Increasing environmental pushback and local regulatory scrutiny could throttle the pace of future data center developments.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788114026,
-    "timestamp_display": "Aug 30 \u2022 06:20 PM UTC"
   }
 ]
