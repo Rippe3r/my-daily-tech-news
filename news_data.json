@@ -1,5 +1,31 @@
 [
   {
+    "title": "NYC Public Schools Ban AI Use for Students Through Eighth Grade",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cU1NWjNWaXZlY1NRcTJnRTJnVXdoclZHa1MxT0NQbXpWSjl4a0lMU1ZtUHhFMGVXMldkT2tLemVfV1RVaXVOUFB2SmlmbXpXaXN4dW8yNHRsSWZQZHdqVlFXOUhZcUdibGVFVVR2OTNZWFdsQ05nQVBGNjNPUzFvejNfcTZ1QnV2OVA2jZmTmpKQnNGRzhSMXZPMDJFT2fSAaIBQVVfeXFMT0NYeUtoa0pSdVd3eERBVlJjcXREU2RRdHI2VXFuY2Vqd1NUdDdONUdpWTN3a0RJZFU0SXRhN2czSmpsNFVsc3pzalh5ODVMTl_mZ0lLYzYzWkRGNTJEcTdNZDh6VU9wSV_tpFU3QzZKNkZqRVpncVpoR1_qUzZfR1RtYlhUbjRVMHlMUjlZSi1UQWhueEQ3QVBERmtJQXJzNl_w?oc=5",
+    "category": "SOFTWARE",
+    "summary": "New York City's public school system has implemented a sweeping policy prohibiting student generative AI usage from kindergarten through eighth grade. The district aims to protect foundational learning processes and discourage over-reliance on automated tools during early developmental years.",
+    "point1": "Restricts students up to eighth grade from using generative AI tools across NYC public schools.",
+    "point2": "Reflects a growing policy push to preserve traditional educational skill development amid rising AI adoption.",
+    "point3": "School districts across the United States may follow NYC's lead in setting strict early education guidelines.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788348448,
+    "timestamp_display": "Sep 02 \u2022 11:28 AM UTC"
+  },
+  {
+    "title": "OpenAI Prepares Release of 'Astra' Model with High-Level Cyber Capabilities",
+    "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
+    "category": "AI",
+    "summary": "OpenAI is preparing to deploy its new 'Astra' AI model, which demonstrates advanced capabilities in finding software vulnerabilities and executing cybersecurity penetration testing. The upcoming release highlights major progress in automated defensive tools as well as concerns over systemic security risks.",
+    "point1": "Astra possesses sophisticated capabilities to identify and breach digital defense systems.",
+    "point2": "Heightens industry concerns regarding automated cybersecurity threats and dual-use technological risks.",
+    "point3": "OpenAI plans to implement safety protocols and evaluation benchmarks alongside its rollout.",
+    "rss_image": "https://media.wired.com/photos/6a9613c7a31f896f81e828e0/master/pass/OpenAI-AI-Safety-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6a9613c7a31f896f81e828e0/master/pass/OpenAI-AI-Safety-Business.jpg",
+    "timestamp_epoch": 1788348448,
+    "timestamp_display": "Sep 02 \u2022 11:28 AM UTC"
+  },
+  {
     "title": "Pangram Rises as AI Text Detection Standard Amid Industry Reliability Debates",
     "url": "https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/",
     "category": "AI",
