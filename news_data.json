@@ -1,5 +1,44 @@
 [
   {
+    "title": "New York City Bans Generative AI Tools in Elementary and Middle Schools",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8wXzZnbFJaZHpuN1pnMWRTOWRJYXBnWHJIRDhzc0dEczB1anRKbjhiM2l1VXZkR1B2NFZTTjZOZ1NHeUdlbDRCeUR5dmpvSzdjNmlUUlI3N0pqTUI3VlhuZU1SbmRLN05vZnEtM0pjSFcxYUZBWVE?oc=5",
+    "category": "SOFTWARE",
+    "summary": "New York City education authorities have instituted a broad moratorium banning generative AI software across all public elementary and middle schools. Officials cited concerns regarding student data privacy, early childhood cognitive development, and classroom integrity as primary drivers for the ban.",
+    "point1": "NYC public schools introduced the nation's largest generative AI moratorium for K-8 grade levels.",
+    "point2": "Reflects growing institutional caution among major school systems over unvetted AI applications in early education.",
+    "point3": "District officials plan to evaluate long-term educational guidelines as research on generative tools matures.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788392708,
+    "timestamp_display": "Sep 02 \u2022 11:46 PM UTC"
+  },
+  {
+    "title": "Trump Administration Backs OpenAI in High-Stakes New York Times Lawsuit",
+    "url": "https://www.wired.com/story/trump-administration-sides-with-ai-giants-new-york-times-lawsuit/",
+    "category": "BUSINESS",
+    "summary": "The Trump administration has officially backed OpenAI in the copyright infringement lawsuit brought by The New York Times. Federal filings contend that using copyrighted materials to train artificial intelligence models falls under protected fair use necessary to maintain US technological leadership.",
+    "point1": "The federal government formally urged courts to treat AI model training data as protected fair use.",
+    "point2": "Provides strong political support to American AI companies facing costly intellectual property litigations.",
+    "point3": "The government's stance could strongly influence judicial rulings and upcoming policy guidelines on AI copyright enforcement.",
+    "rss_image": "https://media.wired.com/photos/6a9847e0838ebf1a08f58e12/master/pass/GettyImages-2214107176.jpg",
+    "image_url": "https://media.wired.com/photos/6a9847e0838ebf1a08f58e12/master/pass/GettyImages-2214107176.jpg",
+    "timestamp_epoch": 1788392708,
+    "timestamp_display": "Sep 02 \u2022 11:46 PM UTC"
+  },
+  {
+    "title": "Palo Alto Networks Acquires Thrive-Backed Console for $500M",
+    "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+    "category": "SECURITY",
+    "summary": "Cybersecurity titan Palo Alto Networks has acquired developer-focused startup Console in a deal valued at $500 million. The move allows Palo Alto Networks to consolidate developer workflows and modern infrastructure management directly into its enterprise security portfolio.",
+    "point1": "Palo Alto Networks acquired startup Console from Thrive Capital for $500 million.",
+    "point2": "Demonstrates security leaders aggressively absorbing developer workflow management tools to streamline DevSecOps.",
+    "point3": "Full integration of Console into Palo Alto's cloud enterprise platforms will unfold over coming product cycles.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788392708,
+    "timestamp_display": "Sep 02 \u2022 11:46 PM UTC"
+  },
+  {
     "title": "Reliance Jio Aims to Transform Millions of Aging PCs Into AI-Ready Machines",
     "url": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
     "category": "HARDWARE",
