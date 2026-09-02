@@ -1,5 +1,44 @@
 [
   {
+    "title": "Pangram Rises as AI Text Detection Standard Amid Industry Reliability Debates",
+    "url": "https://www.wired.com/story/pangram-has-emerged-as-the-gold-standard-of-ai-detection/",
+    "category": "AI",
+    "summary": "Pangram has established itself as a top-tier detection platform for identifying AI-generated text in academic and commercial settings. However, experts continue to evaluate whether any detector can maintain high precision as natural language models improve.",
+    "point1": "Pangram reports higher precision metrics compared to earlier detection engines prone to false positives.",
+    "point2": "Verifiable text origin tools are growing increasingly vital for academic integrity, publishing, and legal compliance.",
+    "point3": "Detection capabilities will remain in an ongoing arms race as generator LLMs become indistinguishable from human writing.",
+    "rss_image": "https://media.wired.com/photos/6a96e7a402072373527ca410/master/pass/09012026-pangram-main.gif",
+    "image_url": "https://media.wired.com/photos/6a96e7a402072373527ca410/master/pass/09012026-pangram-main.gif",
+    "timestamp_epoch": 1788344436,
+    "timestamp_display": "Sep 02 \u2022 10:21 AM UTC"
+  },
+  {
+    "title": "Google Rolls Out Android Update Addressing Vehicle Motion Sickness and Accessibility Features",
+    "url": "https://techcrunch.com/2026/09/01/googles-android-update-tackles-motion-sickness-accessibility-and-more/",
+    "category": "MOBILE",
+    "summary": "Google has announced a broad system update for Android aimed at reducing motion sickness when viewing screens in moving vehicles. The release also includes enhanced accessibility tools designed to make mobile interfaces easier to navigate.",
+    "point1": "Features real-time visual cues synchronized with vehicle motion to reduce sensory conflict for passengers.",
+    "point2": "Expands motor and sensory accessibility tools to provide a more inclusive smartphone user experience.",
+    "point3": "The update is beginning to roll out to supported Pixel and third-party Android devices.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788344436,
+    "timestamp_display": "Sep 02 \u2022 10:21 AM UTC"
+  },
+  {
+    "title": "European Union Orders Bull Supercomputer to Meet Escalating AI Infrastructure Demand",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOaG84MDdUdXlvbzJldndVZWpseUMyeGloNXBCeGZZVG5qYkNlMlJyY0lyakQyWUpvSXhrSHp3UF9idUFsVG43bXRJemIxSTNmOU5Cd2VuNjdJaVJuQzUteHN5NWgzV3JzZjB1NXpFeUlWc2J0cTZCLWs0SzB2SDZaeDNheFdwQzIyUFRzdHR0cm9Tci1oRGhuRm01NVZOamU1M2llSHl5X0Z4QWNsbENHZUhsNkdielRXM3F3Vw?oc=5",
+    "category": "HARDWARE",
+    "summary": "To keep up with exploding computing requirements across the continent, the EU has commissioned a new high-performance AI supercomputer from French technology vendor Bull. Existing supercomputing infrastructure in the region has hit capacity limits amid the ongoing AI boom.",
+    "point1": "The new supercomputer aims to provide European researchers and enterprise developers sovereign computing power.",
+    "point2": "Soaring compute costs and dependence on foreign tech giants have pushed European institutions to fund local systems.",
+    "point3": "The system will be deployed to support public and private sector AI initiatives across member states.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788344436,
+    "timestamp_display": "Sep 02 \u2022 10:21 AM UTC"
+  },
+  {
     "title": "US Congress Advances Bill to Give US Edge in Open-Source AI Race Against China",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbTRTcFRidXZkbmRlX3BSRXc2b0FaSUFZbzRNQmItZ1JwSGZMQVA1ZkVzbFByNFBuNkZxQVJ3MWtLR2hqeEhpUUw1X0FrR0QxYlpjalRhbm5VbWg5WlpGQWcwT1NhUVVta0p2NmFJcnlyMU4tQmpsbHVkWExSNmxrOThDSlhhU211Z1lxc3Jab1VUa05SU3JWdzVHMlZHYVRpZEZ2dkM5WG03TlhDMWllVFlVZS1nSHpPVlVlZU5RamRrWFRhMFZsMW5QVzRQZ9IBzgFBVV95cUxQQ0hibXp6Wjh2eWd3NnJyTDJQTXV6OHNKQk9BOVhtNWJEQVE3a3NoNVUyZ2RqdkFXTHVHeDFqeUdoVzZDS3ZabHRFTXdYOW9zVnNpN0pDYU0yY1o3QlVoajFGeEdvTnllN09TY0R6clFCdmlYZnpkcDVxQUtCQ2t4NnBKZzBVYnc2TnUzOUVuNFItaHBSeWNYQmg5RlpTcXJTd2FPRmp6T1VPd1dXUUFRZW9lVnJsMDgyMzhVbHhWY0E0QVlCWU1vNmtnYmRnZw?oc=5",
     "category": "BUSINESS",
@@ -179,31 +218,5 @@
     "image_url": "https://media.wired.com/photos/6a9455859666495a32b503b6/master/pass/Screenshot%202026-08-30%20at%2011.06.40%E2%80%AFAM.png",
     "timestamp_epoch": 1788187358,
     "timestamp_display": "Aug 31 \u2022 02:42 PM UTC"
-  },
-  {
-    "title": "U.S. Hardware Restrictions Face Challenges Against China's Scale",
-    "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
-    "category": "BUSINESS",
-    "summary": "While the United States is implementing trade and regulatory barriers around foreign drones and autonomous robotics, China's manufacturing scale continues to offer unmatched cost advantages. Domestic manufacturers struggle to match the supply chain density and production speed of Chinese rivals.",
-    "point1": "U.S. policy efforts focus on building domestic robotics supply chains and restricting foreign hardware.",
-    "point2": "Western startups face higher production costs and supply bottlenecks when avoiding Chinese components.",
-    "point3": "Regulatory pushback will likely drive accelerated investment in nearshoring and domestic hardware assembly.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788157866,
-    "timestamp_display": "Aug 31 \u2022 06:33 AM UTC"
-  },
-  {
-    "title": "Nvidia CEO Jensen Huang Pauses All-Hands Meeting for Call From Donald Trump",
-    "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-took-a-call-from-donald-trump-in-the-middle-of-an-all-hands/",
-    "category": "BUSINESS",
-    "summary": "Nvidia Chief Executive Jensen Huang paused an internal company-wide all-hands meeting to take a live phone call from Donald Trump. The incident highlights the high-stakes political and geopolitical maneuvering surrounding Nvidia's dominant semiconductor empire.",
-    "point1": "Jensen Huang interrupted a live employee all-hands meeting to take a direct call from Donald Trump.",
-    "point2": "Illustrates Nvidia's unique standing at the crossroads of US industrial policy and international trade politics.",
-    "point3": "Reflects growing political scrutiny over semiconductor manufacturing and AI chip export controls.",
-    "rss_image": "https://media.wired.com/photos/6a9205e11fef496705b5c9f7/master/pass/Jensen-Took-Call-From-Trump-Business-2212801537.jpg",
-    "image_url": "https://media.wired.com/photos/6a9205e11fef496705b5c9f7/master/pass/Jensen-Took-Call-From-Trump-Business-2212801537.jpg",
-    "timestamp_epoch": 1788134798,
-    "timestamp_display": "Aug 31 \u2022 12:07 AM UTC"
   }
 ]
