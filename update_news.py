@@ -284,14 +284,41 @@ html_page = f"""<!DOCTYPE html>
             overflow: hidden; 
             display: flex;
             flex-direction: column;
+            position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.35s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }}
+
+        .news-card.in-view {{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }}
+
+        .news-card::after {{
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0;
+            background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.16), transparent 45%);
+            transition: opacity 0.3s ease;
+        }}
+
+        .news-card.tilt-ready:hover::after {{
+            opacity: 1;
         }}
 
         .news-card:hover {{
-            transform: translateY(-4px) scale(1.01);
             border-color: var(--cyan);
             box-shadow: 0 0 25px rgba(0, 243, 255, 0.25);
+        }}
+
+        .news-card:hover:not(.tilt-ready) {{
+            transform: translateY(-4px) scale(1.01);
         }}
         
         .card-image {{
@@ -334,6 +361,7 @@ html_page = f"""<!DOCTYPE html>
             font-weight: 700; 
             letter-spacing: 1px;
             font-family: monospace;
+            animation: badge-pulse 3.2s ease-in-out infinite;
         }}
         
         .timestamp {{
@@ -378,14 +406,217 @@ html_page = f"""<!DOCTYPE html>
             .card-image {{ width: 38%; height: auto; min-height: 240px; }}
             .card-content {{ width: 62%; }}
         }}
+
+        /* ---- Boot sequence overlay ---- */
+        #boot-overlay {{
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-color);
+            opacity: 1;
+            transition: opacity 0.6s ease;
+            animation: boot-force-hide 0.01s linear 4s forwards;
+        }}
+
+        #boot-overlay.boot-hide {{
+            opacity: 0;
+            pointer-events: none;
+        }}
+
+        @keyframes boot-force-hide {{
+            to {{ opacity: 0; visibility: hidden; pointer-events: none; }}
+        }}
+
+        .boot-terminal {{
+            width: 90%;
+            max-width: 480px;
+            font-family: monospace;
+        }}
+
+        .boot-line {{
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            border-right: 2px solid var(--cyan);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 10px 0;
+        }}
+
+        .boot-line:nth-child(1) {{ width: 0; animation: typeline-24 0.6s steps(24, end) 0.1s forwards; }}
+        .boot-line:nth-child(2) {{ width: 0; animation: typeline-20 0.6s steps(20, end) 0.7s forwards; }}
+        .boot-line:nth-child(3) {{ width: 0; animation: typeline-25 0.6s steps(25, end) 1.3s forwards; }}
+
+        @keyframes typeline-24 {{
+            to {{ width: 24ch; border-right-color: transparent; }}
+        }}
+        @keyframes typeline-20 {{
+            to {{ width: 20ch; border-right-color: transparent; }}
+        }}
+        @keyframes typeline-25 {{
+            to {{ width: 25ch; border-right-color: transparent; }}
+        }}
+
+        .boot-title {{
+            margin: 22px 0 0 0;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--cyan);
+            text-shadow: 0 0 18px rgba(0, 243, 255, 0.6);
+            opacity: 0;
+            animation: boot-fade-in 0.4s ease 1.9s forwards;
+        }}
+
+        .boot-skip {{
+            margin: 18px 0 0 0;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            opacity: 0;
+            animation: boot-fade-in 0.4s ease 2.7s forwards;
+        }}
+
+        @keyframes boot-fade-in {{
+            to {{ opacity: 1; }}
+        }}
+
+        /* ---- Ambient scanline texture ---- */
+        #scan-overlay {{
+            position: fixed;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.025) 0px,
+                rgba(255, 255, 255, 0.025) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            mix-blend-mode: overlay;
+        }}
+
+        /* ---- Category badge pulse ---- */
+        @keyframes badge-pulse {{
+            0%, 100% {{ box-shadow: 0 0 4px rgba(0, 243, 255, 0.15); }}
+            50% {{ box-shadow: 0 0 12px rgba(0, 243, 255, 0.55); }}
+        }}
+
+        /* ---- Scroll progress ---- */
+        #scroll-progress {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            z-index: 1001;
+            box-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+            pointer-events: none;
+        }}
+
+        /* ---- Cursor trail glow ---- */
+        #cursor-glow {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 243, 255, 0.55), rgba(168, 85, 247, 0.25) 60%, transparent 75%);
+            pointer-events: none;
+            z-index: 998;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            will-change: transform;
+        }}
+        #cursor-glow.active {{ opacity: 1; }}
+
+        /* ---- Header status line ---- */
+        .status-line {{
+            margin: 14px 0 0 0;
+            font-family: monospace;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }}
+
+        .status-dot {{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 6px var(--cyan);
+            animation: status-pulse 1.6s ease-in-out infinite;
+        }}
+
+        @keyframes status-pulse {{
+            0%, 100% {{ opacity: 1; }}
+            50% {{ opacity: 0.35; }}
+        }}
+
+        @media (prefers-reduced-motion: reduce) {{
+            #boot-overlay {{
+                display: none;
+                animation: none;
+            }}
+            .boot-line, .boot-title, .boot-skip {{
+                animation: none;
+            }}
+            .news-card {{
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }}
+            .category {{
+                animation: none;
+            }}
+            .status-dot {{
+                animation: none;
+            }}
+            #cursor-glow {{
+                display: none;
+            }}
+        }}
     </style>
+    <noscript>
+        <style>
+            .news-card {{ opacity: 1 !important; visibility: visible !important; transform: none !important; }}
+            #boot-overlay {{ display: none !important; }}
+        </style>
+    </noscript>
 </head>
 <body>
     <canvas id="bg-canvas"></canvas>
+    <div id="scan-overlay" aria-hidden="true"></div>
+    <div id="scroll-progress"></div>
+    <div id="cursor-glow" aria-hidden="true"></div>
+    <div id="boot-overlay" aria-hidden="true">
+        <div class="boot-terminal">
+            <p class="boot-line">&gt; ESTABLISHING UPLINK...</p>
+            <p class="boot-line">&gt; DECRYPTING FEED...</p>
+            <p class="boot-line">&gt; SYNCING NEURAL NODES...</p>
+            <p class="boot-title" id="boot-title">TECH MATRIX PULSE</p>
+            <p class="boot-skip">press any key to skip</p>
+        </div>
+    </div>
 
     <header>
         <h1>⚡ TECH MATRIX PULSE</h1>
         <p class="subtitle">// NEURAL TECH DIGEST • LIVE 48-HOUR STREAM</p>
+        <p class="status-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            LIVE // <span id="signal-count">0</span> ACTIVE SIGNALS // <span id="live-clock">00:00:00</span> UTC
+        </p>
     </header>
 
     <main>
@@ -599,6 +830,210 @@ html_page = f"""<!DOCTYPE html>
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }});
+    }})();
+    </script>
+
+    <script>
+    // UI Motion: boot sequence, scroll reveal, card tilt + sheen
+    (function () {{
+        try {{
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var cards = Array.prototype.slice.call(document.querySelectorAll('.news-card'));
+
+            // ---------- Boot sequence ----------
+            var bootOverlay = document.getElementById('boot-overlay');
+            var bootTitle = document.getElementById('boot-title');
+
+            function hideBoot() {{
+                if (!bootOverlay) return;
+                bootOverlay.classList.add('boot-hide');
+                document.body.style.overflow = '';
+                window.removeEventListener('keydown', hideBoot);
+                window.removeEventListener('pointerdown', hideBoot);
+            }}
+
+            if (bootOverlay) {{
+                if (prefersReducedMotion) {{
+                    bootOverlay.style.display = 'none';
+                }} else {{
+                    document.body.style.overflow = 'hidden';
+                    window.addEventListener('keydown', hideBoot, {{ once: true }});
+                    window.addEventListener('pointerdown', hideBoot, {{ once: true }});
+
+                    if (bootTitle) {{
+                        (function () {{
+                            var fullTitle = bootTitle.textContent;
+                            var scrambleChars = '!<>-_\\/[]{{}}=+*^?#$%01';
+                            var start = null;
+                            var duration = 700;
+
+                            function scrambleFrame(now) {{
+                                if (start === null) start = now;
+                                var progress = Math.min((now - start) / duration, 1);
+                                var out = '';
+                                for (var i = 0; i < fullTitle.length; i++) {{
+                                    var threshold = (i + 1) / fullTitle.length;
+                                    if (fullTitle[i] === ' ') {{
+                                        out += ' ';
+                                    }} else if (progress >= threshold) {{
+                                        out += fullTitle[i];
+                                    }} else {{
+                                        out += scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+                                    }}
+                                }}
+                                bootTitle.textContent = out;
+                                if (progress < 1) {{
+                                    requestAnimationFrame(scrambleFrame);
+                                }} else {{
+                                    bootTitle.textContent = fullTitle;
+                                }}
+                            }}
+
+                            setTimeout(function () {{
+                                requestAnimationFrame(scrambleFrame);
+                            }}, 1900);
+                        }})();
+                    }}
+
+                    setTimeout(hideBoot, 3300);
+                }}
+            }}
+
+            // ---------- Scroll reveal ----------
+            function revealAll() {{
+                cards.forEach(function (card) {{
+                    card.classList.add('in-view');
+                }});
+            }}
+
+            if (prefersReducedMotion || !('IntersectionObserver' in window)) {{
+                revealAll();
+            }} else {{
+                var observer = new IntersectionObserver(function (entries) {{
+                    entries.forEach(function (entry) {{
+                        if (entry.isIntersecting) {{
+                            entry.target.classList.add('in-view');
+                            observer.unobserve(entry.target);
+                        }}
+                    }});
+                }}, {{ threshold: 0.15 }});
+
+                cards.forEach(function (card) {{
+                    observer.observe(card);
+                }});
+            }}
+
+            // ---------- Card tilt + sheen ----------
+            var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+            if (canHover && !prefersReducedMotion) {{
+                cards.forEach(function (card) {{
+                    card.classList.add('tilt-ready');
+
+                    card.addEventListener('pointermove', function (e) {{
+                        var rect = card.getBoundingClientRect();
+                        var x = (e.clientX - rect.left) / rect.width;
+                        var y = (e.clientY - rect.top) / rect.height;
+                        var rotateY = (x - 0.5) * 10;
+                        var rotateX = (0.5 - y) * 8;
+                        card.style.transform = 'perspective(800px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg)';
+                        card.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+                        card.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+                    }});
+
+                    card.addEventListener('pointerleave', function () {{
+                        card.style.transform = '';
+                    }});
+                }});
+            }}
+
+            // ---------- Scroll progress ----------
+            var progressBar = document.getElementById('scroll-progress');
+            if (progressBar) {{
+                var updateProgress = function () {{
+                    var docEl = document.documentElement;
+                    var scrollTop = docEl.scrollTop || document.body.scrollTop;
+                    var scrollHeight = (docEl.scrollHeight || document.body.scrollHeight) - docEl.clientHeight;
+                    var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+                    progressBar.style.width = pct + '%';
+                }};
+                window.addEventListener('scroll', updateProgress, {{ passive: true }});
+                updateProgress();
+            }}
+
+            // ---------- Live status line ----------
+            var TOTAL_SIGNALS = {len(active_news)};  // live count injected by the generator
+            var signalCountEl = document.getElementById('signal-count');
+            if (signalCountEl) {{
+                if (prefersReducedMotion) {{
+                    signalCountEl.textContent = TOTAL_SIGNALS;
+                }} else {{
+                    var currentCount = 0;
+                    var countStep = function () {{
+                        currentCount += Math.max(1, Math.ceil(TOTAL_SIGNALS / 20));
+                        if (currentCount >= TOTAL_SIGNALS) {{
+                            signalCountEl.textContent = TOTAL_SIGNALS;
+                        }} else {{
+                            signalCountEl.textContent = currentCount;
+                            requestAnimationFrame(countStep);
+                        }}
+                    }};
+                    requestAnimationFrame(countStep);
+                }}
+            }}
+
+            var clockEl = document.getElementById('live-clock');
+            if (clockEl) {{
+                var pad2 = function (n) {{ return (n < 10 ? '0' : '') + n; }};
+                var tickClock = function () {{
+                    var now = new Date();
+                    clockEl.textContent = pad2(now.getUTCHours()) + ':' + pad2(now.getUTCMinutes()) + ':' + pad2(now.getUTCSeconds());
+                }};
+                tickClock();
+                setInterval(tickClock, 1000);
+            }}
+
+            // ---------- Cursor trail glow (fine-pointer desktops only) ----------
+            var cursorGlow = document.getElementById('cursor-glow');
+            if (cursorGlow && canHover && !prefersReducedMotion) {{
+                var glowTargetX = window.innerWidth / 2;
+                var glowTargetY = window.innerHeight / 2;
+                var glowCurrentX = glowTargetX;
+                var glowCurrentY = glowTargetY;
+                var glowActive = false;
+
+                window.addEventListener('pointermove', function (e) {{
+                    if (e.pointerType && e.pointerType !== 'mouse') return;
+                    glowTargetX = e.clientX;
+                    glowTargetY = e.clientY;
+                    if (!glowActive) {{
+                        glowActive = true;
+                        cursorGlow.classList.add('active');
+                    }}
+                }});
+                window.addEventListener('pointerleave', function () {{
+                    glowActive = false;
+                    cursorGlow.classList.remove('active');
+                }});
+
+                var glowFrame = function () {{
+                    glowCurrentX += (glowTargetX - glowCurrentX) * 0.18;
+                    glowCurrentY += (glowTargetY - glowCurrentY) * 0.18;
+                    cursorGlow.style.transform = 'translate(' + glowCurrentX.toFixed(1) + 'px, ' + glowCurrentY.toFixed(1) + 'px) translate(-50%, -50%)';
+                    requestAnimationFrame(glowFrame);
+                }};
+                glowFrame();
+            }}
+        }} catch (err) {{
+            // Fail safe: a bug in these motion effects must never hide the real content
+            var fallbackCards = document.querySelectorAll('.news-card');
+            for (var i = 0; i < fallbackCards.length; i++) {{
+                fallbackCards[i].classList.add('in-view');
+            }}
+            var overlay = document.getElementById('boot-overlay');
+            if (overlay) overlay.style.display = 'none';
+            document.body.style.overflow = '';
+        }}
     }})();
     </script>
 </body>
