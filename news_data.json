@@ -1,5 +1,31 @@
 [
   {
+    "title": "Reliance Jio Aims to Transform Millions of Aging PCs Into AI-Ready Machines",
+    "url": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
+    "category": "HARDWARE",
+    "summary": "Mukesh Ambani, India's richest man and head of Reliance Industries, has announced an ambitious plan to turn millions of outdated computers into capable AI PCs. By leveraging cloud computing infrastructure, the initiative aims to bring advanced AI access to underserved populations without requiring costly hardware upgrades.",
+    "point1": "Reliance plans to use cloud-based streaming to deliver powerful AI workloads to legacy computer systems.",
+    "point2": "This strategy bypasses the hardware bottleneck, democratizing AI access in a massive emerging market.",
+    "point3": "If successful, the initiative could reshape the domestic PC market and establish Reliance as a dominant player in consumer AI services.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788373124,
+    "timestamp_display": "Sep 02 \u2022 06:19 PM UTC"
+  },
+  {
+    "title": "US Government Sides With OpenAI in High-Stakes AI Copyright Dispute",
+    "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+    "category": "AI",
+    "summary": "The U.S. government has officially sided with OpenAI in a pivotal legal battle concerning the training of large language models on copyrighted materials. This backing strengthens tech companies' stance that utilizing publicly available internet data for AI training constitutes fair use.",
+    "point1": "The U.S. government submitted a statement of interest supporting OpenAI's fair use defense in court.",
+    "point2": "A victory for OpenAI could set a massive legal precedent, shielding developers of generative AI from trillions in copyright liability.",
+    "point3": "Content creators and publishers face an uphill battle as regulatory and legal frameworks increasingly lean toward enabling AI development.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788373124,
+    "timestamp_display": "Sep 02 \u2022 06:19 PM UTC"
+  },
+  {
     "title": "NYC Public Schools Ban AI for Students Through 8th Grade Under New Policy",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWjNWaXZlY1NRcTJnRTJnVXdoclZHa1MxT0NQbXpWSjl4a0lMU1ZtUHhFMGVXMldkT2tLemVfV1RVaXVOUFB2SmlmbXpXaXN4dW8yNHRsSWZQZHdqVlFXOUhZcUdibGVFVVR2OTNZWFdsQ05nQVBGNjNPUzFvejNfcTZ1QnV2OVAyalZmTmpKQnNGRzhSMXZPMDJFT2fSAaIBQVVfeXFMT0NYeUtoa0pSdVd3eERBVlJjcXREU2RRdHI2VXFuY2Vqd1NUdDdONUdpWTN3a0RJZFU0SXRhY2czSmpsNFVsc3pzalh5ODVMTl9mZ0lLYzYzWkRGNTJEcTdNZDh6VU9wSV90cFU3QzZKNkZqRVpncVpoR19xUzZfR1RtYlhUbjRVMHlMUjlZSi1UQWhueEQ3QVBERmtJQXJzNl93?oc=5",
     "category": "AI",
