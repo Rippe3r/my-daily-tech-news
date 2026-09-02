@@ -1,5 +1,18 @@
 [
   {
+    "title": "NYC Public Schools Ban AI for Students Through 8th Grade Under New Policy",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWjNWaXZlY1NRcTJnRTJnVXdoclZHa1MxT0NQbXpWSjl4a0lMU1ZtUHhFMGVXMldkT2tLemVfV1RVaXVOUFB2SmlmbXpXaXN4dW8yNHRsSWZQZHdqVlFXOUhZcUdibGVFVVR2OTNZWFdsQ05nQVBGNjNPUzFvejNfcTZ1QnV2OVAyalZmTmpKQnNGRzhSMXZPMDJFT2fSAaIBQVVfeXFMT0NYeUtoa0pSdVd3eERBVlJjcXREU2RRdHI2VXFuY2Vqd1NUdDdONUdpWTN3a0RJZFU0SXRhY2czSmpsNFVsc3pzalh5ODVMTl9mZ0lLYzYzWkRGNTJEcTdNZDh6VU9wSV90cFU3QzZKNkZqRVpncVpoR19xUzZfR1RtYlhUbjRVMHlMUjlZSi1UQWhueEQ3QVBERmtJQXJzNl93?oc=5",
+    "category": "AI",
+    "summary": "New York City Public Schools have instituted a sweeping ban on the use of artificial intelligence for teaching students from kindergarten through eighth grade. The policy aims to protect younger students from developmental and academic risks associated with early AI exposure, while allowing older high school students to continue utilizing the tools under supervision.",
+    "point1": "The policy restricts teachers from using AI tools in lessons targeted at students in the eighth grade and below.",
+    "point2": "Educators and policymakers worry that early over-reliance on generative AI may stunt critical thinking and foundational writing skills in young children.",
+    "point3": "Implementation begins this school year, with potential adjustments as schools monitor student progress and AI integration in higher grades.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788360711,
+    "timestamp_display": "Sep 02 \u2022 02:52 PM UTC"
+  },
+  {
     "title": "NYC Public Schools Ban AI Use for Students Through Eighth Grade",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cU1NWjNWaXZlY1NRcTJnRTJnVXdoclZHa1MxT0NQbXpWSjl4a0lMU1ZtUHhFMGVXMldkT2tLemVfV1RVaXVOUFB2SmlmbXpXaXN4dW8yNHRsSWZQZHdqVlFXOUhZcUdibGVFVVR2OTNZWFdsQ05nQVBGNjNPUzFvejNfcTZ1QnV2OVA2jZmTmpKQnNGRzhSMXZPMDJFT2fSAaIBQVVfeXFMT0NYeUtoa0pSdVd3eERBVlJjcXREU2RRdHI2VXFuY2Vqd1NUdDdONUdpWTN3a0RJZFU0SXRhN2czSmpsNFVsc3pzalh5ODVMTl_mZ0lLYzYzWkRGNTJEcTdNZDh6VU9wSV_tpFU3QzZKNkZqRVpncVpoR1_qUzZfR1RtYlhUbjRVMHlMUjlZSi1UQWhueEQ3QVBERmtJQXJzNl_w?oc=5",
     "category": "SOFTWARE",
@@ -231,18 +244,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788221809,
     "timestamp_display": "Sep 01 \u2022 12:17 AM UTC"
-  },
-  {
-    "title": "Google Maps Glitch Relabels Lake Ontario as 'Lake America'",
-    "url": "https://www.wired.com/story/google-maps-now-shows-lake-america-instead-of-lake-ontario/",
-    "category": "SOFTWARE",
-    "summary": "Google Maps users uncovered a bizarre spatial labeling anomaly where Lake Ontario was displayed under the name 'Lake America'. The geographical bug underscores the risks of automated data pipelines in mapping platforms.",
-    "point1": "Google Maps displayed an incorrect label naming Lake Ontario as 'Lake America'.",
-    "point2": "Demonstrates how automated geographic data processing can inadvertently introduce widespread errors into essential navigation applications.",
-    "point3": "Google is expected to issue a map data update to correct the naming discrepancy.",
-    "rss_image": "https://media.wired.com/photos/6a9455859666495a32b503b6/master/pass/Screenshot%202026-08-30%20at%2011.06.40%E2%80%AFAM.png",
-    "image_url": "https://media.wired.com/photos/6a9455859666495a32b503b6/master/pass/Screenshot%202026-08-30%20at%2011.06.40%E2%80%AFAM.png",
-    "timestamp_epoch": 1788187358,
-    "timestamp_display": "Aug 31 \u2022 02:42 PM UTC"
   }
 ]
