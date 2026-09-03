@@ -18,6 +18,11 @@ concurrency:
 permissions:
   contents: write
 
+# Which script builds the site. Leave it blank and the job finds it by itself.
+# Only fill it in if the job picks the wrong file, e.g. GENERATOR: scripts/build.py
+env:
+  GENERATOR: ""
+
 jobs:
   update-site:
     runs-on: ubuntu-latest
@@ -45,8 +50,47 @@ jobs:
           fi
 
       - name: Generate updated index.html and database
-        # >>> CHANGE THIS ONE LINE to whatever your generator is really called <<<
-        run: python main.py
+        run: |
+          set -euo pipefail
+
+          SCRIPT="${GENERATOR:-}"
+
+          # Try the usual names for a site generator, in order.
+          if [ -z "$SCRIPT" ]; then
+            for candidate in main.py app.py run.py index.py generate.py generator.py \
+                             generate_site.py build.py build_site.py update.py \
+                             update_news.py update_site.py news.py news_update.py \
+                             news_scraper.py scraper.py fetch_news.py; do
+              if [ -f "$candidate" ]; then
+                SCRIPT="$candidate"
+                break
+              fi
+            done
+          fi
+
+          # No familiar name, so fall back to the only Python file in the repo.
+          if [ -z "$SCRIPT" ]; then
+            mapfile -t FOUND < <(find . -name '*.py' -type f \
+              -not -path './.git/*' -not -path './.github/*' \
+              -not -path '*/venv/*' -not -path '*/.venv/*' \
+              -not -path '*/site-packages/*' -printf '%P\n' | sort)
+            if [ "${#FOUND[@]}" -eq 1 ]; then
+              SCRIPT="${FOUND[0]}"
+            fi
+          fi
+
+          if [ -z "$SCRIPT" ] || [ ! -f "$SCRIPT" ]; then
+            echo "::error::Could not tell which script builds the site."
+            echo "Python files in this repo:"
+            find . -name '*.py' -type f -not -path './.git/*' -printf '  %P\n' | sort
+            echo "Repo root contains:"
+            ls -A | sed 's/^/  /'
+            echo "Fix: copy the right filename into GENERATOR near the top of this workflow."
+            exit 1
+          fi
+
+          echo "Building the site with: $SCRIPT"
+          python "$SCRIPT"
 
       - name: Commit and push changes
         run: |
