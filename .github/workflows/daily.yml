@@ -2,39 +2,106 @@ name: Run News Update Hourly
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs automatically every hour
-  workflow_dispatch: # Allows manual trigger anytime
+    # Every hour, on the hour (UTC). GitHub often delays scheduled runs by a
+    # few minutes when the shared runner queue is busy - that is normal.
+    - cron: "0 * * * *"
+  workflow_dispatch:
 
+# Never let two update runs overlap. Overlapping runs are what moved main from
+# 3a1291c to 33485af while run #157 was still working, which is the root cause
+# of the rebase conflict.
+concurrency:
+  group: hourly-news-update
+  cancel-in-progress: false
+
+# The job pushes commits, so the token needs write access to repo contents.
 permissions:
   contents: write
 
 jobs:
   update-site:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        # v5 is the Node 24 build. v4 is the Node 20 build behind your
+        # deprecation warning - Node 20 leaves the runners on 2026-09-16.
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        # v6 is the Node 24 build of setup-python (v5 = Node 20).
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install google-genai
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install requests feedparser beautifulsoup4
+          fi
 
       - name: Generate updated index.html and database
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python update_news.py
+        # >>> CHANGE THIS ONE LINE to whatever your generator is really called <<<
+        run: python main.py
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html news_data.json
-          if ! git diff --staged --quiet; then
-            git commit -m "Hourly news update"
-            git pull origin main --rebase
-            git push
+          set -euo pipefail
+
+          FILES="index.html news_data.json"
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Fail loudly here rather than committing a half-built site.
+          for f in $FILES; do
+            if [ ! -f "$f" ]; then
+              echo "::error::$f was not produced by the generator step - stopping."
+              exit 1
+            fi
+          done
+
+          if [ -z "$(git status --porcelain -- $FILES)" ]; then
+            echo "Site is already up to date - nothing to commit."
+            exit 0
           fi
+
+          # Park the freshly generated files outside the repo so the hard reset
+          # below cannot destroy them.
+          FRESH="$(mktemp -d)"
+          cp $FILES "$FRESH"/
+
+          for attempt in 1 2 3 4 5; do
+            echo "--- push attempt $attempt ---"
+
+            # Line up exactly with remote main. No merge and no rebase happens,
+            # so there is nothing left for git to report a conflict on.
+            git fetch --depth=1 origin main
+            git reset --hard FETCH_HEAD
+
+            # Replay the fresh output on top of the current remote tip.
+            for f in $FILES; do cp "$FRESH/$f" "$f"; done
+            git add -- $FILES
+
+            if git diff --cached --quiet; then
+              echo "Remote already has identical content - nothing to push."
+              exit 0
+            fi
+
+            git commit -m "Hourly news update ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+
+            if git push origin HEAD:main; then
+              echo "Pushed $(git rev-parse --short HEAD) to main."
+              exit 0
+            fi
+
+            echo "Remote moved ahead mid-push. Re-syncing and retrying..."
+            sleep $(( RANDOM % 5 + 2 ))
+          done
+
+          echo "::error::Still could not push after 5 attempts."
+          exit 1
