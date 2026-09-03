@@ -1,5 +1,31 @@
 [
   {
+    "title": "NYC School System Unveils Aggressive Restrictions on AI",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9BR1BUYk1LbDI5NGtFZy1KbUZtNGl4V3R6d0Z1Q3FYRmtqWVFtSjVvQlAxQjJVYUkwMVRZUUFaQzg1NHAxY2hweVBLZFhBRlJ3RXlfVGtpLTE5RGhWVmNXUlAxd0lJTG43WXlHNWJpTUxqanVJZWpN?oc=5",
+    "category": "AI",
+    "summary": "New York City's public school district has announced restrictive new guidelines on artificial intelligence tools in classrooms, marking a sharp pivot from initial efforts to integrate AI into student curricula. The policy update addresses growing concerns about academic honesty and student data safety.",
+    "point1": "NYC public schools are implementing aggressive limits on how generative AI tools can be used in classrooms.",
+    "point2": "The decision illustrates the persistent friction between rapid tech adoption and traditional educational standards.",
+    "point3": "Other major school districts may replicate these policy restrictions as they grapple with classroom AI use.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788420946,
+    "timestamp_display": "Sep 03 \u2022 07:37 AM UTC"
+  },
+  {
+    "title": "Meta Pushes Its New AI Agent on Employees\u2014but Eases Off on Tokenmaxxing",
+    "url": "https://www.wired.com/story/meta-pushes-its-new-ai-agent-on-employees-but-eases-off-on-tokenmaxxing/",
+    "category": "BUSINESS",
+    "summary": "Meta is actively rolling out its latest internal generative AI assistant to staff, yet the company has backed away from 'tokenmaxxing'\u2014the practice of aggressively tracking and mandating employee usage of AI tools. The shift highlights a corporate recognition that forcing AI adoption can lead to workplace friction.",
+    "point1": "Meta has introduced a new proprietary AI agent to streamline internal software development and workflows.",
+    "point2": "The company eased aggressive internal targets that heavily pressured staff to use generative AI tools daily.",
+    "point3": "The balanced approach could serve as a model for other enterprise tech companies attempting to integrate AI internally.",
+    "rss_image": "https://media.wired.com/photos/6a98bc1a652ea8849cb4e3a3/master/pass/Meta-Stops-Forcing-Employees-To-Use-AI-Business-1461790372.jpg",
+    "image_url": "https://media.wired.com/photos/6a98bc1a652ea8849cb4e3a3/master/pass/Meta-Stops-Forcing-Employees-To-Use-AI-Business-1461790372.jpg",
+    "timestamp_epoch": 1788420946,
+    "timestamp_display": "Sep 03 \u2022 07:37 AM UTC"
+  },
+  {
     "title": "OpenAI's New Reasoning Technique Triggers Concerns Among Safety Experts",
     "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
     "category": "AI",
@@ -271,17 +297,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788277972,
     "timestamp_display": "Sep 01 \u2022 03:53 PM UTC"
-  },
-  {
-    "title": "AI could cause global economic downturn, Andrew Bailey warns G20",
-    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE93UkFFTExla3dMSVo2YWwxUXl0ZllhV0dIbW0wWTdSMXktMHV1X2l4SnlZMmRFMXdSY2hqbm0tVGNNTmsxME5ncHp2aVdHRmhvd3Y0cUo2cnkwQQ?oc=5",
-    "category": "BUSINESS",
-    "summary": "Bank of England Governor Andrew Bailey warned G20 financial leaders that rapid, uncoordinated AI adoption could trigger a severe global economic shock. He emphasized that unmanaged job displacement and rapid automation present major systemic risks to financial market stability.",
-    "point1": "Central bank leadership raised major macroeconomic stability concerns regarding rapid AI automation.",
-    "point2": "Signals growing consensus among central banks to treat AI integration as a systemic macroeconomic risk.",
-    "point3": "G20 member nations will likely pursue unified policy frameworks to cushion labor market dislocations.",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788242179,
-    "timestamp_display": "Sep 01 \u2022 05:56 AM UTC"
   }
 ]
