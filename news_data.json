@@ -1,5 +1,18 @@
 [
   {
+    "title": "OpenAI's New Reasoning Technique Triggers Concerns Among Safety Experts",
+    "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
+    "category": "AI",
+    "summary": "AI researchers and safety advocates are raising alarms over a novel reasoning mechanism implemented in OpenAI's latest models. Experts caution that the approach could make model decision-making harder to audit and control.",
+    "point1": "Safety experts warn OpenAI's new reasoning method creates significant oversight and interpretability challenges.",
+    "point2": "Underscores tension between racing to enhance model capabilities and verifying system alignment.",
+    "point3": "Likely to accelerate calls for mandatory third-party safety audits before advanced reasoning models are deployed.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788402352,
+    "timestamp_display": "Sep 03 \u2022 02:26 AM UTC"
+  },
+  {
     "title": "New York City Bans Generative AI Tools in Elementary and Middle Schools",
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8wXzZnbFJaZHpuN1pnMWRTOWRJYXBnWHJIRDhzc0dEczB1anRKbjhiM2l1VXZkR1B2NFZTTjZOZ1NHeUdlbDRCeUR5dmpvSzdjNmlUUlI3N0pqTUI3VlhuZU1SbmRLN05vZnEtM0pjSFcxYUZBWVE?oc=5",
     "category": "SOFTWARE",
@@ -270,44 +283,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788242179,
     "timestamp_display": "Sep 01 \u2022 05:56 AM UTC"
-  },
-  {
-    "title": "Instagram Imposes New Restrictions on Undisclosed AI Persona Accounts",
-    "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
-    "category": "SOFTWARE",
-    "summary": "Instagram is enforcing stricter rules on social profiles driven by artificial intelligence that fail to explicitly disclose their synthetic nature. The policy aims to curb bot-driven misinformation and prevent deceptive persona engagement across the platform.",
-    "point1": "Undisclosed AI accounts face restricted reach, feature limitations, and potential bans.",
-    "point2": "Protects users from deceptive virtual personas and deepfake social manipulation.",
-    "point3": "Meta intends to introduce stricter automated detection mechanisms for unmarked AI accounts.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788221809,
-    "timestamp_display": "Sep 01 \u2022 12:17 AM UTC"
-  },
-  {
-    "title": "The Pentagon Launches Internal Custom AI Models Modeled After ChatGPT and Grok",
-    "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/",
-    "category": "AI",
-    "summary": "The U.S. Department of Defense has deployed specialized conversational generative AI tools designed for military and defense operational use. These internal AI models aim to leverage large language model capability within secure, controlled defense environments.",
-    "point1": "The Pentagon has officially introduced custom-built generative AI assistants for defense personnel.",
-    "point2": "Demonstrates official government adoption of LLMs within high-security military networks.",
-    "point3": "Defense leadership will expand specialized toolsets for intelligence processing throughout the year.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788221809,
-    "timestamp_display": "Sep 01 \u2022 12:17 AM UTC"
-  },
-  {
-    "title": "Apple Shares Evidence Against Ex-Employee Accused of Stealing Trade Secrets for OpenAI",
-    "url": "https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/",
-    "category": "BUSINESS",
-    "summary": "Apple has presented detailed evidence alleging a former employee exfiltrated confidential internal data and proprietary technology prior to joining OpenAI. The allegations highlight growing legal friction over intellectual property amidst aggressive AI talent recruitment wars.",
-    "point1": "Apple produced evidence alleging intentional corporate IP theft intended to benefit OpenAI.",
-    "point2": "Underscores escalating legal and security risks in competitive AI talent recruitment.",
-    "point3": "The ongoing court case could set stricter precedents for tech non-compete and trade secret enforcement.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788221809,
-    "timestamp_display": "Sep 01 \u2022 12:17 AM UTC"
   }
 ]
