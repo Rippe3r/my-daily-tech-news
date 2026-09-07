@@ -50,11 +50,13 @@ jobs:
           fi
 
       - name: Generate updated index.html and database
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           set -euo pipefail
-
+          
           SCRIPT="${GENERATOR:-}"
-
+          
           # Try the usual names for a site generator, in order.
           if [ -z "$SCRIPT" ]; then
             for candidate in main.py app.py run.py index.py generate.py generator.py \
@@ -67,7 +69,7 @@ jobs:
               fi
             done
           fi
-
+      
           # No familiar name, so fall back to the only Python file in the repo.
           if [ -z "$SCRIPT" ]; then
             mapfile -t FOUND < <(find . -name '*.py' -type f \
@@ -78,7 +80,7 @@ jobs:
               SCRIPT="${FOUND[0]}"
             fi
           fi
-
+          
           if [ -z "$SCRIPT" ] || [ ! -f "$SCRIPT" ]; then
             echo "::error::Could not tell which script builds the site."
             echo "Python files in this repo:"
@@ -88,7 +90,7 @@ jobs:
             echo "Fix: copy the right filename into GENERATOR near the top of this workflow."
             exit 1
           fi
-
+          
           echo "Building the site with: $SCRIPT"
           python "$SCRIPT"
 
