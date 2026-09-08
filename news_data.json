@@ -1,5 +1,44 @@
 [
   {
+    "title": "Hackers Actively Targeting Anthropic Subscribers to Steal Claude AI Tokens",
+    "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+    "category": "SECURITY",
+    "summary": "Cybercriminals are launching credential theft attacks aimed specifically at Anthropic subscribers to hijack valuable Claude API tokens. The stolen compute access is being resold on underground forums or utilized for resource-intensive LLM workflows.",
+    "point1": "Phishing campaigns and credential stealers are explicitly seeking API access tokens.",
+    "point2": "Compromised tokens can lead to severe unauthorized API charges and sensitive enterprise data leakage.",
+    "point3": "AI providers are expected to mandate stricter session controls, granular token permissions, and automated anomaly detection.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788905695,
+    "timestamp_display": "Sep 08 \u2022 10:15 PM UTC"
+  },
+  {
+    "title": "AI Coding Startup Cognition Reaches $48 Billion Valuation",
+    "url": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+    "category": "BUSINESS",
+    "summary": "Cognition, creator of automated AI developer tools, has reached a massive $48 billion valuation following its latest funding round. Venture investors continue to pour capital into software generation tools, signaling belief that the market can support multiple multi-billion dollar players.",
+    "point1": "Cognition secured new capital boosting its evaluation to $48B in rapid fashion.",
+    "point2": "Demonstrates sustained venture enthusiasm for specialized software engineering AI platforms.",
+    "point3": "Competition will intensify as developer tools transition from simple co-pilots to fully autonomous agents.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788905695,
+    "timestamp_display": "Sep 08 \u2022 10:15 PM UTC"
+  },
+  {
+    "title": "Meta Debuts 'Muse' Personal AI Agent with Built-In Privacy Focus",
+    "url": "https://www.wired.com/story/meta-releases-muse-a-personal-ai-agent-with-privacy-built-into-it/",
+    "category": "AI",
+    "summary": "Meta has officially launched Muse, a personal AI agent designed to assist consumers with daily tasks across its ecosystem. The product launch emphasizes architecture aimed at safeguarding personal user data, addressing consumer trust hurdles.",
+    "point1": "Muse acts as an autonomous assistant deeply integrated across Meta's software platform.",
+    "point2": "Consumer adoption hinges heavily on Meta overcoming historical privacy concerns from users.",
+    "point3": "Meta plans further device and OS integrations to directly compete with existing AI assistant rivals.",
+    "rss_image": "https://media.wired.com/photos/6a9e9eca147ff8c9409f7051/master/pass/MetaSignalAi.jpg",
+    "image_url": "https://media.wired.com/photos/6a9e9eca147ff8c9409f7051/master/pass/MetaSignalAi.jpg",
+    "timestamp_epoch": 1788905695,
+    "timestamp_display": "Sep 08 \u2022 10:15 PM UTC"
+  },
+  {
     "title": "Pentagon Asked OpenAI for Unrestricted AI System Designed to 'Rarely Say No'",
     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9oUW43RU1iMjhJdURoS1JpcV_tZW5vSUkxc2FkZzlvVUh3M1hxWGNWcXNOS19RVmYtd0I1VXVyWk5DTEx0LWpFVE15bFg4a0syUUFEVl_fYmxDQ2c1QVlyR3hXOTZmQVR5dS1FRU5XMjZmT3NHNXRUVlF3?oc=5",
     "category": "AI",
