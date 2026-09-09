@@ -1,5 +1,18 @@
 [
   {
+    "title": "US Agencies Accuse Chinese AI Firms of Distilling American AI Models",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTExCSlY3RU9rWnVjSVpVSlBnaEhnUDQtRXl0SjEzRkVCNFdYSzZYRXViTlgyYVFoT0cxcG9fOTlad2NtRW00LWlLWGotRDA4Q1lhS1AwTFlDaWdqWFFzZE95X1o0TWNBclI0MkVXOUhQbFpaMmRZcjFUWGFXZFE1eA?oc=5",
+    "category": "AI",
+    "summary": "United States security and intelligence agencies have formally accused Chinese technology companies of using model distillation to systematically copy frontier American AI systems, including Claude, GPT, Gemini, and Grok. Officials state that these distillation techniques allow foreign firms to harvest outputs from proprietary models to rapidly train competitive models without paying underlying research costs.",
+    "point1": "U.S. agencies explicitly named distillation campaigns targeting Claude, GPT, Gemini, and Grok.",
+    "point2": "Escalates trade and national security friction between Washington and Beijing over AI sovereignty and intellectual property.",
+    "point3": "Likely to trigger stricter federal API restrictions, enhanced output obfuscation, and export control enforcement.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788977961,
+    "timestamp_display": "Sep 09 \u2022 06:20 PM UTC"
+  },
+  {
     "title": "Stealth Hardware Startup Raises $400 Million to Fix AI Memory Bottlenecks",
     "url": "https://www.wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck/",
     "category": "HARDWARE",
