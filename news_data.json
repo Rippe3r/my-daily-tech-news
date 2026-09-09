@@ -1,5 +1,31 @@
 [
   {
+    "title": "Stealth Hardware Startup Raises $400 Million to Fix AI Memory Bottlenecks",
+    "url": "https://www.wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck/",
+    "category": "HARDWARE",
+    "summary": "A stealth semiconductor startup has emerged with $400 million in funding to solve severe memory throughput constraints in modern AI data centers. The company's novel chip architecture aims to dramatically improve processing speeds for complex generative AI workloads.",
+    "point1": "The startup secured $400M in capital to target memory transfer limits in AI accelerator hardware.",
+    "point2": "Addressing memory bottlenecks is critical for lowering training costs and improving high-concurrency LLM inference.",
+    "point3": "The company plans to manufacture initial silicon prototypes for validation testing with major cloud providers.",
+    "rss_image": "https://media.wired.com/photos/6a99ec2e5d2ca173f400bbc3/master/pass/00-kepler-wafer_memory_technology.jpg",
+    "image_url": "https://media.wired.com/photos/6a99ec2e5d2ca173f400bbc3/master/pass/00-kepler-wafer_memory_technology.jpg",
+    "timestamp_epoch": 1788965857,
+    "timestamp_display": "Sep 09 \u2022 02:58 PM UTC"
+  },
+  {
+    "title": "US Accuses Chinese AI Firms of 'Industrial-Scale' Theft and Malicious Copying",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMHYzUXVXM3VfMmRMWWo1X2Mwdmg3MWhBcGRqYnRXbHlvcXZzV3lXLUJPTXNQbUFTWkdacW03S0tQb3hkUldfMXRNSlI2OU1GV1Q5b29adkVIUGtyWnpXMjZBb1RUVDBwNE9NQ0stWlBlMWozV3Jqd1NkOWRsZGVOVzByMjhrUDhTZUE?oc=5",
+    "category": "BUSINESS",
+    "summary": "The US government has launched allegations claiming Chinese tech companies are committing industrial-scale trade secret theft to advance their frontier AI models. Officials assert that systematic intellectual property copying is being used to bypass international technological barriers.",
+    "point1": "US authorities allege widespread trade secret theft and model replication by Chinese AI developers.",
+    "point2": "Heightens geopolitical friction and economic competition over leading-edge artificial intelligence infrastructure.",
+    "point3": "Expected to lead to stricter export controls, defensive cybersecurity mandates, and intellectual property enforcement.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788965857,
+    "timestamp_display": "Sep 09 \u2022 02:58 PM UTC"
+  },
+  {
     "title": "Google Commits $15 Billion to Expand AI Infrastructure in Finland",
     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZWVXTzcwTVJMV3N1ZWh5cFU3ajlmTGJVRHExM0tIemhzNTZGZFZndmp4SkxMNGd4dnlnMEp4VjhISXpwSXFDVWd4b3M2OVJtNGp2Zm81YXBDSEdLWndFSnBISG4tc0RVOW41RU1SMGNybE40U2NtV3Y4a2RheDFwbmw2bzYwUHpLZnZRVjV5YVR6Ny0tUG5hbWhhNnVRRFdYREN0cGxucFJfS2ZzYWpiWA?oc=5",
     "category": "BUSINESS",
@@ -180,83 +206,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788822807,
     "timestamp_display": "Sep 07 \u2022 11:15 PM UTC"
-  },
-  {
-    "title": "Travis Kalanick\u2019s Startup Atoms Signals Entry Into Robotaxi Industry",
-    "url": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
-    "category": "HARDWARE",
-    "summary": "Uber co-founder Travis Kalanick\u2019s latest company, Atoms, appears to be preparing an entry into the autonomous vehicle sector. The potential move could place Kalanick back in direct competition with major ride-hailing and driverless vehicle providers.",
-    "point1": "Reports indicate Atoms is exploring hardware setup and operational plans for automated fleet deployment.",
-    "point2": "Signals Kalanick's strategic return to urban mobility and transportation logistics.",
-    "point3": "Increased entry into the driverless fleet market could accelerate commercial scaling and regulatory movement.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788780701,
-    "timestamp_display": "Sep 07 \u2022 11:32 AM UTC"
-  },
-  {
-    "title": "Concurrent Unexplained Outages Strike OpenAI and Anthropic Services",
-    "url": "https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/",
-    "category": "SOFTWARE",
-    "summary": "Major AI providers OpenAI and Anthropic experienced simultaneous service disruptions without providing immediate detailed explanations. The unexpected downtime affected millions of enterprise and consumer users relying on top generative AI infrastructure.",
-    "point1": "Both flagship AI platforms suffered major downtime on the same day without an official root-cause explanation.",
-    "point2": "The event illustrates widespread enterprise vulnerability and operational reliance on centralized LLM API infrastructure.",
-    "point3": "Industry watchers await technical post-mortems to understand whether the outages were linked to cyber incidents or cloud infrastructure failures.",
-    "rss_image": "https://media.wired.com/photos/6a99e16fbf4e66136bddbc74/master/pass/Security_AWaveofOutagesHitsLeadingAIChatbots_v1-ezgif.com-video-to-gif-converter%20(2).gif",
-    "image_url": "https://media.wired.com/photos/6a99e16fbf4e66136bddbc74/master/pass/Security_AWaveofOutagesHitsLeadingAIChatbots_v1-ezgif.com-video-to-gif-converter%20(2).gif",
-    "timestamp_epoch": 1788779695,
-    "timestamp_display": "Sep 07 \u2022 11:15 AM UTC"
-  },
-  {
-    "title": "Seattle Times and Newsday File Copyright Suit Against OpenAI and Microsoft",
-    "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
-    "category": "BUSINESS",
-    "summary": "The Seattle Times and Newsday have joined a growing list of news organizations suing OpenAI and Microsoft over unauthorized training on copyrighted content. The publishers allege their journalism was systematically harvested without licensing agreements or compensation.",
-    "point1": "Regional news outlets allege copyright infringement and unauthorized content scraping for AI model training.",
-    "point2": "The suit adds legal pressure on AI developers to establish commercial licensing deals with local press organizations.",
-    "point3": "Courts will soon address whether training massive AI models on journalistic output constitutes fair use under federal law.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788779695,
-    "timestamp_display": "Sep 07 \u2022 11:15 AM UTC"
-  },
-  {
-    "title": "Wikipedia Workers Vote to Form First-Ever Organized Union",
-    "url": "https://www.wired.com/story/wikipedia-workers-vote-on-whether-to-unionize/",
-    "category": "BUSINESS",
-    "summary": "Workers associated with Wikipedia have voted to establish the platform's first official union. The historic labor organizing effort reflects broader trends of tech and non-profit digital workers seeking formal bargaining power.",
-    "point1": "Employees across Wikipedia operations voted in favor of unionizing for collective bargaining rights.",
-    "point2": "The move highlights growing labor organization efforts within open-source platforms and tech non-profits.",
-    "point3": "Union leadership plans to focus upcoming negotiations on workplace equity, compensation, and AI implementation policies.",
-    "rss_image": "https://media.wired.com/photos/6a9a07338aae3f350260c9af/master/pass/Wikipedia-Workers-Vote-on-Whether-to-Unionize-Business.jpg",
-    "image_url": "https://media.wired.com/photos/6a9a07338aae3f350260c9af/master/pass/Wikipedia-Workers-Vote-on-Whether-to-Unionize-Business.jpg",
-    "timestamp_epoch": 1788779695,
-    "timestamp_display": "Sep 07 \u2022 11:15 AM UTC"
-  },
-  {
-    "title": "Early Data Shows AI-Designed Drug May Help Slow Human Aging",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZkh6d3hkX2RaWUpjSGtmeEJjS0NLTXNzWkk4eF9CQWJxYTRFVGFhY2VlLVJIRFRaeE5nWnlVZ0trVy1NNVpENkRZUWxVRUoxRkFMR2FaLWZMeV9aVTlYZGtqaVJZcjBjd2xZNjV5dG12dERmWnhDS3E1dldhNm9IdA?oc=5",
-    "category": "AI",
-    "summary": "Early research results indicate that a novel compound engineered using artificial intelligence shows promise in targeting cellular aging processes. The development highlights the expanding role of machine learning in longevity biotech and drug discovery.",
-    "point1": "Machine learning models successfully identified novel therapeutic targets capable of delaying cellular senescence.",
-    "point2": "This milestone demonstrates how generative AI can compress drug discovery timelines from years into months.",
-    "point3": "Subsequent human clinical trials will be necessary to confirm the compound's safety, efficacy, and longevity benefits.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788779695,
-    "timestamp_display": "Sep 07 \u2022 11:15 AM UTC"
-  },
-  {
-    "title": "GPT-6 Astra Launches as OpenAI Signals AGI Era Breakthroughs",
-    "url": "https://www.wired.com/story/openai-says-gpt-6-can-use-a-computer-better-than-a-human/",
-    "category": "AI",
-    "summary": "OpenAI has unveiled GPT-6 Astra, claiming its next-generation model can operate computers better than human users. The company suggests this launch marks a crucial milestone toward artificial general intelligence (AGI).",
-    "point1": "GPT-6 Astra demonstrates advanced computer-use capabilities that surpass human performance in digital tasks.",
-    "point2": "The model represents a shift from simple text prompts to proactive, autonomous agent workflows across software environments.",
-    "point3": "Industry experts are scrutinizing safety frameworks and economic impacts as OpenAI pushes toward full AGI deployment.",
-    "rss_image": "https://media.wired.com/photos/6a99abf8b2409d6188eae980/master/pass/GPT-6-Can-Use-Computer-Better-Than-Human-Business-1015939026.jpg",
-    "image_url": "https://media.wired.com/photos/6a99abf8b2409d6188eae980/master/pass/GPT-6-Can-Use-Computer-Better-Than-Human-Business-1015939026.jpg",
-    "timestamp_epoch": 1788779695,
-    "timestamp_display": "Sep 07 \u2022 11:15 AM UTC"
   }
 ]
