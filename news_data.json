@@ -1,5 +1,57 @@
 [
   {
+    "title": "San Francisco Legal Order Targets Meta Over AI-Generated Abuse Advertisements",
+    "url": "https://www.wired.com/story/san-francisco-orders-meta-to-stop-allowing-ai-child-abuse-ads/",
+    "category": "SECURITY",
+    "summary": "San Francisco city authorities have issued an enforcement order commanding Meta to eliminate illicit AI-generated exploitation images from its ad network. The action highlights increasing local municipal efforts to hold tech platforms liable for bad actors using automated AI tools to run abusive ad campaigns.",
+    "point1": "San Francisco forces Meta to address harmful AI-generated content running across its advertising network.",
+    "point2": "Illustrates local government initiatives bypassing slow federal action to police AI safety violations directly.",
+    "point3": "Sets a precedent for municipal lawsuits and regulatory pressure targeting automated content moderation failures.",
+    "rss_image": "https://media.wired.com/photos/6aa1c5b373b15b9694431f6d/master/pass/GettyImages-2233066222.jpg",
+    "image_url": "https://media.wired.com/photos/6aa1c5b373b15b9694431f6d/master/pass/GettyImages-2233066222.jpg",
+    "timestamp_epoch": 1788997447,
+    "timestamp_display": "Sep 09 \u2022 11:44 PM UTC"
+  },
+  {
+    "title": "Anthropic Safety Researcher Quits Citing Urgent Risks to Humanity",
+    "url": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
+    "category": "BUSINESS",
+    "summary": "Senior safety researcher Jacob Coxon has resigned from AI safety pioneer Anthropic, publicly warning that commercial pressure is eroding safeguards during critical model developments. The resignation coincides with growing political concern and warnings over uncontrolled autonomous agent behavior.",
+    "point1": "Prominent Anthropic researcher resigns over fears that safety controls are failing to keep pace with capabilities.",
+    "point2": "Exposes deepening internal tensions between commercial expansion and existential risk management in leading AI labs.",
+    "point3": "Amplifies pressure on global lawmakers to enact strict safety mandates and regulatory frameworks.",
+    "rss_image": "https://media.wired.com/photos/6aa1afc94eb21a2db77402a8/master/pass/Security_InterviewWithAnthropicGuyWhoQuitBecauseAI_v-ezgif.com-video-to-gif-converter.gif",
+    "image_url": "https://media.wired.com/photos/6aa1afc94eb21a2db77402a8/master/pass/Security_InterviewWithAnthropicGuyWhoQuitBecauseAI_v-ezgif.com-video-to-gif-converter.gif",
+    "timestamp_epoch": 1788997447,
+    "timestamp_display": "Sep 09 \u2022 11:44 PM UTC"
+  },
+  {
+    "title": "OpenAI Claims Major Breakthrough in Solving Mathematical 'Millennium Problem'",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeGZlZkg4d2o3cU1aeDlUdHNXRjkzMmxjcVFqX0VNS1RST2plREhzXzdhZld4OXVZVGFUeW9JVEhzdzNCdDIwTWJqRzJ3UGhfd3psYS1VMnpobHFBSFpNRDMzdWxyQnk1jxPTUp2UDQzZ2VBVnhCU2xEZl_tZVRPbEYzcWx1Zw?oc=5",
+    "category": "AI",
+    "summary": "OpenAI announced that its latest frontier models have successfully solved one of the famed Millennium Prize Problems, marking an extraordinary step forward in artificial mathematical reasoning. The milestone demonstrates AI's evolving capability from pattern recognition to complex theoretical deduction.",
+    "point1": "OpenAI models reportedly resolved one of seven historical mathematics challenges worth $1 million each.",
+    "point2": "Proves AI capability is moving beyond language generation into advanced theoretical problem-solving.",
+    "point3": "Could significantly accelerate research velocity in cryptography, computer science, and fundamental physics.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788997447,
+    "timestamp_display": "Sep 09 \u2022 11:44 PM UTC"
+  },
+  {
+    "title": "Apple Unveils Foldable iPhone Duo and AI-Enhanced Hardware at Fall Event",
+    "url": "https://techcrunch.com/2026/09/09/everything-apple-announced-at-its-fall-iphone-event-from-the-foldable-iphone-duo-to-an-always-listening-apple-watch/",
+    "category": "MOBILE",
+    "summary": "Apple officially hosted its annual fall hardware event, revealing the new foldable iPhone Duo alongside updated Apple Watch devices featuring always-listening AI functionality. Notably, Apple revealed that advanced AI models were actively utilized to design the intricate hinge mechanism for the new foldable handset.",
+    "point1": "Introduces the iPhone Duo, Apple's long-awaited foray into foldable hardware featuring an AI-engineered hinge.",
+    "point2": "Expands ambient computing with always-listening AI features integrated directly into the Apple Watch line.",
+    "point3": "Signals a major strategic shift toward AI-designed hardware components and continuous audio monitoring across Apple devices.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1788997447,
+    "timestamp_display": "Sep 09 \u2022 11:44 PM UTC"
+  },
+  {
     "title": "US Agencies Accuse Chinese AI Firms of Distilling American AI Models",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTExCSlY3RU9rWnVjSVpVSlBnaEhnUDQtRXl0SjEzRkVCNFdYSzZYRXViTlgyYVFoT0cxcG9fOTlad2NtRW00LWlLWGotRDA4Q1lhS1AwTFlDaWdqWFFzZE95X1o0TWNBclI0MkVXOUhQbFpaMmRZcjFUWGFXZFE1eA?oc=5",
     "category": "AI",
@@ -206,18 +258,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788853183,
     "timestamp_display": "Sep 08 \u2022 07:40 AM UTC"
-  },
-  {
-    "title": "Senator Bernie Sanders Introduces 'Ban Artificial Superintelligence Act'",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1tRTMzaGxsSWR3VDVGeFVNaTRRVlhiTlRCUFFESGY0SmZFQzNvMVFoX3NHUnFNMXFWQVE4Sl81ZGtTSHhUdExoc2ZNRXA0c1BUS0RfRThB?oc=5",
-    "category": "AI",
-    "summary": "U.S. Senator Bernie Sanders has targeted frontier AI development by introducing the 'Ban Artificial Superintelligence Act'. The proposed legislative bill seeks to halt the development of superintelligent AI systems to guard against existential economic and societal risks.",
-    "point1": "The legislative bill aims to federally restrict or ban the creation of artificial superintelligence.",
-    "point2": "Reflects escalating political concern over unregulated frontier model scaling and potential job displacement.",
-    "point3": "The proposal faces upcoming debate in Congress amid growing tensions between safety regulators and tech industry lobbyists.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788822807,
-    "timestamp_display": "Sep 07 \u2022 11:15 PM UTC"
   }
 ]
