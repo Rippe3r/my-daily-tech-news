@@ -232,18 +232,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788965857,
     "timestamp_display": "Sep 09 \u2022 02:58 PM UTC"
-  },
-  {
-    "title": "Google Commits $15 Billion to Expand AI Infrastructure in Finland",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZWVXTzcwTVJMV3N1ZWh5cFU3ajlmTGJVRHExM0tIemhzNTZGZFZndmp4SkxMNGd4dnlnMEp4VjhISXpwSXFDVWd4b3M2OVJtNGp2Zm81YXBDSEdLWndFSnBISG4tc0RVOW41RU1SMGNybE40U2NtV3Y4a2RheDFwbmw2bzYwUHpLZnZRVjV5YVR6Ny0tUG5hbWhhNnVRRFdYREN0cGxucFJfS2ZzYWpiWA?oc=5",
-    "category": "BUSINESS",
-    "summary": "Google has announced a massive $15 billion investment targeted at expanding its data centers and cloud infrastructure in Finland. The move underscores how hyperscale tech companies are leveraging cooler Nordic environments to meet the energy demands of massive AI workloads.",
-    "point1": "The $15 billion capital deployment is one of Google's largest infrastructure investments in Europe.",
-    "point2": "Access to sustainable energy and efficient cooling is crucial to keeping up with generative AI compute demand.",
-    "point3": "Facility expansions in Finland will expand regional cloud computing capacity over the coming years.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788949972,
-    "timestamp_display": "Sep 09 \u2022 10:33 AM UTC"
   }
 ]
