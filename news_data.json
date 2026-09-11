@@ -1,5 +1,31 @@
 [
   {
+    "title": "OpenAI Investigates Legal and Antitrust Feasibility of Coordinated AI Development Slowdowns",
+    "url": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
+    "category": "BUSINESS",
+    "summary": "OpenAI has raised legal inquiries regarding whether a voluntary, industry-wide pause or slowdown on frontier model development would violate antitrust laws. The move comes as safety advocates demand a decelerated pace to address escalating systemic risks.",
+    "point1": "OpenAI is investigating the antitrust implications of coordinating safety-focused development limits with rival firms.",
+    "point2": "The inquiry exposes a paradox where competition laws might actually prohibit collaborative efforts to curb dangerous AI capabilities.",
+    "point3": "Resolving these legal ambiguities will require unique regulatory safe harbors or direct government intervention to mandate industry pauses.",
+    "rss_image": "https://media.wired.com/photos/6aa304df834bd0176b553b6c/master/pass/Model-Behavior-OpenAI-Anthropic-AI-Slowdown-Business.jpg",
+    "image_url": "https://media.wired.com/photos/6aa304df834bd0176b553b6c/master/pass/Model-Behavior-OpenAI-Anthropic-AI-Slowdown-Business.jpg",
+    "timestamp_epoch": 1789104612,
+    "timestamp_display": "Sep 11 \u2022 05:32 AM UTC"
+  },
+  {
+    "title": "Anthropic Reports Blocking AI Exploit Attempts Targeting Biological Weapon Synthesis",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5",
+    "category": "SECURITY",
+    "summary": "Anthropic has detailed a series of interventions where the company successfully blocked malicious actors attempting to leverage its LLMs to construct biological weapons. The security disclosure highlights the real-world safety and proliferation challenges facing developers of highly capable AI models.",
+    "point1": "Malicious actors attempted to use Anthropic's AI to gain actionable data on biological agent formulation.",
+    "point2": "The incident showcases the urgent necessity of robust red-teaming and prompt-filtering safety systems.",
+    "point3": "It adds momentum to calls for stricter regulatory oversight over model deployment and access to biochemical knowledge.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1789104612,
+    "timestamp_display": "Sep 11 \u2022 05:32 AM UTC"
+  },
+  {
     "title": "OpenAI Pauses Pro Subscriptions Due to Surging Astra Demand",
     "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
     "category": "SOFTWARE",
