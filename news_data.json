@@ -1,5 +1,57 @@
 [
   {
+    "title": "Kimi Maker Moonshot AI Targets $2 Billion Annual Revenue Milestone",
+    "url": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
+    "category": "AI",
+    "summary": "Chinese artificial intelligence startup Moonshot AI, creator of the popular assistant Kimi, has set an aggressive target to reach $2 billion in annual revenue. The ambitious goal highlights rapid monetization efforts among Asian AI firms competing globally.",
+    "point1": "Moonshot AI targets a $2 billion revenue milestone powered by user adoption of its Kimi AI platform.",
+    "point2": "Illustrates that international AI labs are rapidly translating consumer adoption into commercial growth.",
+    "point3": "Signals intensifying revenue competition between Chinese AI scale-ups and Western frontier labs.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1789162177,
+    "timestamp_display": "Sep 11 \u2022 09:30 PM UTC"
+  },
+  {
+    "title": "Nvidia Becomes Most Active Investor in Mega $100M+ VC Funding Rounds",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPenhiX20ySVF3SkxjZ0tjMXV1c1c5YVBKSjhJVGZBYm45YnJhWWtrT2hmVE9MbHlBNmdMWTU5aGpQRWw0eWhCT01HZ3VwaExIVTFUV0tZX0s3STFhUUJZQzdzZWtFTFctdUNYeUdST1BOdTlucXE5czh0eU02OUJwZnItbS0xXzFBM0ltWEU3NU5wbmUzUl9fUFdrN0hSS0RLb1lXVG5GaEhqazJSYWVJM0tSSjBndVNmblp2WThaWGhHZw?oc=5",
+    "category": "BUSINESS",
+    "summary": "Nvidia has emerged as the global leader in participating in venture capital funding rounds exceeding $100 million. The semiconductor giant is deploying massive capital reserves to back high-growth startups across the artificial intelligence landscape.",
+    "point1": "Nvidia now outpaces traditional venture capital firms in participating in mega-scale tech funding rounds.",
+    "point2": "Solidifies Nvidia's strategic control over the broader AI software and hardware ecosystem.",
+    "point3": "Strategic venture investing guarantees sustained reliance on Nvidia's computational infrastructure.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1789162177,
+    "timestamp_display": "Sep 11 \u2022 09:30 PM UTC"
+  },
+  {
+    "title": "US Regulators Launched Investigations Into Polymarket Trades",
+    "url": "https://www.wired.com/story/polymarket-investigations-iran-biden-google-foia/",
+    "category": "BUSINESS",
+    "summary": "Unsealed documents reveal the U.S. government launched three previously unreported investigations into trading activity on prediction platform Polymarket. The probes scrutinized market movements surrounding sensitive geopolitical events, presidential pardons, and major tech announcements.",
+    "point1": "FOIA disclosures reveal federal scrutiny over potentially manipulative or insider trading on prediction markets.",
+    "point2": "Demonstrates regulators' intent to police prediction platforms as their market influence grows.",
+    "point3": "Polymarket and similar prediction platforms face rising legal oversight and compliance expectations.",
+    "rss_image": "https://media.wired.com/photos/6aa423dcb30233b4abc2d13c/master/pass/Business_US%20Government%20Looked%20Into%20Insider%20Trading%20Allegations%20Over%20Biden%20Pardons%20on%20Polymarket_v1.jpg",
+    "image_url": "https://media.wired.com/photos/6aa423dcb30233b4abc2d13c/master/pass/Business_US%20Government%20Looked%20Into%20Insider%20Trading%20Allegations%20Over%20Biden%20Pardons%20on%20Polymarket_v1.jpg",
+    "timestamp_epoch": 1789162177,
+    "timestamp_display": "Sep 11 \u2022 09:30 PM UTC"
+  },
+  {
+    "title": "Anthropic Discloses Misuse Incidents Involving Foreign Warfare and Biological Risk",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaElwSjlfRDJiaDhsR3pkdFlhMDk3cGJXb3NUMHZRNDh0V2tKOVNhR0FTMlUzNFdNOWJRbGNlNE5WV3FJT1l5UjFfV1lvYU1uMVB4ZXdLbjZiZldYMnhtRXdMVURGcnlINEM5Rk5ueldZaDFoczJfZV9Tb2RfdzRLUnFybjZUNDlSaE9pWHJ3NnhXX1ZZS0dqN09xUHNvamtSNkFRSTl4VE9pdy1jR3pfeS1oNFNEMTZMNmZOR0h3dHBjSmFQV1pKOVJR?oc=5",
+    "category": "SECURITY",
+    "summary": "AI safety startup Anthropic revealed it intercepted attempts to leverage its frontier models for biological weapon creation and military operational support. Reports indicate foreign state actors attempted to use American AI systems to assist in targeting U.S. Navy warships.",
+    "point1": "Anthropic blocked system queries designed to synthesize bio-threats and assist military target selection.",
+    "point2": "Underscores national security vulnerabilities as commercial AI models reach advanced capability thresholds.",
+    "point3": "Strict enforcement protocols and government-mandated guardrails will likely escalate for frontier model developers.",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "timestamp_epoch": 1789162177,
+    "timestamp_display": "Sep 11 \u2022 09:30 PM UTC"
+  },
+  {
     "title": "OpenAI Investigates Legal and Antitrust Feasibility of Coordinated AI Development Slowdowns",
     "url": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
     "category": "BUSINESS",
@@ -193,18 +245,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788997447,
     "timestamp_display": "Sep 09 \u2022 11:44 PM UTC"
-  },
-  {
-    "title": "US Agencies Accuse Chinese AI Firms of Distilling American AI Models",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTExCSlY3RU9rWnVjSVpVSlBnaEhnUDQtRXl0SjEzRkVCNFdYSzZYRXViTlgyYVFoT0cxcG9fOTlad2NtRW00LWlLWGotRDA4Q1lhS1AwTFlDaWdqWFFzZE95X1o0TWNBclI0MkVXOUhQbFpaMmRZcjFUWGFXZFE1eA?oc=5",
-    "category": "AI",
-    "summary": "United States security and intelligence agencies have formally accused Chinese technology companies of using model distillation to systematically copy frontier American AI systems, including Claude, GPT, Gemini, and Grok. Officials state that these distillation techniques allow foreign firms to harvest outputs from proprietary models to rapidly train competitive models without paying underlying research costs.",
-    "point1": "U.S. agencies explicitly named distillation campaigns targeting Claude, GPT, Gemini, and Grok.",
-    "point2": "Escalates trade and national security friction between Washington and Beijing over AI sovereignty and intellectual property.",
-    "point3": "Likely to trigger stricter federal API restrictions, enhanced output obfuscation, and export control enforcement.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788977961,
-    "timestamp_display": "Sep 09 \u2022 06:20 PM UTC"
   }
 ]
