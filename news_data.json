@@ -206,31 +206,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788977961,
     "timestamp_display": "Sep 09 \u2022 06:20 PM UTC"
-  },
-  {
-    "title": "Stealth Hardware Startup Raises $400 Million to Fix AI Memory Bottlenecks",
-    "url": "https://www.wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck/",
-    "category": "HARDWARE",
-    "summary": "A stealth semiconductor startup has emerged with $400 million in funding to solve severe memory throughput constraints in modern AI data centers. The company's novel chip architecture aims to dramatically improve processing speeds for complex generative AI workloads.",
-    "point1": "The startup secured $400M in capital to target memory transfer limits in AI accelerator hardware.",
-    "point2": "Addressing memory bottlenecks is critical for lowering training costs and improving high-concurrency LLM inference.",
-    "point3": "The company plans to manufacture initial silicon prototypes for validation testing with major cloud providers.",
-    "rss_image": "https://media.wired.com/photos/6a99ec2e5d2ca173f400bbc3/master/pass/00-kepler-wafer_memory_technology.jpg",
-    "image_url": "https://media.wired.com/photos/6a99ec2e5d2ca173f400bbc3/master/pass/00-kepler-wafer_memory_technology.jpg",
-    "timestamp_epoch": 1788965857,
-    "timestamp_display": "Sep 09 \u2022 02:58 PM UTC"
-  },
-  {
-    "title": "US Accuses Chinese AI Firms of 'Industrial-Scale' Theft and Malicious Copying",
-    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMHYzUXVXM3VfMmRMWWo1X2Mwdmg3MWhBcGRqYnRXbHlvcXZzV3lXLUJPTXNQbUFTWkdacW03S0tQb3hkUldfMXRNSlI2OU1GV1Q5b29adkVIUGtyWnpXMjZBb1RUVDBwNE9NQ0stWlBlMWozV3Jqd1NkOWRsZGVOVzByMjhrUDhTZUE?oc=5",
-    "category": "BUSINESS",
-    "summary": "The US government has launched allegations claiming Chinese tech companies are committing industrial-scale trade secret theft to advance their frontier AI models. Officials assert that systematic intellectual property copying is being used to bypass international technological barriers.",
-    "point1": "US authorities allege widespread trade secret theft and model replication by Chinese AI developers.",
-    "point2": "Heightens geopolitical friction and economic competition over leading-edge artificial intelligence infrastructure.",
-    "point3": "Expected to lead to stricter export controls, defensive cybersecurity mandates, and intellectual property enforcement.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788965857,
-    "timestamp_display": "Sep 09 \u2022 02:58 PM UTC"
   }
 ]
