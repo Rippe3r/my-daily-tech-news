@@ -245,18 +245,5 @@
     "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1788949972,
     "timestamp_display": "Sep 09 \u2022 10:33 AM UTC"
-  },
-  {
-    "title": "Pentagon Requests Unrestricted AI Model from OpenAI",
-    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9oUW43RU1iMjhJdURoS1JpcV9tZW5vSUkxc2FkZzlvVUh3M1hxWGNWcXNOS1_QVmYtd0I1VXVyWk5DTEx0LWpFVE15bFg4a0syUUFEVl_fYmxDQ2c1QVlyR3hXOTZmQVR5dS1FRU5XMjZmT3NHNXRUVlF3?oc=5",
-    "category": "AI",
-    "summary": "The Pentagon reportedly asked OpenAI to create a specialized artificial intelligence system designed to rarely issue safety refusals when prompted. The request underscores the defense sector's push to leverage AI models unencumbered by standard commercial guardrails.",
-    "point1": "The Pentagon asked OpenAI to modify model safety restrictions to minimize automated prompt rejections.",
-    "point2": "Signals growing pressure on commercial AI labs to compromise standard safety ethics for defense contracts.",
-    "point3": "Debates around military AI policies will intensify as defense agencies push for bespoke, unrestricted AI tools.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1788932557,
-    "timestamp_display": "Sep 09 \u2022 05:43 AM UTC"
   }
 ]
