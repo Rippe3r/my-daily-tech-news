@@ -1,5 +1,37 @@
 [
   {
+    "title": "Matt Mullenweg returns as Automattic CEO following board dispute",
+    "url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Automattic confirmed that co-founder Matt Mullenweg has returned to his position as chief executive officer and chairman. The move follows an attempted ouster by the board of directors, which Automattic stated has now given Mullenweg its full support.",
+    "point1": "Matt Mullenweg resumed leadership of Automattic after an attempted board ouster.",
+    "point2": "Automattic operates core web infrastructure including WordPress.com.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1789257037,
+    "timestamp_display": "Sep 12 • 11:51 PM UTC"
+  },
+  {
+    "title": "Anthropic CEO Dario Amodei calls to pace frontier AI development",
+    "url": "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss",
+    "category": "AI",
+    "importance": "CRITICAL",
+    "summary": "Anthropic Chief Executive Officer Dario Amodei called for artificial intelligence developers to slow the pace of frontier model development amid severe safety concerns. Amodei warned that unpaced advancements could lead to models capable of causing catastrophic global harm.",
+    "point1": "Anthropic CEO Dario Amodei urged AI industry leaders to slow down frontier model advancement.",
+    "point2": "The warning highlights safety fears among frontier lab leaders regarding catastrophic risks.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "MULTIPLE_REPUTABLE_REPORTS",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9256/live/a1802a30-aeb9-11f1-b1d1-571ed4d7ff2c.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9256/live/a1802a30-aeb9-11f1-b1d1-571ed4d7ff2c.jpg",
+    "timestamp_epoch": 1789257037,
+    "timestamp_display": "Sep 12 • 11:51 PM UTC"
+  },
+  {
     "title": "SEBI proposes revisions to Consolidated Account Statement rules",
     "url": "https://www.thehindu.com/business/sebi-proposes-to-tweak-cas-after-industry-feedback/article71460451.ece",
     "category": "INDIA",
@@ -665,57 +697,5 @@
     "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1789087470,
     "timestamp_display": "Sep 11 • 12:44 AM UTC"
-  },
-  {
-    "title": "Jensen Huang Projects 70% Growth for Nvidia Driven by Massive Compute Demand",
-    "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
-    "category": "HARDWARE",
-    "summary": "Nvidia CEO Jensen Huang laid out the roadmap explaining why the tech giant expects to grow by an extraordinary 70% over the coming year. The optimism is anchored in continuous enterprise adoption and expanding global hardware orders for frontier AI cluster deployments.",
-    "point1": "Jensen Huang forecasts 70% continued year-over-year growth for Nvidia next year.",
-    "point2": "Refutes theories of an immediate AI hardware spending slowdown or compute bubble.",
-    "point3": "Reaffirms Nvidia's near-monopoly positioning in providing hardware platforms for next-gen models.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789078189,
-    "timestamp_display": "Sep 10 • 10:10 PM UTC"
-  },
-  {
-    "title": "Meta’s Standalone AI Agent 'Muse' Soars to No. 2 in US App Stores",
-    "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-    "category": "MOBILE",
-    "summary": "Meta's dedicated artificial intelligence agent, Muse, has surged to become the second most downloaded application in the United States. The rapid ascent demonstrates growing consumer appetite for specialized mobile AI assistants capable of agentic tasks.",
-    "point1": "Meta's Muse app reached the #2 spot overall on U.S. mobile app charts.",
-    "point2": "Demonstrates consumer shifting from basic web searches to proactive, agentic mobile AI tools.",
-    "point3": "Sets up an intense consumer rivalry between Meta, OpenAI, and Google for default AI assistant dominance.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789078189,
-    "timestamp_display": "Sep 10 • 10:10 PM UTC"
-  },
-  {
-    "title": "Anthropic Accuses Chinese AI Firms of Distillation Campaigns",
-    "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
-    "category": "AI",
-    "summary": "Anthropic has published details outlining systematic model distillation campaigns carried out by major Chinese tech players, including Alibaba, Moonshot AI, and DeepSeek. Distillation allows companies to extract intelligence from top-tier proprietary models to train cheaper competitor models.",
-    "point1": "Anthropic publicly detailed unauthorized distillation efforts targeting its frontier AI models.",
-    "point2": "Exposes escalating international disputes over AI intellectual property, API scraping, and model cloning.",
-    "point3": "Likely to prompt stricter API safeguards, advanced watermarking techniques, and geopolitical policy debates.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789078189,
-    "timestamp_display": "Sep 10 • 10:10 PM UTC"
-  },
-  {
-    "title": "Pentagon in Talks for $5 Billion Loan to AI Cloud Startup Fluidstack",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQm56T2dLMnFMeVp3a0tJY2s1eVdLalpSQ2c4bXBGQ2dOclF3a0dCVjhDYldvcEJMbEQ5TUQ5RXJuZXllZ1FvR3phRVlGNHhBazR0LXlaTy1DQmdXUENkQ1hLcWZrZlh0Ni0zdVVhSEH...",
-    "category": "BUSINESS",
-    "summary": "The U.S. Department of Defense is reportedly negotiating a massive $5 billion loan to Fluidstack, a fast-growing AI cloud infrastructure startup. The potential deal highlights the federal government's increasing intervention to secure sovereign AI compute power and supply chains.",
-    "point1": "The Pentagon is considering lending $5 billion to support AI cloud startup Fluidstack.",
-    "point2": "Underscores how military and defense priorities are now tied directly to advanced AI compute availability.",
-    "point3": "Could mark a dramatic shift toward direct federal financing for private AI infrastructure vendors.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789078189,
-    "timestamp_display": "Sep 10 • 10:10 PM UTC"
   }
 ]
