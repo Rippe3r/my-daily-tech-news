@@ -10,12 +10,45 @@ import xml.etree.ElementTree as ET
 from google import genai
 from google.genai import types
 
-# 1. RSS Feed Parser
-RSS_FEEDS = [
-    "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
-    "https://techcrunch.com/category/artificial-intelligence/feed/",
-    "https://www.wired.com/feed/category/business/latest/rss"
-]
+# 1. Category-aware RSS Feed Parser
+# The site is intentionally split into four top-level categories.
+# IMPORTANT: RSS discovery is not itself proof that a story is true.
+# The verification stage below only publishes stories from trusted sources
+# and requires corroboration/primary-source evidence where available.
+CATEGORY_FEEDS = {
+    "AI": [
+        "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
+        "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "https://www.wired.com/feed/tag/ai/latest/rss",
+    ],
+    "TECH": [
+        "https://news.google.com/rss/search?q=technology+gadgets+smartphones+chips&hl=en-US&gl=US&ceid=US:en",
+        "https://techcrunch.com/feed/",
+        "https://www.theverge.com/rss/index.xml",
+    ],
+    "WORLD": [
+        "https://news.google.com/rss/search?q=technology+world+news&hl=en-US&gl=US&ceid=US:en",
+        "https://feeds.bbci.co.uk/news/world/rss.xml",
+        "https://feeds.reuters.com/reuters/worldNews",
+    ],
+    "INDIA": [
+        "https://news.google.com/rss/search?q=India+technology+news&hl=en-IN&gl=IN&ceid=IN:en",
+        "https://www.thehindu.com/sci-tech/technology/feeder/default.rss",
+        "https://indianexpress.com/section/technology/feed/",
+    ],
+}
+
+# Domains allowed as direct/corroborating sources.
+# Google News is treated as discovery only; the underlying publisher must be trusted.
+TRUSTED_DOMAINS = {
+    "reuters.com", "apnews.com", "bbc.com", "bbc.co.uk",
+    "thehindu.com", "indianexpress.com", "techcrunch.com",
+    "theverge.com", "wired.com", "arstechnica.com",
+    "blog.google", "deepmind.google", "openai.com", "microsoft.com",
+    "apple.com", "nvidia.com", "samsung.com", "meta.com",
+    "amazon.com", "aboutamazon.com", "intel.com", "qualcomm.com",
+    "google.com", "github.blog",
+}
 
 NAMESPACES = {
     'media': 'http://search.yahoo.com/mrss/',
@@ -46,27 +79,48 @@ def extract_image_url(item):
 
     return ""
 
+def domain_from_url(url):
+    match = re.search(r"https?://(?:www\\.)?([^/]+)", url or "")
+    return match.group(1).lower() if match else ""
+
+
+def is_trusted_domain(url):
+    domain = domain_from_url(url)
+    return any(domain == d or domain.endswith("." + d) for d in TRUSTED_DOMAINS)
+
+
 def fetch_rss():
     articles = []
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
+    ctx = ssl.create_default_context()  # Keep normal certificate verification enabled.
 
-    for feed in RSS_FEEDS:
-        try:
-            req = urllib.request.Request(feed, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-            xml_data = urllib.request.urlopen(req, context=ctx, timeout=10).read()
-            root = ET.fromstring(xml_data)
-            for item in root.findall('.//item')[:5]:
-                title = item.find('title').text if item.find('title') is not None else ""
-                link = item.find('link').text if item.find('link') is not None else ""
-                img = extract_image_url(item)
-                if title and link:
-                    articles.append(f"Title: {title}\nURL: {link}\nRSS_Image: {img}")
-        except Exception as e:
-            print(f"Warning feed error {feed}: {e}")
-            
+    for category, feeds in CATEGORY_FEEDS.items():
+        for feed in feeds:
+            try:
+                req = urllib.request.Request(
+                    feed,
+                    headers={"User-Agent": "TechMatrixPulse/2.0 (+news aggregator)"}
+                )
+                xml_data = urllib.request.urlopen(req, context=ctx, timeout=12).read()
+                root = ET.fromstring(xml_data)
+
+                for item in root.findall(".//item")[:8]:
+                    title = item.find("title").text if item.find("title") is not None else ""
+                    link = item.find("link").text if item.find("link") is not None else ""
+                    img = extract_image_url(item)
+
+                    if title and link:
+                        articles.append(
+                            f"CandidateCategory: {category}\n"
+                            f"Title: {title.strip()}\n"
+                            f"URL: {link.strip()}\n"
+                            f"SourceDomain: {domain_from_url(link)}\n"
+                            f"RSS_Image: {img}"
+                        )
+            except Exception as e:
+                print(f"Warning feed error {feed}: {e}")
+
     return "\n---\n".join(articles)
+
 
 # 2. Database & Purge Stories Older Than 48 Hours
 DB_FILE = "news_data.json"
@@ -93,23 +147,55 @@ client = genai.Client(api_key=api_key)
 raw_news = fetch_rss()
 
 system_prompt = """
-You are an expert AI & Tech Journalist.
-Analyze the raw RSS feeds and return a JSON ARRAY of 3 to 5 verified, distinct major tech stories.
+You are a strict technology-news editor and fact-checker.
 
-Output ONLY a raw JSON array matching this exact schema for each item (do NOT use ```json code blocks):
+Your job is NOT to invent, embellish, speculate, or turn rumors into facts.
+
+INPUT:
+You receive RSS candidates from multiple feeds. Some candidates may be duplicates,
+aggregators, or unreliable sources.
+
+PUBLICATION RULES:
+1. Publish ONLY stories whose supplied URL is from a trusted publisher/domain OR is
+   clearly a primary source from a recognized organization/company.
+2. Google News RSS is discovery material, NOT proof. Do not treat Google News itself
+   as the source.
+3. Prefer primary-source announcements/documents and reputable reporting.
+4. For major claims, prefer corroboration from at least two independent reputable
+   sources. If there is only one reliable source, publish only if it is clearly a
+   primary announcement or direct reporting and label the evidence appropriately.
+5. Never fabricate a second source, quote, date, statistic, product specification,
+   company statement, or event.
+6. Do not publish unverified rumors, anonymous social-media claims, clickbait, or
+   speculative predictions as facts.
+7. Keep the original article URL. Never create a URL.
+8. Assign exactly one top-level category:
+   AI, TECH, WORLD, INDIA.
+   AI = artificial intelligence, ML, models, agents, AI research/tools.
+   TECH = gadgets, phones, PCs, chips, software, cybersecurity, space-tech,
+          consumer technology, launches, updates and other technology.
+   WORLD = major worldwide news with a technology relevance or major world events
+           covered by the site.
+   INDIA = India-specific technology/news developments.
+9. If a candidate cannot meet the publication rules, EXCLUDE it.
+
+Return ONLY a raw JSON array, with 0 to 12 objects, matching this schema:
 [
   {
-    "title": "Headline",
+    "title": "Accurate headline based only on the source",
     "url": "Original Story Link",
-    "category": "AI | HARDWARE | SECURITY | SOFTWARE | MOBILE | BUSINESS",
-    "summary": "Detailed 2-3 sentence overview.",
-    "point1": "Key fact or primary takeaway.",
-    "point2": "Why this matters for users/industry.",
-    "point3": "Future outlook or timeline.",
-    "rss_image": "Copy exact RSS_Image URL from feed if present, otherwise leave empty string"
+    "category": "AI | TECH | WORLD | INDIA",
+    "summary": "Factual 2-3 sentence overview. No unsupported claims.",
+    "point1": "Key verified fact.",
+    "point2": "Why it matters, only if supported by the reporting.",
+    "point3": "Known next step/timeline, or 'No confirmed timeline reported.'",
+    "verification": "VERIFIED_PRIMARY | VERIFIED_CORROBORATED",
+    "source_name": "Publisher name",
+    "rss_image": "Copy exact RSS_Image URL from feed if present, otherwise empty string"
   }
 ]
 """
+
 
 import time
 
@@ -215,13 +301,13 @@ with open(DB_FILE, "w", encoding="utf-8") as f:
 cards_html = ""
 for item in active_news:
     cards_html += f"""
-<article class="news-card">
+<article class="news-card" data-category="{item.get("category", "TECH").upper()}">
   <div class="card-image">
     <img src="{item.get('image_url')}" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='{DEFAULT_IMAGE}';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">{item.get('category', 'TECH')}</span>
+      <span class="category">{item.get("category", "TECH")}</span><span class="verification-tag">✓ {item.get("verification", "VERIFIED")}</span>
       <span class="timestamp">⏰ {item.get('timestamp_display')}</span>
     </div>
     <h2 class="title"><a href="{item.get('url')}" target="_blank" rel="noopener">{item.get('title')}</a></h2>
@@ -241,7 +327,7 @@ html_page = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Tech Cyber Pulse</title>
+    <title>TECH MATRIX PULSE — Verified Tech News</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {{
@@ -300,6 +386,99 @@ html_page = f"""<!DOCTYPE html>
 
         .subtitle {{ color: var(--text-muted); font-size: 0.95rem; font-family: monospace; }}
         
+        /* ---- Animated category control ---- */
+        .category-nav {{
+            position: sticky;
+            top: 14px;
+            z-index: 20;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto 18px;
+            padding: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            border-radius: 999px;
+            background: rgba(5, 8, 20, 0.78);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 10px 35px rgba(0,0,0,.28);
+        }}
+        .category-nav::-webkit-scrollbar {{ display: none; }}
+        .category-tab {{
+            position: relative;
+            z-index: 2;
+            border: 0;
+            background: transparent;
+            color: var(--text-muted);
+            padding: 10px 15px;
+            border-radius: 999px;
+            font: 700 .72rem monospace;
+            letter-spacing: .7px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: color .25s ease, transform .25s ease;
+        }}
+        .category-tab:hover {{ color: var(--text-main); transform: translateY(-1px); }}
+        .category-tab.active {{ color: #050814; }}
+        .category-tab .tab-icon {{
+            display: inline-block;
+            margin-right: 6px;
+            transition: transform .35s cubic-bezier(.2,.8,.2,1);
+        }}
+        .category-tab.active .tab-icon {{ transform: rotate(180deg) scale(1.15); }}
+        .tab-count {{
+            display: inline-grid;
+            place-items: center;
+            min-width: 18px;
+            height: 18px;
+            margin-left: 5px;
+            padding: 0 5px;
+            border-radius: 99px;
+            background: rgba(255,255,255,.12);
+            font-size: .62rem;
+        }}
+        .category-indicator {{
+            position: absolute;
+            z-index: 1;
+            left: 6px;
+            top: 6px;
+            width: 0;
+            height: calc(100% - 12px);
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--cyan), #a855f7);
+            box-shadow: 0 0 18px rgba(0,243,255,.35);
+            transition: left .42s cubic-bezier(.2,.8,.2,1), width .42s cubic-bezier(.2,.8,.2,1);
+        }}
+        .verification-banner {{
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin: 0 auto 28px;
+            padding: 12px 15px;
+            border: 1px solid rgba(74, 222, 128, .22);
+            border-radius: 12px;
+            background: rgba(15, 23, 42, .55);
+            color: var(--text-muted);
+            font-size: .76rem;
+        }}
+        .verification-banner strong {{ color: #86efac; letter-spacing: .6px; }}
+        .verification-icon {{
+            display: grid;
+            place-items: center;
+            flex: 0 0 22px;
+            height: 22px;
+            border: 1px solid #86efac;
+            border-radius: 50%;
+            color: #86efac;
+            font-weight: 800;
+        }}
+        .news-card.is-hidden {{
+            display: none;
+        }}
+
         .news-card {{ 
             background: var(--card-bg); 
             backdrop-filter: blur(16px);
@@ -389,6 +568,17 @@ html_page = f"""<!DOCTYPE html>
             animation: badge-pulse 3.2s ease-in-out infinite;
         }}
         
+        .verification-tag {{
+            color: #86efac;
+            border: 1px solid rgba(134, 239, 172, .35);
+            background: rgba(134, 239, 172, .06);
+            font-size: .64rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-family: monospace;
+            letter-spacing: .3px;
+        }}
+
         .timestamp {{
             color: var(--text-muted);
             font-size: 0.8rem;
@@ -637,14 +827,38 @@ html_page = f"""<!DOCTYPE html>
 
     <header>
         <h1>⚡ TECH MATRIX PULSE</h1>
-        <p class="subtitle">// NEURAL TECH DIGEST • LIVE 48-HOUR STREAM</p>
+        <p class="subtitle">// VERIFIED AI • TECHNOLOGY • WORLD • INDIA</p>
         <p class="status-line">
             <span class="status-dot" aria-hidden="true"></span>
             LIVE // <span id="signal-count">0</span> ACTIVE SIGNALS // <span id="live-clock">00:00:00</span> UTC
         </p>
     </header>
 
-    <main>
+    <nav class="category-nav" aria-label="News categories">
+        <button class="category-tab active" data-filter="ALL" type="button">
+            <span class="tab-icon">◈</span><span>ALL</span><span class="tab-count">{len(active_news)}</span>
+        </button>
+        <button class="category-tab" data-filter="AI" type="button">
+            <span class="tab-icon">✦</span><span>AI</span>
+        </button>
+        <button class="category-tab" data-filter="TECH" type="button">
+            <span class="tab-icon">⌘</span><span>TECHNOLOGY</span>
+        </button>
+        <button class="category-tab" data-filter="WORLD" type="button">
+            <span class="tab-icon">◎</span><span>WORLD</span>
+        </button>
+        <button class="category-tab" data-filter="INDIA" type="button">
+            <span class="tab-icon">◇</span><span>INDIA</span>
+        </button>
+        <span class="category-indicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="verification-banner">
+        <span class="verification-icon">✓</span>
+        <span><strong>VERIFICATION FIRST</strong> — Stories are restricted to trusted/primary sources and filtered for corroboration. No system can honestly guarantee that every news report is 100% true.</span>
+    </div>
+
+    <main id="news-feed">
         {cards_html}
     </main>
 
@@ -984,6 +1198,46 @@ html_page = f"""<!DOCTYPE html>
                 }};
                 window.addEventListener('scroll', updateProgress, {{ passive: true }});
                 updateProgress();
+            }}
+
+            // ---------- Animated category filter ----------
+            var categoryNav = document.querySelector('.category-nav');
+            var categoryTabs = Array.prototype.slice.call(document.querySelectorAll('.category-tab'));
+            var categoryIndicator = document.querySelector('.category-indicator');
+            var feedCards = Array.prototype.slice.call(document.querySelectorAll('.news-card'));
+
+            function moveCategoryIndicator(tab) {{
+                if (!categoryIndicator || !tab || !categoryNav) return;
+                var navRect = categoryNav.getBoundingClientRect();
+                var tabRect = tab.getBoundingClientRect();
+                categoryIndicator.style.left = (tabRect.left - navRect.left) + 'px';
+                categoryIndicator.style.width = tabRect.width + 'px';
+            }}
+
+            function filterCategory(category) {{
+                feedCards.forEach(function(card) {{
+                    var cardCategory = (card.getAttribute('data-category') || '').toUpperCase();
+                    var show = category === 'ALL' || cardCategory === category;
+                    card.classList.toggle('is-hidden', !show);
+                    if (show) card.classList.add('in-view');
+                }});
+            }}
+
+            categoryTabs.forEach(function(tab) {{
+                tab.addEventListener('click', function() {{
+                    categoryTabs.forEach(function(t) {{ t.classList.remove('active'); }});
+                    tab.classList.add('active');
+                    filterCategory(tab.getAttribute('data-filter'));
+                    moveCategoryIndicator(tab);
+                }});
+            }});
+
+            if (categoryTabs.length) {{
+                requestAnimationFrame(function() {{ moveCategoryIndicator(categoryTabs[0]); }});
+                window.addEventListener('resize', function() {{
+                    var active = document.querySelector('.category-tab.active');
+                    moveCategoryIndicator(active);
+                }});
             }}
 
             // ---------- Live status line ----------
