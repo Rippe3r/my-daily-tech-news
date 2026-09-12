@@ -1,5 +1,37 @@
 [
   {
+    "title": "Indian Court Issues Non-Bailable Warrant Against LeT Founder Hafiz Saeed",
+    "url": "https://www.thehindu.com/news/national/indias-most-wanted-terrorist-hafiz-saeed-in-pakistan-nia-tells-jammu-court-secures-warrant/article71459225.ece",
+    "category": "INDIA",
+    "importance": "MAJOR",
+    "summary": "A special National Investigation Agency (NIA) court in Jammu issued a non-bailable warrant against Lashkar-e-Taiba founder Hafiz Saeed. Prosecutors informed the court that Saeed continues to operate from Pakistan, providing arms and funding to militants in Jammu and Kashmir.",
+    "point1": "An NIA court issued a fresh non-bailable arrest warrant against terrorist leader Hafiz Saeed.",
+    "point2": "The warrant formalizes judicial proceedings regarding cross-border terrorism financing and orchestration in Kashmir.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu",
+    "rss_image": "https://th-i.thgim.com/public/incoming/mufey7/article71459226.ece/alternates/LANDSCAPE_1200/CCI_UDHindu_KSL_U3O6SJ0PN_R1576854631_3_59ff8610-e71e-455c-9afe-0899913c25b5.jpg",
+    "image_url": "https://th-i.thgim.com/public/incoming/mufey7/article71459226.ece/alternates/LANDSCAPE_1200/CCI_UDHindu_KSL_U3O6SJ0PN_R1576854631_3_59ff8610-e71e-455c-9afe-0899913c25b5.jpg",
+    "timestamp_epoch": 1789213709,
+    "timestamp_display": "Sep 12 • 11:49 AM UTC"
+  },
+  {
+    "title": "PM Modi Urges BRICS Leaders to Reform Global Governance as New Delhi Declaration Adopted",
+    "url": "https://www.thehindu.com/news/national/from-rule-takers-to-rule-shapers-pm-modis-big-pitch-to-brics-leaders-in-welcome-address/article71459705.ece",
+    "category": "INDIA",
+    "importance": "CRITICAL",
+    "summary": "Prime Minister Narendra Modi called on BRICS leaders to transition from rule-takers to rule-shapers during the 18th BRICS Summit in New Delhi. The summit adopted the New Delhi Declaration, advocating for stronger multilateralism, global governance reform, and enhanced economic cooperation. Leaders reaffirmed commitments to dialogue and diplomacy to address ongoing global conflicts.",
+    "point1": "India hosted the 18th BRICS Summit in New Delhi, where the New Delhi Declaration was adopted by consensus.",
+    "point2": "The summit highlights efforts by major developing nations to reshape global governance structures and expand multilateral cooperation.",
+    "point3": "PM Modi requested BRICS leaders present 10 specific proposals for global governance reform during the summit.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu",
+    "rss_image": "https://th-i.thgim.com/public/incoming/z4mb2s/article71459729.ece/alternates/LANDSCAPE_1200/PTI09_12_2026_000208B.jpg",
+    "image_url": "https://th-i.thgim.com/public/incoming/z4mb2s/article71459729.ece/alternates/LANDSCAPE_1200/PTI09_12_2026_000208B.jpg",
+    "timestamp_epoch": 1789213709,
+    "timestamp_display": "Sep 12 • 11:49 AM UTC"
+  },
+  {
     "title": "India Completes 2,843-km Western Dedicated Freight Corridor Network",
     "url": "https://www.thehindu.com/business/Economy/dfcs-the-backbone-of-indias-logistics-push/article71455054.ece",
     "category": "INDIA",
@@ -487,18 +519,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1789058953,
     "timestamp_display": "Sep 10 • 04:49 PM UTC"
-  },
-  {
-    "title": "Massachusetts Imposes Clean Energy Mandates on AI Data Centers",
-    "url": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
-    "category": "BUSINESS",
-    "summary": "Massachusetts state regulators have enacted strict new environmental standards requiring data centers operating within the state to transition to clean power sources. The policy directly targets surging electricity consumption driven by intensive artificial intelligence workloads.",
-    "point1": "Massachusetts established mandatory clean power standards specifically targeting data center energy consumption.",
-    "point2": "Addresses the expanding environmental footprint and severe regional power grid strain caused by AI hardware expansion.",
-    "point3": "Could serve as a legislative template for other states seeking to enforce green energy adoption across tech infrastructure.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789026235,
-    "timestamp_display": "Sep 10 • 07:46 AM UTC"
   }
 ]
