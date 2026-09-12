@@ -1,5 +1,21 @@
 [
   {
+    "title": "San Francisco Orders Meta to Halt AI-Generated Child Abuse Ads",
+    "url": "https://www.wired.com/story/san-francisco-orders-meta-to-stop-allowing-ai-child-abuse-ads/",
+    "category": "AI",
+    "importance": "MAJOR",
+    "summary": "The San Francisco City Attorney's Office ordered Meta to explain and cease allowing AI-generated child abuse advertisements on Facebook and Instagram. Meta responded by disputing the municipality's jurisdictional authority over its ad platform.",
+    "point1": "San Francisco city officials demanded Meta explain why AI child abuse ads repeatedly bypassed ad safety filters.",
+    "point2": "The directive highlights increasing local legal pressure on social media platforms hosting generative AI harms.",
+    "point3": "Meta was ordered to respond to the city attorney's query regarding ad delivery and oversight.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "WIRED AI",
+    "rss_image": "https://media.wired.com/photos/6aa1c5b373b15b9694431f6d/master/pass/GettyImages-2233066222.jpg",
+    "image_url": "https://media.wired.com/photos/6aa1c5b373b15b9694431f6d/master/pass/GettyImages-2233066222.jpg",
+    "timestamp_epoch": 1789214031,
+    "timestamp_display": "Sep 12 • 11:54 AM UTC"
+  },
+  {
     "title": "BRICS Summit 2026 Adopts New Delhi Declaration in India",
     "url": "https://www.thehindu.com/news/national/brics-summit-india-world-leaders-in-new-delhi-key-agenda-live-updates-september-12-2026/article71459005.ece",
     "category": "INDIA",
