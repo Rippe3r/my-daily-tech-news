@@ -830,11 +830,18 @@ html_page = f"""<!DOCTYPE html>
             scroll-behavior: smooth;
         }}
 
+        html {{
+            background: #02040d;
+            min-height: 100%;
+        }}
+
         body {{
+            position: relative;
+            z-index: 1;
             margin: 0 auto;
             max-width: 1080px;
             padding: 30px 20px 70px;
-            background: var(--bg-color);
+            background: transparent;
             color: var(--text-main);
             font-family:
                 -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -852,8 +859,27 @@ html_page = f"""<!DOCTYPE html>
             inset: 0;
             width: 100vw;
             height: 100vh;
-            z-index: -10;
+            z-index: 0;
             pointer-events: none;
+            display: block;
+            opacity: 1;
+        }}
+
+        body::before {{
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 50% 45%, rgba(0,234,255,.075), transparent 28%),
+                radial-gradient(circle at 15% 80%, rgba(139,92,246,.055), transparent 30%),
+                radial-gradient(circle at 85% 20%, rgba(59,130,246,.045), transparent 30%);
+        }}
+
+        header, main, footer {{
+            position: relative;
+            z-index: 2;
         }}
 
         #scan-overlay {{
@@ -1664,7 +1690,11 @@ html_page = f"""<!DOCTYPE html>
     (function () {{
         const canvas = document.getElementById("bg-canvas");
         const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!canvas || typeof THREE === "undefined") return;
+        if (!canvas) return;
+        if (typeof THREE === "undefined") {{
+            canvas.style.background = "radial-gradient(circle at 50% 45%, rgba(0,234,255,.12), transparent 25%), #02040d";
+            return;
+        }}
 
         const scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(0x02040d, 0.035);
@@ -1679,7 +1709,7 @@ html_page = f"""<!DOCTYPE html>
         }});
         renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000, 0);
+        renderer.setClearColor(0x02040d, 1);
 
         const clock = new THREE.Clock();
         const mouse = {{ x: 0, y: 0, tx: 0, ty: 0 }};
@@ -1888,8 +1918,7 @@ html_page = f"""<!DOCTYPE html>
         }});
 
         buildLinks(0);
-        if(!reduced) animate();
-        else renderer.render(scene,camera);
+        animate();
     }})();
     </script>
 </body>
