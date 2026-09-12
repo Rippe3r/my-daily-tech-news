@@ -1659,310 +1659,237 @@ html_page = f"""<!DOCTYPE html>
 
 
     // ========================================================
-    // THREE.JS AMBIENT NEURAL BACKGROUND
+    // THREE.JS — CONTINUOUS 3D DIGITAL UNIVERSE
     // ========================================================
     (function () {{
         const canvas = document.getElementById("bg-canvas");
-        const reduced =
-            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (!canvas || typeof THREE === "undefined") return;
 
         const scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0x050814, .05);
+        scene.fog = new THREE.FogExp2(0x02040d, 0.035);
 
         const camera = new THREE.PerspectiveCamera(
-            60,
-            window.innerWidth / window.innerHeight,
-            .1,
-            1000
+            58, window.innerWidth / window.innerHeight, 0.1, 160
         );
-
-        camera.position.z = 9;
+        camera.position.set(0, 0, 18);
 
         const renderer = new THREE.WebGLRenderer({{
-            canvas: canvas,
-            alpha: true,
-            antialias: true
+            canvas, alpha: true, antialias: true, powerPreference: "high-performance"
         }});
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
 
-        renderer.setSize(
-            window.innerWidth,
-            window.innerHeight
-        );
+        const clock = new THREE.Clock();
+        const mouse = {{ x: 0, y: 0, tx: 0, ty: 0 }};
+        const cyan = new THREE.Color(0x00eaff);
+        const violet = new THREE.Color(0x8b5cf6);
+        const blue = new THREE.Color(0x3b82f6);
 
-        renderer.setPixelRatio(
-            Math.min(window.devicePixelRatio || 1, 1.75)
-        );
-
-        function makeNodeTexture() {{
-            const size = 128;
-            const c = document.createElement("canvas");
-
-            c.width = size;
-            c.height = size;
-
-            const ctx = c.getContext("2d");
-
-            const gradient = ctx.createRadialGradient(
-                size / 2,
-                size / 2,
-                0,
-                size / 2,
-                size / 2,
-                size / 2
-            );
-
-            gradient.addColorStop(0, "rgba(255,255,255,1)");
-            gradient.addColorStop(.35, "rgba(255,255,255,.55)");
-            gradient.addColorStop(1, "rgba(255,255,255,0)");
-
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, size, size);
-
+        // ---------- deep-space star field ----------
+        const starCount = window.innerWidth < 680 ? 850 : 1700;
+        const starPos = new Float32Array(starCount * 3);
+        const starCol = new Float32Array(starCount * 3);
+        const starSizes = new Float32Array(starCount);
+        const c1 = new THREE.Color(0x74f9ff);
+        const c2 = new THREE.Color(0xa78bfa);
+        const c3 = new THREE.Color(0xffffff);
+        for (let i = 0; i < starCount; i++) {{
+            const a = i * 3;
+            const r = 24 + Math.random() * 55;
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+            starPos[a] = r * Math.sin(phi) * Math.cos(theta);
+            starPos[a + 1] = r * Math.sin(phi) * Math.sin(theta);
+            starPos[a + 2] = r * Math.cos(phi);
+            const col = Math.random() < .5 ? c1 : (Math.random() < .5 ? c2 : c3);
+            starCol[a] = col.r; starCol[a + 1] = col.g; starCol[a + 2] = col.b;
+            starSizes[i] = .45 + Math.random() * 1.8;
+        }}
+        const starsGeo = new THREE.BufferGeometry();
+        starsGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
+        starsGeo.setAttribute("color", new THREE.BufferAttribute(starCol, 3));
+        const starTex = (() => {{
+            const c = document.createElement("canvas"); c.width = c.height = 64;
+            const x = c.getContext("2d"), g = x.createRadialGradient(32,32,0,32,32,32);
+            g.addColorStop(0,"rgba(255,255,255,1)"); g.addColorStop(.18,"rgba(255,255,255,.8)");
+            g.addColorStop(1,"rgba(255,255,255,0)"); x.fillStyle=g; x.fillRect(0,0,64,64);
             return new THREE.CanvasTexture(c);
-        }}
+        }})();
+        const stars = new THREE.Points(starsGeo, new THREE.PointsMaterial({{
+            size: .075, map: starTex, vertexColors: true, transparent: true,
+            opacity: .65, depthWrite: false, blending: THREE.AdditiveBlending
+        }}));
+        scene.add(stars);
 
-        const nodeCount =
-            window.innerWidth < 680 ? 45 : 80;
-
-        const bounds = 9;
-        const linkDistance = 3.1;
-
-        const positions =
-            new Float32Array(nodeCount * 3);
-
+        // ---------- central neural intelligence cloud ----------
+        const nodeCount = window.innerWidth < 680 ? 72 : 150;
+        const bounds = 8.5;
+        const linkDistance = 2.75;
+        const positions = new Float32Array(nodeCount * 3);
         const velocities = [];
-
+        const phases = [];
         for (let i = 0; i < nodeCount; i++) {{
-            const index = i * 3;
-
-            positions[index] =
-                (Math.random() - .5) * bounds * 2;
-
-            positions[index + 1] =
-                (Math.random() - .5) * bounds * 2;
-
-            positions[index + 2] =
-                (Math.random() - .5) * bounds * 2;
-
+            const a = i * 3;
+            // Ellipsoidal cloud, denser near the center.
+            const radius = Math.pow(Math.random(), .62) * bounds;
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+            positions[a] = radius * Math.sin(phi) * Math.cos(theta) * 1.35;
+            positions[a+1] = radius * Math.sin(phi) * Math.sin(theta) * .72;
+            positions[a+2] = radius * Math.cos(phi) * .85;
             velocities.push({{
-                x: (Math.random() - .5) * .0055,
-                y: (Math.random() - .5) * .0055,
-                z: (Math.random() - .5) * .0055
+                x:(Math.random()-.5)*.0035, y:(Math.random()-.5)*.0035, z:(Math.random()-.5)*.0035
             }});
+            phases.push(Math.random()*Math.PI*2);
         }}
 
-        const nodesGeometry =
-            new THREE.BufferGeometry();
+        const nodeGeo = new THREE.BufferGeometry();
+        nodeGeo.setAttribute("position", new THREE.BufferAttribute(positions,3));
+        const nodeMat = new THREE.PointsMaterial({{
+            size:.20, map:starTex, color:0x67e8f9, transparent:true,
+            opacity:.72, depthWrite:false, blending:THREE.AdditiveBlending, sizeAttenuation:true
+        }});
+        const nodes = new THREE.Points(nodeGeo,nodeMat);
 
-        nodesGeometry.setAttribute(
-            "position",
-            new THREE.BufferAttribute(positions, 3)
-        );
+        const maxPairs = nodeCount*(nodeCount-1)/2;
+        const lp = new Float32Array(maxPairs*6);
+        const lc = new Float32Array(maxPairs*6);
+        const linkGeo = new THREE.BufferGeometry();
+        const lpAttr = new THREE.BufferAttribute(lp,3);
+        const lcAttr = new THREE.BufferAttribute(lc,3);
+        lpAttr.setUsage(THREE.DynamicDrawUsage); lcAttr.setUsage(THREE.DynamicDrawUsage);
+        linkGeo.setAttribute("position",lpAttr); linkGeo.setAttribute("color",lcAttr);
+        const links = new THREE.LineSegments(linkGeo,new THREE.LineBasicMaterial({{
+            vertexColors:true, transparent:true, opacity:.20, depthWrite:false, blending:THREE.AdditiveBlending
+        }}));
 
-        const nodesMaterial =
-            new THREE.PointsMaterial({{
-                size: .3,
-                map: makeNodeTexture(),
-                color: 0x5eeaff,
-                transparent: true,
-                opacity: .8,
-                depthWrite: false,
-                blending: THREE.AdditiveBlending,
-                sizeAttenuation: true
-            }});
-
-        const nodes =
-            new THREE.Points(
-                nodesGeometry,
-                nodesMaterial
-            );
-
-        const maxPairs =
-            (nodeCount * (nodeCount - 1)) / 2;
-
-        const linePositions =
-            new Float32Array(maxPairs * 2 * 3);
-
-        const lineColors =
-            new Float32Array(maxPairs * 2 * 3);
-
-        const linesGeometry =
-            new THREE.BufferGeometry();
-
-        const positionAttribute =
-            new THREE.BufferAttribute(
-                linePositions,
-                3
-            );
-
-        const colorAttribute =
-            new THREE.BufferAttribute(
-                lineColors,
-                3
-            );
-
-        positionAttribute.setUsage(
-            THREE.DynamicDrawUsage
-        );
-
-        colorAttribute.setUsage(
-            THREE.DynamicDrawUsage
-        );
-
-        linesGeometry.setAttribute(
-            "position",
-            positionAttribute
-        );
-
-        linesGeometry.setAttribute(
-            "color",
-            colorAttribute
-        );
-
-        const linesMaterial =
-            new THREE.LineBasicMaterial({{
-                vertexColors: true,
-                transparent: true,
-                opacity: .32,
-                depthWrite: false,
-                blending: THREE.AdditiveBlending
-            }});
-
-        const links =
-            new THREE.LineSegments(
-                linesGeometry,
-                linesMaterial
-            );
-
-        const group = new THREE.Group();
-
-        group.add(links);
-        group.add(nodes);
-        scene.add(group);
-
-        const cyan = new THREE.Color(0x00f3ff);
-        const purple = new THREE.Color(0xa855f7);
-        const tempColor = new THREE.Color();
-
-        function buildLinks() {{
-            let vi = 0;
-            let ci = 0;
-            let segments = 0;
-
-            for (let i = 0; i < nodeCount; i++) {{
-                const a = i * 3;
-
-                for (let j = i + 1; j < nodeCount; j++) {{
-                    const b = j * 3;
-
-                    const dx =
-                        positions[a] - positions[b];
-
-                    const dy =
-                        positions[a + 1] -
-                        positions[b + 1];
-
-                    const dz =
-                        positions[a + 2] -
-                        positions[b + 2];
-
-                    const distance =
-                        Math.sqrt(
-                            dx * dx +
-                            dy * dy +
-                            dz * dz
-                        );
-
-                    if (distance < linkDistance) {{
-                        linePositions[vi++] = positions[a];
-                        linePositions[vi++] = positions[a + 1];
-                        linePositions[vi++] = positions[a + 2];
-
-                        linePositions[vi++] = positions[b];
-                        linePositions[vi++] = positions[b + 1];
-                        linePositions[vi++] = positions[b + 2];
-
-                        tempColor
-                            .copy(cyan)
-                            .lerp(
-                                purple,
-                                distance / linkDistance
-                            );
-
-                        for (let n = 0; n < 2; n++) {{
-                            lineColors[ci++] = tempColor.r;
-                            lineColors[ci++] = tempColor.g;
-                            lineColors[ci++] = tempColor.b;
-                        }}
-
+        function buildLinks(t) {{
+            let vi=0, ci=0, segments=0;
+            for(let i=0;i<nodeCount;i++) {{
+                const a=i*3;
+                for(let j=i+1;j<nodeCount;j++) {{
+                    const b=j*3, dx=positions[a]-positions[b], dy=positions[a+1]-positions[b+1], dz=positions[a+2]-positions[b+2];
+                    const d=Math.sqrt(dx*dx+dy*dy+dz*dz);
+                    if(d<linkDistance) {{
+                        lp[vi++]=positions[a]; lp[vi++]=positions[a+1]; lp[vi++]=positions[a+2];
+                        lp[vi++]=positions[b]; lp[vi++]=positions[b+1]; lp[vi++]=positions[b+2];
+                        const pulse=(Math.sin(t*1.7+phases[i]+phases[j])+.5)*.5;
+                        const col=cyan.clone().lerp(violet, d/linkDistance).lerp(blue,pulse*.18);
+                        for(let k=0;k<2;k++) {{ lc[ci++]=col.r; lc[ci++]=col.g; lc[ci++]=col.b; }}
                         segments++;
                     }}
                 }}
             }}
-
-            positionAttribute.needsUpdate = true;
-            colorAttribute.needsUpdate = true;
-
-            linesGeometry.setDrawRange(
-                0,
-                segments * 2
-            );
+            lpAttr.needsUpdate=true; lcAttr.needsUpdate=true; linkGeo.setDrawRange(0,segments*2);
         }}
 
+        // ---------- orbital rings ----------
+        const orbitalGroup = new THREE.Group();
+        for(let r=0;r<4;r++) {{
+            const ring=new THREE.Mesh(
+                new THREE.TorusGeometry(3.1+r*1.25,.012+(r===1?.012:0),8,180),
+                new THREE.MeshBasicMaterial({{color:r%2?0x8b5cf6:0x00eaff,transparent:true,opacity:.17,blending:THREE.AdditiveBlending}})
+            );
+            ring.rotation.x = Math.PI/2 + (r-1.5)*.13;
+            ring.rotation.y = (r-1.5)*.25;
+            orbitalGroup.add(ring);
+        }}
+        scene.add(orbitalGroup);
+
+        // ---------- luminous central core ----------
+        const coreGeo = new THREE.SphereGeometry(1.15,32,32);
+        const coreMat = new THREE.MeshBasicMaterial({{color:0x092b46,transparent:true,opacity:.30,wireframe:true}});
+        const core = new THREE.Mesh(coreGeo,coreMat);
+        scene.add(core);
+        const halo = new THREE.Mesh(
+            new THREE.SphereGeometry(1.65,24,24),
+            new THREE.MeshBasicMaterial({{color:0x00eaff,transparent:true,opacity:.035,side:THREE.BackSide,blending:THREE.AdditiveBlending}})
+        );
+        scene.add(halo);
+
+        // ---------- flowing data arcs ----------
+        const streamGroup = new THREE.Group();
+        const streamCount = window.innerWidth < 680 ? 5 : 9;
+        for(let s=0;s<streamCount;s++) {{
+            const pts=[];
+            const rad=4.0+(s%4)*1.35;
+            const off=s/streamCount*Math.PI*2;
+            for(let k=0;k<80;k++) {{
+                const u=k/79, a=off+u*Math.PI*1.25;
+                pts.push(new THREE.Vector3(
+                    Math.cos(a)*rad,
+                    Math.sin(a)*rad*.34 + Math.sin(u*Math.PI*5+s)*.35,
+                    Math.sin(a)*rad*.62
+                ));
+            }}
+            const curve=new THREE.CatmullRomCurve3(pts);
+            const geom=new THREE.BufferGeometry().setFromPoints(curve.getPoints(100));
+            const line=new THREE.Line(geom,new THREE.LineBasicMaterial({{
+                color:s%2?0xa855f7:0x00eaff,transparent:true,opacity:.10,blending:THREE.AdditiveBlending
+            }}));
+            streamGroup.add(line);
+        }}
+        scene.add(streamGroup);
+
+        const world = new THREE.Group();
+        world.add(links,nodes,orbitalGroup,core,halo,streamGroup);
+        scene.add(world);
+
+        let frame=0;
         function animate() {{
             requestAnimationFrame(animate);
+            const t=clock.getElapsedTime();
+            mouse.x += (mouse.tx-mouse.x)*.025;
+            mouse.y += (mouse.ty-mouse.y)*.025;
 
-            for (let i = 0; i < nodeCount; i++) {{
-                const index = i * 3;
+            // Autonomous motion: layered rotation + floating camera + breathing core.
+            stars.rotation.y = t*.003;
+            stars.rotation.x = Math.sin(t*.11)*.012;
+            world.rotation.y = t*.035 + mouse.x*.10;
+            world.rotation.x = Math.sin(t*.16)*.035 + mouse.y*.055;
+            orbitalGroup.rotation.z = t*.09;
+            orbitalGroup.rotation.x += .00025;
+            core.rotation.x=t*.18; core.rotation.y=t*.25;
+            core.scale.setScalar(1 + Math.sin(t*1.6)*.045);
+            halo.scale.setScalar(1 + Math.sin(t*1.15)*.12);
+            streamGroup.rotation.y=-t*.055;
+            streamGroup.rotation.z=Math.sin(t*.12)*.03;
 
-                positions[index] += velocities[i].x;
-                positions[index + 1] += velocities[i].y;
-                positions[index + 2] += velocities[i].z;
+            camera.position.x += ((mouse.x*1.25)-camera.position.x)*.018;
+            camera.position.y += ((-mouse.y*.85)-camera.position.y)*.018;
+            camera.position.z = 18 + Math.sin(t*.12)*.35;
+            camera.lookAt(0,0,0);
 
-                if (Math.abs(positions[index]) > bounds) {{
-                    velocities[i].x *= -1;
-                }}
-
-                if (Math.abs(positions[index + 1]) > bounds) {{
-                    velocities[i].y *= -1;
-                }}
-
-                if (Math.abs(positions[index + 2]) > bounds) {{
-                    velocities[i].z *= -1;
-                }}
+            for(let i=0;i<nodeCount;i++) {{
+                const a=i*3;
+                positions[a]+=velocities[i].x + Math.sin(t*.35+phases[i])*.00035;
+                positions[a+1]+=velocities[i].y + Math.cos(t*.31+phases[i])*.00030;
+                positions[a+2]+=velocities[i].z;
+                if(Math.abs(positions[a])>bounds*1.25) velocities[i].x*=-1;
+                if(Math.abs(positions[a+1])>bounds*.8) velocities[i].y*=-1;
+                if(Math.abs(positions[a+2])>bounds) velocities[i].z*=-1;
             }}
-
-            nodesGeometry.attributes.position.needsUpdate = true;
-
-            buildLinks();
-
-            group.rotation.y += .0007;
-            group.rotation.x += .00008;
-
-            renderer.render(scene, camera);
+            nodeGeo.attributes.position.needsUpdate=true;
+            if(frame++%2===0) buildLinks(t);
+            renderer.render(scene,camera);
         }}
 
-        buildLinks();
-
-        if (!reduced) {{
-            animate();
-        }} else {{
-            renderer.render(scene, camera);
-        }}
-
-        window.addEventListener("resize", function () {{
-            camera.aspect =
-                window.innerWidth / window.innerHeight;
-
+        window.addEventListener("pointermove",e=>{{
+            mouse.tx=(e.clientX/window.innerWidth-.5)*2;
+            mouse.ty=(e.clientY/window.innerHeight-.5)*2;
+        }},{{passive:true}});
+        window.addEventListener("resize",()=>{{
+            camera.aspect=window.innerWidth/window.innerHeight;
             camera.updateProjectionMatrix();
-
-            renderer.setSize(
-                window.innerWidth,
-                window.innerHeight
-            );
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.6));
         }});
+
+        buildLinks(0);
+        if(!reduced) animate();
+        else renderer.render(scene,camera);
     }})();
     </script>
 </body>
