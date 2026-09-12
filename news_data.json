@@ -1,5 +1,37 @@
 [
   {
+    "title": "RBI Rejects Tata Sons' Application to Surrender NBFC License, Directs Immediate Listing",
+    "url": "https://www.thehindu.com/business/Industry/rbi-rejects-tata-sons-application-to-surrender-nbfc-licence-asks-for-immediate-listing/article71460477.ece",
+    "category": "INDIA",
+    "importance": "MAJOR",
+    "summary": "The Reserve Bank of India rejected an application by Tata Sons Private Ltd to surrender its Non-Banking Financial Company (NBFC) license. The central bank instructed the Tata Group holding company to prepare for an immediate public listing.",
+    "point1": "The RBI rejected Tata Sons' request to surrender its NBFC license.",
+    "point2": "Regulatory mandates require upper-layer NBFCs to list publicly on exchanges.",
+    "point3": "Tata Sons was directed to prepare for an immediate public stock listing.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu Business",
+    "rss_image": "https://th-i.thgim.com/public/incoming/pln8f7/article71460575.ece/alternates/LANDSCAPE_1200/Tata-Sons-listiGGHGC040U.4.jpg.jpg",
+    "image_url": "https://th-i.thgim.com/public/incoming/pln8f7/article71460575.ece/alternates/LANDSCAPE_1200/Tata-Sons-listiGGHGC040U.4.jpg.jpg",
+    "timestamp_epoch": 1789224380,
+    "timestamp_display": "Sep 12 • 02:46 PM UTC"
+  },
+  {
+    "title": "Revolut Confirms Customer Data Breach via Fake Government Requests",
+    "url": "https://techcrunch.com/2026/09/12/revolut-confirms-customer-data-breach-through-fake-government-requests/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Financial technology firm Revolut confirmed a customer data breach stemming from fraudulent government requests. The company stated it has notified affected customers and alerted relevant authorities and regulators.",
+    "point1": "Revolut confirmed a security incident that compromised customer data.",
+    "point2": "The breach was executed using fraudulent government information requests.",
+    "point3": "Affected customers, law enforcement, and financial regulators have been notified.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1789224380,
+    "timestamp_display": "Sep 12 • 02:46 PM UTC"
+  },
+  {
     "title": "San Francisco Orders Meta to Halt AI-Generated Child Abuse Ads",
     "url": "https://www.wired.com/story/san-francisco-orders-meta-to-stop-allowing-ai-child-abuse-ads/",
     "category": "AI",
