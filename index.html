@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Tech Cyber Pulse</title>
+    <title>TECH MATRIX PULSE — Verified Tech News</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
@@ -62,6 +62,99 @@
 
         .subtitle { color: var(--text-muted); font-size: 0.95rem; font-family: monospace; }
         
+        /* ---- Animated category control ---- */
+        .category-nav {
+            position: sticky;
+            top: 14px;
+            z-index: 20;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            width: fit-content;
+            max-width: 100%;
+            margin: 0 auto 18px;
+            padding: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            border-radius: 999px;
+            background: rgba(5, 8, 20, 0.78);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 10px 35px rgba(0,0,0,.28);
+        }
+        .category-nav::-webkit-scrollbar { display: none; }
+        .category-tab {
+            position: relative;
+            z-index: 2;
+            border: 0;
+            background: transparent;
+            color: var(--text-muted);
+            padding: 10px 15px;
+            border-radius: 999px;
+            font: 700 .72rem monospace;
+            letter-spacing: .7px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: color .25s ease, transform .25s ease;
+        }
+        .category-tab:hover { color: var(--text-main); transform: translateY(-1px); }
+        .category-tab.active { color: #050814; }
+        .category-tab .tab-icon {
+            display: inline-block;
+            margin-right: 6px;
+            transition: transform .35s cubic-bezier(.2,.8,.2,1);
+        }
+        .category-tab.active .tab-icon { transform: rotate(180deg) scale(1.15); }
+        .tab-count {
+            display: inline-grid;
+            place-items: center;
+            min-width: 18px;
+            height: 18px;
+            margin-left: 5px;
+            padding: 0 5px;
+            border-radius: 99px;
+            background: rgba(255,255,255,.12);
+            font-size: .62rem;
+        }
+        .category-indicator {
+            position: absolute;
+            z-index: 1;
+            left: 6px;
+            top: 6px;
+            width: 0;
+            height: calc(100% - 12px);
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--cyan), #a855f7);
+            box-shadow: 0 0 18px rgba(0,243,255,.35);
+            transition: left .42s cubic-bezier(.2,.8,.2,1), width .42s cubic-bezier(.2,.8,.2,1);
+        }
+        .verification-banner {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin: 0 auto 28px;
+            padding: 12px 15px;
+            border: 1px solid rgba(74, 222, 128, .22);
+            border-radius: 12px;
+            background: rgba(15, 23, 42, .55);
+            color: var(--text-muted);
+            font-size: .76rem;
+        }
+        .verification-banner strong { color: #86efac; letter-spacing: .6px; }
+        .verification-icon {
+            display: grid;
+            place-items: center;
+            flex: 0 0 22px;
+            height: 22px;
+            border: 1px solid #86efac;
+            border-radius: 50%;
+            color: #86efac;
+            font-weight: 800;
+        }
+        .news-card.is-hidden {
+            display: none;
+        }
+
         .news-card { 
             background: var(--card-bg); 
             backdrop-filter: blur(16px);
@@ -151,6 +244,17 @@
             animation: badge-pulse 3.2s ease-in-out infinite;
         }
         
+        .verification-tag {
+            color: #86efac;
+            border: 1px solid rgba(134, 239, 172, .35);
+            background: rgba(134, 239, 172, .06);
+            font-size: .64rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-family: monospace;
+            letter-spacing: .3px;
+        }
+
         .timestamp {
             color: var(--text-muted);
             font-size: 0.8rem;
@@ -399,22 +503,186 @@
 
     <header>
         <h1>⚡ TECH MATRIX PULSE</h1>
-        <p class="subtitle">// NEURAL TECH DIGEST • LIVE 48-HOUR STREAM</p>
+        <p class="subtitle">// VERIFIED AI • TECHNOLOGY • WORLD • INDIA</p>
         <p class="status-line">
             <span class="status-dot" aria-hidden="true"></span>
             LIVE // <span id="signal-count">0</span> ACTIVE SIGNALS // <span id="live-clock">00:00:00</span> UTC
         </p>
     </header>
 
-    <main>
+    <nav class="category-nav" aria-label="News categories">
+        <button class="category-tab active" data-filter="ALL" type="button">
+            <span class="tab-icon">◈</span><span>ALL</span><span class="tab-count">24</span>
+        </button>
+        <button class="category-tab" data-filter="AI" type="button">
+            <span class="tab-icon">✦</span><span>AI</span>
+        </button>
+        <button class="category-tab" data-filter="TECH" type="button">
+            <span class="tab-icon">⌘</span><span>TECHNOLOGY</span>
+        </button>
+        <button class="category-tab" data-filter="WORLD" type="button">
+            <span class="tab-icon">◎</span><span>WORLD</span>
+        </button>
+        <button class="category-tab" data-filter="INDIA" type="button">
+            <span class="tab-icon">◇</span><span>INDIA</span>
+        </button>
+        <span class="category-indicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="verification-banner">
+        <span class="verification-icon">✓</span>
+        <span><strong>VERIFICATION FIRST</strong> — Stories are restricted to trusted/primary sources and filtered for corroboration. No system can honestly guarantee that every news report is 100% true.</span>
+    </div>
+
+    <main id="news-feed">
         
-<article class="news-card">
+<article class="news-card" data-category="WORLD">
+  <div class="card-image">
+    <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5eb3/live/845b2920-adc7-11f1-a540-61c3f7fc4e6c.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">WORLD</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Israel says it has destroyed major underground Hezbollah base</a></h2>
+    <p class="summary">The Israeli military stated it successfully destroyed a large underground Hezbollah military facility. The facility reportedly housed strategic weapons storage and operational infrastructure.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Israeli forces targeted and destroyed a large subterranean Hezbollah installation.</li>
+      <li><strong>Impact:</strong> Represents a major strike on underground tactical infrastructure in the region.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for subsequent tactical operations.</li>
+    </ul>
+    <a href="https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="WORLD">
+  <div class="card-image">
+    <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/09dc/live/6dac0640-adcc-11f1-a540-61c3f7fc4e6c.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">WORLD</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane</a></h2>
+    <p class="summary">Houthi forces in Yemen claimed significant ground advances alongside heightened control over Red Sea maritime routes. The movements present ongoing risks to commercial shipping corridors.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Houthi forces reported major tactical territorial gains in Yemen.</li>
+      <li><strong>Impact:</strong> Increases pressure on critical international maritime supply routes in the Red Sea.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for resolution of conflict tensions.</li>
+    </ul>
+    <a href="https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="AI">
+  <div class="card-image">
+    <img src="https://th-i.thgim.com/public/incoming/r4vzpp/article71456123.ece/alternates/LANDSCAPE_1200/2026-09-10T195449Z_374685200_RC2UNLAFWGCM_RTRMADP_3_ANTHROPIC-CYBERSECURITY.JPG" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.thehindu.com/news/international/anthropic-says-yemen-fighters-used-ai-to-seek-guided-weapons/article71456112.ece" target="_blank" rel="noopener">Anthropic says Yemen fighters used AI to seek guided weapons</a></h2>
+    <p class="summary">AI research lab Anthropic disclosed that combatants in Yemen attempted to use its AI models to assist in researching guided weapons technology. The company confirmed it detected and blocked the queries under its safety policies.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Anthropic blocked attempt by Yemen-based combatants to query AI models regarding guided weaponry.</li>
+      <li><strong>Impact:</strong> Highlights ongoing threat actor attempts to misuse frontier models for military operations.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for additional threat reports.</li>
+    </ul>
+    <a href="https://www.thehindu.com/news/international/anthropic-says-yemen-fighters-used-ai-to-seek-guided-weapons/article71456112.ece" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="INDIA">
+  <div class="card-image">
+    <img src="https://th-i.thgim.com/public/incoming/n9t4zw/article71457742.ece/alternates/LANDSCAPE_1200/PTI09_11_2026_000200B.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">INDIA</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.thehindu.com/sci-tech/technology/37-deep-tech-innovations-on-display-at-bharat-innovates-exposition-on-sep-11-12/article71456815.ece" target="_blank" rel="noopener">37 deep-tech innovations on display at Bharat Innovates Exposition on Sep 11-12</a></h2>
+    <p class="summary">The Bharat Innovates Exposition features 37 selected Indian deep-tech startups presenting technological solutions across hardware, AI, and robotics. The two-day event focuses on connecting innovators with investors and policy leaders.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Thirty-seven Indian deep-tech startups are showcasing innovations at the exposition.</li>
+      <li><strong>Impact:</strong> Aims to boost local technological capabilities and ecosystem investment.</li>
+      <li><strong>Outlook:</strong> The event runs through September 12.</li>
+    </ul>
+    <a href="https://www.thehindu.com/sci-tech/technology/37-deep-tech-innovations-on-display-at-bharat-innovates-exposition-on-sep-11-12/article71456815.ece" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="TECH">
+  <div class="card-image">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">TECH</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/" target="_blank" rel="noopener">Roblox is making it easier to build games with AI — and play them outside Roblox</a></h2>
+    <p class="summary">Roblox announced new generative AI features aimed at simplifying game creation while expanding capabilities to host and play experiences outside the main Roblox ecosystem. The platform aims to broaden developer reach and lower entry barriers.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Roblox introduced enhanced AI game-building tools and off-platform gameplay support.</li>
+      <li><strong>Impact:</strong> Expands developer options for building interactive experiences using generative assistance.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for full feature deployment.</li>
+    </ul>
+    <a href="https://techcrunch.com/2026/09/11/roblox-is-making-it-easier-to-build-games-with-ai-and-play-them-outside-roblox/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="AI">
+  <div class="card-image">
+    <img src="https://media.wired.com/photos/6aa1c3b873b15b9694431f67/master/pass/Security_ClearviewAIIsTestinganAIToolThatLetsCops-ezgif.com-video-to-gif-converter.gif" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/" target="_blank" rel="noopener">Clearview AI Is Testing an AI Tool That Would Let Cops Unearth Your Life Online</a></h2>
+    <p class="summary">Clearview AI is testing a new surveillance tool designed to allow law enforcement to automatically aggregate a target's digital activity across the web. The software relies on AI to streamline public record and internet data analysis.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Clearview AI is actively testing an automated investigative tool for law enforcement agencies.</li>
+      <li><strong>Impact:</strong> Raises major privacy and civil liberties concerns regarding broad digital tracking capabilities.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for a general rollout.</li>
+    </ul>
+    <a href="https://www.wired.com/story/clearview-ai-is-testing-an-ai-tool-that-lets-cops-instantly-unearth-your-online-activity/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="AI">
+  <div class="card-image">
+    <img src="https://media.wired.com/photos/6aa4120d92d2b4de236f2240/master/pass/GettyImages-2289768151.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
+  </div>
+  <div class="card-content">
+    <div class="meta-bar">
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED_PRIMARY</span>
+      <span class="timestamp">⏰ Sep 12 • 03:02 AM UTC</span>
+    </div>
+    <h2 class="title"><a href="https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/" target="_blank" rel="noopener">Meta Sued Over Training Data for Its AI and Face-Recognition Systems</a></h2>
+    <p class="summary">Meta is facing a lawsuit regarding the datasets used to train its artificial intelligence and facial-recognition systems. The legal action challenges how user data was collected and processed for AI model development.</p>
+    <ul class="key-points">
+      <li><strong>Takeaway:</strong> Meta has been targeted in a lawsuit concerning data collection for facial recognition and AI tools.</li>
+      <li><strong>Impact:</strong> The case highlights expanding legal scrutiny around copyright and privacy in AI training data.</li>
+      <li><strong>Outlook:</strong> No confirmed timeline reported for court proceedings.</li>
+    </ul>
+    <a href="https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/" target="_blank" rel="noopener" class="read-more">EXPLORE ARTICLE &rarr;</a>
+  </div>
+</article>
+
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://media.wired.com/photos/6aa2e16e1ef586476d0a1793/master/pass/Backchannel-Timnit-Gebru-Business.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 12 • 02:32 AM UTC</span>
     </div>
     <h2 class="title"><a href="https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/" target="_blank" rel="noopener">AI Ethics Pioneer Argues 'Doom Talk' Distracts From Real-World Harms</a></h2>
@@ -428,13 +696,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 11:46 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/" target="_blank" rel="noopener">Garry Tan Advocates for Frontier Model Distillation in US Open-Weight AI</a></h2>
@@ -448,13 +716,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 11:46 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/" target="_blank" rel="noopener">Mecka AI Nears $500M Valuation in Sequoia-Led Deal</a></h2>
@@ -468,13 +736,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 09:30 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/" target="_blank" rel="noopener">Kimi Maker Moonshot AI Targets $2 Billion Annual Revenue Milestone</a></h2>
@@ -488,13 +756,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 09:30 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPenhiX20ySVF3SkxjZ0tjMXV1c1c5YVBKSjhJVGZBYm45YnJhWWtrT2hmVE9MbHlBNmdMWTU5aGpQRWw0eWhCT01HZ3VwaExIVTFUV0tZX0s3STFhUUJZQzdzZWtFTFctdUNYeUdST1BOdTlucXE5czh0eU02OUJwZnItbS0xXzFBM0ltWEU3NU5wbmUzUl9fUFdrN0hSS0RLb1lXVG5GaEhqazJSYWVJM0tSSjBndVNmblp2WThaWGhHZw?oc=5" target="_blank" rel="noopener">Nvidia Becomes Most Active Investor in Mega $100M+ VC Funding Rounds</a></h2>
@@ -508,13 +776,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://media.wired.com/photos/6aa423dcb30233b4abc2d13c/master/pass/Business_US%20Government%20Looked%20Into%20Insider%20Trading%20Allegations%20Over%20Biden%20Pardons%20on%20Polymarket_v1.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 09:30 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://www.wired.com/story/polymarket-investigations-iran-biden-google-foia/" target="_blank" rel="noopener">US Regulators Launched Investigations Into Polymarket Trades</a></h2>
@@ -528,13 +796,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="SECURITY">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">SECURITY</span>
+      <span class="category">SECURITY</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 09:30 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxNaElwSjlfRDJiaDhsR3pkdFlhMDk3cGJXb3NUMHZRNDh0V2tKOVNhR0FTMlUzNFdNOWJRbGNlNE5WV3FJT1l5UjFfV1lvYU1uMVB4ZXdLbjZiZldYMnhtRXdMVURGcnlINEM5Rk5ueldZaDFoczJfZV9Tb2RfdzRLUnFybjZUNDlSaE9pWHJ3NnhXX1ZZS0dqN09xUHNvamtSNkFRSTl4VE9pdy1jR3pfeS1oNFNEMTZMNmZOR0h3dHBjSmFQV1pKOVJR?oc=5" target="_blank" rel="noopener">Anthropic Discloses Misuse Incidents Involving Foreign Warfare and Biological Risk</a></h2>
@@ -548,13 +816,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://media.wired.com/photos/6aa304df834bd0176b553b6c/master/pass/Model-Behavior-OpenAI-Anthropic-AI-Slowdown-Business.jpg" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 05:32 AM UTC</span>
     </div>
     <h2 class="title"><a href="https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/" target="_blank" rel="noopener">OpenAI Investigates Legal and Antitrust Feasibility of Coordinated AI Development Slowdowns</a></h2>
@@ -568,13 +836,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="SECURITY">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">SECURITY</span>
+      <span class="category">SECURITY</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 05:32 AM UTC</span>
     </div>
     <h2 class="title"><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5" target="_blank" rel="noopener">Anthropic Reports Blocking AI Exploit Attempts Targeting Biological Weapon Synthesis</a></h2>
@@ -588,13 +856,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="SOFTWARE">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">SOFTWARE</span>
+      <span class="category">SOFTWARE</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 11 • 12:44 AM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/" target="_blank" rel="noopener">OpenAI Pauses Pro Subscriptions Due to Surging Astra Demand</a></h2>
@@ -608,13 +876,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="HARDWARE">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">HARDWARE</span>
+      <span class="category">HARDWARE</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 10:10 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/" target="_blank" rel="noopener">Jensen Huang Projects 70% Growth for Nvidia Driven by Massive Compute Demand</a></h2>
@@ -628,13 +896,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="MOBILE">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">MOBILE</span>
+      <span class="category">MOBILE</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 10:10 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/" target="_blank" rel="noopener">Meta’s Standalone AI Agent 'Muse' Soars to No. 2 in US App Stores</a></h2>
@@ -648,13 +916,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 10:10 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/" target="_blank" rel="noopener">Anthropic Accuses Chinese AI Firms of Distillation Campaigns</a></h2>
@@ -668,13 +936,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 10:10 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxNQm56T2dLMnFMeVp3a0tJY2s1eVdLalpSQ2c4bXBGQ2dOclF3a0dCVjhDYldvcEJMbEQ5TUQ5RXJuZXllZ1FvR3phRVlGNHhBazR0LXlaTy1DQmdXUENkQ1hLcWZrZlh0Ni0zdVVhSEH..." target="_blank" rel="noopener">Pentagon in Talks for $5 Billion Loan to AI Cloud Startup Fluidstack</a></h2>
@@ -688,13 +956,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 07:25 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/" target="_blank" rel="noopener">Pocket FM Hits $500M Run Rate with 93% AI-Generated Audio Content</a></h2>
@@ -708,13 +976,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="AI">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">AI</span>
+      <span class="category">AI</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 04:49 PM UTC</span>
     </div>
     <h2 class="title"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQcXB3ZTR1cm5DUm8xYmNjUHgzOUVoQm81TzIyLWdFRG5lVWFOQ2xpS21LLVR1ZGt4TUlNSmZWYkxfQXJQRXpaZEJoU3owYy1EVVVtY01Kbml5VXJOTE4xT29YVjE1aTF2SVZVb1hXWnJrbFZEbTU2TVp1MTNZdDZtbGVCb1A3Smo2bTZ5TVRvR0CNcFBtckxUcEM5NFdBamdvVEk0X2owVVM4SVRwZTAzQllLYUF0QkVHZ0tjStIBwgFBVV95cUxOckxCMmtKNWdVekphODEzNGw2OVVRRHphYUtJZWpWNlJJOTY1cWc4S2FQdjRKVDlkX2ltR2ZYOHlQdGt4MFhXczg3anV2WGxYMDhqNEdvdjdhOTQ5NExWVTVLbHlRR1EtRWEtSm9ZZi1KbkhncDZjb0UwNEH3VU1YRWE2VkVoaHxdXy1iQzNKRWxUWldZZjB1cWtTNk45UzlVRU8tZ3dURFFJMTNvZUZnd3Y1dU5tREtqSk9qUnpVY2IzUQ?oc=5" target="_blank" rel="noopener">Trump admin partners with OpenAI to equip federal employees with artificial intelligence tools</a></h2>
@@ -728,13 +996,13 @@
   </div>
 </article>
 
-<article class="news-card">
+<article class="news-card" data-category="BUSINESS">
   <div class="card-image">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Tech News" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80';">
   </div>
   <div class="card-content">
     <div class="meta-bar">
-      <span class="category">BUSINESS</span>
+      <span class="category">BUSINESS</span><span class="verification-tag">✓ VERIFIED</span>
       <span class="timestamp">⏰ Sep 10 • 07:46 AM UTC</span>
     </div>
     <h2 class="title"><a href="https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/" target="_blank" rel="noopener">Massachusetts Imposes Clean Energy Mandates on AI Data Centers</a></h2>
@@ -1088,8 +1356,48 @@
                 updateProgress();
             }
 
+            // ---------- Animated category filter ----------
+            var categoryNav = document.querySelector('.category-nav');
+            var categoryTabs = Array.prototype.slice.call(document.querySelectorAll('.category-tab'));
+            var categoryIndicator = document.querySelector('.category-indicator');
+            var feedCards = Array.prototype.slice.call(document.querySelectorAll('.news-card'));
+
+            function moveCategoryIndicator(tab) {
+                if (!categoryIndicator || !tab || !categoryNav) return;
+                var navRect = categoryNav.getBoundingClientRect();
+                var tabRect = tab.getBoundingClientRect();
+                categoryIndicator.style.left = (tabRect.left - navRect.left) + 'px';
+                categoryIndicator.style.width = tabRect.width + 'px';
+            }
+
+            function filterCategory(category) {
+                feedCards.forEach(function(card) {
+                    var cardCategory = (card.getAttribute('data-category') || '').toUpperCase();
+                    var show = category === 'ALL' || cardCategory === category;
+                    card.classList.toggle('is-hidden', !show);
+                    if (show) card.classList.add('in-view');
+                });
+            }
+
+            categoryTabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    categoryTabs.forEach(function(t) { t.classList.remove('active'); });
+                    tab.classList.add('active');
+                    filterCategory(tab.getAttribute('data-filter'));
+                    moveCategoryIndicator(tab);
+                });
+            });
+
+            if (categoryTabs.length) {
+                requestAnimationFrame(function() { moveCategoryIndicator(categoryTabs[0]); });
+                window.addEventListener('resize', function() {
+                    var active = document.querySelector('.category-tab.active');
+                    moveCategoryIndicator(active);
+                });
+            }
+
             // ---------- Live status line ----------
-            var TOTAL_SIGNALS = 17;  // live count injected by the generator
+            var TOTAL_SIGNALS = 24;  // live count injected by the generator
             var signalCountEl = document.getElementById('signal-count');
             if (signalCountEl) {
                 if (prefersReducedMotion) {
