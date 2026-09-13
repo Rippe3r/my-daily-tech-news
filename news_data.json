@@ -1,5 +1,21 @@
 [
   {
+    "title": "Modi and Xi Note Progress in India-China Relations at BRICS Summit",
+    "url": "https://www.thehindu.com/news/national/xi-modi-welcome-steady-progress-in-india-china-ties/article71460892.ece",
+    "category": "INDIA",
+    "importance": "CRITICAL",
+    "summary": "Indian Prime Minister Narendra Modi and Chinese President Xi Jinping welcomed steady progress in bilateral ties during talks at the BRICS Summit in New Delhi. Prime Minister Modi stressed that maintaining peace and tranquility in border areas remains vital for bilateral relations.",
+    "point1": "Prime Minister Modi and President Xi held high-level discussions on bilateral ties during the New Delhi summit.",
+    "point2": "Marks a significant diplomatic engagement between India and China to manage border stability and economic cooperation.",
+    "point3": "Diplomatic talks and summit sessions continue in New Delhi.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu",
+    "rss_image": "https://th-i.thgim.com/public/incoming/urtwhq/article71461259.ece/alternates/LANDSCAPE_1200/2026-09-12T140945Z_19151810_RC2QHNA3WEUY_RTRMADP_3_BRICS-SUMMIT.JPG",
+    "image_url": "https://th-i.thgim.com/public/incoming/urtwhq/article71461259.ece/alternates/LANDSCAPE_1200/2026-09-12T140945Z_19151810_RC2QHNA3WEUY_RTRMADP_3_BRICS-SUMMIT.JPG",
+    "timestamp_epoch": 1789266651,
+    "timestamp_display": "Sep 13 • 02:31 AM UTC"
+  },
+  {
     "title": "Matt Mullenweg returns as Automattic CEO following board dispute",
     "url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
     "category": "TECH",
@@ -684,18 +700,5 @@
     "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
     "timestamp_epoch": 1789104612,
     "timestamp_display": "Sep 11 • 05:32 AM UTC"
-  },
-  {
-    "title": "OpenAI Pauses Pro Subscriptions Due to Surging Astra Demand",
-    "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
-    "category": "SOFTWARE",
-    "summary": "OpenAI has temporarily suspended new signups for its premium Pro subscription tier to manage server compute load. The pause was triggered by intense demand following the rollout of its Astra feature set.",
-    "point1": "OpenAI halted new ChatGPT Pro plan signups to preserve system performance during compute bottlenecks.",
-    "point2": "Demonstrates the severe infrastructure challenges AI companies face when scaling resource-intensive features.",
-    "point3": "OpenAI is scaling capacity before reopening access to prospective subscribers.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789087470,
-    "timestamp_display": "Sep 11 • 12:44 AM UTC"
   }
 ]
