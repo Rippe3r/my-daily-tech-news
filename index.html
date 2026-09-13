@@ -648,7 +648,7 @@
         <button class="category-tab active" data-filter="ALL" type="button">
             <span class="tab-icon">◈</span>
             <span>ALL</span>
-            <span class="tab-count">46</span>
+            <span class="tab-count">47</span>
         </button>
 
         <button class="category-tab" data-filter="AI" type="button">
@@ -686,6 +686,61 @@
 
     <main id="news-feed">
         
+<article class="news-card"
+         data-category="INDIA"
+         data-importance="CRITICAL">
+    <div class="card-image">
+        <img
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+            alt="PM Modi Outlines Four Key Pillars for India at BRICS Summit 2026"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85';"
+        >
+        <div class="image-overlay">
+            <span>INDIA</span>
+            <span>CRITICAL</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="meta-bar">
+            <span class="category">INDIA</span>
+            <span class="importance">CRITICAL</span>
+            <span class="timestamp">⏰ Sep 13 • 01:02 PM UTC</span>
+        </div>
+
+        <div class="source-line">
+            <span class="source-check">✓</span>
+            <span>DIRECT_REPUTABLE_REPORT</span>
+            <span class="source-separator">•</span>
+            <span>The Hindu</span>
+        </div>
+
+        <h2 class="title">
+            <a href="https://www.thehindu.com/news/national/brics-summit-2026-india-live-updates-narendra-modi-world-leaders-new-delhi-declaration-key-agenda-september-13-2026/article71462451.ece" target="_blank" rel="noopener noreferrer">
+                PM Modi Outlines Four Key Pillars for India at BRICS Summit 2026
+            </a>
+        </h2>
+
+        <p class="summary">Prime Minister Narendra Modi addressed global delegates at the 2026 BRICS Summit, highlighting India&#x27;s operational focus on resilience, innovation, cooperation, and sustainability. Modi also warned member nations against the weaponization of critical minerals and strategic technology.</p>
+
+        <ul class="key-points">
+            <li><strong>FACT</strong>PM Narendra Modi detailed India&#x27;s summit priorities: resilience, innovation, cooperation, and sustainability.</li>
+            <li><strong>IMPACT</strong>Modi cautioned against geopolitical weaponization of critical minerals and advanced technology.</li>
+            <li><strong>NEXT</strong>Summit deliberations and policy sessions remain ongoing in New Delhi.</li>
+        </ul>
+
+        <a href="https://www.thehindu.com/news/national/brics-summit-2026-india-live-updates-narendra-modi-world-leaders-new-delhi-declaration-key-agenda-september-13-2026/article71462451.ece"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="read-more">
+            READ ORIGINAL REPORT <span>↗</span>
+        </a>
+    </div>
+</article>
+
 <article class="news-card"
          data-category="INDIA"
          data-importance="MAJOR">
@@ -3355,7 +3410,7 @@
     (function () {
         const clock = document.getElementById("live-clock");
         const count = document.getElementById("signal-count");
-        const target = 46;
+        const target = 47;
 
         function pad(n) {
             return String(n).padStart(2, "0");
