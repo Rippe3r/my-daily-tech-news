@@ -804,31 +804,5 @@
     "image_url": "https://media.wired.com/photos/6aa2e16e1ef586476d0a1793/master/pass/Backchannel-Timnit-Gebru-Business.jpg",
     "timestamp_epoch": 1789180304,
     "timestamp_display": "Sep 12 • 02:32 AM UTC"
-  },
-  {
-    "title": "Garry Tan Advocates for Frontier Model Distillation in US Open-Weight AI",
-    "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-    "category": "AI",
-    "summary": "Y Combinator CEO Garry Tan is urging US open-weight AI developers to systematically distill knowledge from proprietary frontier models. Tan argues that this technique is vital for maintaining American open-source AI competitiveness against rapidly evolving foreign alternatives.",
-    "point1": "Y Combinator's Garry Tan wants US developers to use model distillation to boost open-source AI performance.",
-    "point2": "Model distillation allows smaller models to mirror frontier-level capabilities at a fraction of the compute cost.",
-    "point3": "Expect intensified legal friction regarding synthetic training data and proprietary terms of service.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789170346,
-    "timestamp_display": "Sep 11 • 11:46 PM UTC"
-  },
-  {
-    "title": "Mecka AI Nears $500M Valuation in Sequoia-Led Deal",
-    "url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
-    "category": "AI",
-    "summary": "Robotics AI startup Mecka AI is nearing a $500 million valuation in a new investment round led by Sequoia Capital. The deal emphasizes the tech industry's surging demand for high-quality spatial and physical training data required to build next-generation embodied AI models.",
-    "point1": "Sequoia Capital is leading a funding round pushing Mecka AI's valuation toward $500 million.",
-    "point2": "Physical data collection and curation are becoming critical bottlenecks and valuable assets for training robotics.",
-    "point3": "Increased capital influx into robotics data suppliers will accelerate the commercial readiness of humanoid robots.",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
-    "timestamp_epoch": 1789170346,
-    "timestamp_display": "Sep 11 • 11:46 PM UTC"
   }
 ]
