@@ -1,5 +1,21 @@
 [
   {
+    "title": "Chief Justice of India Declares Judiciary Must Remain Open to Public Scrutiny",
+    "url": "https://www.thehindu.com/news/national/cji-says-judiciary-can-not-earn-public-trust-by-shielding-itself-from-scrutiny/article71466330.ece",
+    "category": "INDIA",
+    "importance": "MAJOR",
+    "summary": "Chief Justice of India stated that the judicial institution cannot build public confidence by shielding its decisions from outside review. Addressing judicial accountability, the CJI stressed that courts must accept public examination, questioning, and legitimate criticism.",
+    "point1": "CJI emphasized that judicial trust requires openness to public examination and criticism.",
+    "point2": "Highlights senior judicial leadership's stance on institutional transparency and accountability.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu",
+    "rss_image": "https://th-i.thgim.com/public/incoming/864phj/article71466368.ece/alternates/LANDSCAPE_1200/20260914406L.jpg",
+    "image_url": "https://th-i.thgim.com/public/incoming/864phj/article71466368.ece/alternates/LANDSCAPE_1200/20260914406L.jpg",
+    "timestamp_epoch": 1789450727,
+    "timestamp_display": "Sep 15 • 05:40 AM UTC"
+  },
+  {
     "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
     "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
     "category": "AI",
@@ -510,21 +526,5 @@
     "image_url": "https://th-i.thgim.com/public/incoming/lavrdk/article71462662.ece/alternates/LANDSCAPE_1200/PTI09_13_2026_000067B.jpg",
     "timestamp_epoch": 1789285959,
     "timestamp_display": "Sep 13 • 07:53 AM UTC"
-  },
-  {
-    "title": "Modi and Xi Note Progress in India-China Relations at BRICS Summit",
-    "url": "https://www.thehindu.com/news/national/xi-modi-welcome-steady-progress-in-india-china-ties/article71460892.ece",
-    "category": "INDIA",
-    "importance": "CRITICAL",
-    "summary": "Indian Prime Minister Narendra Modi and Chinese President Xi Jinping welcomed steady progress in bilateral ties during talks at the BRICS Summit in New Delhi. Prime Minister Modi stressed that maintaining peace and tranquility in border areas remains vital for bilateral relations.",
-    "point1": "Prime Minister Modi and President Xi held high-level discussions on bilateral ties during the New Delhi summit.",
-    "point2": "Marks a significant diplomatic engagement between India and China to manage border stability and economic cooperation.",
-    "point3": "Diplomatic talks and summit sessions continue in New Delhi.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu",
-    "rss_image": "https://th-i.thgim.com/public/incoming/urtwhq/article71461259.ece/alternates/LANDSCAPE_1200/2026-09-12T140945Z_19151810_RC2QHNA3WEUY_RTRMADP_3_BRICS-SUMMIT.JPG",
-    "image_url": "https://th-i.thgim.com/public/incoming/urtwhq/article71461259.ece/alternates/LANDSCAPE_1200/2026-09-12T140945Z_19151810_RC2QHNA3WEUY_RTRMADP_3_BRICS-SUMMIT.JPG",
-    "timestamp_epoch": 1789266651,
-    "timestamp_display": "Sep 13 • 02:31 AM UTC"
   }
 ]
