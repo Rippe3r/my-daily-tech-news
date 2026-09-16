@@ -1,5 +1,21 @@
 [
   {
+    "title": "TDP and Shiv Sena Back Union Government Plan for State-Level UCC",
+    "url": "https://www.thehindu.com/news/national/key-allies-tdp-shiv-sena-back-amit-shahs-statement-on-ucc-in-all-nda-ruled-states/article71470158.ece",
+    "category": "INDIA",
+    "importance": "MAJOR",
+    "summary": "NDA coalition partners Telugu Desam Party and Shiv Sena declared support for Home Minister Amit Shah's announcement regarding Uniform Civil Code rollout in NDA-governed states. The backing provides crucial political support for the coalition government's agenda.",
+    "point1": "Key allies TDP and Shiv Sena publicly supported Union Home Minister Amit Shah's statement on UCC.",
+    "point2": "Support from coalition partners with Lok Sabha seats strengthens parliamentary backing for the initiative.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu",
+    "rss_image": "https://th-i.thgim.com/public/incoming/z68fs8/article71470159.ece/alternates/LANDSCAPE_1200/20260915150L.jpg",
+    "image_url": "https://th-i.thgim.com/public/incoming/z68fs8/article71470159.ece/alternates/LANDSCAPE_1200/20260915150L.jpg",
+    "timestamp_epoch": 1789520195,
+    "timestamp_display": "Sep 16 • 12:57 AM UTC"
+  },
+  {
     "title": "RBI Files Caveat After Rejecting Tata Sons Application to Avoid Stock Listing",
     "url": "https://www.thehindu.com/business/Industry/rbi-files-caveat-after-rejecting-tata-sons-bid-to-avoid-listing-source-says/article71469622.ece",
     "category": "INDIA",
@@ -542,37 +558,5 @@
     "image_url": "https://media.wired.com/photos/6aa4120d92d2b4de236f2240/master/pass/GettyImages-2289768151.jpg",
     "timestamp_epoch": 1789364226,
     "timestamp_display": "Sep 14 • 05:37 AM UTC"
-  },
-  {
-    "title": "Projections Show Tight Swedish Election Race With Opposition Left Bloc Leading by One Seat",
-    "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "Sweden's election authority projected a narrow one-seat majority for the left-wing opposition bloc following Sunday's national vote. Tallying shows the country's main political coalitions in a virtually tied contest.",
-    "point1": "Election projections show Sweden's opposition left bloc holding a single-seat lead.",
-    "point2": "Determines parliamentary power and the future composition of Sweden's government.",
-    "point3": "Official vote counting by election authorities continues.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d7e0/live/f8b9f5b0-afa4-11f1-a27d-17e2480354ed.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d7e0/live/f8b9f5b0-afa4-11f1-a27d-17e2480354ed.jpg",
-    "timestamp_epoch": 1789339536,
-    "timestamp_display": "Sep 13 • 10:46 PM UTC"
-  },
-  {
-    "title": "Larry Ellison Cancels Planned $7.5 Billion Oracle Stock Sale",
-    "url": "https://techcrunch.com/2026/09/13/larry-ellison-cancels-7-5-billion-sale-of-oracle-stock/",
-    "category": "TECH",
-    "importance": "MAJOR",
-    "summary": "Oracle co-founder Larry Ellison has canceled his planned sale of 50 million shares of Oracle stock. The transaction was previously disclosed and valued at approximately $7.5 billion.",
-    "point1": "Larry Ellison canceled a previously disclosed plan to sell 50 million shares of Oracle stock.",
-    "point2": "Reverses a massive planned insider stock transaction by Oracle's co-founder.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "TechCrunch",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1789339536,
-    "timestamp_display": "Sep 13 • 10:46 PM UTC"
   }
 ]
