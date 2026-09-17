@@ -1,5 +1,53 @@
 [
   {
+    "title": "Rescuers Say 21 Killed After War-Damaged Building Collapses in Gaza",
+    "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
+    "category": "WORLD",
+    "importance": "MAJOR",
+    "summary": "A six-story building in Gaza City collapsed, resulting in the deaths of 21 people, including eight children. Emergency responders reported that ten families were inhabiting the structure, which had sustained damage from a previous Israeli airstrike.",
+    "point1": "Twenty-one people, including eight children, died when a damaged residential building collapsed in Gaza City.",
+    "point2": "The collapse highlights ongoing severe structural and safety hazards affecting displaced residents.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9e43/live/ff225e50-b1b7-11f1-b1d1-571ed4d7ff2c.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9e43/live/ff225e50-b1b7-11f1-b1d1-571ed4d7ff2c.jpg",
+    "timestamp_epoch": 1789606795,
+    "timestamp_display": "Sep 17 • 01:00 AM UTC"
+  },
+  {
+    "title": "US House Passes Legislation Mandating Free AM Radio in New Vehicles",
+    "url": "https://techcrunch.com/2026/09/16/us-automakers-could-soon-be-forced-to-include-am-radio-for-free/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "The U.S. House of Representatives overwhelmingly passed bipartisan legislation mandating that motor vehicle manufacturers equip new cars with AM radio at no extra cost to consumers. The bill aims to ensure public access to broadcast channels during emergency situations.",
+    "point1": "The House approved a bipartisan bill mandating free AM radio inclusion in new motor vehicles.",
+    "point2": "The requirement aims to preserve broadcast emergency communication access across automotive fleets.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1789606795,
+    "timestamp_display": "Sep 17 • 01:00 AM UTC"
+  },
+  {
+    "title": "New York Seizes 12 Celebrity Deepfake Websites in Major Enforcement Action",
+    "url": "https://www.wired.com/story/new-york-seizes-a-dozen-celebrity-deepfake-websites/",
+    "category": "AI",
+    "importance": "MAJOR",
+    "summary": "The Manhattan District Attorney’s Office seized 12 websites creating nonconsensual celebrity deepfakes. Authorities stated the targeted platforms affected approximately 1,200 victims in what is described as the largest legal action against harmful deepfake sites.",
+    "point1": "New York prosecutors seized 12 websites producing unauthorized deepfakes targeting roughly 1,200 victims.",
+    "point2": "It represents the largest legal action taken to date against illicit deepfake domains.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "WIRED AI",
+    "rss_image": "https://media.wired.com/photos/6aa81a44054ce52476eda4d7/master/pass/Security_New%20York%20Seizes%20More%20Than%20a%20Dozen%20Celebrity%20Deepfake%20Websites_v1.jpg",
+    "image_url": "https://media.wired.com/photos/6aa81a44054ce52476eda4d7/master/pass/Security_New%20York%20Seizes%20More%20Than%20a%20Dozen%20Celebrity%20Deepfake%20Websites_v1.jpg",
+    "timestamp_epoch": 1789606795,
+    "timestamp_display": "Sep 17 • 01:00 AM UTC"
+  },
+  {
     "title": "India Cuts Export Windfall Tax on Petrol, Diesel, and Jet Fuel",
     "url": "https://www.thehindu.com/business/govt-cuts-windfall-tax-on-export-of-petrol-diesel-and-atf/article71474189.ece",
     "category": "INDIA",
@@ -654,21 +702,5 @@
     "image_url": "https://th-i.thgim.com/public/incoming/864phj/article71466368.ece/alternates/LANDSCAPE_1200/20260914406L.jpg",
     "timestamp_epoch": 1789450727,
     "timestamp_display": "Sep 15 • 05:40 AM UTC"
-  },
-  {
-    "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
-    "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-    "category": "AI",
-    "importance": "MAJOR",
-    "summary": "Nvidia Chief Executive Officer Jensen Huang informed Donald Trump that Nvidia will not allow a slowdown in artificial intelligence development. Huang's stance contrasts with recent calls from Anthropic CEO Dario Amodei, as well as comments from Elon Musk and Sam Altman supporting safety safeguards.",
-    "point1": "Nvidia CEO Jensen Huang told Donald Trump that the company will not allow an AI development slowdown.",
-    "point2": "The statement opposes calls from other industry leaders for safety-driven slowdowns or regulatory limits.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "TechCrunch AI",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1789430849,
-    "timestamp_display": "Sep 15 • 12:08 AM UTC"
   }
 ]
