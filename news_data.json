@@ -1,5 +1,21 @@
 [
   {
+    "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar",
+    "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o?at_medium=RSS&at_campaign=rss",
+    "category": "AI",
+    "importance": "MAJOR",
+    "summary": "U.S. President Donald Trump announced plans to establish an 'AI Force' and appoint a dedicated artificial intelligence tsar within his administration. Trump stated that his government will not hinder or stifle the growth of AI technology.",
+    "point1": "The U.S. government plans to establish an AI Force and appoint a designated AI tsar.",
+    "point2": "The announcement outlines federal strategy to encourage AI growth without regulatory hindrance.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/093a/live/5485b600-b46d-11f1-9dd6-3102a0e415e4.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/093a/live/5485b600-b46d-11f1-9dd6-3102a0e415e4.jpg",
+    "timestamp_epoch": 1789855200,
+    "timestamp_display": "Sep 19 • 10:00 PM UTC"
+  },
+  {
     "title": "Anthropic Operates Physical Biology Lab to Measure AI Risk Capabilities",
     "url": "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/",
     "category": "AI",
