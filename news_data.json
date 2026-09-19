@@ -1,5 +1,21 @@
 [
   {
+    "title": "Millions lose electricity as Cuba suffers widespread power grid failure",
+    "url": "https://www.bbc.co.uk/news/articles/c6j9x4387lzxo?at_medium=RSS&at_campaign=rss",
+    "category": "WORLD",
+    "importance": "MAJOR",
+    "summary": "A massive power blackout has left millions of residents without electricity across Cuba. Officials attribute repeated grid collapses to ongoing fuel shortages and economic sanctions.",
+    "point1": "A major power outage disconnected millions of residents from Cuba's national grid.",
+    "point2": "Severe fuel shortages continue to destabilize the country's electrical infrastructure.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/86e4/live/a768b9c0-b414-11f1-8366-ad72a16d0f7c.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/86e4/live/a768b9c0-b414-11f1-8366-ad72a16d0f7c.jpg",
+    "timestamp_epoch": 1789826718,
+    "timestamp_display": "Sep 19 • 02:05 PM UTC"
+  },
+  {
     "title": "AI Model Hallucination Nearly Triggers US Military Action",
     "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
     "category": "AI",
@@ -782,53 +798,5 @@
     "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c987/live/23589710-b28c-11f1-8096-b33a1297275a.jpg",
     "timestamp_epoch": 1789658625,
     "timestamp_display": "Sep 17 • 03:24 PM UTC"
-  },
-  {
-    "title": "Tata Sons Board Approves Second Five-Year Term for Chairman N. Chandrasekaran",
-    "url": "https://www.thehindu.com/business/Industry/tata-sons-board-approves-fresh-five-year-term-for-chairman-chandrasekaran/article71476053.ece",
-    "category": "INDIA",
-    "importance": "MAJOR",
-    "summary": "The board of Tata Sons has approved a fresh five-year term for Chairman N. Chandrasekaran. Board members cited the importance of leadership continuity to maintain investor confidence ahead of potential future listing processes.",
-    "point1": "N. Chandrasekaran received a fresh five-year extension as Chairman of Tata Sons.",
-    "point2": "The board emphasized leadership stability ahead of prospective public listings.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu Business",
-    "rss_image": "https://th-i.thgim.com/public/incoming/3peqxw/article71476057.ece/alternates/LANDSCAPE_1200/PTI08_12_2026_000380A.jpg",
-    "image_url": "https://th-i.thgim.com/public/incoming/3peqxw/article71476057.ece/alternates/LANDSCAPE_1200/PTI08_12_2026_000380A.jpg",
-    "timestamp_epoch": 1789642483,
-    "timestamp_display": "Sep 17 • 10:55 AM UTC"
-  },
-  {
-    "title": "Google Launches Integration Allowing AI Agents to Control Smart Home Devices",
-    "url": "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/",
-    "category": "AI",
-    "importance": "MAJOR",
-    "summary": "Google has launched early access to a new Model Context Protocol (MCP) server for Google Home. The integration enables AI agents such as ChatGPT and Claude to control connected devices, review camera summaries, and access smart home activity via natural language.",
-    "point1": "Google launched an MCP server connecting smart home devices directly to external AI agents.",
-    "point2": "Third-party agents like Claude and ChatGPT can manage home devices and view camera logs using natural language.",
-    "point3": "The feature is currently available in early access.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "TechCrunch AI",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1789642483,
-    "timestamp_display": "Sep 17 • 10:55 AM UTC"
-  },
-  {
-    "title": "EU Unveils Plans to Restrict Social Media Access for Children Under 15",
-    "url": "https://www.bbc.co.uk/news/articles/c3j4jz8vpz1xo?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "The European Union has announced plans to restrict independent social media access for children under the age of 15. Under the proposed measures, only children above 15 would be permitted to set up their own social media accounts.",
-    "point1": "The EU plans to restrict independent social media account creation to youth aged 15 and older.",
-    "point2": "The measures aim to strengthen minor safety and limit exposure to digital risks across member states.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/39d1/live/a17b23d0-b26c-11f1-b67f-2b40fa83cfed.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/39d1/live/a17b23d0-b26c-11f1-b67f-2b40fa83cfed.jpg",
-    "timestamp_epoch": 1789642483,
-    "timestamp_display": "Sep 17 • 10:55 AM UTC"
   }
 ]
