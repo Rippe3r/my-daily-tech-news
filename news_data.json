@@ -1,5 +1,37 @@
 [
   {
+    "title": "Google debuts $899 Googlebook laptop built around Gemini AI",
+    "url": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Google introduced the $899 Googlebook, an AI-native laptop engineered to integrate deeply with its Gemini AI model. The device connects Gemini directly to desktop widgets, dictation features, and cursor controls while offering seamless interaction with Android devices.",
+    "point1": "Google launched the $899 Googlebook laptop with hardware-level integration for its Gemini AI system.",
+    "point2": "The laptop aims to provide Android users with integrated desktop and artificial intelligence features.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch AI",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1790036878,
+    "timestamp_display": "Sep 22 • 12:28 AM UTC"
+  },
+  {
+    "title": "Escalating Yemen conflict forces refugees to flee across Red Sea to Djibouti",
+    "url": "https://www.bbc.co.uk/news/articles/cw4gm7l742dmo?at_medium=RSS&at_campaign=rss",
+    "category": "WORLD",
+    "importance": "MAJOR",
+    "summary": "Intensifying military clashes between Houthi forces and Saudi-backed troops have triggered widespread civilian displacement in Yemen. Large numbers of displaced residents are attempting maritime crossings across the Red Sea to reach Djibouti.",
+    "point1": "Escalated fighting in Yemen led to displaced civilians crossing the Red Sea into Djibouti.",
+    "point2": "The humanitarian crisis intensifies as combat surges between Houthi fighters and Saudi-backed troops.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5cd3/live/e6442550-b5c0-11f1-abb5-85e9be42cb76.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5cd3/live/e6442550-b5c0-11f1-abb5-85e9be42cb76.jpg",
+    "timestamp_epoch": 1790036878,
+    "timestamp_display": "Sep 22 • 12:28 AM UTC"
+  },
+  {
     "title": "Supreme Court Orders Fresh Investigation Into 2012 Dharmasthala Rape-Murder Case",
     "url": "https://www.thehindu.com/news/national/karnataka/supreme-court-orders-fresh-probe-into-2012-rape-murder-near-dharmasthala-in-karnataka/article71492604.ece",
     "category": "INDIA",
@@ -558,37 +590,5 @@
     "image_url": "https://th-i.thgim.com/public/incoming/5lamuw/article71481743.ece/alternates/LANDSCAPE_1200/4871_13_9_2026_13_17_6_1_DSC_2298.JPG",
     "timestamp_epoch": 1789878746,
     "timestamp_display": "Sep 20 • 04:33 AM UTC"
-  },
-  {
-    "title": "Tata Sons Boardroom Divided Over Leadership Succession and Public Listing",
-    "url": "https://www.thehindu.com/business/Industry/battle-lines-in-the-boardroom-tata-sons/article71485795.ece",
-    "category": "INDIA",
-    "importance": "MAJOR",
-    "summary": "Tata Sons, the principal promoter company of the Tata Group, is experiencing internal board disagreements over governance and strategic direction. Key points of contention include executive chairman leadership selection and whether to list the holding company publicly.",
-    "point1": "Internal divisions at Tata Sons center on top leadership appointments and public listing decisions.",
-    "point2": "Governance decisions at the promoter level directly impact the entire multi-billion-dollar Tata conglomerate.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu Business",
-    "rss_image": "https://th-i.thgim.com/public/news/national/tamil-nadu/e6vx10/article71485793.ece/alternates/LANDSCAPE_1200/Tata_art.jpg",
-    "image_url": "https://th-i.thgim.com/public/news/national/tamil-nadu/e6vx10/article71485793.ece/alternates/LANDSCAPE_1200/Tata_art.jpg",
-    "timestamp_epoch": 1789862411,
-    "timestamp_display": "Sep 20 • 12:00 AM UTC"
-  },
-  {
-    "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar",
-    "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o?at_medium=RSS&at_campaign=rss",
-    "category": "AI",
-    "importance": "MAJOR",
-    "summary": "U.S. President Donald Trump announced plans to establish an 'AI Force' and appoint a dedicated artificial intelligence tsar within his administration. Trump stated that his government will not hinder or stifle the growth of AI technology.",
-    "point1": "The U.S. government plans to establish an AI Force and appoint a designated AI tsar.",
-    "point2": "The announcement outlines federal strategy to encourage AI growth without regulatory hindrance.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/093a/live/5485b600-b46d-11f1-9dd6-3102a0e415e4.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/093a/live/5485b600-b46d-11f1-9dd6-3102a0e415e4.jpg",
-    "timestamp_epoch": 1789855200,
-    "timestamp_display": "Sep 19 • 10:00 PM UTC"
   }
 ]
