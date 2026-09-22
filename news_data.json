@@ -638,37 +638,5 @@
     "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/82c6/live/aff65ac0-b513-11f1-a430-4d16ee157c41.jpg",
     "timestamp_epoch": 1789924354,
     "timestamp_display": "Sep 20 • 05:13 PM UTC"
-  },
-  {
-    "title": "After October 1, non-eKYC households will only receive smaller LPG refills at market prices",
-    "url": "https://www.thehindu.com/business/Economy/after-october-1-only-smaller-5-or-10-kg-lpg-refills-await-non-ekyc-households/article71485908.ece",
-    "category": "INDIA",
-    "importance": "MAJOR",
-    "summary": "Starting October 1, Indian households that have not completed their eKYC verification will only be allowed to purchase smaller 5 kg or 10 kg LPG refills at market prices. Regulated retail prices and subsidies will remain available only to consumers who complete the verification.",
-    "point1": "Non-eKYC households will be restricted to smaller LPG refills at market prices.",
-    "point2": "Subsidized, regulated-price refills will only be available to verified consumers.",
-    "point3": "The new rules take effect on October 1, 2026.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu Business",
-    "rss_image": "https://th-i.thgim.com/public/incoming/vid19z/article71487280.ece/alternates/LANDSCAPE_1200/liquefied%20petroleum%20gas%20LPG%20cylinders%2010.jpg",
-    "image_url": "https://th-i.thgim.com/public/incoming/vid19z/article71487280.ece/alternates/LANDSCAPE_1200/liquefied%20petroleum%20gas%20LPG%20cylinders%2010.jpg",
-    "timestamp_epoch": 1789912294,
-    "timestamp_display": "Sep 20 • 01:53 PM UTC"
-  },
-  {
-    "title": "What You Need to Know About the Foreign-Made Router Ban in the US",
-    "url": "https://www.wired.com/story/us-government-foreign-made-router-ban-explained/",
-    "category": "TECH",
-    "importance": "MAJOR",
-    "summary": "The Federal Communications Commission (FCC) has banned the sale of new consumer-grade Wi-Fi routers and mobile hotspots manufactured outside the United States. The sweeping regulatory action aims to address national security and supply chain concerns.",
-    "point1": "The FCC banned the sale of new consumer-grade Wi-Fi routers and mobile hotspots made outside the US.",
-    "point2": "The ban affects new consumer-grade networking hardware.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "WIRED",
-    "rss_image": "https://media.wired.com/photos/69c2c874bebdcbc5795fe12e/master/pass/US-Foreign-Made-Router-Ban-Gear-2222209888.jpg",
-    "image_url": "https://media.wired.com/photos/69c2c874bebdcbc5795fe12e/master/pass/US-Foreign-Made-Router-Ban-Gear-2222209888.jpg",
-    "timestamp_epoch": 1789912294,
-    "timestamp_display": "Sep 20 • 01:53 PM UTC"
   }
 ]
