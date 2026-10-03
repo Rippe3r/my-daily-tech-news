@@ -1,5 +1,37 @@
 [
   {
+    "title": "Federal judge rules Flock license plate reader search violated Fourth Amendment",
+    "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "A federal judge has ruled that a sheriff's deputy violated a woman's Fourth Amendment rights by using the Flock license plate reader system to search for her vehicle without a warrant. The judge characterized the Flock system as 'indiscriminate mass surveillance.'",
+    "point1": "A federal judge ruled that using Flock to search for a license plate without a warrant is unconstitutional.",
+    "point2": "The court officially described the Flock system as indiscriminate mass surveillance.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1791056334,
+    "timestamp_display": "Oct 03 • 07:40 PM UTC"
+  },
+  {
+    "title": "Tens of thousands protest in Spain over housing crisis",
+    "url": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+    "category": "WORLD",
+    "importance": "MAJOR",
+    "summary": "More than 50 protests took place across Spain as tens of thousands of people demonstrated against the country's housing crisis. The protests erupted after the Spanish government failed to pass emergency housing legislation through parliament.",
+    "point1": "Over 50 coordinated protests were held across Spain on Saturday.",
+    "point2": "The demonstrations followed the government's failure to pass emergency housing legislation.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/225b/live/a58f5d00-bf24-11f1-bc2e-018d645d8d21.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/225b/live/a58f5d00-bf24-11f1-bc2e-018d645d8d21.jpg",
+    "timestamp_epoch": 1791056334,
+    "timestamp_display": "Oct 03 • 07:40 PM UTC"
+  },
+  {
     "title": "MRFA deal likely by end of FY27, says IAF chief; annual requirement of 36-40 fighters",
     "url": "https://www.thehindu.com/news/national/india-may-finalise-mrfa-deal-by-current-financial-year-iaf-chief/article71540116.ece",
     "category": "INDIA",
