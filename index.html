@@ -648,7 +648,7 @@
         <button class="category-tab active" data-filter="ALL" type="button">
             <span class="tab-icon">◈</span>
             <span>ALL</span>
-            <span class="tab-count">34</span>
+            <span class="tab-count">36</span>
         </button>
 
         <button class="category-tab" data-filter="AI" type="button">
@@ -686,6 +686,116 @@
 
     <main id="news-feed">
         
+<article class="news-card"
+         data-category="WORLD"
+         data-importance="CRITICAL">
+    <div class="card-image">
+        <img
+            src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6a59/live/bee37260-c036-11f1-a64c-550be9e3c66b.png"
+            alt="Voting Concludes in Tight Brazilian Presidential Election Between Lula and Flávio Bolsonaro"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85';"
+        >
+        <div class="image-overlay">
+            <span>WORLD</span>
+            <span>CRITICAL</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="meta-bar">
+            <span class="category">WORLD</span>
+            <span class="importance">CRITICAL</span>
+            <span class="timestamp">⏰ Oct 04 • 10:09 PM UTC</span>
+        </div>
+
+        <div class="source-line">
+            <span class="source-check">✓</span>
+            <span>DIRECT_REPUTABLE_REPORT</span>
+            <span class="source-separator">•</span>
+            <span>BBC World</span>
+        </div>
+
+        <h2 class="title">
+            <a href="https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">
+                Voting Concludes in Tight Brazilian Presidential Election Between Lula and Flávio Bolsonaro
+            </a>
+        </h2>
+
+        <p class="summary">Voting has concluded in Brazil&#x27;s presidential election, with incumbent President Luiz Inácio Lula da Silva and challenger Flávio Bolsonaro locked in a close race. If no candidate secures over 50% of the vote, the election will head to a run-off.</p>
+
+        <ul class="key-points">
+            <li><strong>FACT</strong>Polls closed in Brazil as President Lula and Flávio Bolsonaro remain closely contested.</li>
+            <li><strong>IMPACT</strong>The vote determines the political leadership of Latin America&#x27;s largest economy.</li>
+            <li><strong>NEXT</strong>If no candidate gets over 50% of the vote, a run-off will take place on October 25.</li>
+        </ul>
+
+        <a href="https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&amp;at_campaign=rss"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="read-more">
+            READ ORIGINAL REPORT <span>↗</span>
+        </a>
+    </div>
+</article>
+
+<article class="news-card"
+         data-category="AI"
+         data-importance="MAJOR">
+    <div class="card-image">
+        <img
+            src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+            alt="Google Freezes Open Source Bug Bounty Program Over Rise in AI Submissions"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85';"
+        >
+        <div class="image-overlay">
+            <span>AI</span>
+            <span>MAJOR</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="meta-bar">
+            <span class="category">AI</span>
+            <span class="importance">MAJOR</span>
+            <span class="timestamp">⏰ Oct 04 • 10:09 PM UTC</span>
+        </div>
+
+        <div class="source-line">
+            <span class="source-check">✓</span>
+            <span>DIRECT_REPUTABLE_REPORT</span>
+            <span class="source-separator">•</span>
+            <span>TechCrunch AI</span>
+        </div>
+
+        <h2 class="title">
+            <a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/" target="_blank" rel="noopener noreferrer">
+                Google Freezes Open Source Bug Bounty Program Over Rise in AI Submissions
+            </a>
+        </h2>
+
+        <p class="summary">Google has suspended its open-source bug bounty program following a significant rise in AI-generated security submissions. The influx of automated vulnerability reports strained review processes and degraded overall report quality.</p>
+
+        <ul class="key-points">
+            <li><strong>FACT</strong>Google paused its open-source bug bounty program due to excessive automated AI submissions.</li>
+            <li><strong>IMPACT</strong>Automated AI submissions are overwhelming security response teams across software ecosystems.</li>
+            <li><strong>NEXT</strong>No confirmed timeline reported.</li>
+        </ul>
+
+        <a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="read-more">
+            READ ORIGINAL REPORT <span>↗</span>
+        </a>
+    </div>
+</article>
+
 <article class="news-card"
          data-category="INDIA"
          data-importance="CRITICAL">
@@ -2695,7 +2805,7 @@
     (function () {
         const clock = document.getElementById("live-clock");
         const count = document.getElementById("signal-count");
-        const target = 34;
+        const target = 36;
 
         function pad(n) {
             return String(n).padStart(2, "0");
