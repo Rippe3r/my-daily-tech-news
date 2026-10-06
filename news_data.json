@@ -542,37 +542,5 @@
     "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=85",
     "timestamp_epoch": 1791140110,
     "timestamp_display": "Oct 04 • 06:55 PM UTC"
-  },
-  {
-    "title": "Ethiopian Rebel Forces Withdraw From Tigray Capital Mekelle",
-    "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "Rebel forces in northern Ethiopia have pulled back from Mekelle, the regional capital of Tigray. Pro-government military forces have entered and assumed control over the city.",
-    "point1": "Tigrayan rebel fighters withdrew from Mekelle without major urban clashes.",
-    "point2": "Pro-government Ethiopian forces took control of the strategic regional capital.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/965b/live/ca8ca230-bfeb-11f1-8c3e-3b2eab095459.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/965b/live/ca8ca230-bfeb-11f1-8c3e-3b2eab095459.jpg",
-    "timestamp_epoch": 1791126224,
-    "timestamp_display": "Oct 04 • 03:04 PM UTC"
-  },
-  {
-    "title": "Yemen Government Launches Military Campaign Against Houthis",
-    "url": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "The President of Yemen announced a major military campaign aimed at reclaiming territory held by Iran-backed Houthi forces. The escalation follows escalating strikes between the Houthis and coalition forces.",
-    "point1": "Yemeni leadership announced a military operation to retake land from Houthi forces.",
-    "point2": "Marks a significant formal offensive following ongoing cross-border missile and air strikes.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7653/live/2853dd30-bffa-11f1-8c3e-3b2eab095459.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7653/live/2853dd30-bffa-11f1-8c3e-3b2eab095459.jpg",
-    "timestamp_epoch": 1791126224,
-    "timestamp_display": "Oct 04 • 03:04 PM UTC"
   }
 ]
