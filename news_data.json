@@ -1,5 +1,53 @@
 [
   {
+    "title": "Spotify expands audiobook service to over 180 global markets",
+    "url": "https://techcrunch.com/2026/10/07/spotify-expands-audiobooks-to-over-180-markets/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Streaming provider Spotify has expanded its audiobook service to more than 180 markets worldwide. The expansion brings a catalog of 350,000 titles across 120 languages to international users.",
+    "point1": "Spotify expanded audiobooks to over 180 international markets.",
+    "point2": "The rollout makes 350,000 audiobook titles available across 120 languages.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1791360377,
+    "timestamp_display": "Oct 07 • 08:07 AM UTC"
+  },
+  {
+    "title": "Serum Institute's Cervavac HPV vaccine earns WHO prequalification",
+    "url": "https://www.thehindu.com/sci-tech/health/serum-institutes-hpv-vaccine-cervavac-receives-who-prequalification/article71554508.ece",
+    "category": "INDIA",
+    "importance": "MAJOR",
+    "summary": "The World Health Organization has granted prequalification status to Cervavac, the quadrivalent HPV vaccine manufactured by the Serum Institute of India. Inclusion on the WHO list allows United Nations agencies to purchase and distribute the vaccine internationally for individuals aged 9 to 26.",
+    "point1": "Serum Institute of India's Cervavac HPV vaccine received formal WHO prequalification status.",
+    "point2": "The prequalification allows global procurement agencies like UN bodies to buy the vaccine for worldwide immunization.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu Business",
+    "rss_image": "https://th-i.thgim.com/public/incoming/98kr5d/article71554651.ece/alternates/LANDSCAPE_1200/NH28HPV03.JPG",
+    "image_url": "https://th-i.thgim.com/public/incoming/98kr5d/article71554651.ece/alternates/LANDSCAPE_1200/NH28HPV03.JPG",
+    "timestamp_epoch": 1791360377,
+    "timestamp_display": "Oct 07 • 08:07 AM UTC"
+  },
+  {
+    "title": "RBI raises repo rate to 5.50% and shifts stance to 'calibrated tightening'",
+    "url": "https://www.thehindu.com/business/Economy/rbi-hikes-repo-rate-by-25-basis-points-to-55/article71554369.ece",
+    "category": "INDIA",
+    "importance": "CRITICAL",
+    "summary": "The Reserve Bank of India raised its benchmark repo rate by 25 basis points to 5.50%, marking its first interest rate hike in nearly three and a half years. The central bank also changed its monetary policy stance from 'neutral' to 'calibrated tightening' amid rising inflation pressures driven by the West Asia conflict.",
+    "point1": "The RBI Monetary Policy Committee increased the key repo rate by 25 basis points to 5.50%.",
+    "point2": "This rate hike is the central bank's first in nearly three and a half years, accompanied by an increased FY27 inflation projection of 5.2%.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "The Hindu Business",
+    "rss_image": "https://th-i.thgim.com/public/incoming/e1ln0d/article71554378.ece/alternates/LANDSCAPE_1200/2026-09-11T091743Z_109916859_RC26SMAYJ264_RTRMADP_3_INDIA-RBI-LIQUIDITY.JPG",
+    "image_url": "https://th-i.thgim.com/public/incoming/e1ln0d/article71554378.ece/alternates/LANDSCAPE_1200/2026-09-11T091743Z_109916859_RC26SMAYJ264_RTRMADP_3_INDIA-RBI-LIQUIDITY.JPG",
+    "timestamp_epoch": 1791360377,
+    "timestamp_display": "Oct 07 • 08:07 AM UTC"
+  },
+  {
     "title": "Indian government intervenes to halt Adani's Mumbai airport slot cuts",
     "url": "https://www.thehindu.com/business/Industry/govt-steps-in-to-stop-adanis-mumbai-airport-slot-cuts/article71552018.ece",
     "category": "INDIA",
@@ -558,21 +606,5 @@
     "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bee9/live/eb472d40-c0b5-11f1-a64c-550be9e3c66b.jpg",
     "timestamp_epoch": 1791222009,
     "timestamp_display": "Oct 05 • 05:41 PM UTC"
-  },
-  {
-    "title": "Supreme Court Issues Notice to ECI and Union Government on CEC Decision Challenge",
-    "url": "https://www.thehindu.com/news/national/cec-gyanesh-kumar-protest-live-updates-supreme-court-hearing-suspension-cjp-congress-delhi-mumbai-india/article71545740.ece",
-    "category": "INDIA",
-    "importance": "CRITICAL",
-    "summary": "The Supreme Court of India issued notices to the Election Commission of India and the central government regarding a plea challenging decisions made by the Chief Election Commissioner-led panel. Chief Justice Surya Kant noted the allegations were based on media reports, while legal counsel argued the ECI failed to refute them.",
-    "point1": "The Supreme Court issued formal notices to the ECI and Union government on decisions taken by the CEC-led panel.",
-    "point2": "The case subjects key decisions of the nation's poll regulatory authority to judicial scrutiny.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1791187401,
-    "timestamp_display": "Oct 05 • 08:04 AM UTC"
   }
 ]
