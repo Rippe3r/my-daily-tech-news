@@ -430,37 +430,5 @@
     "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9d64/live/61119c60-c483-11f1-9323-b15f40d5009a.jpg",
     "timestamp_epoch": 1791705967,
     "timestamp_display": "Oct 11 • 08:06 AM UTC"
-  },
-  {
-    "title": "Tesla renames 'Full Self-Driving' to 'Assisted Driving' in Europe",
-    "url": "https://www.wired.com/story/tesla-full-self-driving-becomes-assisted-driving-in-europe/",
-    "category": "TECH",
-    "importance": "MAJOR",
-    "summary": "Tesla is renaming its flagship 'Full Self-Driving' feature to 'Assisted Driving' across European markets. The change follows sustained criticism and regulatory pressure regarding potentially misleading product branding.",
-    "point1": "Tesla altered its driver-assist software branding to 'Assisted Driving' in Europe.",
-    "point2": "European regulators have required clearer distinction between driver-assistance features and full autonomy.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "WIRED",
-    "rss_image": "https://media.wired.com/photos/6ac9386f3122e744c08a4121/master/pass/GettyImages-1228358583.jpg",
-    "image_url": "https://media.wired.com/photos/6ac9386f3122e744c08a4121/master/pass/GettyImages-1228358583.jpg",
-    "timestamp_epoch": 1791670079,
-    "timestamp_display": "Oct 10 • 10:08 PM UTC"
-  },
-  {
-    "title": "Microsoft’s Satya Nadella says AI models need an 'emergency brake'",
-    "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
-    "category": "AI",
-    "importance": "MAJOR",
-    "summary": "Microsoft CEO Satya Nadella stated that artificial intelligence models require an 'emergency brake' mechanism to manage safety and operational risks. Nadella called on the tech industry to step back and assess the overall trust architecture of AI systems.",
-    "point1": "Satya Nadella advocated for building safety mechanisms, including an emergency brake, into AI models.",
-    "point2": "The comments reflect growing executive concern regarding AI safety, control, and trust frameworks.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "TechCrunch AI",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1791670079,
-    "timestamp_display": "Oct 10 • 10:08 PM UTC"
   }
 ]
