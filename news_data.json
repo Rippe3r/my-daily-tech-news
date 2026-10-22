@@ -462,37 +462,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
     "timestamp_epoch": 1792479490,
     "timestamp_display": "Oct 20 • 06:59 AM UTC"
-  },
-  {
-    "title": "Election offices in 32 US states receive suspicious mailings",
-    "url": "https://www.wired.com/story/election-offices-in-at-least-32-states-have-received-suspicious-letters-in-the-last-week/",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "Election officials across at least 32 U.S. states and Washington, D.C., received suspicious letters in recent days. The widespread deliveries have prompted federal and state security probes into harassment targeted at election infrastructure.",
-    "point1": "Suspicious letters were delivered to election facilities in 32 states and Washington, D.C.",
-    "point2": "The multi-state incident highlights targeted threats facing local election authorities ahead of voting periods.",
-    "point3": "Federal and state law enforcement investigations remain active.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "WIRED",
-    "rss_image": "https://media.wired.com/photos/6ad6231e8983de0c230024ad/master/pass/GettyImages-1266839449.jpg",
-    "image_url": "https://media.wired.com/photos/6ad6231e8983de0c230024ad/master/pass/GettyImages-1266839449.jpg",
-    "timestamp_epoch": 1792459526,
-    "timestamp_display": "Oct 20 • 01:26 AM UTC"
-  },
-  {
-    "title": "Curfews imposed in Paris and major French cities following civil unrest",
-    "url": "https://www.bbc.co.uk/news/articles/cx30ez03djyqo?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "CRITICAL",
-    "summary": "French authorities implemented curfews across parts of central Paris and several other municipalities following widespread civil unrest. France's interior minister acknowledged that law enforcement temporarily lost control in specific urban areas.",
-    "point1": "Local officials instituted curfews across central Paris and multiple cities due to severe rioting.",
-    "point2": "The measures follow public admissions from government officials that law enforcement faced control failures during the violence.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a4a4/live/f9b4b1d0-cc1e-11f1-94fe-b94794c2a157.jpg",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a4a4/live/f9b4b1d0-cc1e-11f1-94fe-b94794c2a157.jpg",
-    "timestamp_epoch": 1792459526,
-    "timestamp_display": "Oct 20 • 01:26 AM UTC"
   }
 ]
