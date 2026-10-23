@@ -648,7 +648,7 @@
         <button class="category-tab active" data-filter="ALL" type="button">
             <span class="tab-icon">◈</span>
             <span>ALL</span>
-            <span class="tab-count">50</span>
+            <span class="tab-count">51</span>
         </button>
 
         <button class="category-tab" data-filter="AI" type="button">
@@ -686,6 +686,61 @@
 
     <main id="news-feed">
         
+<article class="news-card"
+         data-category="WORLD"
+         data-importance="MAJOR">
+    <div class="card-image">
+        <img
+            src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6926/live/c5f26d10-cef3-11f1-93e1-3b657b665bcf.png"
+            alt="Oil Spill Reaches UAE Coastline Following Offshore Tanker Strike"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85';"
+        >
+        <div class="image-overlay">
+            <span>WORLD</span>
+            <span>MAJOR</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="meta-bar">
+            <span class="category">WORLD</span>
+            <span class="importance">MAJOR</span>
+            <span class="timestamp">⏰ Oct 23 • 10:49 PM UTC</span>
+        </div>
+
+        <div class="source-line">
+            <span class="source-check">✓</span>
+            <span>DIRECT_REPUTABLE_REPORT</span>
+            <span class="source-separator">•</span>
+            <span>BBC World</span>
+        </div>
+
+        <h2 class="title">
+            <a href="https://www.bbc.co.uk/news/articles/c6rey3n974g5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">
+                Oil Spill Reaches UAE Coastline Following Offshore Tanker Strike
+            </a>
+        </h2>
+
+        <p class="summary">An oil spill washed up on beaches along the United Arab Emirates coastline after an oil tanker was struck at sea. Satellite images reveal an oil slick stretching over miles, posing immediate environmental risks to local marine life. Environmental and coastal protection authorities are taking steps to contain the damage.</p>
+
+        <ul class="key-points">
+            <li><strong>FACT</strong>A tanker strike resulted in a major oil slick along the coast of the United Arab Emirates.</li>
+            <li><strong>IMPACT</strong>The spreading oil spill threatens regional marine ecosystems and coastal habitats.</li>
+            <li><strong>NEXT</strong>No confirmed timeline reported.</li>
+        </ul>
+
+        <a href="https://www.bbc.co.uk/news/articles/c6rey3n974g5o?at_medium=RSS&amp;at_campaign=rss"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="read-more">
+            READ ORIGINAL REPORT <span>↗</span>
+        </a>
+    </div>
+</article>
+
 <article class="news-card"
          data-category="INDIA"
          data-importance="MAJOR">
@@ -3575,7 +3630,7 @@
     (function () {
         const clock = document.getElementById("live-clock");
         const count = document.getElementById("signal-count");
-        const target = 50;
+        const target = 51;
 
         function pad(n) {
             return String(n).padStart(2, "0");
