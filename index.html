@@ -648,7 +648,7 @@
         <button class="category-tab active" data-filter="ALL" type="button">
             <span class="tab-icon">◈</span>
             <span>ALL</span>
-            <span class="tab-count">47</span>
+            <span class="tab-count">48</span>
         </button>
 
         <button class="category-tab" data-filter="AI" type="button">
@@ -686,6 +686,61 @@
 
     <main id="news-feed">
         
+<article class="news-card"
+         data-category="TECH"
+         data-importance="MAJOR">
+    <div class="card-image">
+        <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+            alt="Starlink seems to be working normally again in Ukraine"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85';"
+        >
+        <div class="image-overlay">
+            <span>TECH</span>
+            <span>MAJOR</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="meta-bar">
+            <span class="category">TECH</span>
+            <span class="importance">MAJOR</span>
+            <span class="timestamp">⏰ Oct 24 • 11:55 PM UTC</span>
+        </div>
+
+        <div class="source-line">
+            <span class="source-check">✓</span>
+            <span>DIRECT_REPUTABLE_REPORT</span>
+            <span class="source-separator">•</span>
+            <span>TechCrunch</span>
+        </div>
+
+        <h2 class="title">
+            <a href="https://techcrunch.com/2026/10/24/starlink-seems-to-be-working-normally-again-in-ukraine/" target="_blank" rel="noopener noreferrer">
+                Starlink seems to be working normally again in Ukraine
+            </a>
+        </h2>
+
+        <p class="summary">Satellite internet provider Starlink has returned to normal operation in Ukraine following a week of severe connection throttling. The restored network access stabilizes critical civil and defence infrastructure.</p>
+
+        <ul class="key-points">
+            <li><strong>FACT</strong>Starlink satellite internet performance in Ukraine has returned to normal operational levels.</li>
+            <li><strong>IMPACT</strong>Connectivity is vital for military operational control and civilian communications in the region.</li>
+            <li><strong>NEXT</strong>No confirmed timeline reported.</li>
+        </ul>
+
+        <a href="https://techcrunch.com/2026/10/24/starlink-seems-to-be-working-normally-again-in-ukraine/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="read-more">
+            READ ORIGINAL REPORT <span>↗</span>
+        </a>
+    </div>
+</article>
+
 <article class="news-card"
          data-category="INDIA"
          data-importance="MAJOR">
@@ -3410,7 +3465,7 @@
     (function () {
         const clock = document.getElementById("live-clock");
         const count = document.getElementById("signal-count");
-        const target = 47;
+        const target = 48;
 
         function pad(n) {
             return String(n).padStart(2, "0");

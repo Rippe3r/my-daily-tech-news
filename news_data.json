@@ -1,5 +1,21 @@
 [
   {
+    "title": "Starlink seems to be working normally again in Ukraine",
+    "url": "https://techcrunch.com/2026/10/24/starlink-seems-to-be-working-normally-again-in-ukraine/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Satellite internet provider Starlink has returned to normal operation in Ukraine following a week of severe connection throttling. The restored network access stabilizes critical civil and defence infrastructure.",
+    "point1": "Starlink satellite internet performance in Ukraine has returned to normal operational levels.",
+    "point2": "Connectivity is vital for military operational control and civilian communications in the region.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1792886070,
+    "timestamp_display": "Oct 24 • 11:55 PM UTC"
+  },
+  {
     "title": "Kotak Mahindra Bank Reports 26 Percent Rise in Q2 Net Profit",
     "url": "https://www.thehindu.com/business/kotak-mahindra-bank-q2-net-up-26-on-higher-income-and-better-asset-quality/article71619693.ece",
     "category": "INDIA",
