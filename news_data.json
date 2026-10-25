@@ -1,5 +1,37 @@
 [
   {
+    "title": "Serbia's President Aleksandar Vučić Concedes Election to Student-Led Opposition Movement",
+    "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
+    "category": "WORLD",
+    "importance": "CRITICAL",
+    "summary": "Serbian President Aleksandar Vučić conceded defeat following a landmark election driven by a student-led protest movement. The concession marks the end of twelve years of rule by the right-wing populist leader.",
+    "point1": "Aleksandar Vučić publicly conceded that his ruling party lost the national vote.",
+    "point2": "The election outcome follows widespread anti-government demonstrations organized by student groups across Serbia.",
+    "point3": "Formal transition steps will begin following final election result certification.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "BBC World",
+    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/84b8/live/fb5fd620-d0c6-11f1-a701-fddedf244c16.jpg",
+    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/84b8/live/fb5fd620-d0c6-11f1-a701-fddedf244c16.jpg",
+    "timestamp_epoch": 1792969071,
+    "timestamp_display": "Oct 25 • 10:58 PM UTC"
+  },
+  {
+    "title": "Scientists Keep Antimatter Particle Trapped for Months in Physics Breakthrough",
+    "url": "https://www.wired.com/story/scientists-trapped-an-antimatter-particle-for-months-to-study-its-secrets/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Researchers successfully contained an antimatter particle for several consecutive months using advanced trapping methods. The achievement enables high-precision physics experiments comparing fundamental properties of matter and antimatter.",
+    "point1": "Physics researchers trapped an elusive antimatter particle continuously across a multi-month period.",
+    "point2": "Long-term containment allows unprecedented precise measurement of matter-antimatter asymmetries.",
+    "point3": "No confirmed timeline reported for follow-up experimental publications.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "WIRED",
+    "rss_image": "https://media.wired.com/photos/6adaaa0519e924cf3288639a/master/pass/1344013114",
+    "image_url": "https://media.wired.com/photos/6adaaa0519e924cf3288639a/master/pass/1344013114",
+    "timestamp_epoch": 1792969071,
+    "timestamp_display": "Oct 25 • 10:58 PM UTC"
+  },
+  {
     "title": "Death Toll Rises to 48 After Gunmen Attack Remote Village in Nigeria",
     "url": "https://www.bbc.co.uk/news/articles/cq1kdlm1ze7do?at_medium=RSS&at_campaign=rss",
     "category": "WORLD",
@@ -574,21 +606,5 @@
     "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
     "timestamp_epoch": 1792804672,
     "timestamp_display": "Oct 24 • 01:18 AM UTC"
-  },
-  {
-    "title": "Oil Spill Reaches UAE Coastline Following Offshore Tanker Strike",
-    "url": "https://www.bbc.co.uk/news/articles/c6rey3n974g5o?at_medium=RSS&at_campaign=rss",
-    "category": "WORLD",
-    "importance": "MAJOR",
-    "summary": "An oil spill washed up on beaches along the United Arab Emirates coastline after an oil tanker was struck at sea. Satellite images reveal an oil slick stretching over miles, posing immediate environmental risks to local marine life. Environmental and coastal protection authorities are taking steps to contain the damage.",
-    "point1": "A tanker strike resulted in a major oil slick along the coast of the United Arab Emirates.",
-    "point2": "The spreading oil spill threatens regional marine ecosystems and coastal habitats.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "BBC World",
-    "rss_image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6926/live/c5f26d10-cef3-11f1-93e1-3b657b665bcf.png",
-    "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6926/live/c5f26d10-cef3-11f1-93e1-3b657b665bcf.png",
-    "timestamp_epoch": 1792795715,
-    "timestamp_display": "Oct 23 • 10:49 PM UTC"
   }
 ]
