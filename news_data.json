@@ -1,5 +1,21 @@
 [
   {
+    "title": "Intel’s stock crashes, knocking $12B from government’s stake",
+    "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
+    "category": "TECH",
+    "importance": "MAJOR",
+    "summary": "Intel's stock crashed sharply, reducing the value of the U.S. government's equity stake by $12 billion. The semiconductor company's financial downturn stems from sluggish PC sales alongside rising hardware costs driven by AI demand.",
+    "point1": "Intel share losses wiped $12 billion from the U.S. government's financial stake in the chip manufacturer.",
+    "point2": "Higher component costs caused by AI infrastructure spending have contributed to broader price increases in the PC sector.",
+    "point3": "No confirmed timeline reported.",
+    "verification": "DIRECT_REPUTABLE_REPORT",
+    "source_name": "TechCrunch AI",
+    "rss_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85",
+    "timestamp_epoch": 1793455776,
+    "timestamp_display": "Oct 31 • 02:11 PM UTC"
+  },
+  {
     "title": "India Orders Sun Pharma to Halt Eye-Care Drug Production over Quality Lapses",
     "url": "https://www.thehindu.com/business/india-orders-sun-pharma-to-halt-eye-care-drug-production-at-plant-after-quality-lapses/article71646516.ece",
     "category": "INDIA",
@@ -734,37 +750,5 @@
     "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9946/live/591e3810-d3b5-11f1-a701-fddedf244c16.jpg",
     "timestamp_epoch": 1793294052,
     "timestamp_display": "Oct 29 • 05:15 PM UTC"
-  },
-  {
-    "title": "Microsoft Reports $10 Billion in Quarterly Revenue Linked to OpenAI Partnership",
-    "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
-    "category": "AI",
-    "importance": "MAJOR",
-    "summary": "Microsoft generated $10 billion in quarterly revenue from commercial arrangements and revenue-sharing payments with OpenAI for the period ending September 30. The figure underscores the high financial scale of the partnership between the two companies.",
-    "point1": "Microsoft recorded $10 billion from OpenAI commercial arrangements in a single quarter.",
-    "point2": "The financial results highlight ongoing commercial integration and revenue sharing between Microsoft and OpenAI.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "TechCrunch AI",
-    "rss_image": "",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
-    "timestamp_epoch": 1793270277,
-    "timestamp_display": "Oct 29 • 10:38 AM UTC"
-  },
-  {
-    "title": "Tamil Nadu Cabinet Establishes Panel Led by Retired High Court Judge for Social Justice Survey",
-    "url": "https://www.thehindu.com/news/national/tamil-nadu/tamil-nadu-cabinet-decides-to-form-commission-headed-by-retd-hc-judge-to-conduct-social-justice-survey/article71639709.ece",
-    "category": "INDIA",
-    "importance": "MAJOR",
-    "summary": "The Tamil Nadu Cabinet approved the establishment of a dedicated commission led by a retired High Court judge to execute a state-wide Social Justice Survey. The decision was formalized during a cabinet meeting presided over by Chief Minister Vijay in Chennai.",
-    "point1": "Tamil Nadu will conduct a Social Justice Survey overseen by an independent commission headed by a retired High Court judge.",
-    "point2": "The survey aims to gather comprehensive socio-economic data across demographic groups in the state.",
-    "point3": "No confirmed timeline reported.",
-    "verification": "DIRECT_REPUTABLE_REPORT",
-    "source_name": "The Hindu",
-    "rss_image": "https://th-i.thgim.com/public/news/national/tamil-nadu/rfttj8/article71639962.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-10-29%20at%2014.23.50.jpeg",
-    "image_url": "https://th-i.thgim.com/public/news/national/tamil-nadu/rfttj8/article71639962.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-10-29%20at%2014.23.50.jpeg",
-    "timestamp_epoch": 1793270277,
-    "timestamp_display": "Oct 29 • 10:38 AM UTC"
   }
 ]
